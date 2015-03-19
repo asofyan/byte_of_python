@@ -133,66 +133,66 @@ Catatan untuk programmer Perl
 
 :   Sebuah list di dalam list tidak akan kehilangan identitas, dengan kata lain list tidak disatukan sebagaimana di dalam Perl. Ini juga berlaku untuk tuple di dalam tuple, atau list di dalam tuple dan seterusnya. Sejauh yang diperhatikan oleh Python, mereka hanyalah objects yang menyimpan objects lainnya. Tidak ada pertimbangan lain.
 
-## Dictionary 
+## Pustaka 
 
-A dictionary is like an address-book where you can find the address or contact details of a person by knowing only his/her name i.e. we associate **keys** (name) with **values** (details). Note that the key must be unique just like you cannot find out the correct information if you have two persons with the exact same name.
+Pustaka (_dictionary_) seperti buku-alamat di mana Anda dapat menemukan alamat atau detail kontak seseorang hanya dengan mengetahui namanya. Dengan kata lain kita asosiasikan **kunci** atau **keys** (nama) dengan **nilai** atau **value** (informasi detail). Perlu dicatat bahwa kunci dalam sebuah pustaka haruslah unik dan Anda tidak dapat menemukan informasi yang benar jika dua orang punya nama yang sama. 
 
-Note that you can use only immutable objects (like strings) for the keys of a dictionary but you can use either immutable or mutable objects for the values of the dictionary.  This basically translates to say that you should use only simple objects for keys.
+Mohon dicatat bahwa Anda hanya dapat menggunakan _immutable objects_ (obyek yang tidak bisa dimutasi/diubah jenisnya seperti string) untuk kunci sebuah pustaka namun Anda dapat menggunakan obyek yang bisa berubah bentuk (_mutable object_) maupun obyek yang tidak bisa berubah bentuk (_immutable objects_). Dengan kata lain Anda seharusnya menggunakan obyek yang sederhana untuk kunci. 
 
-Pairs of keys and values are specified in a dictionary by using the notation `d = {key1 : value1, key2 : value2 }`. Notice that the key-value pairs are separated by a colon and the pairs are separated themselves by commas and all this is enclosed in a pair of curly braces.
+Pasangan kunci dan nilainya yang digunakan dalam pustaka mengunakan notasi `d = {kunci1: nilai1, kunci2:nilai2}`. Perhatikan bahwa pasangan kunci-nilai dipisahkan dengan titik dua dan pasangan tersebut dipisahkan dengan koma hingga ditutup dengan kurung kurawal penutup.
 
-Remember that key-value pairs in a dictionary are not ordered in any manner. If you want a particular order, then you will have to sort them yourself before using it.
+Perlu diingat bahwa pasangan kunci-nilai di dalam pustaka tidak bisa diurutkan. Jika Anda ingin mengurutkannya secara khusus, Anda harus malkukan pengurutan (_sort_) sebelum menggunakannya. 
 
-The dictionaries that you will be using are instances/objects of the `dict` class.
+Pusaka yang Anda gunakan merupakan _instance_/obyek dari kelas `dict`. 
 
-Example (save as `using_dict.py`):
+Contoh (simpan dengan nama `menggunakan_pustaka.py`):
 
 ~~~python
-# 'ab' is short for 'a'ddress'b'ook
+# 'ba' adalah kepanjangan dari 'b'uku 'a'lamat 
 
-ab = {  'Swaroop'   : 'swaroop@swaroopch.com',
+ba = {  'Swaroop'   : 'swaroop@swaroopch.com',
         'Larry'     : 'larry@wall.org',
         'Matsumoto' : 'matz@ruby-lang.org',
         'Spammer'   : 'spammer@hotmail.com'
     }
 
-print("Swaroop's address is", ab['Swaroop'])
+print("Alamat email Swaroop adalah ", ba['Swaroop'])
 
-# Deleting a key-value pair
-del ab['Spammer']
+# Menghapus pasangan kunci-nilai
+del ba['Spammer']
 
-print('\nThere are {0} contacts in the address-book\n'.format(len(ab)))
+print('\nAda {0} kontak di buku alamat\n'.format(len(ba)))
 
-for name, address in ab.items():
-    print('Contact {0} at {1}'.format(name, address))
+for nama, alamat in ba.items():
+    print('Kontak {0} memiliki alamat {1}'.format(name, address))
 
-# Adding a key-value pair
-ab['Guido'] = 'guido@python.org'
+# Menambahkan pasangan kunci-nilai
+ba['Guido'] = 'guido@python.org'
 
-if 'Guido' in ab:
-    print("\nGuido's address is", ab['Guido'])
+if 'Guido' in ba:
+    print("\nAlamat email Guido adalah ", ab['Guido'])
 ~~~
 
-Output:
+Keluaran:
 
 ~~~
-$ python3 using_dict.py
-Swaroop's address is swaroop@swaroopch.com
+$ python3 menggunakan_pustaka.py
+Alamat email Swaroop adalah swaroop@swaroopch.com
 
-There are 3 contacts in the address-book
+Ada 3 kontak di buku alamat
 
-Contact Swaroop at swaroop@swaroopch.com
-Contact Matsumoto at matz@ruby-lang.org
-Contact Larry at larry@wall.org
+Kontak Swaroop memiliki alamat swaroop@swaroopch.com
+Kontak Matsumoto memiliki alamat matz@ruby-lang.org
+Kontak Larry memiliki alamat larry@wall.org
 
-Guido's address is guido@python.org
+Alamat email Guido adalah guido@python.org
 ~~~
 
-How It Works:
+Bagaimana Cara Kerjanya:
 
-We create the dictionary `ab` using the notation already discussed. We then access key-value pairs by specifying the key using the indexing operator as discussed in the context of lists and tuples. Observe the simple syntax.
+Kita membuat pustaka `ba` dengan notasi yang telah kita diskusikan sebelumnya. Lalu kita mengakses pasangan nilai-kunci dengan menyebutkan kunci dengan menggunakan operator indeks sesuai yang telah didiskusikan dalam konteks lists dan tuples. Coba teliti sintaks sederhananya. 
 
-We can delete key-value pairs using our old friend - the `del` statement. We simply specify the dictionary and the indexing operator for the key to be removed and pass it to the `del` statement. There is no need to know the value corresponding to the key for this operation.
+Kita dapat menghapus pasangan kunci-nilai dengan menggunakan teman lama kita, statemen `del`. Kita cukup menyebut nama pustaka dan operator indeks sebagai kunci dan memberikannya pada statemen `del`. Nilainya tidak perlu kita ketahui untuk menjalankan perintah ini. 
 
 Next, we access each key-value pair of the dictionary using the `items` method of the dictionary which returns a list of tuples where each tuple contains a pair of items - the key followed by the value. We retrieve this pair and assign it to the variables `name` and `address` correspondingly for each pair using the `for..in` loop and then print these values in the for-block.
 
