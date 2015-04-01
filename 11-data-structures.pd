@@ -133,9 +133,9 @@ Catatan untuk programmer Perl
 
 :   Sebuah list di dalam list tidak akan kehilangan identitas, dengan kata lain list tidak disatukan sebagaimana di dalam Perl. Ini juga berlaku untuk tuple di dalam tuple, atau list di dalam tuple dan seterusnya. Sejauh yang diperhatikan oleh Python, mereka hanyalah objects yang menyimpan objects lainnya. Tidak ada pertimbangan lain.
 
-## Pustaka 
+## Pustaka (_dictionary_)
 
-Pustaka (_dictionary_) seperti buku-alamat di mana Anda dapat menemukan alamat atau detail kontak seseorang hanya dengan mengetahui namanya. Dengan kata lain kita asosiasikan **kunci** atau **keys** (nama) dengan **nilai** atau **value** (informasi detail). Perlu dicatat bahwa kunci dalam sebuah pustaka haruslah unik dan Anda tidak dapat menemukan informasi yang benar jika dua orang punya nama yang sama. 
+Pustaka seperti buku-alamat di mana Anda dapat menemukan alamat atau detail kontak seseorang hanya dengan mengetahui namanya. Dengan kata lain kita asosiasikan **kunci** atau **keys** (nama) dengan **nilai** atau **value** (informasi detail). Perlu dicatat bahwa kunci dalam sebuah pustaka haruslah unik dan Anda tidak dapat menemukan informasi yang benar jika dua orang punya nama yang sama. 
 
 Mohon dicatat bahwa Anda hanya dapat menggunakan _immutable objects_ (obyek yang tidak bisa dimutasi/diubah jenisnya seperti string) untuk kunci sebuah pustaka namun Anda dapat menggunakan obyek yang bisa berubah bentuk (_mutable object_) maupun obyek yang tidak bisa berubah bentuk (_immutable objects_). Dengan kata lain Anda seharusnya menggunakan obyek yang sederhana untuk kunci. 
 
@@ -194,115 +194,115 @@ Kita membuat pustaka `ba` dengan notasi yang telah kita diskusikan sebelumnya. L
 
 Kita dapat menghapus pasangan kunci-nilai dengan menggunakan teman lama kita, statemen `del`. Kita cukup menyebut nama pustaka dan operator indeks sebagai kunci dan memberikannya pada statemen `del`. Nilainya tidak perlu kita ketahui untuk menjalankan perintah ini. 
 
-Next, we access each key-value pair of the dictionary using the `items` method of the dictionary which returns a list of tuples where each tuple contains a pair of items - the key followed by the value. We retrieve this pair and assign it to the variables `name` and `address` correspondingly for each pair using the `for..in` loop and then print these values in the for-block.
+Berikutnya, kita mengakses pasangan kunci-nilai dari pustaka dengan menggunakan metode `items` yang mengembalikan daftar tuples, di mana masing-masing tuple berisi pasangan dari item tersebut - kunci diikuti dengan nilainya. Kita ambil pasangan tersebut dan menyematkan variabel `nama` dan `alamat` pada setiap pasangan lewat putaran `for..in` dan mencetak nilai di dalam blok-for. 
 
-We can add new key-value pairs by simply using the indexing operator to access a key and assign that value, as we have done for Guido in the above case.
+Kita dapat menambahkan pasangan kunci-nilai, cukup dengan operator indeks untuk mengakses kunci dan memberikan nilainya, sebagaimana kita lakukan terhadap Guido dalam kasus di atas. 
 
-We can check if a key-value pair exists using the `in` operator.
+Kita dapat mengecek apakah pasangan kunci-nilai ada, dengan menggunakan operator `in`. 
 
-For the list of methods of the `dict` class, see `help(dict)`.
+Untuk daftar metode dalam class `dict`, lihat lewat `help(dict)`.
 
-Keyword Arguments and Dictionaries
+Argumen Kata Kunci dan Pustaka
 
-:   On a different note, if you have used keyword arguments in your functions, you have already used dictionaries! Just think about it - the key-value pair is specified by you in the parameter list of the function definition and when you access variables within your function, it is just a key access of a dictionary (which is called the *symbol table*in compiler design terminology).
+:   Dalam catatan yang lain, jika Anda harus menggunakan argumen kata kunci dalam fungsi Anda, maka Anda sudah menggunakan pustaka! Coba pikirkan kembali - pasangan kunci-nilai yang Anda tentukan dalam daftar parameter definisi fungi dan ketika Anda mengakses variabel dalam fungsi Anda, itu hanyalah sebuah kunci akses dari pustaka yang bersangkutan (biasanya disebut sebagai *tabel simbol* dalam terminologi desain kompiler).
 
-## Sequence 
+## Urutan (_Sequence_) 
 
-Lists, tuples and strings are examples of sequences, but what are sequences and what is so special about them?
+_List_, _tuple_ dan _string_ adalah contoh dari urutan(_sequence_), namun apa itu urutan dan apa yang khusus tentangnya? 
 
-The major features are **membership tests**, (i.e. the `in` and `not in` expressions) and **indexing operations**, which allow us to fetch a particular item in the sequence directly.
+Fitur utamanya adalah **ujian keberadaan**, (seperti ekspresi di `in` dan `not in`) dan **operasi mengindeks**, yang memungkinkan untuk mengambil item tertentu di dalam urutan secara langsung.
 
-The three types of sequences mentioned above - lists, tuples and strings, also have a **slicing** operation which allows us to retrieve a slice of the sequence i.e. a part of the sequence.
+Ada tiga jenis urutan sebagaimana disebut di atas - list, tuple dan string, yang juga punya operasi **mengiris** yang memungkinkan kita untuk mengambil irisan dari urutan atau bagian dari urutan. 
 
-Example (save as `seq.py`):
+Contoh (simpan sebagai `seq.py`):
 
 ~~~python
-shoplist = ['apple', 'mango', 'carrot', 'banana']
-name = 'swaroop'
+daftarbelanja = ['apel', 'mangga', 'wortel', 'pisang']
+nama = 'swaroop'
 
-# Indexing or 'Subscription' operation
-print('Item 0 is', shoplist[0])
-print('Item 1 is', shoplist[1])
-print('Item 2 is', shoplist[2])
-print('Item 3 is', shoplist[3])
-print('Item -1 is', shoplist[-1])
-print('Item -2 is', shoplist[-2])
-print('Character 0 is', name[0])
+# Operasi 'mengindeks' atau 'berlangganan'
+print('Item 0 adalah', daftarbelanja[0])
+print('Item 1 adalah', daftarbelanja[1])
+print('Item 2 adalah', daftarbelanja[2])
+print('Item 3 adalah', daftarbelanja[3])
+print('Item -1 adalah', daftarbelanja[-1])
+print('Item -2 adalah', daftarbelanja[-2])
+print('Character 0 is', nama[0])
 
-# Slicing on a list
-print('Item 1 to 3 is', shoplist[1:3])
-print('Item 2 to end is', shoplist[2:])
-print('Item 1 to -1 is', shoplist[1:-1])
-print('Item start to end is', shoplist[:])
+# Mengiris sebuah _list_
+print('Item 1 ke 3 adalah', shoplist[1:3])
+print('Item 2 ke end adalah', shoplist[2:])
+print('Item 1 ke -1 adalah', shoplist[1:-1])
+print('Item dari awal hingga akhir adalah', shoplist[:])
 
-# Slicing on a string
-print('characters 1 to 3 is', name[1:3])
-print('characters 2 to end is', name[2:])
-print('characters 1 to -1 is', name[1:-1])
-print('characters start to end is', name[:])
+# Mengiris _string_
+print('karakter 1 ke 3 adalah', nama[1:3])
+print('karakter 2 ke terakhir adalah', nama[2:])
+print('karakter 1 ke -1 adalah', nama[1:-1])
+print('karakter dari awal hingga akhir adalah', nama[:])
 ~~~
 
-Output:
+Keluaran:
 
 ~~~
 $ python3 seq.py
-Item 0 is apple
-Item 1 is mango
-Item 2 is carrot
-Item 3 is banana
-Item -1 is banana
-Item -2 is carrot
-Character 0 is s
-Item 1 to 3 is ['mango', 'carrot']
-Item 2 to end is ['carrot', 'banana']
-Item 1 to -1 is ['mango', 'carrot']
-Item start to end is ['apple', 'mango', 'carrot', 'banana']
-characters 1 to 3 is wa
-characters 2 to end is aroop
-characters 1 to -1 is waroo
-characters start to end is swaroop
+Item 0 adalah apel
+Item 1 adalah mangga
+Item 2 adalah wortel
+Item 3 adalah pisang
+Item -1 adalah pisang
+Item -2 adalah wortel
+Karakter 0 adalah s
+Item 1 ke 3 adalah ['mangga', 'wortel']
+Item 2 ke terakhir adalah ['wortel', 'pisang']
+Item 1 ke -1 adalah ['mangga', 'wortel']
+Item dari awal hingga akhir adalah ['apel', 'mangga', 'wortel', 'pisang']
+karakter 1 ke 3 adalah wa
+karakter 2 ke terakhir adalah aroop
+karakter 1 ke -1 adalah waroo
+karakter dari awal hingga akhir adalah swaroop
 ~~~
 
-How It Works:
+Bagaimana Cara Kerjanya:
 
-First, we see how to use indexes to get individual items of a sequence. This is also referred to as the *subscription operation*. Whenever you specify a number to a sequence within square brackets as shown above, Python will fetch you the item corresponding to that position in the sequence. Remember that Python starts counting numbers from 0. Hence, `shoplist[0]` fetches the first item and `shoplist[3]` fetches the fourth item in the `shoplist`sequence.
+Pertama, kita lihat bagaimana menggunakan indeks untuk mengambil item satuan dari sebuah urutan. Ini juga bisa disebut sebagai *operasi berlangganan*. Saat Anda menyebutkan sebuah angka ke urutan dalam tanda kurung kotak sebagaimana yang ditampilkan di atas, Python akan mengambilkan untuk Anda, item yang berada dalam posisi bersangkutan dalam sebuah urutan. Ingat bahwa Python mulai menghitung angka dari 0. Sehingga `daftarbelanja[0]` akan mengambil item pertama dan `daftarbelanjap3[` akan mengambil item ke empat dalam urutan `daftarbelanja`.
 
-The index can also be a negative number, in which case, the position is calculated from the end of the sequence. Therefore, `shoplist[-1]` refers to the last item in the sequence and `shoplist[-2]` fetches the second last item in the sequence.
+Indeks juga bisa berupa angka negatif, dalam kasus ini, posisinya akan dihitung dari akhir urutan. Sehingga `daftarbelanja[-1]` akan merujuk pada item terakhir dari sebuah urutan dan `daftarbelanja[-2]` mengambil angka kedua terakhir dalam urutan. 
 
-The slicing operation is used by specifying the name of the sequence followed by an optional pair of numbers separated by a colon within square brackets. Note that this is very similar to the indexing operation you have been using till now. Remember the numbers are optional but the colon isn't.
+Operasi pengirisan digunakan dengan menyebut nama urutan dan bisa ditambahkan (tidak harus) angka atau pasangan angka yang dipisah dengan titik dua dalam tanda kurung kotak. Mohon dicatat bahwa ini sangat mirip dengan operasi mengindeks yang sudah Anda gunakan hingga sekarang. Dan perlu diingat bahwa angka tersebut tidak harus, namun titik dua adalah keharusan.
 
-The first number (before the colon) in the slicing operation refers to the position from where the slice starts and the second number (after the colon) indicates where the slice will stop at. If the first number is not specified, Python will start at the beginning of the sequence. If the second number is left out, Python will stop at the end of the sequence. Note that the slice returned *starts* at the start position and will end just before the *end* position i.e. the start position is included but the end position is excluded from the sequence slice.
+Angka pertama (sebelum titik dua) dalam operasi pengirisan merujuk pada posisi di mana irisan dimulai dan angka kedua (setelah titik dua) menunjukkan pada angka keberapa urutan akan berhenti. Jika angka kedua tidak diisi, Python akan menghentikannya hingga angka terakhir. Catat bahwa irisan akan mengembalikan angka *awal* pada posisi start dan akan berakhir satu angka sebelum posisi *terakhir*. Atau dengan kata lain posisi awal akan ikut dikembalikan namun posisi terakhir tidak akan diikutkan dalam potongan urutan. 
 
-Thus, `shoplist[1:3]` returns a slice of the sequence starting at position 1, includes position 2 but stops at position 3 and therefore a *slice* of two items is returned.  Similarly, `shoplist[:]` returns a copy of the whole sequence.
+Sehingga, `daftarbelanja[1:3]` akan mengembalikan iritasn yang dimulai pada posisi 1, termasuk psosisi dua namun berhenti di posisi tiga sehingga hanya dua *irisan* yang dikembalikan. Mirip dengan itu, `daftarbelanja[:]` akan mengembalikan seluruh urutan. 
 
-You can also do slicing with negative positions. Negative numbers are used for positions from the end of the sequence. For example, `shoplist[:-1]` will return a slice of the sequence which excludes the last item of the sequence but contains everything else.
+Anda juga dapat memotong dengan posisi negatif. Angka negatif digunakan untuk posisi dari akhir urutan. Sebagai contoh `daftarbelanja[:-1]` akan mengembalikan irisan dari urutan yang mengecualikan item terakhir dari urutan, namun menampilkan semua yang lainnya.
 
-You can also provide a third argument for the slice, which is the *step* for the slicing (by default, the step size is 1):
-
-~~~
->>> shoplist = ['apple', 'mango', 'carrot', 'banana']
->>> shoplist[::1]
-['apple', 'mango', 'carrot', 'banana']
->>> shoplist[::2]
-['apple', 'carrot']
->>> shoplist[::3]
-['apple', 'banana']
->>> shoplist[::-1]
-['banana', 'carrot', 'mango', 'apple']
-~~~
-
-Notice that when the step is 2, we get the items with position 0, 2, ... When the step size is 3, we get the items with position 0, 3, etc.
-
-Try various combinations of such slice specifications using the Python interpreter interactively i.e. the prompt so that you can see the results immediately. The great thing about sequences is that you can access tuples, lists and strings all in the same way!
-
-## Set 
-
-Sets are *unordered* collections of simple objects. These are used when the existence of an object in a collection is more important than the order or how many times it occurs.
-
-Using sets, you can test for membership, whether it is a subset of another set, find the intersection between two sets, and so on.
+Anda juga dapat memberikan argumen ketiga dari potonga, merupakan *langkah* dari irisan (secara baku, langkah urutannya adalah 1):
 
 ~~~
->>> bri = set(['brazil', 'russia', 'india'])
+>>> daftarbelanja = ['apel', 'mangga', 'wortel', 'pisang']
+>>> daftarbelanja[::1]
+['apel', 'mangga', 'wortel', 'pisang']
+>>> daftarbelanja[::2]
+['apel', 'wortel']
+>>> daftarbelanja[::3]
+['apel', 'pisang']
+>>> daftarbelanja[::-1]
+['pisang', 'wortel', 'mangga', 'apel']
+~~~
+
+Perhatikan bahwa ketika langkahnya 2, kita mengambil item dengan posisi 0, 2, ... Dan ketika langkahnya 3, kita mengambil item pada posisi 0, 3, dan seterusnya. 
+
+Cobalah beberapa kombinasi dengan penggunaan sesuai spesifikasi urutan dengan menggunakan Python interpreter yang interaktif atau prompt sehingga Anda dapat melihat keluarannya secara langsung. Hal yang bagus pada urutan adalah bahwa Anda bisa mengakses _tuple_,_list_ dan _string_ dengan cara yang sama!
+
+## _Set_ 
+
+_Set_ adalah koleksi obyek sederhana yang  *tidak berurut*. Ini digunakan ketika keberadaan obyek dalam sebuah koleksi lebih penting daripada urutannya atau berapa kali muncul.
+
+Dengan menggunakan _set_ Anda dapat mengetes keanggotaan, apakah dia merupakan subset dari set yang lain, menemukan interseksi dari dua set dan lainnya. 
+
+~~~
+>>> bri = set(['brazil', 'rusia', 'india'])
 >>> 'india' in bri
 True
 >>> 'usa' in bri
@@ -312,109 +312,109 @@ False
 >>> bric.issuperset(bri)
 True
 >>> bri.remove('russia')
->>> bri & bric # OR bri.intersection(bric)
+>>> bri & bric # ATAU bri.intersection(bric)
 {'brazil', 'india'}
 ~~~
 
-How It Works:
+Bagaimana Cara Kerjanya:
 
-The example is pretty much self-explanatory because it involves basic set theory mathematics taught in school.
+Contoh berikut ini bisa menjelaskan-sendiri sebaba melibatkan set dasar teori matematika yang diajarkan di sekolah.
 
-## References 
+## Referensi 
 
-When you create an object and assign it to a variable, the variable only *refers* to the object and does not represent the object itself! That is, the variable name points to that part of your computer's memory where the object is stored. This is called **binding** the name to the object.
+Ketika Anda membuat obyek dan menyematkannya pada variable, variable tersebut hanya *mereferensikan* pada obyek dan tidak merepresentasikan obyek itu sendiri! Dengan kata lain, itu hanyalah nama variabel yang menunjukkan bagian dari memori komputer tempat di mana obyek tersebut diletakkan. Ini disebut sebagai **binding** atau **mengikat** nama kepada obyek tersebut. 
 
-Generally, you don't need to be worried about this, but there is a subtle effect due to references which you need to be aware of:
+Secara umum, Anda tidak perlu khawatir tentang hal ini, namun ada beberapa efek ringan atas referensi yang perlu Anda perhatikan:
 
-Example (save as `reference.py`):
-
-~~~python
-print('Simple Assignment')
-shoplist = ['apple', 'mango', 'carrot', 'banana']
-mylist = shoplist # mylist is just another name pointing to the same object!
-
-del shoplist[0] # I purchased the first item, so I remove it from the list
-
-print('shoplist is', shoplist)
-print('mylist is', mylist)
-# notice that both shoplist and mylist both print the same list without
-# the 'apple' confirming that they point to the same object
-
-print('Copy by making a full slice')
-mylist = shoplist[:] # make a copy by doing a full slice
-del mylist[0] # remove first item
-
-print('shoplist is', shoplist)
-print('mylist is', mylist)
-# notice that now the two lists are different
-~~~
-
-Output:
-
-~~~
-$ python3 reference.py
-Simple Assignment
-shoplist is ['mango', 'carrot', 'banana']
-mylist is ['mango', 'carrot', 'banana']
-Copy by making a full slice
-shoplist is ['mango', 'carrot', 'banana']
-mylist is ['carrot', 'banana']
-~~~
-
-How It Works:
-
-Most of the explanation is available in the comments.
-
-Remember that if you want to make a copy of a list or such kinds of sequences or complex objects (not simple *objects* such as integers), then you have to use the slicing operation to make a copy. If you just assign the variable name to another name, both of them will ''refer'' to the same object and this could be trouble if you are not careful.
-
-Note for Perl programmers
-
-:   Remember that an assignment statement for lists does **not** create a copy. You have to use slicing operation to make a copy of the sequence.
-
-## More About Strings 
-
-We have already discussed strings in detail earlier. What more can there be to know?  Well, did you know that strings are also objects and have methods which do everything from checking part of a string to stripping spaces!
-
-The strings that you use in program are all objects of the class `str`.  Some useful methods of this class are demonstrated in the next example. For a complete list of such methods, see `help(str)`.
-
-Example (save as `str_methods.py`):
+Contoh (simpan sebagai `referensi.py`):
 
 ~~~python
-name = 'Swaroop' # This is a string object
+print('Tugas Sederhana')
+daftarbelanja = ['apel', 'mangga', 'wortel', 'pisang']
+daftarku = daftarbelanja # daftarku cuma sekedar nama yang merujuk pada obyek yang sama!
+
+del daftarbelanja[0] # Saya membeli item pertama, sehingga saya perlu menghapusnya dari daftar
+
+print('daftar belanja ', daftarbelanja)
+print('daftarku', daftarku)
+# perhatikan bahwa daftarbelanja dan daftarku, keduanya mencetak hal yang sama 
+# tanpa 'apel' mengonfirmasi bahwa keduanya merujuk pada obyek yang sama
+
+print('Salin dengan membuat irisan penuh')
+daftarku = daftarbelanja[:] # membuat salinan lewat irisan penuh
+del daftarku[0] # menghapus item pertama
+
+print('daftar belanja ', daftarbelanja)
+print('daftarku', daftarku)
+# perhatikan perbedaan kedua list tersebut sekarang
+~~~
+
+Keluaran:
+
+~~~
+$ python3 referensi.py
+Tugas Sederhana
+daftar belanja ['mangga', 'wortel', 'pisang']
+daftarku ['mangga', 'wortel', 'pisang']
+Salin dengan membuat irisan penuh
+daftar belanja ['mangga', 'wortel', 'pisang']
+daftarku ['wortel', 'pisang']
+~~~
+
+Bagaimana Cara Kerjanya:
+
+Hampir semua penjelasan sudah ditulis di komentar. 
+
+Mohon diingat jika Anda ingin membuat salinan sebuah daftar (_list_) atau sejenis urutan (_sequence_) atau obyek yang sedikit rumit (bukan *obyek* sederhana seperti integer), Anda harus membuat operasi irisan untuk membuat salinan. Jika Anda cuma menyebut nama dengan nama variabel lain, keduanya akan ''merujuk'' pada obyek yang sama dan ini bisa menimbulkan masalah jika Anda tidak hati-hati. 
+
+Catatan untuk programmer Perl
+
+:   Ingat bahwa statemen penugasan seperti daftar (_list_) **tidak** membuat salinan. Anda harus gunakan operasi irisan untuk menyalin sebuah urutan. 
+
+## Lebih banyak tentang String
+
+Kita telah mendiskusikan string secara lebih detail sebelumnya. Apa lagi yang bisa kita eksplorasi dari situ? Jika Anda tahu string adalah sebuah obyek dan memiliki semua metode untuk melakukan berbagai operasi, seperti mengecek bagian atau bahkan menghapus spasi!
+
+String yang Anda gunakan di dalam program merupakan obyek dari kelas `str`. Beberapa metode yang bermanfaat didemonstrasikan dalam contoh berikut. Untuk daftar lengkap dari metode ini, lihat `help(str)`. 
+
+Contoh (simpan dengan nama `metode_str.py`):
+
+~~~python
+nama = 'Swaroop' # Ini adalah obyek string
 
 if name.startswith('Swa'):
-    print('Yes, the string starts with "Swa"')
+    print('Ya, string dimulai dengan "Swa"')
 
 if 'a' in name:
-    print('Yes, it contains the string "a"')
+    print('Ya, string memiliki huruf "a"')
 
 if name.find('war') != -1:
-    print('Yes, it contains the string "war"')
+    print('Ya, string memiliki kata "war"')
 
 delimiter = '_*_'
-mylist = ['Brazil', 'Russia', 'India', 'China']
-print(delimiter.join(mylist))
+daftarku = ['Brazil', 'Russia', 'India', 'China']
+print(delimiter.join(daftarku))
 
 ~~~
 
-Output:
+Keluaran:
 
 ~~~
-$ python3 str_methods.py
-Yes, the string starts with "Swa"
-Yes, it contains the string "a"
-Yes, it contains the string "war"
+$ python3 metode_str.py
+Ya, string dimulai dengan "Swa"
+Ya, string memiliki huruf "a"
+Ya, string memiliki kata "war"
 Brazil_*_Russia_*_India_*_China
 ~~~
 
-How It Works:
+Bagaimana Cara Kerjanya:
 
-Here, we see a lot of the string methods in action. The `startswith` method is used to find out whether the string starts with the given string. The `in` operator is used to check if a given string is a part of the string.
+Di sini kita lihat banyak metode string kita gunakan. Metode `startswith` digunakan untuk mengecek apakah obyek tersebut dimulai dengan string sebagaimana dimaksud. Operator `in` digunakan untuk mengecek apakah suatu string (misal kata atau kumpulan huruf/angka) merupakan bagian dari string. 
 
-The `find` method is used to locate the position of the given substring within the string; `find` returns -1 if it is unsuccessful in finding the substring. The `str` class also has a neat method to `join` the items of a sequence with the string acting as a delimiter between each item of the sequence and returns a bigger string generated from this.
+Metode `find` digunakan untuk mencari posisi substring di dalam string; `find` memberikan kembalian -1 jika tidak berhasil. Kelas `str` juga punya metode keren seperti `join` untuk menggabungkan item dari sebuah urutan dengan menggunakan string tertentu sebagai delimiter dari tiap item sehingga menghasilkan string baru yang lebih besar.
 
-## Summary 
+## Ringkasan
 
-We have explored the various built-in data structures of Python in detail. These data structures will be essential for writing programs of reasonable size.
+Kita telah mengeksplorasi banyak struktur data _built-in_ yang ada di Python secara detail Struktur data ini esensial dalam menulis program dalam ukuran apa saja. 
 
-Now that we have a lot of the basics of Python in place, we will next see how to design and write a real-world Python program.
+Sekarang kita sudah memahami dasar-dasar Python, kita akan lihat bagaimana mendesain dan menulis program Python yang digunakan di dunia nyata. 
