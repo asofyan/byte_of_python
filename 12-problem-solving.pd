@@ -1,14 +1,14 @@
-# Problem Solving
+# Pemecahan Masalah
 
-We have explored various parts of the Python language and now we will take a look at how all these parts fit together, by designing and writing a program which *does* something useful. The idea is to learn how to write a Python script on your own.
+Setelah sebelumnya kita telah mengeksplorasi berbagai bagian bahasa Python, sekarang kita coba untuk menggabungkan bagian-bagian tadi menjadi satu kesatuan, dengan mendesain dan membuat program yang *benar-benar* berguna. Idenya adalah belajar bagaimana Anda menulis skrip Python sendiri.
 
-## The Problem
+## Permasalahan
 
-The problem we want to solve is *"I want a program which creates a backup of all my important files"*.
+Permasalahan yang ingin dipecahkan adalah *"Saya ingin membuat sebuah program yang membackup semua berkas-berkas saya yang penting."*.
 
-Although, this is a simple problem, there is not enough information for us to get started with the solution. A little more **analysis** is required. For example, how do we specify *which* files are to be backed up? *How* are they stored? *Where* are they stored?
+Meskipun ini masalah sederhana, namun tidak ada informasi yang cukup bagi kita untuk mulai dengan pemecahannya. Hal ini membutuhkan sedikit **analisa lanjutan**. Sebagai contoh, bagaimana kita menentukan berkas *mana* yang penting sehingga perlu dibackup? *Bagaimana* berkas-berkas tersebut disimpan? *Di mana* tempat penyimpanannya?
 
-After analyzing the problem properly, we **design** our program. We make a list of things about how our program should work. In this case, I have created the following list on how *I* want it to work. If you do the design, you may not come up with the same kind of analysis since every person has their own way of doing things, so that is perfectly okay.
+Setelah menganalisa masalah tersebut secara lebih mendalam, kita mulai **mendesain** program kita. Kita bisa mulai dengan membuat daftar bagaimana program kita akan berjalan nantinya. Dalam kasus ini, Saya telah membuat daftar berikut tentang bagaimana *Saya* ingin program tersebut bekerja. Jika Anda melakukan sendiri desainnya, mungkin Anda akan membuat analisa berbeda mengingat setiap orang punya pendekatan berbeda tentang bagaimana cara mereka melakukan pekerjaannya. Dan ini sama sekali bukan masalah. Tidak apa-apa. 
 
 - The files and directories to be backed up are specified in a list.
 - The backup must be stored in a main backup directory.
