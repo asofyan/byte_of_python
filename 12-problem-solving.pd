@@ -10,51 +10,51 @@ Meskipun ini masalah sederhana, namun tidak ada informasi yang cukup bagi kita u
 
 Setelah menganalisa masalah tersebut secara lebih mendalam, kita mulai **mendesain** program kita. Kita bisa mulai dengan membuat daftar bagaimana program kita akan berjalan nantinya. Dalam kasus ini, Saya telah membuat daftar berikut tentang bagaimana *Saya* ingin program tersebut bekerja. Jika Anda melakukan sendiri desainnya, mungkin Anda akan membuat analisa berbeda mengingat setiap orang punya pendekatan berbeda tentang bagaimana cara mereka melakukan pekerjaannya. Dan ini sama sekali bukan masalah. Tidak apa-apa. 
 
-- The files and directories to be backed up are specified in a list.
-- The backup must be stored in a main backup directory.
-- The files are backed up into a zip file.
-- The name of the zip archive is the current date and time.
-- We use the standard `zip` command available by default in any standard Linux/Unix distribution. Windows users can [install](http://gnuwin32.sourceforge.net/downlinks/zip.php) from the [GnuWin32 project page](http://gnuwin32.sourceforge.net/packages/zip.htm) and add `C:\Program Files\GnuWin32\bin` to your system PATH environment variable, similar to [what we did for recognizing the python command itself](#dos-prompt). Note that you can use any archiving command you want as long as it has a command line
+- Berkas dan direktori akan disimpan dalam berkas pendukung (_backup_) secara khusus dalam list.
+- Berkas pendukung harus disimpan dalam direktori pendukung utama.
+- Semua berkas disimpan dalam berkas pendukung dengan format zip.
+- Penamaan dalam berkas arsip berformat zip  dibuat dalam tanggal dan waktu sekarang.
+- Kita menggunakan perintah baku `zip` yang sudah tersedia dalam setiap distribusi Linux/Unix. Pengguna Windows dapat [memasang](http://gnuwin32.sourceforge.net/downlinks/zip.php) dari [Halaman Proyek GnuWin32 ](http://gnuwin32.sourceforge.net/packages/zip.htm) and add `C:\Program Files\GnuWin32\bin` ke dalam variabel lingkungan yang dikenal oleh PATH sistem, sama seperti [cara kita mengenal perintah python sendiri](#dos-prompt). Perhatikan bahwa perintah untuk mengarsipkan berkas dapat Anda gunakan selama aplikasi tersebut tersedia dan bisa diakses melalui baris perintah. 
 
-## The Solution 
+## Solusi 
 
-As the design of our program is now reasonably stable, we can write the code which is an **implementation** of our solution.
+Mengingat desain program kita relatif sudah komplit dan stabil, sekarang kita dapat menuliskan kode sebagai **implementasi** dari solusi kita. 
 
-Save as `backup_ver1.py`:
+Simpan sebagai `backup_ver1.py`:
 
 ~~~python
 import os
 import time
 
-# 1. The files and directories to be backed up are specified in a list.
+# 1. Berkas dan direktori akan disimpan dalam berkas pendukung (_back up_) secara khusus dalam list.
 source = ['"C:\\My Documents"', 'C:\\Code']
-# Notice we had to use double quotes inside the string for names with spaces in it.
+# Perhatikan bahwa kita harus menggunakan petik dua di dalam string yang memiliki spasi di dalamnya.
 
-# 2. The backup must be stored in a main backup directory
-target_dir = 'E:\\Backup' # Remember to change this to what you will be using
+# 2. Berkas pendukung harus disimpan dalam direktori pendukung utama.
+target_dir = 'E:\\Backup' # Ingat bahwa ini harus diganti dengan direktori yang benar-benar Anda gunakan
 
-# 3. The files are backed up into a zip file.
-# 4. The name of the zip archive is the current date and time
+# 3. Semua berkas disimpan dalam berkas pendukung dengan format zip.
+# 4. Penamaan dalam berkas arsip berformat zip  dibuat dalam tanggal dan waktu sekarang.
 target = target_dir + os.sep + time.strftime('%Y%m%d%H%M%S') + '.zip'
 
-# 5. We use the zip command to put the files in a zip archive
+# 5. Kita gunakan perintah zip untuk memasukkan berkas ke dalam arsip zip
 zip_command = "zip -qr {0} {1}".format(target, ' '.join(source))
 
-# Run the backup
+# Jalankan backup
 if os.system(zip_command) == 0:
-    print('Successful backup to', target)
+    print('Backup berhasil dilakukan ke', target)
 else:
-    print('Backup FAILED')
+    print('Backup GAGAL')
 ~~~
 
-Output:
+Keluaran:
 
 ~~~
 $ python backup_ver1.py
-Successful backup to E:\Backup\20080702185040.zip
+Backup berhasil dilakukan ke E:\Backup\20080702185040.zip
 ~~~
 
-Now, we are in the **testing** phase where we test that our program works properly. If it doesn't behave as expected, then we have to **debug** our program i.e. remove the *bugs* (errors) from the program.
+Sekarang, kita dalam fase **testing** untuk menguji apakah program yang kita buat dapat berjalan dengan baik. Jika tidak berjalan sesuai harapan, kita harus melakukan **debug** terhadap program kita, yakni dengan memperbaiki *bus* (kesalahan) dari program. 
 
 If the above program does not work for you, put a `print(zip_command)` just before the `os.system` call and run the program. Now copy/paste the printed zip_command to the shell prompt and see if it runs properly on its own. If this command fails, check the zip command manual on what could be wrong. If this command succeeds, then check the Python program if it exactly matches the program written above.
 
