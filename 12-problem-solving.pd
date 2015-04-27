@@ -56,29 +56,29 @@ Backup berhasil dilakukan ke E:\Backup\20080702185040.zip
 
 Sekarang, kita dalam fase **testing** untuk menguji apakah program yang kita buat dapat berjalan dengan baik. Jika tidak berjalan sesuai harapan, kita harus melakukan **debug** terhadap program kita, yakni dengan memperbaiki *bus* (kesalahan) dari program. 
 
-If the above program does not work for you, put a `print(zip_command)` just before the `os.system` call and run the program. Now copy/paste the printed zip_command to the shell prompt and see if it runs properly on its own. If this command fails, check the zip command manual on what could be wrong. If this command succeeds, then check the Python program if it exactly matches the program written above.
+Jika kode program di atas tidak berjalan, buat satu baris perintah `print(zip_command)` di atas baris `os.system', dan jalankan program kembali. Kemudian, salin/tempel hasil keluaran print zip_command yang ada di layar, dan lihat apakah tulisan yang tampil sudah menunjukkan bahwa program sudah berjalan dengan benar. Jika perintah tersebut gagal, cek kembali petunjuk perintah zip dan cari kemungkinan-kemungkinan kekeliruan. Jika perintah ini berhasil dijalankan, lihat kembali program Python Anda apakah keluarannya sesuai dengan apa yang tertulis di atas. 
 
-How It Works:
+Bagaimana Cara Kerjanya:
 
-You will notice how we have converted our *design* into *code* in a step-by-step manner.
+Anda akan memahami bahwa kita telah mengonversi *desain* menjadi *kode program* langkah demi langkah. 
 
-We make use of the `os` and `time` modules by first importing them. Then, we specify the files and directories to be backed up in the `source` list. The target directory is where we store all the backup files and this is specified in the `target_dir` variable. The name of the zip archive that we are going to create is the current date and time which we generate using the `time.strftime()` function. It will also have the `.zip` extension and will be stored in the `target_dir` directory.
+Kita menggunakan modul `os` dan `time` dengan cara mengimpornya terlebih dahulu. Kemudian, kita tentukan berkas dan direktori yang akan dibackup ke dalam direktori yang kita namakan lewat variabel `target_dir`. Nama file arsip zip yang akan kita buat, terdiri dari tanggal dan waktu saat perintah tersebut dijalankan dengan menggunakan fungsi `time.strftime()`. Pembuatan berkas tersebut juga akan menambahkan ekstensi `.zip` dan akan disimpan pada direktori `target_dir`. 
 
-Notice the use of the `os.sep` variable - this gives the directory separator according to your operating system i.e. it will be `'/'` in Linux and Unix, it will be `'\\'` in Windows and `':'` in Mac OS. Using `os.sep` instead of these characters directly will make our program portable and work across all of these systems.
+Perhatikan bahwa variabel `os.sep` - yang akan memberikan pemisah antar direktori yang sesuai dengan sistem operasi Anda, yakni `'/'` jika berada dalam lingkungan Linux dan Unix, atau `'\\'` di Windows dan `':'` di Mac OS. Penggunaan fungsi `os.sep` daripada menuliskan langsung karakter pemisahnya akan membuat program kita portabel dan berjalan di sistem yang heterogen. 
 
-The `time.strftime()` function takes a specification such as the one we have used in the above program. The `%Y` specification will be replaced by the year with the century. The `%m` specification will be replaced by the month as a decimal number between  `01` and `12` and so on. The complete list of such specifications can be found in the [Python Reference Manual](http://docs.python.org/py3k/library/time.html#time.strftime).
+Fungsi `time.strftime()` akan mengambil karakter tertentu yang sudah ditentukan untuk kita gunakan di program di atas. Karakter spesifik `%Y` akan diganti dengan tahun. Sedangkan `%m` akan diganti nama bulan dengan format desimal antara `01` hingga `12` dan seterusnya. Spesifikasi lengkap terhadap hal ini bisa dilihat di [Manual Referensi Python](http://docs.python.org/py3k/library/time.html#time.strftime).
 
-We create the name of the target zip file using the addition operator which *concatenates* the strings i.e. it joins the two strings together and returns a new one. Then, we create a string `zip_command` which contains the command that we are going to execute. You can check if this command works by running it in the shell (Linux terminal or DOS prompt).
+Kita membuat nama dari file arsip yang dituju dengan tambahan operator yang *menggabungkan/concatenates* string, yakni dengan menggabungkan dua string untuk menjadi satu string gabungan. Kemudian kita juga membuat string `zip_command` yang berisi seluruh perintah yang akan kita eksekusi. Anda dapat mengecek apakah perintah ini berjalan atau tidak dengan menjalankannya di shell (baik di terminal Linux atau prompt DOS).
 
-The `zip` command that we are using has some options and parameters passed. The `-q` option is used to indicate that the zip command should work **q**uietly.  The `-r` option specifies that the zip command should work **r**ecursively for directories i.e. it should include all the subdirectories and files. The two options are combined and specified in a shortcut as `-qr`. The options are followed by the name of the zip archive to create followed by the list of files and directories to backup. We convert the `source` list into a string using the `join` method of strings which we have already seen how to use.
+Perintah `zip` yang kita gunakan memiliki opsi dan parameter yang bisa dimasukkan. Opsi `-q` digunakan sebagai indikasi bahwa perintah zip haraus berjalan secara diam-diam (**q**uietly). Opsi `-r` menunjukkan bahwa perintah zip harus dijalankan secara **r**ekursif di dalam direktori, yakni dengan memasukkan seluruh sub direktori dan berkas di bawahnya. Kedua parameter tersebut dapat digabung menjadi satu parameter `-qr`. Opsi tersebut diikuti nama berkas arsip zip yang didalamnya akan diisi arsip seluruh berkas dan direktori yang akan dibackup. Kita mengonversi list `source` menjadi string lewat metode yang sudah pernah kita lihat penggunaannya sebelumnya, yakni `join` string. 
 
-Then, we finally *run* the command using the `os.system` function which runs the command as if it was run from the *system* i.e. in the shell - it returns `0` if the command was successfully, else it returns an error number.
+Lalu kita benar-benar *menjalankan* perintah tersebut lewat fungsi `os.system` di mana fungsi tersebut akan menjalankan perintah seolah-olah dijalankan oleh *sistem*, yakni akan memberikan kembalian `0` jika berhasil, dan jika gagal akan memberikan nomor pesan kesalahan yang sesuai dengan sistem operasinya. 
 
-Depending on the outcome of the command, we print the appropriate message that the backup has failed or succeeded.
+Tergantung dari keluaran perintah di atas, kita akan mencetak pesan pelaksanaan backup tersebut apakah gagal atau berhasil.
 
-That's it, we have created a script to take a backup of our important files!
+Itu saja, kita telah membuat skrip untuk membackup seluruh berkas-berkas penting kita!
 
-Note to Windows Users
+Catatan untuk pengguna Windows
 
 :   Instead of double backslash escape sequences, you can also use raw strings. For example, use `'C:\\Documents'` or `r'C:\Documents'`. However, do **not** use `'C:\Documents'` since you end up using an unknown escape sequence `\D`.
 
