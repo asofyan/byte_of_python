@@ -80,29 +80,29 @@ Itu saja, kita telah membuat skrip untuk membackup seluruh berkas-berkas penting
 
 Catatan untuk pengguna Windows
 
-:   Instead of double backslash escape sequences, you can also use raw strings. For example, use `'C:\\Documents'` or `r'C:\Documents'`. However, do **not** use `'C:\Documents'` since you end up using an unknown escape sequence `\D`.
+:   Selain menggunakan backslash (garis miring kiri) untuk lepas dari urutan (_sequences_), Anda bisa menggunakan string dasar. Sebagai contoh `'C:\\Documents'` atau `r'C:\Documents'`. Meskipun demikian **jangan** menggunakan `'C:\Documents'` karena nantinya akan dianggap sebagai string urutan lepas (_escape sequence_) `\D`. 
 
-Now that we have a working backup script, we can use it whenever we want to take a backup of the files. Linux/Unix users are advised to use the [executable method](#executable-python-programs) as discussed earlier so that they can run the backup script anytime anywhere. This is called the **operation** phase or the **deployment** phase of the software.
+Sekarang kita sudah memiliki skrip backup yang berjalan dengan baik, dan kita bisa menggunakannya setiap saat kita butuhkan untuk membuat backup berkas. Pengguna Linux/Unix sangat disarankan untuk menggunakan [metode yang bisa dieksekusi](#executable-python-programs) sebagaimana yang telah kita diskusikan sebelumnya, sehingga kita dapat menjalankan skrip backup kapan saja dan di mana saja. Hal ini sering disebut fase **operasi** atau fase **deployment** dari sebuah perangkat lunak.
 
-The above program works properly, but (usually) first programs do not work exactly as you expect. For example, there might be problems if you have not designed the program properly or if you have made a mistake when typing the code, etc. Appropriately, you will have to go back to the design phase or you will have to debug your program.
+Meskipun program di atas dapat berjalan sebagaimana mestinya, tapi (biasanya) program pertama kali dijalankan tidak sesuai dengan yang diinginkan. Sebagai conth, mungkin akan ada masalah jika Anda tidak mendesain program dengan layak, atau Anda melakukan kesalahan saat mengetikkan kode sintaks, dan sebagainya. Selayaknya, kita harus kembali ke fase desain atau nanti Anda harus debug program yang Anda buat. 
 
-## Second Version
+## Versi Kedua
 
-The first version of our script works. However, we can make some refinements to it so that it can work better on a daily basis. This is called the **maintenance** phase of the software.
+Versi pertama dari program yang kita buat telah berjalan sebagaimana mestinya. Meskipun demikian, kita bisa saja membuat beberapa perbaikan sehingga dapat berjalan lebih baik setiap harinya. Ini disebut sebagai fase **pemeliharaan** dari pengembangan perangkat lunak. 
 
-One of the refinements I felt was useful is a better file-naming mechanism - using the *time* as the name of the file within a directory with the current *date* as a directory within the main backup directory. The first advantage is that your backups are stored in a hierarchical manner and therefore it is much easier to manage. The second advantage is that the filenames are much shorter. The third advantage is that separate directories will help you check if you have made a backup for each day since the directory would be created only if you have made a backup for that day.
+Salah satu perbaikan yang saya pikir akan berguna lebih baik adalah mekanisme penamaan berkas - dengan menggunakan *waktu* sebagai bagian dari nama berkas di dalam direktori backup utama. Keuntungan pertama adalah, backup Anda akan disimpan dalam format yang hierarkis sehingga lebih mudah untuk diatur. Keuntungan kedua, nama berkas jauh lebh pendek. Keuntungan ketiga, direktori yang terpisah akan membantu Anda jika Anda mambuat backup tiap hari, dan direktori yang terbuat adalah direktori yang memang benar-benar dibuat di hari itu. 
 
-Save as `backup_ver2.py`:
+Simpan sebagai `backup_ver2.py`:
 
 ~~~python
 import os
 import time
 
-# 1. The files and directories to be backed up are specified in a list.
-source = ['"C:\\My Documents"', 'C:\\Code']
-# Notice we had to use double quotes inside the string for names with spaces in it.
+# 1. Berkas dan direktori yang dibackup disebut secara khusus dalam daftar(_list_).
+sumber = ['"C:\\My Documents"', 'C:\\Code']
+# Perhatikan bahwa kita menggunakan tanda petik dua di dalam string untuk nama yang memiliki spasi.
 
-# 2. The backup must be stored in a main backup directory
+# 2. Backup harus disimpan di dalam direktori backup utama
 target_dir = 'E:\\Backup' # Remember to change this to what you will be using
 
 # 3. The files are backed up into a zip file.
