@@ -103,56 +103,56 @@ sumber = ['"C:\\My Documents"', 'C:\\Code']
 # Perhatikan bahwa kita menggunakan tanda petik dua di dalam string untuk nama yang memiliki spasi.
 
 # 2. Backup harus disimpan di dalam direktori backup utama
-target_dir = 'E:\\Backup' # Remember to change this to what you will be using
+target_dir = 'E:\\Backup' # Mohon diingat untuk ganti ini dengan folder yang akan Anda gunakan
 
-# 3. The files are backed up into a zip file.
-# 4. The current day is the name of the subdirectory in the main directory
+# 3. Berkas akan dibackup ke dalam berkas zip.
+# 4. Nama sub direktori dengan nama hari ini di dalam direktori utama 
 today = target_dir + os.sep + time.strftime('%Y%m%d')
-# The current time is the name of the zip archive
+# Waktu hari ini adalah nama dari arsip zip 
 now = time.strftime('%H%M%S')
 
-# Create the subdirectory if it isn't already there
+# Buat sub direktori jika belum ada di sana 
 if not os.path.exists(today):
     os.mkdir(today) # make directory
-    print('Successfully created directory', today)
+    print('Berhasil membuat direktori', today)
 
-# The name of the zip file
+# Nama berkas zip 
 target = today + os.sep + now + '.zip'
 
-# 5. We use the zip command to put the files in a zip archive
+# 5. Sekarang kita gunakan perintah zip untuk memasukkan berkas ke dalam arsip zip
 zip_command = "zip -qr {0} {1}".format(target, ' '.join(source))
 
-# Run the backup
+# Jalankan backup 
 if os.system(zip_command) == 0:
-    print('Successful backup to', target)
+    print('Berhasil backup ke dalam ', target)
 else:
-    print('Backup FAILED')
+    print('Backup GAGAL')
 ~~~
 
-Output:
+Keluaran:
 
 ~~~
 $ python3 backup_ver2.py
-Successfully created directory E:\Backup\20080702
-Successful backup to E:\Backup\20080702\202311.zip
+Berhasil membuat direktori E:\Backup\20080702
+Berhasil backup ke dalam E:\Backup\20080702\202311.zip
 
 $ python3 backup_ver2.py
-Successful backup to E:\Backup\20080702\202325.zip
+Berhasil backup ke dalam E:\Backup\20080702\202325.zip
 ~~~
 
-How It Works:
+Bagaimana Cara Kerjanya:
 
-Most of the program remains the same. The changes are that we check if there is a directory with the current day as its name inside the main backup directory using the `os.path.exists` function. If it doesn't exist, we create it using the `os.mkdir` function.
+Hampir sebagian besar program sama dengan yang sebelumnya. Perbedaannya hanya ketika saat kita mengecek apakah sudah ada direktori yang namanya sama dengan nama hari ini di dalam direkotri backup utama dengan fungsi `os.path.exists`. Jika tidak ada, kita akan buat direktori dengan fungsi `os.mkdir`
 
-## Third Version
+## Versi Ketiga 
 
-The second version works fine when I do many backups, but when there are lots of backups, I am finding it hard to differentiate what the backups were for! For example, I might have made some major changes to a program or presentation, then I want to associate what those changes are with the name of the zip archive. This can be easily achieved by attaching a user-supplied comment to the name of the zip archive.
+Versi kedua berjalan baik saat saya melakukan backup, tapi saat ada banyak berkas yang perlu dibackup, saya kesulitan untuk membedakan berkas-berkas yang saya backup! Misalnya saya membuat perubahan besar dalam program atau presentasi, lalu saya ingin mengasosiasikan perubahan tersebut dalam nama berkas atau nama arsip zip. Ini dapat diperoleh dengan mudah dengan memberikan komentar ddi dalam nama berkas arsip zip-nya. 
 
-Note
+Catatan
 
-:   The following program does not work, so do not be alarmed, please follow along because there's a lesson in here.
+:   Program berikut ini tidak akan jalan, jadi tidak perlu khawatir. Mohon ikuti karena ada pelajaran di sini. 
 
-Save as `backup_ver3.py`:
+Simpan sebagai `backup_ver3.py`:
 
 ~~~python
 import os
