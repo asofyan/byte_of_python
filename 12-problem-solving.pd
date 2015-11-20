@@ -158,57 +158,58 @@ Simpan sebagai `backup_ver3.py`:
 import os
 import time
 
-# 1. The files and directories to be backed up are specified in a list.
-source = ['"C:\\My Documents"', 'C:\\Code']
-# Notice we had to use double quotes inside the string for names with spaces in it.
+# 1. Berkas-berkas dan direktori akan dibackup dalam list 
+sumber = ['"C:\\My Documents"', 'C:\\Code']
+# Perhatikan bahwa kita menggunakan petik dua di dalam string untuk nama yang memiliki spasi.
 
-# 2. The backup must be stored in a main backup directory
-target_dir = 'E:\\Backup' # Remember to change this to what you will be using
+# 2. Backup harus disimpan dalam direktori backup utama 
+target_dir = 'E:\\Backup' # Ingat untuk mengganti ini dengan direktori yang akan Anda gunakan
 
-# 3. The files are backed up into a zip file.
-# 4. The current day is the name of the subdirectory in the main directory
-today = target_dir + os.sep + time.strftime('%Y%m%d')
-# The current time is the name of the zip archive
-now = time.strftime('%H%M%S')
+# 3. Berkas akan dibackup dalam format zip
+# 4. Hari ini adalah nama sub direktori di bawah direktori utama
 
-# Take a comment from the user to create the name of the zip file
-comment = input('Enter a comment --> ')
-if len(comment) == 0: # check if a comment was entered
-    target = today + os.sep + now + '.zip'
+hari_ini = target_dir + os.sep + time.strftime('%Y%m%d')
+# Waktu sekarang digunakan sebagai nama dalam arsip zip
+sekarang = time.strftime('%H%M%S')
+
+# Simpan komentar dari pengguna untuk membuat nama yang digunakan dalam berkas zip
+komentar = input('Masukkan komentar --> ')
+if len(komentar) == 0: # cek apakah komentar sudah diisikan
+    target = hari_ini + os.sep + sekarang + '.zip'
 else:
-    target = today + os.sep + now + '_' +
-        comment.replace(' ', '_') + '.zip'
+    target = hari_ini + os.sep + sekarang + '_' +
+        komentar.replace(' ', '_') + '.zip'
 
-# Create the subdirectory if it isn't already there
-if not os.path.exists(today):
-    os.mkdir(today) # make directory
-    print('Successfully created directory', today)
+# Buat sub direktori dulu jika belum ada
+if not os.path.exists(hari_ini):
+    os.mkdir(hari_ini) # membuat direktori 
+    print('Berhasil membuat direktori ', hari_ini)
 
-# 5. We use the zip command to put the files in a zip archive
-zip_command = "zip -qr {0} {1}".format(target, ' '.join(source))
+# 5. Selanjutnya kita gunakan perintah zip untuk memasukkan berkas ke dalam arsip zip
+zip_command = "zip -qr {0} {1}".format(target, ' '.join(sumber))
 
-# Run the backup
+# Jalankan backup 
 if os.system(zip_command) == 0:
-    print('Successful backup to', target)
+    print('Berhasil membuat backup di ', target)
 else:
-    print('Backup FAILED')
+    print('Backup GAGAL')
 ~~~
 
-Output:
+Keluaran:
 
 ~~~
 $ python3 backup_ver3.py
   File "backup_ver3.py", line 25
-    target = today + os.sep + now + '_' +
+    target = hari_ini + os.sep + sekarang + '_' +
                                         ^
 SyntaxError: invalid syntax
 ~~~
 
-How This (does not) Work:
+Kenapa ini (tidak) Berjalan:
 
-**This program does not work!** Python says there is a syntax error which means that the script does not satisfy the structure that Python expects to see. When we observe the error given by Python, it also tells us the place where it detected the error as well. So we start *debugging* our program from that line.
+**Program ini tidak berjalan!** Python mengatakan ada kesalahan sintaks, yang berarti bahwa skirp tidak sesuai dengan struktur yang diharapkan oleh Python. Ketika kita melihat pesan kesalahan yang diberikan oleh Python, pesan tersebut juga mengatakan di mana sebetulnya letak kesalahannya. Jadi kita memulai proses *debugging* program kita dari baris tersebut.
 
-On careful observation, we see that the single logical line has been split into two physical lines but we have not specified that these two physical lines belong together. Basically, Python has found the addition operator (`+`) without any operand in that logical line and hence it doesn't know how to continue. Remember that we can specify that the logical line continues in the next physical line by the use of a backslash at the end of the physical line. So, we make this correction to our program. This correction of the program when we find errors is called **bug fixing**.
+Saat melihat lebih dalam, kita lihat ada satu baris yang secara fisik satu, namun dipisah menjadi dua baris, namun kita tidak menetukan bahwa dua baris yang berbeda ini merupakan satu kesatuan. Pada dasarnya, Python telah menemukan bahwa operator tambahan (`+`) tanpa operand dalam baris tersebut, sehingga tidak tahu bagaimana harus melanjutkan. Ingat bahwa kita bisa menentukan satu bagis logis di dalam dua baris fisik namun tetap menjadi satu kesatuan. Jadi kita akan perbaiki program kita. Perbaikan program saat kita menemukan pesan kesalahan semacam ini dinamakan **bug fixing**.
 
 ## Fourth Version
 
