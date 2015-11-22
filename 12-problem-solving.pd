@@ -211,79 +211,81 @@ Kenapa ini (tidak) Berjalan:
 
 Saat melihat lebih dalam, kita lihat ada satu baris yang secara fisik satu, namun dipisah menjadi dua baris, namun kita tidak menetukan bahwa dua baris yang berbeda ini merupakan satu kesatuan. Pada dasarnya, Python telah menemukan bahwa operator tambahan (`+`) tanpa operand dalam baris tersebut, sehingga tidak tahu bagaimana harus melanjutkan. Ingat bahwa kita bisa menentukan satu bagis logis di dalam dua baris fisik namun tetap menjadi satu kesatuan. Jadi kita akan perbaiki program kita. Perbaikan program saat kita menemukan pesan kesalahan semacam ini dinamakan **bug fixing**.
 
-## Fourth Version
+## Versi ke Empat 
 
-Save as `backup_ver4.py`:
+Simpan sebagai `backup_ver4.py`:
 
 ~~~python
 import os
 import time
 
-# 1. The files and directories to be backed up are specified in a list.
-source = ['"C:\\My Documents"', 'C:\\Code']
-# Notice we had to use double quotes inside the string for names with spaces in it.
+# 1. Berkas-berkas dan direktori akan dibackup dalam list 
+sumber = ['"C:\\My Documents"', 'C:\\Code']
+# Perhatikan bahwa kita menggunakan petik dua di dalam string untuk nama yang memiliki spasi.
 
-# 2. The backup must be stored in a main backup directory
-target_dir = 'E:\\Backup' # Remember to change this to what you will be using
+# 2. Backup harus disimpan dalam direktori backup utama 
+target_dir = 'E:\\Backup' # Ingat untuk mengganti ini dengan direktori yang akan Anda gunakan
 
-# 3. The files are backed up into a zip file.
-# 4. The current day is the name of the subdirectory in the main directory
-today = target_dir + os.sep + time.strftime('%Y%m%d')
-# The current time is the name of the zip archive
-now = time.strftime('%H%M%S')
+# 3. Berkas akan dibackup dalam format zip
+# 4. Hari ini adalah nama sub direktori di bawah direktori utama
 
-# Take a comment from the user to create the name of the zip file
-comment = input('Enter a comment --> ')
-if len(comment) == 0: # check if a comment was entered
-    target = today + os.sep + now + '.zip'
+hari_ini = target_dir + os.sep + time.strftime('%Y%m%d')
+# Waktu sekarang digunakan sebagai nama dalam arsip zip
+sekarang = time.strftime('%H%M%S')
+
+# Simpan komentar dari pengguna untuk membuat nama yang digunakan dalam berkas zip
+komentar = input('Masukkan komentar --> ')
+if len(komentar) == 0: # cek apakah komentar sudah diisikan
+    target = hari_ini + os.sep + sekarang + '.zip'
 else:
-    target = today + os.sep + now + '_' + \
-        comment.replace(' ', '_') + '.zip'
+    target = hari_ini + os.sep + sekarang + '_' + \
+        komentar.replace(' ', '_') + '.zip'
 
-# Create the subdirectory if it isn't already there
-if not os.path.exists(today):
-    os.mkdir(today) # make directory
-    print('Successfully created directory', today)
+# Buat sub direktori dulu jika belum ada
+if not os.path.exists(hari_ini):
+    os.mkdir(hari_ini) # membuat direktori 
+    print('Berhasil membuat direktori ', hari_ini)
 
-# 5. We use the zip command to put the files in a zip archive
-zip_command = "zip -qr {0} {1}".format(target, ' '.join(source))
+# 5. Selanjutnya kita gunakan perintah zip untuk memasukkan berkas ke dalam arsip zip
+zip_command = "zip -qr {0} {1}".format(target, ' '.join(sumber))
 
-# Run the backup
+# Jalankan backup 
 if os.system(zip_command) == 0:
-    print('Successful backup to', target)
+    print('Berhasil membuat backup di ', target)
 else:
-    print('Backup FAILED')
+    print('Backup GAGAL')
+
 ~~~
 
 Output:
 
 ~~~
 $ python3 backup_ver4.py
-Enter a comment --> added new examples
-Successful backup to E:\Backup\20080702\202836_added_new_examples.zip
+Masukkan komentar --> tambah contoh baru 
+Berhasil membuat backup di E:\Backup\20080702\202836_tambah_contoh_baru.zip
 
 $ python3 backup_ver4.py
-Enter a comment -->
-Successful backup to E:\Backup\20080702\202839.zip
+Masukkan komentar -->
+Berhasil membuat backup di E:\Backup\20080702\202839.zip
 ~~~
 
-How It Works:
+Bagaimana Cara Kerjanya:
 
-This program now works! Let us go through the actual enhancements that we had made in version 3. We take in the user's comments using the `input` function and then check if the user actually entered something by finding out the length of the input using the `len` function. If the user has just pressed `enter` without entering anything (maybe it was just a routine backup or no special changes were made), then we proceed as we have done before.
+Sekarang program ini berjalan sesuai dengan yang kita harapkan! Mari kita lihat bersama, di sebelah mana yang kita perbaiki dari versi 3. Kita meminta komentar/masukan dengan menggunakan fungsi `input`, kemudian kita cek kembali apakah pengguna memasukkan komentar sesuai dengan panjang yang kita tentukan lewat fungsi `len`. Jika pengguna menekan tombol `enter` tanpa memasukkan apapun (mungkin hanya backup rutin atau tidak ada perubahan berkasnya), kita langsung memproses sesuai langkah yang telah kita lakukan sebelumnya.
 
-However, if a comment was supplied, then this is attached to the name of the zip archive just before the `.zip` extension.  Notice that we are replacing spaces in the comment with underscores - this is because managing filenames without spaces is much easier.
+Meskipun demikian, jika ada komentar yang dituliskan, komentar ini akan dimasukkan ke dalam nama berkas, sebelum ekstensi `.zip`. Perhatikan bahwa kita mengganti spasi yang ada dalam komentar dengan garis bawah _. Alasannya adalah karena lebih mudah mengatur berkas-berkas dengan nama tanpa spasi. 
 
-## More Refinements
+## Perbaikan Lebih Lanjut 
 
-The fourth version is a satisfactorily working script for most users, but there is always room for improvement. For example, you can include a *verbosity* level for the program where you can specify a `-v` option to make your program become more talkative.
+Versi ke empat merupakan skrip yang berjalan secara memuaskan bagi banyak pengguna, namun selalu ada ruang untuk perbaikan. Sebagai contoh, Anda dapat menambahkan level *verbosity* (lebih banyak kata/informasi yang ditampilkan oleh skrip) dengan menambahkan opsi `-v` agar program Anda lebih berbicara.
 
-Another possible enhancement would be to allow extra files and directories to be passed to the script at the command line. We can get these names from the `sys.argv` list and we can add them to our `source` list using the `extend`method provided by the `list` class.
+Kemungkinan perbaikan lainnya misalkan dengan memperbolehkan berkas-berkas tambahan dan direktori untuk diumpankan pada baris perintah. Kita dapat memperoleh informasi pilihan kata yang diumpankan ini lewat fungsi `sys.argv` yang berupa list, sehingga kita dapat menambahkan metode `extend` yang telah diberikan oleh class `list`. 
 
-The most important refinement would be to not use the `os.system` way of creating archives and instead using the `zipfile` or `tarfile` built-in module to create these archives. They are part of the standard library and available already for you to use without external dependencies on the zip program to be available on your computer.
+Perbaikan terbaik yang bisa Anda lakukan adalah dengan tidak menggunakan cara `os.system` untuk membuat berkas arsip, namun menggunakan modul yang secara baku sudah ada, yakni `zipfile` atau `tarfile`. Keduanya merupakan bagian dari pustaka standar dan langsung tersedia tanpa memerlukan dependensi program zip eksternal yang mengharuskan program zip tersedia terlebih dahulu di komputer Anda. 
 
-However, I have been using the `os.system` way of creating a backup in the above examples purely for pedagogical purposes, so that the example is simple enough to be understood by everybody but real enough to be useful.
+Namun, saya menggunakan cara `os.system` dalam membuat backup di program di atas untuk kepentingan pembelajaran, sehingga contoh yang diberikan cukup sederhana untuk dipahami oleh setiap orang, namun juga nyata karena dapat dijalankan untuk diambil manfaatnya.
 
-Can you try writing the fifth version that uses the [zipfile](http://docs.python.org/py3k/library/zipfile.html) module instead of the `os.system` call?
+Dapatkah Anda coba membuat versi ke lima yang menggunakan modul [zipfile](http://docs.python.org/py3k/library/zipfile.html) daripada fungsi sistem `os.system`?
 
 ## The Software Development Process
 
