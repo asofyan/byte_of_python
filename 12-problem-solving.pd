@@ -257,7 +257,7 @@ else:
 
 ~~~
 
-Output:
+Keluaran:
 
 ~~~
 $ python3 backup_ver4.py
@@ -287,21 +287,21 @@ Namun, saya menggunakan cara `os.system` dalam membuat backup di program di atas
 
 Dapatkah Anda coba membuat versi ke lima yang menggunakan modul [zipfile](http://docs.python.org/py3k/library/zipfile.html) daripada fungsi sistem `os.system`?
 
-## The Software Development Process
+## Proses Pengembangan Perangkat Lunak 
 
-We have now gone through the various **phases** in the process of writing a software. These phases can be summarised as follows:
+Kita telah melakukan beberapa **fase** dalam proses pengembangan perangkat lunak. Fase ini dapat diringkas sebagai berikut:
 
-#. What (Analysis)
-#. How (Design)
-#. Do It (Implementation)
-#. Test (Testing and Debugging)
-#. Use (Operation or Deployment)
-#. Maintain (Refinement)
+#. Apa (Analisa)
+#. Bagaimana (Desain)
+#. Mengerjakan (Implementasi)
+#. Uji coba (Uji coba dan debugging)
+#. Menggunakan (Operasi atau Pemasangan)
+#. Perawatan (Perbaikan terus menerus)
 
-A recommended way of writing programs is the procedure we have followed in creating the backup script: Do the analysis and design. Start implementing with a simple version. Test and debug it. Use it to ensure that it works as expected. Now, add any features that you want and continue to repeat the Do It-Test-Use cycle as many times as required. Remember, **Software is grown, not built**.
+Salah satu prosedur menulis perangkat lunak yang direkomendasikan sudah kita ikuti satu demi satu dalam membuat skrip backup sebelumnya: Dimulai dengan analisa dan desain. Lalu Mulai dengan implementasi untuk program yang sederhana. Kemudian kita lakukan ujicoba dan debug. Kita gunakan programnya agar berjalan sesuai dengan yang diharapkan. Sekarang, kita menambahkan fitur-fitur yang diinginkan, kemudian melakukan kembali proses dari siklus Kerjakan-Ujicoba-Gunakan sebanyak yang dibutuhkan. Ingat bahwa **Perangkat lunak tidak tumbuh, namun dibangun**.
 
-## Summary
+## Ringkasan 
 
-We have seen how to create our own Python programs/scripts and the various stages involved in writing such programs. You may find it useful to create your own program just like we did in this chapter so that you become comfortable with Python as well as problem-solving.
+Kita telah melihat bagaimana membuat program/skrip Python kita sendiri, dan berbagai tahapan yang dibutuhkan dalam menulis sebuah perangkat lunak. Anda mungkin dapat memanfaatkannya untuk menulis program Anda sendiri sebagaimana yang sudah Anda kerjakan di bab ini hingga Anda nyaman dengan Python sebagaimana Anda nyaman dengan pemecahan-masalah.
 
-Next, we will discuss object-oriented programming.
+Selanjutnya, kita akan diskusikan pemrograman berbasis-obyek. 

@@ -1,21 +1,22 @@
-# Object Oriented Programming
+# Pemrograman Berbasis Obyek 
 
-In all the programs we wrote till now, we have designed our program around functions i.e. blocks of statements which manipulate data. This is called the *procedure-oriented* way of programming. There is another way of organizing your program which is to combine data and functionality and wrap it inside something called an object. This is called the *object oriented* programming paradigm. Most of the time you can use procedural programming, but when writing large programs or have a problem that is better suited to this method, you can use object oriented programming techniques.
+Seluruh program yang kita tulis sejauh ini, dibuat atas dasar fungsi, yakni satu kelompok blok dari stetemen yang bertugas untuk memproses data. Pendekatan ini dinamakan *procedure-oriented* atau *pemrograman berbasis prosedur*. Ada cara lain dalam mengatur perangkat lunak Anda yakni dengan menggabungkan data dan fungsi dan menyatukannya ke dalam sesuatu yang disebut sebagai obyek. Paradigma ini dinamakan pemrograman *berbasis obyek*. Dalam banyak hal, Anda bisa menggunakan pemrograman presedural, namun saat menulis program dalam skala program, atau punya masalah yang lebih cocok dengan pendekatan ini, Anda dapat menggunakan teknik pemrograman berbasis obyek. 
 
-Classes and objects are the two main aspects of object oriented programming. A  **class** creates a new *type* where **objects** are *instances* of the class. An analogy is that you can have variables of type `int` which translates to saying that variables that store integers are variables which are instances (objects) of the `int` class.
+Kelas dan obyek adalah dua aspek utama dalam pemerograman berbasis obyek. Sebuah **kelas (class)** membuat *tipe (type)* baru dimana **obyek (object)** merupakan *perwujudan (instance)* dari sebuah kelas. Bisa dianalogikan Anda punya variabel dengan tipe `int`, dapat diterjemahkan bahwa variabel yang menyimpan integer tersebut merupakan variabel perwujudan dari kelas `int`.
 
-Note for Static Language Programmers
+Catatan untuk Programmer Bahasa Statik
 
-:   Note that even integers are treated as objects (of the `int` class). This is unlike C++ and Java (before version 1.5) where integers are primitive native types. See `help(int)` for more details on the class.
-C# and Java 1.5 programmers will find this similar to the *boxing and unboxing* concept.
+:   Perlu dicatat bahwa integer juga diperlakukan sebagai obyek (dari kelas `int`). Hal ini berbeda di C++ dan Java (sebelum versi 1.5) di mana integer merupakan tipe bawaan awal (primitive native types). Lihat `help(int)` untuk informasi detil dari kelas ini.
 
-Objects can store data using ordinary variables that *belong* to the object. Variables that belong to an object or class are referred to as **fields**. Objects can also have functionality by using functions that *belong* to a class. Such functions are called **methods** of the class. This terminology is important because it helps us to differentiate between functions and variables which are independent and those which belong to a class or object. Collectively, the fields and methods can be referred to as the **attributes** of that class.
+Programmer C# dan Java 1.5 akan mengenali hal ini mirip dengan konsep *boxing dan unboxing*.
 
-Fields are of two types - they can belong to each instance/object of the class or they can belong to the class itself. They are called **instance variables** and **class variables** respectively.
+Obyek dapat menyimpan data dengan menggunakan variabel umum yang *dimiliki* oleh obyek tersebut. Variabel yang ikut dalam sebuah obyek atau kelas sering disebut sebagai **fields**. Obyek juga dapat digunakan dengan memanfaatkan fungsi yang *dimiliki* oleh sebuah kelas. Fungsi ini disebut sebagai **metode/methods** dari sebuah kelas. Terminologi ini penting sebab hal ini membantu kita untuk membedakan antara fungsi dan variabel yang independen dengan fungsi dan variabel yang merupakan milik dari kelas atau obyek. Secara bersama-sama, fields dan methods dapat disebut sebagai **atribut** dari sebuah kelas.
 
-A class is created using the `class` keyword. The fields and methods of the class are listed in an indented block.
+Fields ada dua jenis - mereka ikut dalam sebuah wujud/obyek dari sebuah kelas, atau mereka merupakan bagian dari kelas itu sendiri. Ini sering disebut sebagi **variabel terwujud/instance variables** dan **variabel kelas/class variables**.
 
-## The self
+Sebuah kelas dibuat dengan kata kunci `class`. Fields dan methods dari sebuah kelas, akan dimasukkan dalam blo yang menjorok (_indented block_).
+
+## Diri/Self 
 
 Class methods have only one specific difference from ordinary functions - they must have an extra first name that has to be added to the beginning of the parameter list, but you **do not** give a value for this parameter when you call the method, Python will provide it. This particular variable refers to the object *itself*, and by convention, it is given the name `self`.
 
