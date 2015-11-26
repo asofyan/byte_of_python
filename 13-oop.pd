@@ -51,45 +51,45 @@ $ python3 kelassederhana.py
 
 Bagaimana Cara Kerjanya:
 
-We create a new class using the `class` statement and the name of the class. This is followed by an indented block of statements which form the body of the class. In this case, we have an empty block which is indicated using the `pass` statement.
+Kita membuat kelas beru dengan statemen `class` yang diikuti nama kelasnya. Kemudian di bawahnya ditambahkan statemen dalam blok yang menjorok ke dalam, sebagai isi baris perintah dari kelas tersebut. Kita menambahkan blok kosong dengan statemen `pass`. 
 
-Next, we create an object/instance of this class using the name of the class followed by a pair of parentheses. (We will learn [more about instantiation](#the-init-method) in the next section). For our verification, we confirm the type of the variable by simply printing it. It tells us that we have an instance of the `Person` class in the `__main__` module.
+Kemudian, kita membuat obyek/wujud dari kelas ini dengan nama kelas yang diikuti oleh kurung kurawal. (Kita akan belajar [lebih banyak tentang perwujudan/_instantiation_](#metode-init)  di bagian berikutnya). Sebagai verifikasi, kita konfirmasi jenis variabel tersebut sebagai sebuah obyek dengan menampilkannya di layar. Informasi tersebut menunjukkan bahwa kita mempunya sebuah wujud kelas `Person` di dalam modul `__main__`.
 
-Notice that the address of the computer memory where your object is stored is also printed. The address will have a different value on your computer since Python can store the object wherever it finds space.
+Perhatikan bahwa alamat di mana obyek Anda berada di dalam memori komputer juga dicetak. Alamat ini akan memiliki nilai yang berbeda antara apa yang muncul di layar komputer Anda dengan yang tampilan di atas, mengingat Python akan menyimpan obyek di mana saja dia temukan ruangan kosong. 
 
-## Object Methods 
+## Metode Obyek 
 
-We have already discussed that classes/objects can have methods just like functions except that we have an extra `self` variable. We will now see an example (save as `method.py`).
+Kita telah diskusikan bahwa kelas/obyek dapat memiliki metode yang tugasnya mirip dengan fungsi (pada pemrograman prosedural), kecuali ada tambahan variabel bernama `self`. Kita akan lihat dalam contoh berikut (simpan dengan nama `metode.py`).
 
 ~~~python
 class Person:
-    def sayHi(self):
-        print('Hello, how are you?')
+    def sapaHalo(self):
+        print('Halo, apa kabar?')
 
 p = Person()
-p.sayHi()
+p.sapaHalo()
 
-# This short example can also be written as Person().sayHi()
+# Contoh di atas dapat diperpendek dengan menuliskan Person().sapaHalo()
 ~~~
 
-Output:
+Keluaran:
 
 ~~~
-$ python3 method.py
-Hello, how are you?
+$ python3 metode.py
+Halo, apa kabar?
 ~~~
 
-How It Works:
+Bagaimana Cara Kerjanya:
 
-Here we see the `self` in action. Notice that the `sayHi` method takes no parameters but still has the `self` in the function definition.
+Di sini kita lihat bagaimana `self` bekerja. Perhatikan bahwa metode `sapaHalo` tidak membutuhkan satu parameterpun, namun dalam definisi di dalam kelasnya, masih tetap membutuhkan parameter `self`.
 
-## The __init__ method 
+## Metode __init__ 
 
-There are many method names which have special significance in Python classes. We will see the significance of the `__init__` method now.
+Ada banyak nama metode yang memiliki kegunaan khusus dalam kelas di Python. Kita akan lihat pentingnya metode `__init__` sebagai berikut.
 
-The `__init__` method is run as soon as an object of a class is instantiated. The method is useful to do any *initialization* you want to do with your object. Notice the double underscores both at the beginning and at the end of the name.
+Metode `__init__` otomatis berjalan jika sebuah obyek diwujudkan dari kelas. Metode ini berguna untuk *inisialisasi* hal-hal yang perlu Anda persiapkan saat obyek Anda mewujud. Perhatikan bahwa di depan init ada dua garis bawah di belakang dan di depan.
 
-Example (save as `class_init.py`):
+Contoh (simpan sebagai `class_init.py`):
 
 ~~~python
 class Person:
