@@ -18,38 +18,38 @@ Sebuah kelas dibuat dengan kata kunci `class`. Fields dan methods dari sebuah ke
 
 ## Diri/Self 
 
-Class methods have only one specific difference from ordinary functions - they must have an extra first name that has to be added to the beginning of the parameter list, but you **do not** give a value for this parameter when you call the method, Python will provide it. This particular variable refers to the object *itself*, and by convention, it is given the name `self`.
+Metode kelas punya perbedaan khusus terhadap fungsi yang biasa Anda kenal - mereka harus punya nama depan tambahan yang harus ditambahkan di seluruh awal daftar parameter, namun Anda **tidak perlu** memberi nilai terhadap parameter ini saat Anda memanggil metode-nya, Python akan secara otomatis memberikannya. Variabel yang khusus ini akan merujuk pada obyek itu *sendiri*, dan secara umum telah disepakati, dengan nama `diri` atau `self`.
 
-Although, you can give any name for this parameter, it is *strongly recommended* that you use the name `self` - any other name is definitely frowned upon. There are many advantages to using a standard name - any reader of your program will immediately recognize it and even specialized IDEs (Integrated Development Environments) can help you if you use `self`.
+Meskipun, Anda dapat memberikan nama apa saja terhadap parameter ini, namun *sangat disarankan* Anda menggunakan nama `self` - dan nama selain itu pastinya akan memancing pertanyaan. Ada keuntungan menggunakan nama yang baku - setiap pembaca program Anda akan segera mengenalinua, dan bahkan IDE (Integrated Development Environments - Alat Bantu Pengembangan yang Terintegrasi) dapat membantu jika Anda menggunakan `self`.
 
-Note for C++/Java/C# Programmers
+Catatan untuk C++/Java/C# Programmers
 
-:   The `self` in Python is equivalent to the `this` pointer in C++ and the `this` reference in Java and C#.
+:    `self` di Python sebanding dengan pointer `this` di C++ dan `this` di Java dan C#
 
-You must be wondering how Python gives the value for `self` and why you don't need to give a value for it. An example will make this clear. Say you have a class called `MyClass` and an instance of this class called `myobject`. When you call a method of this object as ` myobject.method(arg1, arg2)`, this is automatically converted by Python into `MyClass.method(myobject, arg1, arg2)` - this is all the special `self` is about.
+Anda mungkin heran, kenapa Python memberikan nilai langsung untuk `self` dan kenapa Anda tidak perlu memberikan nilai terhadapnya. Berikut sebuah contoh yang dapat mempermudah Anda memahaminya. Misalnya Anda punya kelas dengan nama `KelasKu` dan perwujudan (instance) dari kelas ini dinamakan `obyekku`. Ketika Anda memanggil metode dari obyek ini dengan nama `obyekku.metode(argumen1, argumen2)`, secara otomatis akan dikonversikan oleh Python menjadi `KelasKu.metode(obyekku, argumen1, argumen2(` - inilah yang khusus terhadap `self`. 
 
-This also means that if you have a method which takes no arguments, then you still have to have one argument - the `self`.
+Ini juga berarti jika Anda punya metode yang tidak memiliki argumen, Anda tetap harus memberikan satu arguman - `self`. 
 
-## Classes 
+## Kelas 
 
-The simplest class possible is shown in the following example (save as `simplestclass.py`).
+Kelas yang sederhana dapat dilihat dalam contoh di bawah ini (simpan sebagai `kelassederhana.py`).
 
 ~~~python
 class Person:
-    pass # An empty block
+    pass # blok kosong 
 
 p = Person()
 print(p)
 ~~~
 
-Output:
+Keluaran:
 
 ~~~
-$ python3 simplestclass.py
+$ python3 kelassederhana.py
 <__main__.Person object at 0x019F85F0>
 ~~~
 
-How It Works:
+Bagaimana Cara Kerjanya:
 
 We create a new class using the `class` statement and the name of the class. This is followed by an indented block of statements which form the body of the class. In this case, we have an empty block which is indicated using the `pass` statement.
 
