@@ -51,7 +51,7 @@ $ python3 kelassederhana.py
 
 Bagaimana Cara Kerjanya:
 
-Kita membuat kelas beru dengan statemen `class` yang diikuti nama kelasnya. Kemudian di bawahnya ditambahkan statemen dalam blok yang menjorok ke dalam, sebagai isi baris perintah dari kelas tersebut. Kita menambahkan blok kosong dengan statemen `pass`. 
+Kita membuat kelas baru dengan statemen `class` yang diikuti nama kelasnya. Kemudian di bawahnya ditambahkan statemen dalam blok yang menjorok ke dalam, sebagai isi baris perintah dari kelas tersebut. Kita menambahkan blok kosong dengan statemen `pass`. 
 
 Kemudian, kita membuat obyek/wujud dari kelas ini dengan nama kelas yang diikuti oleh kurung kurawal. (Kita akan belajar [lebih banyak tentang perwujudan/_instantiation_](#metode-init)  di bagian berikutnya). Sebagai verifikasi, kita konfirmasi jenis variabel tersebut sebagai sebuah obyek dengan menampilkannya di layar. Informasi tersebut menunjukkan bahwa kita mempunya sebuah wujud kelas `Person` di dalam modul `__main__`.
 
@@ -93,31 +93,31 @@ Contoh (simpan sebagai `class_init.py`):
 
 ~~~python
 class Person:
-    def __init__(self, name):
-        self.name = name
-    def sayHi(self):
-        print('Hello, my name is', self.name)
+    def __init__(self, nama):
+        self.nama = nama
+    def sapaHalo(self):
+        print('Halo, nama saya', self.nama)
 
 p = Person('Swaroop')
-p.sayHi()
+p.sapaHalo()
 
-# This short example can also be written as Person('Swaroop').sayHi()
+# Contoh sederhana ini juga bisa ditulis seperti ini: Person('Swaroop').sapaHalo()
 ~~~
 
-Output:
+Keluaran:
 
 ~~~
 $ python3 class_init.py
-Hello, my name is Swaroop
+Halo, nama saya Swaroop
 ~~~
 
-How It Works:
+Bagaimana Cara Kerjanya:
 
-Here, we define the `__init__` method as taking a parameter `name` (along with the usual `self`).  Here, we just create a new field also called `name`. Notice these are two different variables even though they are both called 'name'. There is no problem because the dotted notation `self.name` means that there is something called "name" that is part of the object called "self" and the other `name` is a local variable. Since we explicitly indicate which name we are referring to, there is no confusion.
+Di sini kita definisikan metode `__init__` dengan mengambil `nama` sebagai parameter ( dan sebagaimana biasa, bersamaan dengan `self`). Di sini kita baru saja membuat field baru dengan nama `nama`. Perhatikan bahwa keduanya merupakan variabel yang berbeda meskipun keduanya sama-sama dipanggil dengan variabel `nama`. Hal ini bukan menjadi masalah mengingat notasi titik `self.nama` berarti merujuk pada sesuatu yang dipanggil "nama" dan merupakan bagian dari obyek yang dipanggil dengan "self" dan variable `nama` lainnya merupakan variabel lokal. Mengingat kita secara eksplisit mereferensikan nama yang mana, sehingga hal ini tidak membingungkan lagi.
 
-Most importantly, notice that we do not explicitly call the `__init__` method but pass the arguments in the parentheses following the class name when creating a new instance of the class. This is the special significance of this method.
+YAng paling penting adalah, perhatikan bahwa kita tidak secara eksplisit memanggil metode `__init__ namun kita melemparkan arguman dalam kuruung, yang diikuti nama kelas, jika ingin membuat kelas ini mewujud dalam obyek. Metode ini sangat spesifik di Python.
 
-Now, we are able to use the `self.name` field in our methods which is demonstrated in the `sayHi` method.
+Sekarang, kita dapat menggunakan `self.nama` untuk diberikan dalam metode/fungsi, yang dalam contoh di atas bernama `sapaHalo`.
 
 ## Class And Object Variables
 
