@@ -119,19 +119,19 @@ YAng paling penting adalah, perhatikan bahwa kita tidak secara eksplisit memangg
 
 Sekarang, kita dapat menggunakan `self.nama` untuk diberikan dalam metode/fungsi, yang dalam contoh di atas bernama `sapaHalo`.
 
-## Class And Object Variables
+## Kelas dan Variabel Obyek
 
-We have already discussed the functionality part of classes and objects (i.e. methods), now let us learn about the data part. The data part, i.e. fields, are nothing but ordinary variables that are *bound* to the **namespaces** of the classes and objects. This means that these names are valid within the context of these classes and objects only. That's why they are called *name spaces*.
+Kita telah diskusikan sebelumnya beberapa fungsi bagian dari kelas dan obyek (yakni metode), sekarang kita belajar bagian yang lain, yakni data. Data di dalam obyek, atau disebut field, sebenarnya merupakan variabel biasa nameun *terikat* **lingkup nama** atau **name spaces** dari sebuah kelas atau obyek. Ini rtinya bahwa nama hanya valid di dalam konteks obyek atau kelas yang bersangkutan saja. Karena itulah mereka sering disebut sebagai *lingkup nama* atau *name spaces*.
 
-There are two types of *fields* - class variables and object variables which are classified depending on whether the class or the object *owns* the variables respectively.
+Ada dua jenis *fields* - variabel kelas atau variabel obyek yang dikelompokkan atas dasar apakah kelas atau obyek tersebut *memiliki* variabel tersebut. 
 
-*Class variables* are shared - they can be accessed by all instances of that class. There is only one copy of the class variable and when any one object makes a change to a class variable, that change will be seen by all the other instances.
+*Variabel kelas* merupakan entitas yang dimanfaatkan bersama-sama - dia dapat diakses oleh seluruh perwujudan (_instance_) kelas yang bersangkutan. Jadi jika Anda mendefinisikan satu variabel - dia merujuk pada satu variabel yang bersangkutan, dan jika ada perubahan dilakukan oleh salah satu obyek, maka perubahan tersebut akan dilihat oleh seluruh wujud obyek (instances).
 
-*Object variables* are owned by each individual object/instance of the class. In this case, each object has its own copy of the field i.e. they are not shared and are not related in any way to the field by the same name in a different instance. An example will make this easy to understand (save as `objvar.py`):
+*Variabel Obyek* dimiliki oleh secara tersendiri oleh obyek dari kelas yang bersangkutan. Dalam hal ini, setiap obyek hanya memiliki satu salinan field yang bersangkutan. Dengan kata lain field tersebut tidak akan dibagikan dan tidak berhubungan dengan field lain di obyek berbeda meskipun namanya sama. Untuk mempermudah pemahaman, berikut contohnya (simpan sebagai `varobyek.py`):
 	
 ~~~python
 class Robot:
-    '''Represents a robot, with a name.'''
+    '''Mewakili sebuah robot dengan nama.'''
 
     # A class variable, counting the number of robots
     population = 0
