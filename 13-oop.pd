@@ -133,114 +133,114 @@ Ada dua jenis *fields* - variabel kelas atau variabel obyek yang dikelompokkan a
 class Robot:
     '''Mewakili sebuah robot dengan nama.'''
 
-    # A class variable, counting the number of robots
-    population = 0
+    # Sebuah variabl, untuk menampung hitungan jumlah robot
+    populasi = 0
  
-    def __init__(self, name):
-        '''Initializes the data.'''
-        self.name = name
-        print('(Initializing {0})'.format(self.name))
+    def __init__(self, nama):
+        '''Inisialisasi data.'''
+        self.nama = nama
+        print('(Inisialisasi {0})'.format(self.nama))
  
-        # When this person is created, the robot
-        # adds to the population
-        Robot.population += 1
+        # Saat robot ini dibuat, jumlah robot ditambahkan
+        # ke dalam populasi
+        Robot.populasi += 1
  
     def __del__(self):
-        '''I am dying.'''
-        print('{0} is being destroyed!'.format(self.name))
+        '''Saya mati.'''
+        print('{0} sedang dimusnahkan!'.format(self.nama))
  
-        Robot.population -= 1
+        Robot.populasi -= 1
  
-        if Robot.population == 0:
-            print('{0} was the last one.'.format(self.name))
+        if Robot.populasi == 0:
+            print('{0} adalah robot terakhir.'.format(self.nama))
         else:
-            print('There are still {0:d} robots working.'.format(Robot.population))
+            print('Masih ada {0:d} robot yang sedang bekerja.'.format(Robot.populasi))
  
-    def sayHi(self):
-        '''Greeting by the robot.
+    def sapaHalo(self):
+        '''Ucapan salam dari salah seorang robot.
  
-        Yeah, they can do that.'''
-        print('Greetings, my masters call me {0}.'.format(self.name))
+        Yah, tentu saja mereka dapat melakukannya.'''
+        print('Salam, tuan saya memberi nama saya {0}.'.format(self.nama))
 
-    def howMany():
-        '''Prints the current population.'''
-        print('We have {0:d} robots.'.format(Robot.population))
-    howMany = staticmethod(howMany)
+    def adaBerapa():
+        '''Menampilkan jumlah populasi saat ini.'''
+        print('Kita memiliki {0:d} robot.'.format(Robot.populasi))
+    adaBerapa = staticmethod(adaBerapa)
  
 droid1 = Robot('R2-D2')
-droid1.sayHi()
-Robot.howMany()
+droid1.sapaHalo()
+Robot.adaBerapa()
  
 droid2 = Robot('C-3PO')
-droid2.sayHi()
-Robot.howMany()
+droid2.sapaHalo()
+Robot.adaBerapa()
  
-print("\nRobots can do some work here.\n")
+print("\nPara robot dapat menjalankan beberapa tugas di sini.\n")
 
-print("Robots have finished their work. So let's destroy them.")
+print("Pada robot sudah selesai menjaalankan tugas. Mari kita musnahkan mereka.")
 del droid1
 del droid2
 
-Robot.howMany()
+Robot.adaBerapa()
 ~~~
 
-Output:
+Keluaran:
 
 ~~~
-$ python3 objvar.py
-(Initializing R2-D2)
-Greetings, my masters call me R2-D2.
-We have 1 robots.
-(Initializing C-3PO)
-Greetings, my masters call me C-3PO.
-We have 2 robots.
+$ python3 varobyek.py
+(Inisialisasi R2-D2)
+Salam, tuan saya memberi nama saya R2-D2.
+Kita memiliki 1 robot.
+(Inisialisasi C-3PO)
+Salam, tuan saya memberi nama saya C-3PO.
+Kita memiliki 2 robot.
 
-Robots can do some work here.
+Para robot dapat menjalankan beberapa tugas di sini.
 
-Robots have finished their work. So let's destroy them.
-R2-D2 is being destroyed!
-There are still 1 robots working.
-C-3PO is being destroyed!
-C-3PO was the last one.
-We have 0 robots.
+Para robot sudah selesai menjalankan tugas. Mari kita musnahkan mereka.
+R2-D2 sedang dimusnahkan! 
+Masih ada 1 robot yang sedang bekerja.
+C-3PO sedang dimusnahkan!
+C-3PO adalah robot terakhir.
+Kita memiliki 0 robot.
 ~~~
 
-How It Works:
+Bagaimana Cara Kerjanya:
 
-This is a long example but helps demonstrate the nature of class and object variables. Here, `population` belongs to the`Robot` class and hence is a class variable. The `name` variable belongs to the object (it is assigned using `self`) and hence is an object variable.
+Skrip di atas merupakan contoh yang panjang, namun membantu mendemonstrasikan bagaimana sebuah variabel obyek dan kelas bekerja. Di sini, `populasi` merupakan milik kelas `Robot` sehingga ini bisa kita sebut sebagai variabel kelas. Lalu variabel `nama` merupakan milik obyek (sehingga dalam penggunaannya memakai awalan `self`), dan ini disebut sebagai variabel obyek. 
 
-Thus, we refer to the `population` class variable as `Robot.population` and not as `self.population`. We refer to the object variable `name` using `self.name` notation in the methods of that object. Remember this simple difference between class and object variables. Also note that an object variable with the same name as a class variable will hide the class variable! 
+Sehingga, kita bisa menyebut variabel kelas `populasi` dengan sebutan `Robot.populasi`, dan bukan `self.populasi`. Kita merujuk pada variabel obyek `nama` dengan penulisan `self.nama` sebagai metode di dalam obyek. Mohon selalu diingat perbedaan sederhana antara variabel kelas dan variabel obyek. Dan catat pula bahwa nama variabel obyek yang memiliki nama yang sama dengan variabel kelas, akan menyembunyikan variabel kelas!
 
-The `howMany` is actually a method that belongs to the class and not to the object. This means we can define it as either a `classmethod` or a `staticmethod` depending on whether we need to know which class we are part of. Since we don't need such information, we will go for `staticmethod`	.
+`adaBerapa` sebetulnya merupakan metode yang mengikuti kelas dan bukan obyek. Ini berarti bahwa kita bisa mendefinisikannya sebagai `classmethod` atau sebagai `staticmethod` tergantung apakah kita ingin mengetahui di kelas apa kita saat ini. Mengingat kita tidak perlu mengetahui informasi tersebut, kita akan menggunakan `staticmethod`. 
 
-We could have also achieved the same using [decorators](http://www.ibm.com/developerworks/linux/library/l-cpdecor.html):
+Kita dapat memperoleh hal yang sama dengan menggunakan [dekorator](http://www.ibm.com/developerworks/linux/library/l-cpdecor.html):
 
 ~~~python
 @staticmethod
-def howMany():
-    '''Prints the current population.'''
-    print('We have {0:d} robots.'.format(Robot.population))
+def adaBerapa():
+    '''Menampilkan jumlah populasi saat ini.'''
+    print('Kita memiliki {0:d} robot.'.format(Robot.populasi))
 ~~~
 
-Decorators can be imagined to be a shortcut to calling an explicit statement, as we have seen in this example.
+Dekorator dapat dibayangkan sebagai jalan pintas untuk memanggil statemen secara eksplisit, sebagaimana yang kita lihat dalam contoh.
 
-Observe that the `__init__` method is used to initialize the `Robot` instance with a name. In this method, we increase the `population` count by 1 since we have one more robot being added. Also observe that the values of `self.name` is specific to each object which indicates the nature of object variables.
+Perhatikan bahwa metode `__init__` yang digunakan untuk inisialisasi wujud `Robot` dengan nama. Dalam metode ini, kita meningkatkan jumlah `populasi` dengan tambahan 1 setelah robot ditambahkan. Juga perhatikan bahwa nilai `self.nama` khusus di tiap obyek yang mengindikasikan cara kerja variabel obyek. 
 
-Remember, that you must refer to the variables and methods of the same object using the `self` **only**. This is called an *attribute reference*.
+Ingat, bahwa Anda harus merujuk pada variabel dan metode di dalam obyek yang sama dengan **hanya** menggunakan awalan `self`. Ini dinamakan sebagai *referensi atribut/attribute reference*.
 
-In this program, we also see the use of **docstrings** for classes as well as methods. We can access the class docstring at runtime using `Robot.__doc__` and the method docstring as `Robot.sayHi.__doc__`
+Dalam program ini, kita juga melihat penggunaan **docstrings** untuk kelas maupun metode. Kita dapat mengakses kelas docstring ini pada saat program dijalankan dengan menggunakan `Robot.__doc__` dan docstring untuk metodenya dengan memanggil `Robot.sapaHalo.__doc__`.
 
-Just like the `__init__` method, there is another special method `__del__` which is called when an object is going to die i.e. it is no longer being used and is being returned to the computer system for reusing that piece of memory. In this method, we simply decrease the `Robot.population` count by 1.
+Seperti metode `__init__`, ada metode khusus lainnya yang disebut dengan metode `__del__` dan dipanggil saat obyek akan dimusnahkan atau tidak akan digunakan lagi oleh komputer, sehingga kita bisa menggunakan kembali bagian dari memori komputer tersebut. Dalam metode ini kita cukup kurangi 1 nilai dari `Robot.populasi`.
 
-The `__del__` method is run when the object is no longer in use and there is no guarantee *when* that method will be run. If you want to explicitly see it in action, we have to use the `del` statement which is what we have done here.
+Metode `__del__` dijalankan ketika obyek tidak lagi digunakan dan tidak ada garansi lagi *kapan* metode tersebut akan dijalankan. Jika Anda ingin melihatnya secara eksplisit, gunakan statemen `del` secara langsung, di mana sudah kita lakukan dalam contoh sebelumnya.
 
-All class members are public. One exception: If you use data members with names using the *double underscore prefix* such as `__privatevar`, Python uses name-mangling to effectively make it a private variable.
+Semua anggota kelas bersifat publik. Ada satu pengecualian: Jika Anda menggunakan data dengan *nama berawalan dua garis bawah* seperti `__varprivat`, Python menggunakan penyamaran-nama secara efektif yang membuat variabel tersebut menjadi privat. 
 
-Thus, the convention followed is that any variable that is to be used only within the class or object should begin with an underscore and all other names are public and can be used by other classes/objects. Remember that this is only a convention and is not enforced by Python (except for the double underscore prefix).
+Sehingga, sudah ada ketentuan tidak tertulis yang diikuti bahwa setiap variabel yang hanya boleh digunakan dalam kelas atau obyek harus diawali dengan garis bawah, selain itu dianggap sebagai publik dan dapat dimanfaatkan oleh kelas/obyek yang lain. Ingat bahwa ini hanya konvensi dan tidak dipaksakan oleh Python (kecuali untuk awalan dua garis bawah).
 
-Note for C++/Java/C# Programmers
+Catatan untuk Programmer C++/Java/C# 
 
-:   All class members (including the data members) are *public* and all the methods are *virtual* in Python.
+:   Semua anggota kelas (termasuk anggota data) bersifat *publik* dan seluruh metode di Python bersifat *virtual*.
 
 ## Inheritance 
 
