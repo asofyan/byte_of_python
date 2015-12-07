@@ -242,97 +242,97 @@ Catatan untuk Programmer C++/Java/C#
 
 :   Semua anggota kelas (termasuk anggota data) bersifat *publik* dan seluruh metode di Python bersifat *virtual*.
 
-## Inheritance 
+## Penurunan (_Inheritance_) 
 
-One of the major benefits of object oriented programming is **reuse** of code and one of the ways this is achieved is through the *inheritance* mechanism. Inheritance can be best imagined as implementing a *type and subtype* relationship between classes.
+Salah satu keuntungan terbesar dari pemrograman berbasis obyek adalah **penggunaan kembali** kode yang telah dibuat, dan salah satu cara melakukan ini adalah melalui mekanisme penurunan (_inheritance_). Penurunan dapat dibayangkan sebagai implementasi hubungan antara *tipe dan sub tipe* antar kelas.
 
-Suppose you want to write a program which has to keep track of the teachers and students in a college. They have some common characteristics such as name, age and address. They also have specific characteristics such as salary, courses and leaves for teachers and, marks and fees for students.
+Misalnya Anda ingin membuat program untuk mengatur data guru dan mahasiswa di kampus. Mereka punya karakteristik data yang sama seperti nama, usia dan alamat. Merka juga memiliki karakteristik khusus seperti gaji dan kursus untuk guru, nilai dan uang kuliah untuk mahasiswa.
 
-You can create two independent classes for each type and process them but adding a new common characteristic would mean adding to both of these independent classes. This quickly becomes unwieldy.
+Anda dapat membuat dua kelas berbeda untuk setiap tipe dan memprosesnya sendiri-sendiri, namun jika ada tambahan tipe yang bersifat umum dan berlaku untuk kedua belah pihak, Anda harus menambahkan dua kali. Ini dapat membuat program menjadi berat dan sulit diatur. 
 
-A better way would be to create a common class called `SchoolMember` and then have the teacher and student classes *inherit* from this class i.e. they will become sub-types of this type (class) and then we can add specific characteristics to these sub-types.
+Cara yang lebih baik adalah membuat kelas yang lebih umum, misalnya bernama `AnggotaSekolah` dan membuat kelas dengan nama Dosen dan Murid *yang diturunkan* dari kelas `AnggotaSekolah`. Dengan kata lain kita membuat sub tipe dari tipe (kelas) `AnggotaSekolah`, lalu membuat karakteristik yang khusus untuk setiap sub tipe yang kita buat ini.
 
-There are many advantages to this approach. If we add/change any functionality in `SchoolMember`, this is automatically reflected in the subtypes as well. For example, you can add a new ID card field for both teachers and students by simply adding it to the SchoolMember class. However, changes in the subtypes do not affect other subtypes. Another advantage is that if you can refer to a teacher or student object as a `SchoolMember` object which could be useful in some situations such as counting of the number of school members. This is called **polymorphism** where a sub-type can be substituted in any situation where a parent type is expected i.e. the object can be treated as an instance of the parent class.
+Ada banyak keuntungan dari pendekatan ini. Jika kita menambahkan/mengganti fungsi di `AnggotaSekolah`, otomatis akan berlaku di seluruh sub tipe-nya. Misalnya Anda bisa menambah field Nomor Tanda Pengenal untuk guru dan mahasiswa, dengan menambahkannya langsung ke class AnggotaSekolah. Meskipun demikian, mengganti sub tipe tidak akan mempengaruhi sub tipe lainnya. Keuntungan lain adalah jika Anda bisa merujuk obyek `Dosen` atau `Mahasiswa` sebagai obyek turunan dari `AnggotaSekolah` adalah Anda bisa memanfaatkan data kedua sub tipe turunannya. Misalnya menghitung jumlah total guru dan mahasiswa. Ini disebut sebagai **polimorfism/pholymorphism** di mana setiap sub tipe dapat diganti di kondisi apapun jika tipe induk menginginkannya atau dengan kata lain obyek diperlakukan sebagaimana perwujudan dari kelas induk.
 
-Also observe that we *reuse* the code of the parent class and we do not need to repeat it in the different classes as we would have had to in case we had used independent classes.
+Juga perhatikan bahwa *penggunaan kembali* kode dari kelas induknya, kita tidak perlu mengulang kembali ke dalam kelas yang berbeda sebagaimana yang kita lakukan jika kita menggunakan kelas yang independen.
 
-The `SchoolMember` class in this situation is known as the *base class* or the *superclass*. The `Teacher` and `Student` classes are called the *derived classes* or *subclasses*.
+`AnggotaSekolah` dalam hal ini disebut sebagai *kelas dasar/base class* atau *superclass*. Sementara `Dosen` dan `Mahasiswa` disebut sebagai *kelas turunan/derived classes* atau *subclasses*.
 
-We will now see this example as a program (save as `inherit.py`):
+Kita akan melihat contoh ini dalam sebuah program (simpan sebagai `turunan.py`):
 
 ~~~python
-class SchoolMember:
-    '''Represents any school member.'''
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
-        print('(Initialized SchoolMember: {0})'.format(self.name))
+class AnggotaSekolah:
+    '''Mewakili Anggota Sekolah.'''
+    def __init__(self, nama, usia):
+        self.nama = nama
+        self.usia = usia
+        print('(Inisialisasi AnggotaSekolah: {0})'.format(self.nama))
     
-    def tell(self):
-        '''Tell my details.'''
-        print('Name:"{0}" Age:"{1}"'.format(self.name, self.age), end=" ")
+    def katakan(self):
+        '''Katakan detail saya.'''
+        print('Nama:"{0}" Usia:"{1}"'.format(self.nama, self.usia), end=" ")
 
-class Teacher(SchoolMember):
-    '''Represents a teacher.'''
-    def __init__(self, name, age, salary):
-        SchoolMember.__init__(self, name, age)
-        self.salary = salary
-        print('(Initialized Teacher: {0})'.format(self.name))
+class Dosen(AnggotaSekolah):
+    '''Mewakili seorang dosen.'''
+    def __init__(self, nama, usia, gaji):
+        AnggotaSekolah.__init__(self, nama, usia)
+        self.gaji = gaji 
+        print('(Inisialisasi Dosen: {0})'.format(self.nama))
 
-    def tell(self):
-        SchoolMember.tell(self)
-        print('Salary: "{0:d}"'.format(self.salary))
+    def katakan(self):
+        AnggotaSekolah.katakan(self)
+        print('Gaji: "{0:d}"'.format(self.gaji))
 
-class Student(SchoolMember):
-    '''Represents a student.'''
-    def __init__(self, name, age, marks):
-        SchoolMember.__init__(self, name, age)
-        self.marks = marks
-        print('(Initialized Student: {0})'.format(self.name))
+class Mahasiswa(AnggotaSekolah):
+    '''Mewakili seorang mahasiswa.'''
+    def __init__(self, nama, usia, nilai):
+        AnggotaSekolah.__init__(self, nama, usia)
+        self.nilai = nilai 
+        print('(Inisialisasi Mahasiswa: {0})'.format(self.nama))
     
-    def tell(self):
-        SchoolMember.tell(self)
-        print('Marks: "{0:d}"'.format(self.marks))
+    def katakan(self):
+        AnggotaSekolah.katakan(self)
+        print('Marks: "{0:d}"'.format(self.nilai))
 
-t = Teacher('Mrs. Shrividya', 40, 30000)
-s = Student('Swaroop', 25, 75)
+t = Dosen('Mrs. Shrividya', 40, 30000)
+s = Mahasiswa('Swaroop', 25, 75)
 
-print() # prints a blank line
+print() # mencetak baris kosong 
 
-members = [t, s]
-for member in members:
-    member.tell() # works for both Teachers and Students
+paraanggota = [t, s]
+for anggota in paraanggota:
+    anggota.katakan() # berjalan baik untuk Dosen maupun Mahasiswa
 ~~~
 
-Output:
+Keluaran:
 
 ~~~
-$ python3 inherit.py
-(Initialized SchoolMember: Mrs. Shrividya)
-(Initialized Teacher: Mrs. Shrividya)
-(Initialized SchoolMember: Swaroop)
-(Initialized Student: Swaroop)
+$ python3 turunan.py
+(Inisialisasi AnggotaSekolah: Mrs. Shrividya)
+(Inisialisasi Dosen: Mrs. Shrividya)
+(Inisialisasi AnggotaSekolah: Swaroop)
+(Inisialisasi Mahasiswa: Swaroop)
 
-Name:"Mrs. Shrividya" Age:"40" Salary: "30000"
-Name:"Swaroop" Age:"25" Marks: "75"
+Nama:"Mrs. Shrividya" Usia:"40" Gaji: "30000"
+Nama:"Swaroop" Usia:"25" Gaji: "75"
 ~~~
 
-How It Works:
+Bagaimana Cara Kerjanya:
 
-To use inheritance, we specify the base class names in a tuple following the class name in the class definition. Next, we observe that the `__init__` method of the base class is explicitly called using the `self` variable so that we can initialize the base class part of the object. This is very important to remember - Python does not automatically call the constructor of the base class, you have to explicitly call it yourself.
+Untuk menggunakan turunan, kita tentukan dulu nama kelas dasar (_base class__) di dalam sebuah tuple diikuti dengan nama kelas pada definisi kelasnya. Kemudian, kita lihat metode `__init__` dari kelas dasar yang secara eksplisit dipanggil dengan menggunakan variabel `self` sehingga kita dapat inisialisasi kelas dasar sebagai bagian dari obyek. Sangat penting untuk diingat - Python tidak secara otomatis memanggil seluruh konstruktor kelas dasar, namun Anda harus memanggilnya sendiri.
 
-We also observe that we can call methods of the base class by prefixing the class name to the method call and then pass in the `self` variable along with any arguments.
+Kita juga lihat bahwa kita dapat memanggil semua metode dalam kelas dasar dengan memberikan awalan dari nama kelas terhadap seluruh metode yang dipanggil di dalam variabel `self` bersamaan dengan argumen lain.
 
-Notice that we can treat instances of `Teacher` or `Student` as just instances of the `SchoolMember` when we use the `tell` method of the `SchoolMember` class.
+Perhatikan juga bahwa kita dapat memperlakukan wujud `Dosen` atau `Mahasiswa` sebagai perwujudan dari `AnggotaSekolah` ketika kita gunakan metode `Katakan` dari fungsi kelas `AnggotaSekolah`.
 
-Also, observe that the `tell` method of the subtype is called and not the `tell` method of the `SchoolMember` class. One way to understand this is that Python *always* starts looking for methods in the actual type, which in this case it does. If it could not find the method, it starts looking at the methods belonging to its base classes one by one in the order they are specified in the tuple in the class definition.
+Perhatikan pula bahwa metode `katakan` dari sub tipe dipanggil,, namun bukanlah `katakan` dari kelas `AnggotaSekolah`. Satu cara untuk memahami ini adalah bahwa Python *selalu* memulai pencarian metode di tipe yang sedang dijalankan saat ini, yang dalam hal ini ditemukan. Jika metode tersebut tidak ketemua, ia akan mulai mencari metode yang dimiliki oleh kelas dasar satu demi satu secara urut sebagaimana yang telah ditentukan dalam tuple definisi kelas.
 
-A note on terminology - if more than one class is listed in the inheritance tuple, then it is called *multiple inheritance*.
+Satu catatan untuk terminologi - jika ada satu kelas didaftara pada tuple turuanan - ini sering disebut sebagai *multiple inheritance*.
 
-The `end` parameter is used in the `tell()` method to change a new line to be started at the end of the `print()` call to printing spaces.
+Parameter `end` yang digunakan dalam metode `katakan()` untuk mengganti baris baru di akhir setiap panggilan `print()` untuk mencetak sesuatu.
 
-## Summary 
+## Ringkasan 
 
-We have now explored the various aspects of classes and objects as well as the various terminologies associated with it. We have also seen the benefits and pitfalls of object-oriented programming. Python is highly object-oriented and understanding these concepts carefully will help you a lot in the long run.
+Kita telah mengeksplorasi berbagai macam aspek dari kelas dan obyek dan banyak terminologi yang berkaitan dengannya. Kita juga akan lihat keuntungan dan kerugian pemrograman berbasis obyek. Python sangat berorientasi terhadap obyek dan memahami konsep ini secara hati-hati akan membantu Anda dalam jangka panjang.
 
-Next, we will learn how to deal with input/output and how to access files in Python.
+Berikutnya, kita akan belajar bagaimana menangani input/output dan bagaimana mengakses berkas di Python.
