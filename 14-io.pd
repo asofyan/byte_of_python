@@ -1,46 +1,46 @@
-# Input Output
+# Masukan Keluaran 
 
-There will be situations where your program has to interact with the user. For example, you would want to take input from the user and then print some results back. We can achieve this using the `input()` and `print()` functions respectively.
+Akan ada kondisi di mana program Anda harus berinteraksi dengan pengguna. Misalnya, Anda ingin mengambil masukan dari pengguna dan mencetak hasilnya. Kita dapat melakukan hal ini dengan menggunakan fungsi `input()` dan `print()` secara bersamaan. 
 
-For output, we can also use the various methods of the `str` (string) class. For example, you can use the `rjust` method to get a string which is right justified to a specified width. See `help(str)` for more details.
+Untuk keluaran, kita juga bisa menggunakan berbagai macam metode klas `str` (string). Sebagai contoh, Anda dapat memanfaatkan metode `rjust` untuk menampilkan layar rata kanan dengan ukuran khusus. Lihat `help(str)` untuk informasi lebih detail.
 
-Another common type of input/output is dealing with files. The ability to create, read and write files is essential to many programs and we will explore this aspect in this chapter.
+Jenis masukan dan keluaran yang umum lainnya adalah dalam penggunaan berkas (_file_). Kemampuan untuk membuat, membaca dan menulis berkas sangat penting dalam sebuah program, dan kita akan mengeksplorasi aspek tersebut di bab ini.
 
-## Input from user
+## Masukan dari Pengguna 
 
-Save this program as `user_input.py`:
+Simpan program ini dengan nama `masukan_pengguna.py`:
 
 ~~~python
-def reverse(text):
+def putarbalik(teks):
     return text[::-1]
 
-def is_palindrome(text):
-    return text == reverse(text)
+def ini_palindrom(teks):
+    return text == putarbalik(teks)
 
-something = input('Enter text: ')
-if (is_palindrome(something)):
-    print("Yes, it is a palindrome")
+sesuatu = input('Masukkan teks: ')
+if (ini_palindrom(sesuatu)):
+    print("Ya, ini palindrom")
 else:
-    print("No, it is not a palindrome")
+    print("Tidak, ini bukan palindrom")
 ~~~
 
-Output:
+Keluaran:
 
 ~~~
-$ python3 user_input.py
-Enter text: sir
-No, it is not a palindrome
+$ python3 masukan_pengguna.py
+Masukkan teks: sir
+Tidak, ini bukan palindrom
 
-$ python3 user_input.py
-Enter text: madam
-Yes, it is a palindrome
+$ python3 masukan_pengguna.py
+Masukkan teks: madam
+Ya, ini palindrom
 
-$ python3 user_input.py
-Enter text: racecar
-Yes, it is a palindrome
+$ python3 masukan_pengguna.py
+Masukkan teks: racecar
+Ya, ini palindrom
 ~~~
 
-How It Works:
+Bagaimana Cara Kerjanya:
 
 We use the slicing feature to reverse the text. We've already seen how we can make [slices from sequences](#sequence) using the `seq[a:b]` code starting from position `a` to position `b`. We can also provide a third argument that determines the *step* by which the slicing is done. The default step is `1` because of which it returns a continuous part of the text. Giving a negative step, i.e., `-1` will return the text in reverse.
 
