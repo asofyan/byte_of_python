@@ -42,19 +42,19 @@ Ya, ini palindrom
 
 Bagaimana Cara Kerjanya:
 
-We use the slicing feature to reverse the text. We've already seen how we can make [slices from sequences](#sequence) using the `seq[a:b]` code starting from position `a` to position `b`. We can also provide a third argument that determines the *step* by which the slicing is done. The default step is `1` because of which it returns a continuous part of the text. Giving a negative step, i.e., `-1` will return the text in reverse.
+Kita menggunakan fitur pemotongan untuk membalikkan teks. Kita sudah pelajari sebelumnya tentang bagaimana cara membuat [potongan dari urutan](#sequence) dengan menggunakan `seq[a:b]` mulai dari posisi `a` hingga posisi `b`. Kita juga dapat memberikan argumen ketiga yang menentukan berapa banyak *langkah* yang diperlukan agar proses pemotongan selesai. Langkah bakunya adalah `1` yang akan memberikan hasil berurutan dari sebuah teks. Dengan memberi langkah negatif, seperti `-1` akan mengembalikan teks dalam urutan terbalik.
 
-The `input()` function takes a string as argument and displays it to the user. Then it waits for the user to type something and press the return key. Once the user has entered and pressed the return key, the `input()` function will then return that text the user has entered.
+Fungsi `input()` mengambil argumen string dan menampilkannya langsung kepada pengguna. Kemudian ia menunggu pengguna mengetikkan sesuatu dan menekan tombol enter/return. Jika pengguna sudah memasukkan teks dan menekan tombol enter/return, fungsi `input()` akan mengmbalikan teks yang telah ditulis sebelumnya oleh pengguna.
 
-We take that text and reverse it. If the original text and reversed text are equal, then the text is a [palindrome]([http://en.wiktionary.org/wiki/palindrome).
+Kemudian kita ambil teks tersebut dan kita balik. Jika teks asli dan teks balikannya sama, maka teks tersebut dikategorikan sebagai [palindrom]([http://en.wiktionary.org/wiki/palindrome).
 
-Homework exercise
+Pekerjaan Rumah
 
-:   Checking whether a text is a palindrome should also ignore punctuation, spaces and case. For example, "Rise to vote, sir." is also a palindrome but our current program doesn't say it is. Can you improve the above program to recognize this palindrome?
+:   Mengecek apakah sebuah teks palindrom atau bukan, juga harus mengabaikan tanda baca, spasi, dan huruf besar kecil. Misalnya "Rise to vote, sir." juga palindrom namun program yang kita buat sebelumnya tidak mengenalinya sebagai palindrom. Dapatkah Anda memperbaiki program di atas sehingga dapat mengenali teks palindrom tersebut?
 
-    *Hint (Don't read) below*
+    *Petunjuk (Jangan dibaca) di bawah*
 
-    Use a tuple (you can find a list of *all* punctuation marks here [punctuation](http://grammar.ccc.commnet.edu/grammar/marks/marks.htm)) to hold all the forbidden characters, then use the membership test to determine whether a character should be removed or not, i.e. forbidden = ('!', '?', '.', ...).
+    Gunakan tuple (Anda dapat temukan *seluruh* tanda baca di sini [tanda baca](http://grammar.ccc.commnet.edu/grammar/marks/marks.htm)) untuk tempat penyimpanan seluruh karakter yang tidak kita inginkan, kemudian kita gunakan tes keikutsertaan untuk memastikan apakah sebeuah karakter dihapus atau tidak, dengan kata lain dilarang = ('!', '?', '.', ...).
 
 ## Files 
 
