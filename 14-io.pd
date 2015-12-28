@@ -56,97 +56,97 @@ Pekerjaan Rumah
 
     Gunakan tuple (Anda dapat temukan *seluruh* tanda baca di sini [tanda baca](http://grammar.ccc.commnet.edu/grammar/marks/marks.htm)) untuk tempat penyimpanan seluruh karakter yang tidak kita inginkan, kemudian kita gunakan tes keikutsertaan untuk memastikan apakah sebeuah karakter dihapus atau tidak, dengan kata lain dilarang = ('!', '?', '.', ...).
 
-## Files 
+## Berkas 
 
-You can open and use files for reading or writing by creating an object of the `file` class and using its `read`, `readline` or `write` methods appropriately to read from or write to the file. The ability to read or write to the file depends on the mode you have specified for the file opening. Then finally, when you are finished with the file, you call the `close` method to tell Python that we are done using the file.
+Anda dapat membaca atau menulis berkas dengan membuat obyek dari kelas `file` dan menggunakan metode di dalamnya seperti `read`, `readline` atau `write` untuk membaca, membaca tiap baris, atau menulis ke dalam berkas tersebut. Kemampuan untuk membaca atau menulis sebuah berkas, tergantung mode yang Anda gunakan saat membuka sebuah berkas. Setelah menyelesaikan semua yang Anda inginkan pada berkas tersebut, Anda dapat memanggil metode `close` untuk memberitahu Python bahwa kita sudah selesai menggunakan berkas tersebut. 
 
-Example (save as `using_file.py`):
+Contoh (simpan sebagai `guna_berkas.py`):
 
 ~~~python
-poem = '''\
-Programming is fun
-When the work is done
-if you wanna make your work also fun:
-    use Python!
+puisi = '''\
+Programming menyenangkan
+Saat pekerjaan terselesaikan
+jika kamu ingin kerja menyenangkan:
+    gunakan Python!
 '''
  
-f = open('poem.txt', 'w') # open for 'w'riting
-f.write(poem) # write text to file
-f.close() # close the file
+f = open('puisi.txt', 'w') # membuka berkas dengan mode 'w' (writing/menulis)
+f.write(puisi) # menulis teks ke dalam berkas
+f.close() # menutup berkas 
  
-f = open('poem.txt') # if no mode is specified, 'r'ead mode is assumed by default
+f = open('puisi.txt') # jika tidak menentukan mode, diasumsikan secara baku dengan  mode 'r' (read/baca)
 while True:
     line = f.readline()
-    if len(line) == 0: # Zero length indicates EOF
+    if len(line) == 0: # Panjang nol mengindikasikan EOF (_End Of File_/akhir berkas)
         break
     print(line, end='')
-f.close() # close the file
+f.close() # tutup berkas
 ~~~
 
-Output:
+Keluaran:
 
 ~~~
-$ python3 using_file.py
-Programming is fun
-When the work is done
-if you wanna make your work also fun:
-        use Python!
+$ python3 guna_berkas.py
+Programming menyenangkan
+Saat pekerjaan terselesaikan
+jika kamu ingin kerja menyenangkan:
+    gunakan Python!
 ~~~
 
-How It Works:
+Bagaimana Cara Kerjanya:
 
-First, open a file by using the built-in `open` function and specifying the name of the file and the mode in which we want to open the file. The mode can be a read mode (`'r'`), write mode (`'w'`) or append mode (`'a'`). We can also specify whether we are reading, writing, or appending in text mode (`'t'`) or binary mode (`'b'`). There are actually many more modes available and `help(open)` will give you more details about them. By default, `open()` considers the file to be a 't'ext file and opens it in 'r'ead mode.
+Pertama, buka berkas dengan fungsi `open` yang sudah ada, dan tentukan nama berkas beserta mode yang kita gunakan saat membuka berkas. Mode ini dapat berupa mode baca (_read_/`'r'`), mode tulis (_write_/`'w'`), atau mode sisip (_append_/`'a'`). Kita juga dapat tentukan saat membaca, menulis atau menyisipkan dalam mode teks (`'t'`) atau mode biner (`'b'`). Sebetulnya ada banyak mode tersedia, dan untuk melihatnya secara detail Anda cukup ketikkan `help(open)`. Secara baku, `open()` dibuka dalam format teks ('t') dan mode baca ('r').
 
-In our example, we first open the file in write text mode and use the `write` method of the file object to write to the file and then we finally `close` the file.
+Dalam contoh kita, berkas dibuka dalam mode tulis teks dengan mode `write`, lalu kita tutup berkas dengan mode `close`.
 
-Next, we open the same file again for reading. We don't need to specify a mode because 'read text file' is the default mode. We read in each line of the file using the `readline` method in a loop. This method returns a complete line including the newline character at the end of the line. When an *empty* string is returned, it means that we have reached the end of the file and we 'break' out of the loop.
+Berikutnya, kita buka lagi berkas yang sama untuk dibaca. Kita tidak perlu menentukan mode secara khusus sebba `membaca berkas teks` adalah mode baku. Lalu kita baca tiap baris yang ada di dalamnya dengan menggunakan metode `readline` dalam sebuah putaran. Metode ini akan mengembalikan satu beris penuh, termasuk karakter ganti baris di akhir baris. Saat string *kosong* dikembalikan, ini berarti kita sudah mencapai akhir berkas dan kita menghentikan ('break') putaran. 
 
-By default, the `print()` function prints the text as well as an automatic newline to the screen. We are suppressing the newline by specifying `end=''` because the line that is read from the file already ends with a newline character. Then, we finally `close`the file.
+Secara baku, fungsi `print()` juga akan mencetak teks di layar, termasuk otomatis pindah baris. Kita menghapus karakter baris baru yang ada di teks, dengan menambahkan `end=''` sebab baris yang dibaca dari berkas sendiri sudah memiliki karakter ganti baris. Tanpa ini akan mencetak ganti baris dua kali. Dan akhirnya, kita `menutup` berkas. 
 
-Now, check the contents of the `poem.txt` file to confirm that the program has indeed written to and read from that file.
+Sekarang, periksa kembali isi dari `puisi.txt` untuk konfirmasi bahwa program sudah benar menulis dan membaca dari berkas tersebut. 
 
 ## Pickle
 
-Python provides a standard module called `pickle` using which you can store **any** Python object in a file and then get it back later. This is called storing the object *persistently*.
+Python memberikan modul standar bernama `picke` di mana Anda dapat menyimpan obyek **apa saja** ke dalam sebuah berkas, lalu memanfaatkannya kemudian. Ini dinamakan menyimpan obyek secara *persisten*.
 
-Example (save as `pickling.py`):
+Contoh (simpan sebagai `pickling.py`):
 
 ~~~python
 import pickle
  
-# the name of the file where we will store the object
-shoplistfile = 'shoplist.data'
-# the list of things to buy 
-shoplist = ['apple', 'mango', 'carrot']
+# nama berkas tempat obyek akan disimpan
+berkasdaftarbelanja = 'daftarbelanja.data'
+# barang-barang yang akan dibeli 
+daftarbelanja = ['apel', 'mangga', 'wortel']
  
-# Write to the file
-f = open(shoplistfile, 'wb')
-pickle.dump(shoplist, f) # dump the object to a file
+# Menulis ke dalam berkas 
+f = open(berkasdaftarbelanja, 'wb')
+pickle.dump(daftarbelanja, f) # buang obyek ke dalam berkas 
 f.close()
  
-del shoplist # destroy the shoplist variable
+del daftarbelanja # hapus variabel daftarbelanja
  
-# Read back from the storage
-f = open(shoplistfile, 'rb')
-storedlist = pickle.load(f) # load the object from the file
-print(storedlist)
+# Baca kembali dari penyimpanan 
+f = open(berkasdaftarbelanja, 'rb')
+daftarsimpan = pickle.load(f) # muat obyek dari berkas
+print(daftarsimpan)
 ~~~
 
-Output:
+Keluaran:
 
 ~~~
 $ python3 pickling.py
-['apple', 'mango', 'carrot']
+['apel', 'mangga', 'wortel']
 ~~~
 
-How It Works:
+Bagaimana Cara Kerjanya:
 
-To store an object in a file, we have to first `open` the file in 'w'rite 'b'inary mode and then call the `dump` function of the`pickle` module. This process is called *pickling*.
+Untuk menyimpan obyek ke dalam berkas, pertama kita harus `buka` berkas dalam mode `w` (tulis) dan `b` (format biner), kemudiapn panggil fungsi `dump` dari modul `pickle`. Proses ini dinamakan *pickling*.
 
-Next, we retrieve the object using the `load` function of the `pickle` module which returns the object. This process is called *unpickling*.
+Kemudian, kita ambil obyek dengan menggunakan fungsi `load` dari modul `pickle` yang mengembalikan obyek. Proses ini dinamakan *unpickling*.
 
-## Summary 
+## Ringkasan 
 
-We have discussed various types of input/output and also file handling and using the pickle module.
+Kita telah mendiskusikan berbagai jenis input/output, penanganan berka dan modul pickle.
 
-Next, we will explore the concept of exceptions.
+Berikutnya, kita akan jelajahi konsep eksepsi (_excpetions_).
