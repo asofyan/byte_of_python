@@ -1,21 +1,21 @@
-# Exceptions
+# Eksepsi 
 
-Exceptions occur when certain *exceptional* situations occur in your program.  For example, what if you are going to read a file and the file does not exist? Or what if you accidentally deleted it when the program was running? Such situations are handled using **exceptions**.
+Eksepsi (pengecualian) akan muncul jika terjadi sesuatu di program Anda yang bersifat *pengecualian*. Misalnya, bagaimana jika Anda ingin membuka satu berkas dan berkas tersebut tidak ada? Atau bagaimana jika Anda secara tidak sengaja menghapusnya saat program masih berjalan? Kondisi semacam ini ditangani dengan menggunakan **eksepsi**.
 
-Similarly, what if your program had some invalid statements? This is handled by Python which **raises** its hands and tells you there is an **error**.
+Mirip dengan itu, bagaimana jika program Anda memiliki statemen yang tidak valid? Hal ini ditangani oleh Python dengan **mengangkat** tangannya dan menyampaikan kepada Anda telah terjadi **kesalahan/_error_** Similarly, what if your program had some invalid statements? This is handled by Python which **raises** its hands and tells you there is an **error**.
 
-## Errors 
+## Error 
 
-Consider a simple `print` function call. What if we misspelt `print` as `Print`? Note the capitalization. In this case, Python *raises* a syntax error.
+Misalnya Anda ingin memanggil fungsi sederhana `print`. Bagaimana jika kita salah tulis dari `print` menjadi `Print`? Perhatikan huruf besar di awalnya. Dalam hal ini, Python akan *mengangkat* error sintaksis. 
 
 ~~~
->>> Print('Hello World')
+>>> Print('Halo Dunia')
 Traceback (most recent call last):
   File "<pyshell#0>", line 1, in <module>
-    Print('Hello World')
+    Print('Halo Dunia')
 NameError: name 'Print' is not defined
->>> print('Hello World')
-Hello World
+>>> print('Halo Dunia')
+Halo Dunia
 ~~~
 
 Observe that a `NameError` is raised and also the location where the error was detected is printed. This is what an *error handler* for this error does.
