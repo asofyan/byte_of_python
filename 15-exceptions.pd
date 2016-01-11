@@ -18,57 +18,57 @@ NameError: name 'Print' is not defined
 Halo Dunia
 ~~~
 
-Observe that a `NameError` is raised and also the location where the error was detected is printed. This is what an *error handler* for this error does.
+Jika Anda perhatikan `NameError` muncul bersama dengan lokasi dimana error terdeteksi. Ini yang disebut sebagai *penanganan kesalahan/_error handler_*. 
 
-## Exceptions 
+## Eksepsi 
 
-We will **try** to read input from the user. Press `ctrl-d` and see what happens.
+Kita akan **mencoba** membaca masukan dari pnegguna. Tekan `ctrl-d` dan lihat apa yang terjadi.
 
 ~~~
->>> s = input('Enter something --> ')
-Enter something --> 
+>>> s = input('Masukkan Sesuatu --> ')
+Masukkan Sesuatu --> 
 Traceback (most recent call last):
   File "<pyshell#2>", line 1, in <module>
-    s = input('Enter something --> ')
+    s = input('Masukkan Sesuatu --> ')
 EOFError: EOF when reading a line
 ~~~
 
-Python raises an error called `EOFError` which basically means it found an *end of file* symbol (which is represented by `ctrl-d`) when it did not expect to see it.
+Python memunculkan kesalahan yang dinamakan `EOFError`, pada dasarnya dia menemukan sebuah simbol *end of file/akhir berkas* (yang diwakilkan dalam bentuk `ctrl-d`) saat Python tidak mengharapkan kemunculannya.
 
-## Handling Exceptions 
+## Menangani Eksepsi 
 
-We can handle exceptions using the `try..except` statement.  We basically put our usual statements within the try-block and put all our error handlers in the except-block.
+Kita dapat menangani ekspsi dengan menggunakan statemen `try..except`. Pada dasarnya kita meletakkan statemen seperti biasa ke dalam blok `try` dan meletakkan seluruh penanganan kesalahan ke dalam blok `except`. 
 
-Example (save as `try_except.py`):
+Contoh (simpan sebagai `try_except.py`):
 
 ~~~python
 try:
-    text = input('Enter something --> ')
+    text = input('Masukkan sesuatu --> ')
 except EOFError:
-    print('Why did you do an EOF on me?')
+    print('Kenapa Anda melakukan EOF terhadap saya?')
 except KeyboardInterrupt:
-    print('You cancelled the operation.')
+    print('Anda membatalkan operasi.')
 else:
-    print('You entered {0}'.format(text))
+    print('Anda memasukkan {0}'.format(text))
 ~~~
 
-Output:
+Keluaran:
 
 ~~~
 $ python3 try_except.py
-Enter something -->     # Press ctrl-d
-Why did you do an EOF on me?
+Masukkan sesuatu -->     # Press ctrl-d
+Kenapa Anda melakukan EOF terhadap saya?
 
 $ python3 try_except.py
-Enter something -->     # Press ctrl-c
-You cancelled the operation.
+Masukkan sesuatu -->     # Press ctrl-c
+Anda membatalkan operasi.
 
 $ python3 try_except.py
-Enter something --> no exceptions
-You entered no exceptions
+Masukkan sesuatu --> tidak ada pengecualian 
+Anda memasukkan tidak ada pengecualian
 ~~~
 
-How It Works:
+Bagaimana Cara Kerjanya:
 
 We put all the statements that might raise exceptions/errors inside the `try` block and then put handlers for the appropriate errors/exceptions in the `except` clause/block. The `except` clause can handle a single specified error or exception, or a parenthesized list of errors/exceptions. If no names of errors or exceptions are supplied, it will handle *all* errors and exceptions.
 
