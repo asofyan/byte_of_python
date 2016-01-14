@@ -70,23 +70,23 @@ Anda memasukkan tidak ada pengecualian
 
 Bagaimana Cara Kerjanya:
 
-We put all the statements that might raise exceptions/errors inside the `try` block and then put handlers for the appropriate errors/exceptions in the `except` clause/block. The `except` clause can handle a single specified error or exception, or a parenthesized list of errors/exceptions. If no names of errors or exceptions are supplied, it will handle *all* errors and exceptions.
+Kita menempatkan semua statemen yang akan memunculkan eksepsi atau pesan kesalahan di dalam blok `try` kemudian meletakkan penanggung jawab (_handler_) ke dalam blok `except`. Klausa `except` ini dapat menangani eksepsi atau pesan kesalahan tunggal, atau penanganan lebih dari satu eksepsi yang ditulis dengan pemisah koma. Jika pesan kesalahan atau eksepsinya tidak ditulis, dia akan menangani *semua* eksepsi dan pesan kesalahan. 
 
-Note that there has to be at least one `except` clause associated with every `try` clause. Otherwise, what's the point of having a try block?
+Mohon dicatat bahwa harus ada paling tidak satu klausa `except` pada setiap klausa `try` yang dibuat. Jika tidak, untuk apa membuat blok `try`? 
 
-If any error or exception is not handled, then the default Python handler is called which just stops the execution of the program and prints an error message. We have already seen this in action above.
+Jika pesan kesalahan atau eksepsi tidak ditangani, maka handler Python yang baku akan dipanggil, program akan berhenti dan menampilkan pesan kesalahan. Kita sudah lihat hal ini sebelumnya.
 
-You can also have an `else` clause associated with a `try..except` block. The `else` clause is executed if no exception occurs.
+Anda juga dapat menggunakan klausa `else` pada setiap blok `try..except`. Klausa ini akan dieksekusi jika tidak ada eksepsi yang terjadi. 
 
-In the next example, we will also see how to get the exception object so that we can retrieve additional information.
+Dalam contoh berikutnya, kita juga akan melihat bagaimana cara memperoleh eksepsi dari sebuah obyek sehingga kita bisa mengambil informasi lebih banyak.
 
-## Raising Exceptions
+## Memunculkan Eksepsi
 
-You can *raise* exceptions using the `raise` statement by providing the name of the error/exception and the exception object that is to be *thrown*.
+Anda dapat *memunculkan* eksepsi dengan menggunakan statemen `raise` dengan memberikan nama dari kesalahan/ekspsi dan obyek eksepsi yang akan *dilemparkan*
 
-The error or exception that you can raise should be a class which directly or indirectly must be a derived class of the `Exception` class.
+Kesalahan atau eksepsi yang dapat Anda munculkan harus berupa kelas yang secara langsung atau tidak diturunkan dari kelas `Exception`. 
 
-Example (save as `raising.py`):
+Contoh (simpan dengan nama `raising.py`):
 
 ~~~python
 class ShortInputException(Exception):
