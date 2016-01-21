@@ -86,84 +86,84 @@ Anda dapat *memunculkan* eksepsi dengan menggunakan statemen `raise` dengan memb
 
 Kesalahan atau eksepsi yang dapat Anda munculkan harus berupa kelas yang secara langsung atau tidak diturunkan dari kelas `Exception`. 
 
-Contoh (simpan dengan nama `raising.py`):
+Contoh (simpan dengan nama `munculkan.py`):
 
 ~~~python
-class ShortInputException(Exception):
-    '''A user-defined exception class.'''
-    def __init__(self, length, atleast):
+class EksepsiMasukanSingkat(Exception):
+    '''kelas eksepsi buatan-sendiri.'''
+    def __init__(self, panjang, minimal):
         Exception.__init__(self)
-        self.length = length
-        self.atleast = atleast
+        self.panjang = panjang 
+        self.minimal = minimal 
 
 try:
-    text = input('Enter something --> ')
+    text = input('Ketikkan sesuatu --> ')
     if len(text) < 3:
-        raise ShortInputException(len(text), 3)
-    # Other work can continue as usual here
+        raise EksepsiMasukanSingkat(len(text), 3)
+    # Perintah lain dapat dilanjutkan sebagaimana biasanya di sini
 except EOFError:
-    print('Why did you do an EOF on me?')
+    print('Kenapa Anda menimpakan EOF ke saya?')
 except ShortInputException as ex:
-    print('ShortInputException: The input was {0} long, expected at least {1}'\
-          .format(ex.length, ex.atleast))
+    print('EksepsiMasukanSingkat: Panjang masukan adalah {0}, dibutuhkan minimal sepanjang {1}'\
+          .format(ex.panjang, ex.minimal))
 else:
-    print('No exception was raised.')
+    print('Tidak ada eksepsi yang dimunculkan.')
 ~~~
 
-Output:
+Keluaran:
 
 ~~~
-$ python3 raising.py
-Enter something --> a
-ShortInputException: The input was 1 long, expected at least 3
+$ python3 munculkan.py
+Ketikkan sesuatu --> a
+EksepsiMasukanSingkat: Panjang masukan adalah 1, dibutuhkan minimal sepanjang 3
 
-$ python3 raising.py
-Enter something --> abc
-No exception was raised.
+$ python3 munculkan.py
+Ketikkan sesuatu --> abc
+Tidak ada eksepsi yang dimunculkan.
 ~~~
 
-How It Works:
+Bagaimana Cara Kerjanya:
 
-Here, we are creating our own exception type. This new exception type is called `ShortInputException`. It has two fields - `length` which is the length of the given input, and `atleast` which is the minimum length that the program was expecting.
+Di sini, kita membuat jenis eksepsi kita sendiri. Eksepsi ini disebut `EksepsiMasukanSingkat`. Dia punya dua field - `panjang` untuk menampung panjangnya masukan (_input_), dan `minimal` yang merupakan minimal panjang yang diinginkan oleh program.
 
-In the `except` clause, we mention the class of error which will be stored `as` the variable name to hold the corresponding error/exception object. This is analogous to parameters and arguments in a function call. Within this particular `except` clause, we use the`length` and `atleast` fields of the exception object to print an appropriate message to the user.
+Dalam klausul `except`, kita menyebutkan kelas pesan kesalahannya, yang akan disimpan `sebagai` nama variabel yang menjadi rujukan setiap obyek pesan kesalahan/eksepsi terkait. Hal ini dapat dianalogikan sebagai parameter dan arguman dalam pemanggilan fungsi. Dalam klausul `except` di sini, kita gunakan field `panjang` dan `minimal` untuk mencetak pesan yang sesuai terhadap pengguna.
 
 ## Try .. Finally 
 
-Suppose you are reading a file in your program. How do you ensure that the file object is closed properly whether or not an exception was raised? This can be done using the `finally` block. Note that you can use an `except` clause along with a `finally` block for the same corresponding `try` block. You will have to embed one within another if you want to use both.
+Misalnya Anda membaca berkas dalam program. Bagaimana Anda tahu bahwa obyek berkas yang bersangkutan sudah ditutup secara semestinya atau ada eksepsi yang dimunculkan? Ini dapat kita atasi dengan penggunaan blok `finally`. Catat bahwa Anda dapat menggunakan klausul `except` bersamaan dengan blok `finally` untuk blok yang sama dengan `try`. Anda harus sisipkan diantara salah satunya jika Anda ingin memanfaatkan keduanya. 
 
-Save as `finally.py`:
+Simpan sebagai `finally.py`:
 
 ~~~python
 import time
 
 try:
-    f = open('poem.txt')
-    while True: # our usual file-reading idiom
+    f = open('puisi.txt')
+    while True: # idiom yang umum dalam pembacaan-berkas
         line = f.readline()
         if len(line) == 0:
             break
         print(line, end='')
-        time.sleep(2) # To make sure it runs for a while
+        time.sleep(2) # Jeda dua detik untuk memastikan perintahnya dijalankan
 except KeyboardInterrupt:
-    print('!! You cancelled the reading from the file.')
+    print('!! Anda membatalkan pembacaan berkas.')
 finally:
     f.close()
-    print('(Cleaning up: Closed the file)')
+    print('(Pembersihan: Menutup berkas)')
 ~~~
 
-Output:
+Keluaran:
 
 ~~~
 $ python3 finally.py
-Programming is fun
-When the work is done
-if you wanna make your work also fun:
-!! You cancelled the reading from the file.
-(Cleaning up: Closed the file)
+Programming menyenangkan
+Saat pekerjaan terselesaikan
+jika kamu ingin kerja menyenangkan:
+!! Anda membatalkan pembacaan berkas.
+(Pembersihan: Menutup berkas)
 ~~~
 
-How It Works:
+Bagaimana Cara Kerjanya:
 
 We do the usual file-reading stuff, but we have arbitrarily introduced sleeping for 2 seconds after printing each line using the `time.sleep` function so that the program runs slowly (Python is very fast by nature). When the program is still running, press `ctrl-c` to interrupt/cancel the program.
 
@@ -172,6 +172,7 @@ Observe that the `KeyboardInterrupt` exception is thrown and the program quits. 
 ## The with statement 
 
 Acquiring a resource in the `try` block and subsequently releasing the resource in the `finally` block is a common pattern. Hence, there is also a `with` statement that enables this to be done in a clean manner:
+
 
 Save as `using_with.py`:
 
