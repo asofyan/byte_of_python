@@ -165,37 +165,37 @@ jika kamu ingin kerja menyenangkan:
 
 Bagaimana Cara Kerjanya:
 
-We do the usual file-reading stuff, but we have arbitrarily introduced sleeping for 2 seconds after printing each line using the `time.sleep` function so that the program runs slowly (Python is very fast by nature). When the program is still running, press `ctrl-c` to interrupt/cancel the program.
+Kita telah lakukan cara pembacaan berkas seperti biasanya, namun secara khusus kita kenalkan waktu jeda selama 2 detik setelah mencetak tiap baris dengan fungsi `time.sleep` sehingga program akan berjalan secara lebih lambat (Python biasanya berjalan sangat cepat). Ketika program masih berjalan, tekan `ctrl-c` untuk menginterupsi/membatalkan program.
 
-Observe that the `KeyboardInterrupt` exception is thrown and the program quits. However, before the program exits, the finally clause is executed and the file object is always closed.
+Perhatikan bahwa eksepsi `KeyboardInterrupt` dimunculkan dan program berhenti berjalan. Bagaimanapun juga, sebelum program berhenti, klausul _finally_ dieksekusi dan obyek berkas akan tertutup setelahnya.
 
-## The with statement 
+## Statemen with 
 
-Acquiring a resource in the `try` block and subsequently releasing the resource in the `finally` block is a common pattern. Hence, there is also a `with` statement that enables this to be done in a clean manner:
+Memanfaatkan sumber daya di dalam blok `try` dan secara berurutan melepaskan sumber daya lewat blok `finally` adalah hal yang biasa. Meskipun demikian, ada juga statemen `with` yang memungkinkan hal ini dilakukan secara bersih.
 
 
-Save as `using_with.py`:
+Simpan sebagai `gunakan_with.py`:
 
 ~~~python
-with open("poem.txt") as f:
+with open("puisi.txt") as f:
     for line in f:
         print(line, end='')
 ~~~
 
-How It Works:
+Bagaimana Cara Kerjanya:
 
-The output should be same as the previous example. The difference here is that we are using the `open` function with the `with` statement - we leave the closing of the file to be done automatically by `with open`.
+Keluaran harusnya sama dengan contoh sebelumnya. Bedanya di sini kita menggunakan fungsi `open` dengan statemen `with` - kita tinggalkan perintah menutup berkas yang nantinya secara otomatis akan dilakukan oleh `with open`.
 
-What happens behind the scenes is that there is a protocol used by the `with` statement. It fetches the object returned by the `open` statement, let's call it "thefile" in this case.
+Yan terjadi di belakang layar sebetulnya ada protokol yang digunakan oleh statemen `with`. Dia mengambil obyek yang dikembalikan oleh statemen `open`, dalam kasus ini kita sebut saja sebagai `sangberkas`. 
 
-It *always* calls the `thefile.__enter__` function before starting the block of code under it and *always* calls `thefile.__exit__` after finishing the block of code.
+Dia *selalu* memanggil fungsi `sangberkas.__enter__` sebelum memulai blok perintah di bawahnya dan *selalu* memanggil `sangberkas.__exit__` setelah menyelesaikan blok perintah.
 
-So the code that we would have written in a `finally` block should be taken care of automatically by the `__exit__`method. This is what helps us to avoid having to use explicit `try..finally` statements repeatedly.
+Jadi kode yang kita tulis di blok `finally` seharusnya secara otomatis sudah diurus oleh metode `__exit__. Ini membantu kita untuk menghindari penggunaan statemen `try..finally` secara eksplisit dan terus menerus.
 
-More discussion on this topic is beyond scope of this book, so please refer [PEP 343](http://www.python.org/dev/peps/pep-0343/) for a comprehensive explanation.
+Diskusi lebih lanjut tentang hal ini di luar skup buku ini, jadi silakan rujuk ke [PEP 343](http://www.python.org/dev/peps/pep-0343/) untuk penjelasan yang lebih komprehensif.
 
-## Summary 
+## Ringkasan 
 
-We have discussed the usage of the `try..except` and `try..finally` statements. We have seen how to create our own exception types and how to raise exceptions as well.
+Kita telah diskusi penggunaan statemen `try..except` dan `try..finally`. Kita juga telah mencoba bagaimana membuat jenis eksepsi kita sendiri dan bagaimana memunculkan eksepsi.
 
-Next, we will explore the Python Standard Library.
+Selanjutnya, kita akan menelusuri Pustaka Baku Python (_Python Standard Library_).
