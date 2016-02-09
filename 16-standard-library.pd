@@ -1,20 +1,20 @@
-# Standard Library
+# Pustaka Standar 
 
-The Python Standard Library contains a huge number of useful modules and is part of every standard Python installation. It is important to become familiar with the Python Standard Library since many problems can be solved quickly if you are familiar with the range of things that these libraries can do.
+Pustaka Standar Python berisi banyak sekali modul-modul yang bermanfaat dan merupakan bagian baku instalasi standar Python. Sangat penting bagi Anda untuk membiasakan diri dengan pustaka standar Python, mengingat banyak permasalahan yang bisa diselesaikan dengan cepat jika Anda sudah terbiasa dengan hal-hal yang bisa dilakukan oleh pustaka standar Python. 
 
-We will explore some of the commonly used modules in this library. You can find complete details for all of the modules in the Python Standard Library in the ['Library Reference' section](http://docs.python.org/py3k/library/index.html) of the documentation that comes with your Python installation.
+Kita akan menjelajahi beberapa penggunaan modul yang umum dalam pustaka ini. Anda dapat memperoleh informasi lengkap dari modul-modul Pustaka Standar Python di dokumentasi yang dibundel bersama instalasi Python Anda di [ bagian 'Referensi Pustaka'](http://docs.python.org/py3k/library/index.html).
 
-Let us explore a few useful modules.
+Mari kita lihat beberapa modul yang bermanfaat
 
-Note
+Catatan
 
-:   If you find the topics in this chapter too advanced, you may skip this chapter. However, I highly recommend coming back to this chapter when you are more comfortable with programming using Python.
+:   Jika Anda temukan topik di bab ini perlu pemahaman tingkat lanjut, Anda bisa abaikan bab ini. Bagaimanapun juga, saya rekomendasikan Anda untuk kembali ke bab ini jika Anda sudah merasa nyaman melakukan pemrograman dengan Python.
 
-## sys module 
+## modul sys 
 
-The `sys` module contains system-specific functionality. We have already seen that the `sys.argv` list contains the command-line arguments.
+Modul sys berisi fungsi-fungsi yang spesifik berkaitan dengan sistem. Kita telah melihat sebelumnya daftar `sys.argv` berisi argumen baris perintah.
 
-Suppose we want to check the version of the Python command being used so that, say, we want to ensure that we are using at least version 3. The `sys` module gives us such functionality.
+Anggap kita ingin mengecek versi Python yang sedang kita gunakan, misalnya, untuk memastikan kita menggunakan paling tidak versi 3. Modul `sys` akan memberikan fungsi tersebut.
 
 ~~~
 $ python3
@@ -25,35 +25,35 @@ sys.version_info(major=3, minor=3, micro=0, releaselevel='final', serial=0)
 True
 ~~~
 
-How It Works:
+Bagaimana Cara Kerjanya:
 
-The `sys` module has a `version_info` tuple that gives us the version information. The first entry is the major version. We can check this to, for example, ensure the program runs only under Python 3.0:
+Modul `sys` memiliki tuple `version_info` yang memberikan informasi tentang versi yang digunakan. Isian pertama berisi versi besar (_major version_). Kita dapat mengecek ini, sebagai contoh, untuk memastikan program hanya berjalan di bawah Python versi 3.0.
 
-Save as `versioncheck.py`:
+Simpan dengan nama `versioncheck.py`:
 
 ~~~python
 import sys, warnings
 if sys.version_info.major < 3:
-    warnings.warn("Need Python 3.0 for this program to run",
+    warnings.warn("Butuh Python 3.0 untuk menjalankan program ini",
         RuntimeWarning)
 else:
-    print('Proceed as normal')
+    print('Program dijalankan secara normal')
 ~~~
 
-Output:
+Keluaran:
 
 ~~~
 $ python2.7 versioncheck.py
-versioncheck.py:6: RuntimeWarning: Need Python 3.0 for this program to run
+versioncheck.py:6: RuntimeWarning: Butuh Python 3.0 untuk menjalankan program ini
   RuntimeWarning)
 
 $ python3 versioncheck.py
-Proceed as normal
+Program dijalankan secara normal
 ~~~
 
-How It Works:
+Bagaimana Cara Kerjanya:
 
-We use another module from the standard library called `warnings` that is used to display warnings to the end-user. If the Python version number is not at least 3, we display a corresponding warning.
+Kita menggunakan modul dari pustaka standar dengan nama `warnings` yang digunakan untuk menampilkan pesan kesalahan kepada pengguna. Jika versi Python yang digunakan kurang dari 3, kita akan tampilkan pesan kesalahan terkait. 
 
 ## logging module 
 
