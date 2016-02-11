@@ -55,21 +55,21 @@ Bagaimana Cara Kerjanya:
 
 Kita menggunakan modul dari pustaka standar dengan nama `warnings` yang digunakan untuk menampilkan pesan kesalahan kepada pengguna. Jika versi Python yang digunakan kurang dari 3, kita akan tampilkan pesan kesalahan terkait. 
 
-## logging module 
+## Modul penyimpan pesan (_logging_) 
 
-What if you wanted to have some debugging messages or important messages to be stored somewhere so that you can check whether your program has been running as you would expect it? How do you "store somewhere" these messages? This can be achieved using the `logging` module.
+Bagaimana jika Anda ingin menyimpan pesan _debugging_ atau pesan penting dari program dan ingin disimpan di suatu tempat sehingga Anda dapat mengecek apakah program berjalan sebagaimana yang Anda harapkan? Bagaimana "menyimpan pesan-pesan ini di suatu tempat"? Ini dapat dicapai dengan menggunakan modul _logging_.
 
-Save as `use_logging.py`:
+Simpan sebagai `gunakan_logging.py`:
 
 ~~~python
 import os, platform, logging
 
 if platform.platform().startswith('Windows'):
-    logging_file = os.path.join(os.getenv('HOMEDRIVE'), os.getenv('HOMEPATH'), 'test.log')
+    berkas_logging = os.path.join(os.getenv('HOMEDRIVE'), os.getenv('HOMEPATH'), 'test.log')
 else:
-    logging_file = os.path.join(os.getenv('HOME'), 'test.log')
+    berkas_logging = os.path.join(os.getenv('HOME'), 'test.log')
 
-print("Logging to", logging_file)
+print("Logging ke", berkas_logging)
 
 logging.basicConfig(
     level=logging.DEBUG,
@@ -78,46 +78,46 @@ logging.basicConfig(
     filemode = 'w',
 )
 
-logging.debug("Start of the program")
-logging.info("Doing something")
-logging.warning("Dying now")
+logging.debug("Memulai program")
+logging.info("Mengerjakan sesuatu")
+logging.warning("Matikan sekarang")
 ~~~
 
-Output:
+Keluaran:
 
 ~~~
-$ python3 use_logging.py
-Logging to C:\Users\swaroop\test.log
+$ python3 gunakan_logging.py
+Logging ke C:\Users\swaroop\test.log
 ~~~
 
-If we check the contents of `test.log`, it will look something like this:
+Jika kita memeriksa isi dari `test.log`, akan terlihat seperti ini:
 
 ~~~
-2012-10-26 16:52:41,339 : DEBUG : Start of the program
-2012-10-26 16:52:41,339 : INFO : Doing something
-2012-10-26 16:52:41,339 : WARNING : Dying now
+2012-10-26 16:52:41,339 : DEBUG : Memulai program 
+2012-10-26 16:52:41,339 : INFO : Mengerjakan sesuatu
+2012-10-26 16:52:41,339 : WARNING : Matikan sekarang
 ~~~
 
-How It Works:
+Bagaimana Cara Kerjanya:
 
-We use three modules from the standard library - the `os` module for interacting with the operating system, the `platform` module for information about the platform i.e. the operating system and the `logging` module to *log* information.
+Kita menggunakan tiga modul dari pustaka standar - modul `os` untuk interaksi dengan sistem operasi, modul `platform` untuk mencari informasi tentang platform - sistem operasi dan modul `logging` untuk menyimpan pesan dan informasi.
 
-First, we check which operating system we are using by checking the string returned by `platform.platform()` (for more information, see `import platform; help(platform)`). If it is Windows, we figure out the home drive, the home folder and the filename where we want to store the information. Putting these three parts together, we get the full location of the file. For other platforms, we need to know just the home folder of the user and we get the full location of the file.
+Pertama, kita cek sistem operasi apa yang kita gunakan dengan mencatat string kembalian dari fungsi `platform.platform()` (untuk informasi lebih lanjut, jalankan `import platforml help(platform)). Jika Windows, kita cari tahu _drive_ (bagian dari _harddisk_ yang digunakan), mencari folder rumah dan nama berkas tempat kita menyimpan informasi. Dengan menyatukan ketiga informasi tersebut bersama-sama, kita akan mendapatkan lokasi lengkap dari berkas. Untuk platform lain, kita hanya perlu tahu folder rumah dari pengguna yang bersangkutan, dan kita akan mendapatkan lokasi lengkap dari berkas yang dituju.
 
-We use the `os.path.join()` function to put these three parts of the location together. The reason to use a special function rather than just adding the strings together is because this function will ensure the full location matches the format expected by the operating system.
+Kita gunakan fungsi `os.path.join()` untuk menyatukan ketiga hal di atas bersamaan. Alasan penggunaan fungsi khusus untuk menyatukan string tersebut bersama-sama, sebab fungsi ini akan memastikan lokasi lengkapnya (separator/pemisah antar folder) sesuai dengan format yang diharapkan oleh sistem operasi. 
 
-We configure the `logging` module to write all the messages in a particular format to the file we have specified.
+Kita konfigurasikan modul `logging` untuk menuliskan seluruh pesan dalam format khusus yang telah kita tentukan sebelumnya.
 
-Finally, we can put messages that are either meant for debugging, information, warning or even critical messages. Once the program has run, we can check this file and we will know what happened in the program, even though no information was displayed to the user running the program.
+Terakhir, kita dapat menuliskan pesan hanya untuk debugging, informasi atau pesan kesalahan, bahkan pesan kesalahan yang bersifat kritis. Sekali program berjalan, kita dapat melihat berkas ini dan kita tahu apa yang terjadi di dalam program, meskipun tidak ada informasi yang ditampilkan di depan pengguna langsung.
 
-## Module of the Week Series 
+## Seri Modul Mingguan 
 
-There is much more to be explored in the standard library such as [debugging](http://docs.python.org/py3k/library/pdb.html), [handling command line options](http://docs.python.org/py3k/library/argparse.html), [regular expressions](http://docs.python.org/py3k/library/re.html) and so on.
+Ada lebih banyak pustaka standar yang bisa dieksplorasi seperti [debugging](http://docs.python.org/py3k/library/pdb.html), [penanganan pilihan baris perintah](http://docs.python.org/py3k/library/argparse.html), [ekspresi reguler](http://docs.python.org/py3k/library/re.html) dan lain-lain.
 
-The best way to further explore the standard library is to read Doug Hellmann's excellent [Python Module of the Week](http://www.doughellmann.com/projects/PyMOTW/) series or reading the [Python documentation](http://docs.python.org/py3k/).
+Cara terbaik untuk mengeksplorasi pustaka standar lebih lanjut adalah dengan membaca seri terbaik dari Doug Hellmann [Modul Mingguan Python](http://www.doughellmann.com/projects/PyMOTW/) atau langsung membaca [Dokumentasi Python](http://docs.python.org/py3k/).
 
-## Summary 
+## Ringkasan 
 
-We have explored some of the functionality of many modules in the Python Standard Library. It is highly recommended to browse through the [Python Standard Library documentation](http://docs.python.org/py3k/library/index.html) to get an idea of all the modules that are available.
+Kita telah menjelajahi beberapa fungsi dari banyak modul yang ada dalam Pustaka Standar Python. Sangat dianjurkan untuk menelusuri lebih lanjut lewat [Pustaka Standar Python](http://docs.python.org/py3k/library/index.html) untuk mengetahui modul-modul apa yang tersedia. 
 
-Next, we will cover various aspects of Python that will make our tour of Python more *complete*.
+Berikutnya, kita akan membahas berbagai macam aspek dari Python yang akan membuat tur Python kita lebih *lengkap*.
