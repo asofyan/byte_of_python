@@ -1,25 +1,25 @@
-# More
+# Lebih Lanjut 
 
-So far we have covered a majority of the various aspects of Python that you will use. In this chapter, we will cover some more aspects that will make our knowledge of Python more well-rounded.
+Sejauh ini kita telah mempelajari hampir mayoritas seluruh aspek Python yang mungkin akan Anda gunakan. Dalam bab ini, kita akan bahas lagi beberapa aspek lanjutan yang akan membuat pengetahuan Anda terhadap Python semakin bulat. 
 
-## Passing tuples around 
+## Mengumpan tuples 
 
-Ever wished you could return two different values from a function? You can. All you have to do is use a tuple.
+Pernahkah Anda menginginkan dua nilai kembalian yang berbeda dari satu fungsi? Anda dapat melakukannya di Python. Yang perlu dilakukan hanyalah menggunakan tuple.
 
 ~~~
->>> def get_error_details():
-...     return (2, 'second error details')
+>>> def ambil_detail_kesalahan():
+...     return (2, 'detail kesalahan kedua')
 ...
->>> errnum, errstr = get_error_details()
+>>> errnum, errstr = ambil_detail_kesalahan()
 >>> errnum
 2
 >>> errstr
-'second error details'
+'detail kesalahan kedua'
 ~~~
 
-Notice that the usage of `a, b = <some expression>` interprets the result of the expression as a tuple with two values.
+Perhatikan bahwa penggunaan `a, b = <beberapa ekspresi>` menerjemahkan hasil dari ekspresi tersebut sebagai tuple dengan dua nilai. 
 
-If you want to interpret the results as `(a, <everything else>)`, then you just need to star it just like you would in function parameters:
+Jika Anda ingin menerjemahkan hasil sebagai `(a, <jenis macam-macam>)`, Anda cukup tambahkan bintang sebagaimana Anda menambahkannya dalam parameter fungsi:
 
 ~~~
 >>> a, *b = [1, 2, 3, 4]
@@ -29,7 +29,7 @@ If you want to interpret the results as `(a, <everything else>)`, then you just 
 [2, 3, 4]
 ~~~
 
-This also means the fastest way to swap two variables in Python is:
+Cara ini juga yang paling cepat untuk memindah-gantikan nilai dari dua variabel di Python: 
 
 ~~~
 >>> a = 5; b = 8
