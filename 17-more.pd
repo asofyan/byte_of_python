@@ -38,25 +38,25 @@ Cara ini juga yang paling cepat untuk memindah-gantikan nilai dari dua variabel 
 (8, 5)
 ~~~
 
-## Special Methods 
+## Metode Khusus 
 
-There are certain methods such as the `__init__` and `__del__` methods which have special significance in classes.
+Ada beberapa metode yang khusus Python seperti `__init__` dan `__del__` yang memiliki kepentingan khusus di dalam kelas.
 
-Special methods are used to mimic certain behaviors of built-in types. For example, if you want to use the `x[key]` indexing operation for your class (just like you use it for lists and tuples), then all you have to do is implement the `__getitem__()` method and your job is done. If you think about it, this is what Python does for the `list` class itself!
+Beberapa metode khusus digunakan untuk meniru perilaku tertentu dari tipe-tipe yang sudah ada secara baku (_built-in_). Misalnya, jika Anda ingin menggunakan metode indeks `x[key]` dalam kelas Anda (seperti saat Anda menggunakan list dan tuples), maka yang perlu Anda lakukan cukup mengimplementasi fungsi `__getitem__()` dan pekerjaan Anda selesai. Jika Anda memikirkannya, inilah yang dilakukan Python untuk kelas `list` itu sendiri!
 
-Some useful special methods are listed in the following table. If you want to know about all the special methods, [see the manual](http://docs.python.org/py3k/reference/datamodel.html#specialnames).
+Dalam tabel berikut akan Anda temukan beberapa metode khusus. Jika Anda ingin mengetahui seluruh metode khusus, [silakan lihat buku petunjuk](http://docs.python.org/py3k/reference/datamodel.html#specialnames).
 
 `__init__(self, ...)`
 
-:   This method is called just before the newly created object is returned for usage.
+:   Metode ini dipanggil sesaat sebelum obyek yang tercantum dibawahnya dibuat, dan metodenya siap digunakan.
 
 `__del__(self)`
 
-:   Called just before the object is destroyed
+:   Dipanggil sebelum obyek dimusnahkan
 
 `__str__(self)`
 
-:   Called when we use the `print` function or when `str()`is used.
+:   Dipanggil sebelum kita menggunakan fungsi `print` atau ketika `str()` digunakan
 
 `__lt__(self, other)`
 
