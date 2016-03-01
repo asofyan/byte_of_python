@@ -60,15 +60,15 @@ Dalam tabel berikut akan Anda temukan beberapa metode khusus. Jika Anda ingin me
 
 `__lt__(self, other)`
 
-:   Called when the *less than* operator (&lt;) is used. Similarly, there are special methods for all the operators (+, &gt;, etc.)
+:   Dipanggil ketika operator *lebih kecil dari* (&lt;) digunakan. Mirip dengan hal ini, ada metode khusus lainnya untuk semua operator (+, &gt;, dll.)
 
 `__getitem__(self, key)`
 
-:   Called when `x[key]` indexing operation is used.
+:   Dipanggil ketika operasi pembuatan indeks `x[key]` dilakukan.
 
 `__len__(self)`
 
-:   Called when the built-in `len()` function is used for the sequence object.
+:   Dipanggil ketika fungsi baku `len()` digunakan untuk obyek yang bersifat urutan (sequence).
 
 ## Single Statement Blocks 
 
