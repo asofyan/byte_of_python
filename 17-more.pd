@@ -70,23 +70,23 @@ Dalam tabel berikut akan Anda temukan beberapa metode khusus. Jika Anda ingin me
 
 :   Dipanggil ketika fungsi baku `len()` digunakan untuk obyek yang bersifat urutan (sequence).
 
-## Single Statement Blocks 
+## Blok Statemen Tunggal
 
-We have seen that each block of statements is set apart from the rest by its own indentation level. Well, there is one caveat. If your block of statements contains only one single statement, then you can specify it on the same line of, say, a conditional statement or looping statement. The following example should make this clear: 
+Kita telah pelajari sebelumnya bahwa setiap blok statemen dibuat terlepas dari level indentasinya. Meskipun demikian ada satu keberatan. Jika blok statemen hanya berisi satu statemen saja, maka Anda bisa teruskan ke dalam satu baris, misalnya, sebuah statemen besifat kondisional ataupun statemen perulangan. Contoh berikut memperjelas apa yang dimaksud sebelumnya:
 
 ~~~
 >>> flag = True
->>> if flag: print('Yes')
-Yes
+>>> if flag: print('Ya')
+Ya
 ~~~
 
-Notice that the single statement is used in-place and not as a separate block.  Although, you can use this for making your program *smaller*, I strongly recommend avoiding this short-cut method, except for error checking, mainly because it will be much easier to add an extra statement if you are using proper indentation.
+Perhatikan bahwa statemen tunggal digunakan di satu tempat dan bukan di blok terpisah. Meskipun Anda dapat membuat program ini menjadi semakin *kecil* secara ukuran, namu saya sangat menganjurkan untuk menghindari metode jalan pintas ini, kecuali hanya untuk pengecekan kesalahan. Sebab utamanya adalah karena lebih mudah membuat statemen tambahan jika Anda menggunakan indentasi yang layak.
 
-## Lambda Forms 
+## Forms Lambda 
 
-A `lambda` statement is used to create new function objects. Essentially, the `lambda` takes a parameter followed by a single expression only which becomes the body of the function and the value of this expression is returned by the new function.
+Statemen `lambda` digunakan untuk membuat obyek fungsi yang baru. Pada dasarnya, `lambda` mengambil parameter yang diikuti oleh ekspresi tunggal dan nilai dari eksresi ini akan dikembalikan oleh fungsi yang baru.
 
-Example (save as `lambda.py`):
+Contoh (simpan sebagai `lambda.py`):
 
 ~~~python
 points = [ { 'x' : 2, 'y' : 3 }, { 'x' : 4, 'y' : 1 } ]
@@ -94,13 +94,13 @@ points.sort(key=lambda i : i['y'])
 print(points)
 ~~~
 
-Output:
+Keluaran:
 
 ~~~
 [{'x': 4, 'y': 1}, {'x': 2, 'y': 3}]
 ~~~
 
-How It Works:
+Bagaimana Cara Kerjanya:
 
 Notice that the `sort` method of a `list` can take a `key` parameter which determines how the list is sorted (usually we know only about ascending or descending order). In our case, we want to do a custom sort, and for that we need to write a function but instead of writing a separate `def` block for a function that will get used in only this one place, we use a lambda expression to create a new function.
 
