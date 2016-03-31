@@ -102,28 +102,28 @@ Keluaran:
 
 Bagaimana Cara Kerjanya:
 
-Notice that the `sort` method of a `list` can take a `key` parameter which determines how the list is sorted (usually we know only about ascending or descending order). In our case, we want to do a custom sort, and for that we need to write a function but instead of writing a separate `def` block for a function that will get used in only this one place, we use a lambda expression to create a new function.
+Perhatikan bahwa metode `sort` dari sebuah `list` dapat mengambil parameter `key` yang menentukan bagaimana nanti list akan diurutkan (biasanya kita hanya tahu urut dari atas atau urut dari bawah). Dalam kasus ini, kita ingin menggunakan pengurutan sendiri, dan untuk itu kita membuat fungsi sendiri. Namun alih-alih kita membuat blok fungsi dengan `def` dan hanya digunakan satu kali di tempat ini, kita gunakan lambda untuk membuat fungsi baru. 
 
-## List Comprehension 
+## Pengartian terhadap List (_List Comprehension_)
 
-List comprehensions are used to derive a new list from an existing list. Suppose you have a list of numbers and you want to get a corresponding list with all the numbers multiplied by 2 only when the number itself is greater than 2. List comprehensions are ideal for such situations.
+List comprehension digunakan untuk menurunkan sebuah _list_ baru dari _list_ yang sudah ada. Misal Anda punya daftar angka dan Anda ingin membuat sebuah list baru yang berisi angka dari list pertama dikalikan dua hanya jika angkanya lebih besar dari pada dua. _List comprehension_ ideal untuk situasi ini.
 
-Example (save as `list_comprehension.py`):
+Contoh (simpan sebagai `list_comprehension.py`):
 
 ~~~python
-listone = [2, 3, 4]
-listtwo = [2*i for i in listone if i > 2]
-print(listtwo)
+list_satu = [2, 3, 4]
+list_dua = [2*i for i in list_satu if i > 2]
+print(list_dua)
 ~~~
 
-Output:
+Keluaran:
 
 ~~~
 $ python3 list_comprehension.py
 [6, 8]
 ~~~
 
-How It Works:
+Bagaimana Cara Kerjanya:
 
 Here, we derive a new list by specifying the manipulation to be done (`2*i`) when some condition is satisfied (`if i > 2`). Note that the original list remains unmodified. 
 
