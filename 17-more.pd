@@ -125,43 +125,43 @@ $ python3 list_comprehension.py
 
 Bagaimana Cara Kerjanya:
 
-Here, we derive a new list by specifying the manipulation to be done (`2*i`) when some condition is satisfied (`if i > 2`). Note that the original list remains unmodified. 
+Di sini kita turunkan satu list baru dengan menentukan manipulasi apa yang harus dikerjakan (`2*i`) ketika satu kondisi terpenuhi (`if i > 2`). Tolong dicatat bahwa daftar yang asli tetap sama dan tidak dimodifikasi sama sekali. 
 
-The advantage of using list comprehensions is that it reduces the amount of boilerplate code required when we use loops to process each element of a list and store it in a new list.
+Keuntungan menggunakan _list comprehensions_ adalah untuk mengurangi jumlah baris kode yang digunakan saat kita melakukan perulangan untuk memproses setiap list dan menyimpannya dalam list baru. 
 
-## Receiving Tuples and Dictionaries in Functions 
+## Menerima Tuples dan Pustaka di dalam Fungsi 
 
-There is a special way of receiving parameters to a function as a tuple or a dictionary using the * or ** prefix respectively. This is useful when taking variable number of arguments in the function.
+Ada cara khusus untuk menerima parameter ke dalam fungsi sebagai tuple atau pustaka dengan menggunakan awalan * atau **. Ini bermanfaat saat kita mengambil cukup banyak argumen di dalam fungsi. 
 
 ~~~
->>> def powersum(power, *args):
-...     '''Return the sum of each argument raised to        specified power.'''
+>>> def jumlahperkalian(perkalian, *args):
+...     '''Mengembalikan jumlah dari setiap argumen saat dinaikkan lewat perkalian.'''
 ...     total = 0
 ...     for i in args:
-...         total += pow(i, power)
+...         total += pow(i, perkalian)
 ...     return total
 ...
->>> powersum(2, 3, 4)
+>>> jumlahperkalian(2, 3, 4)
 25
 
->>> powersum(2, 10)
+>>> jumlahperkalian(2, 10)
 100
 ~~~
 
-Because we have a `*` prefix on the `args` variable, all extra arguments passed to the function are stored in `args` as a tuple.  If a ** prefix had been used instead, the extra parameters would be considered to be key/value pairs of a dictionary.
+Karena kita memiliki `*` sebagai awalan dalam variable `args`, maka seluruh argumen tambahan ke dalam fungsi tersebut disimpan dalam `args` sebagai tuple. Jika menggunakan awalan ** maka paremeter tambahan akan diperlakukan sebagai pustaka yang berisi pasangan kunci/nilai. 
 
-## The assert statement 
+## Statemen Assert 
 
-The `assert` statement is used to assert that something is true. For example, if you are very sure that you will have at least one element in a list you are using and want to check this, and raise an error if it is not true, then `assert` statement is ideal in this situation. When the assert statement fails, an `AssertionError` is raised.
+Statemen `assert` digunakan untuk  memaksakan bahwa sesuatu itu benar. Misalnya, jika Anda sangat yakin bahwa hanya ada satu elemen di dalam list yang Anda gunakan dan ingin mengeceknya, serta memunculkan pesan kesalahan jika salah, maka statemen `assert` sangat ideal dalam konfisi ini. Ketika statemen assert gagal, maka `AssertionError` akan dimunculkan. 
 
 ~~~
->>> mylist = ['item']
->>> assert len(mylist) >= 1
->>> mylist.pop()
+>>> daftarku = ['item']
+>>> assert len(daftarku) >= 1
+>>> daftarku.pop()
 'item'
->>> mylist
+>>> daftarku 
 []
->>> assert len(mylist) >= 1
+>>> assert len(daftarku) >= 1
 Traceback (most recent call last):
 File "<stdin>", line 1, in <module>
 AssertionError
