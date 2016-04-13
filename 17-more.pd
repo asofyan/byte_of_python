@@ -190,16 +190,16 @@ kalimat di atas sama persis dengan
 "Ini kalimat pertama. Ini kalimat kedua."
 ~~~
 
-### Raw String
+### String Mentah (_Raw_) 
 
-If you need to specify some strings where no special processing such as escape sequences are handled, then what you need is to specify a *raw* string by prefixing `r` or `R` to the string. An example is `r"Newlines are indicated by \n"`.
+Jika Anda ingin menentukan beberapa string di mana tidak ada pemrosesan secara khusus seperti pemberlakuan rangkaian pelepasan, maka Anda perlu menentukan string *mentah* dengan memberikan awalan `r` atau `R` ke dalam string. Contohnya `r"Baris baru ditentukan lewat \n"`.
 
-Note for Regular Expression Users
+Catatan untuk pengguna Ekspresi Reguler
 
-:   Always use raw strings when dealing with regular expressions. Otherwise, a lot of backwhacking may be required. For example, backreferences can be referred to as `'\\1'` or `r'\1'`.
+:   Selalu gunakan string mentah saat menggunakan ekspresi reguler. Karena jika tidak, akan ada terlalu banyak karakter tambahan. Misalnya, referensi balik sering ditampilkan sebagai `'\\1'` atau `r'\1'`.
 
-## Summary 
+## Ringkasan 
 
-We have covered some more features of Python in this chapter and yet we haven't covered all the features of Python. However, at this stage, we have covered most of what you are ever going to use in practice. This is sufficient for you to get started with whatever programs you are going to create.
+Di bab ini kita telah membahas beberapa fitur tambahan dari Python meskipun belum mencakup seluruh fitur yang dimiliki Python. Bagaimanapun juga, dalam tahap ini, kita telah membahas hampir semua hal yang mungkin akan Anda gunakan dalam praktek. Dan ini sudah cukup bagi Anda untuk mulai menulis program apapun yang ingin Anda tulis.
 
-Next, we will discuss how to explore Python further.
+Berikutnya, kita akan diskusi bagaimana menjelajahi Python lebih lanjut. 

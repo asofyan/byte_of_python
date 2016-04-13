@@ -1,14 +1,14 @@
-# What Next
+# Apa Berikutnya 
 
-If you have read this book thoroughly till now and practiced writing a lot of programs, then you must have become comfortable and familiar with Python. You have probably created some Python programs to try out stuff and to exercise your Python skills as well. If you have not done it already, you should. The question now is 'What Next?'.
+Jika Anda telah membaca buku ini secara seksama hingga sekarang dan praktek membuat banyak program, maka Anda sekarang seharusnya lebih nyaman dan familiar dengan Python. Anda mungkin sudah mmebuat beberapa program Python untuk percobaan dan melatih kemampuan Python Anda. Jika belum, mulailah sekarang. Pertanyaan berikutnya adalah 'Apa Berikutnya?'
 
-I would suggest that you tackle this problem:
+Saya sarankan Anda coba geluti masalah ini:
 
-> Create your own command-line *address-book* program using which you can browse, add, modify, delete or search for your contacts such as friends, family and colleagues and their information such as email address and/or phone number. Details must be stored for later retrieval.
+> Buat program *buku-alamat* berbasis perintah di mana Anda dapat menelusuri, menambah, modifikasi,menghapus atau mencari kontak yang Anda miliki seperti teman, keluarga dan rekanan serta informasi detil mereka seperti alamat email atau nomor telepon. Detailnya harus disimpan agar bisa ditampilkan di kemudian hari.
 
-This is fairly easy if you think about it in terms of all the various stuff that we have come across till now. If you still want directions on how to proceed, then here's a hint.
+Ini cukup mudah jika Anda memikirkannya dengan mempertimbangkan berbagai hal yang telah kita pelajari sebelumnya hingga sekarang. Jika Anda masih membutuhkan petunjuk bagaimana melakukannya, berikut beberapa petunjuk.
 
-Hint (Don't read without trying first)
+Petunjuk (Jangan baca ini sebelum Anda mencobanya)
 
 :   Create a class to represent the person's information. Use a dictionary to store person objects with their name as the key. Use the pickle module to store the objects persistently on your hard disk. Use the dictionary built-in methods to add, delete and modify the persons.
 
