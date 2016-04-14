@@ -10,34 +10,34 @@ Ini cukup mudah jika Anda memikirkannya dengan mempertimbangkan berbagai hal yan
 
 Petunjuk (Jangan baca ini sebelum Anda mencobanya)
 
-:   Create a class to represent the person's information. Use a dictionary to store person objects with their name as the key. Use the pickle module to store the objects persistently on your hard disk. Use the dictionary built-in methods to add, delete and modify the persons.
+:   Buat sebuah _class_ untuk merepresentasikan informasi dari seseorang. Gunakan pustaka untuk menyimpan obyek person ini, dengan menggunakan namanya sebagai kunci. Gunakan modul picke untuk menyimpan obyek secara persisten ke dalam ruang penyimpanan komputer Anda. Gunakan metode baku dari pustaka untuk menambah, menghapus dan mengubah informasi dari orang tersebut.
 
-Once you are able to do this, you can claim to be a Python programmer. Now, immediately [send me an email](http://www.swaroopch.com/contact/) thanking me for this great book ;-). This step is optional but recommended. Also, please consider [buying a printed copy](http://www.swaroopch.com/buybook/) to support the continued development of this book.
+Sekai Anda bisa melakukan ini, Anda dapat menyebut diri Anda sebagai seorang programmer Python. Lalu kirim [surel ke saya](http://www.swaroopch.com/contact/) dan berterimakasihlah terhadap buku yang bagus ini ;-). Langkah ini tidak wajib, namun dianjurkan. Juga pertimbangkan untuk membeli [versi cetak](http://www.swaroopch.com/buybook/) untuk mendukung pengembangan buku ini.
 
-If you found that program easy, here's another one:
+Jika program di atas menurut Anda cukup mudah, ini contoh lain yang lebih sulit:
 
-> Implement the [replace command](http://unixhelp.ed.ac.uk/CGI/man-cgi?replace). This command will replace one string with another in the list of files provided.
+> Implementasikan [perintah ganti](http://unixhelp.ed.ac.uk/CGI/man-cgi?replace). Perintah ini akan mengganti satu string ke dalam string yang lain di dalam daftar berkas yang diberikan.
 
-The replace command can be as simple or as sophisticated as you wish, from simple string substitution to looking for patterns (regular expressions).
+Perintah ganti dapat dibuat secara sederhana atau rumit sesuai dengan keinginan Anda, dari substitusi string sederhana hingga pencarian pola (ekspresi reguler)
 
-After that, below are some ways to continue your journey with Python:
+Setelah itu, berikut beberapa petunjuk untuk perjalanan Anda bersama Python:
 
-## Example Code 
+## Kode Contoh
 
-The best way to learn a programming language is to write a lot of code and read a lot of code:
+Cara paling baik untuk belajar bahasa pemrograman adalah dengan menulis banyak kode dan membaca banyak kode:
 
-- [Python Cookbook](http://code.activestate.com/recipes/langs/python/) is an extremely valuable collection of recipes or tips on how to solve certain kinds of problems using Python. This is a must-read for every Python user.
-- [Python Module of the Week](http://www.doughellmann.com/PyMOTW/contents.html) is another excellent must-read guide to the [Python Standard Library](#standard-library).
+- [Resep Masak Python](http://code.activestate.com/recipes/langs/python/) koleksi resep atau tips yang sangat bermanfaat untuk memecahkan masalah khusus dengan menggunakan Python. Buku ini wajib-baca untuk setiap pengguna Python.
+- [Modul Mingguan Python](http://www.doughellmann.com/PyMOTW/contents.html) panduan yang sangat baik dan wajib dibaca untuk [Pustaka Standar Python](#pustaka-standar).
 
-## Questions and Answers
+## Tanya Jawab 
 
-- [Official Python Dos and Don'ts](http://docs.python.org/py3k/howto/doanddont.html)
-- [Official Python FAQ](http://www.python.org/doc/faq/general/)
-- [Norvig's list of Infrequently Asked Questions](http://norvig.com/python-iaq.html)
-- [Python Interview Q & A](http://dev.fyicenter.com/Interview-Questions/Python/index.html)
-- [StackOverflow questions tagged with python](http://beta.stackoverflow.com/questions/tagged/python)
+- [Lakukan dan Jangan Lakukan di Python](http://docs.python.org/py3k/howto/doanddont.html)
+- [Pertanyaan Resmi yang Sering Diajukan di Python](http://www.python.org/doc/faq/general/)
+- [Daftar Pertanyaan yang Jarang Ditanyakan dari Norvig](http://norvig.com/python-iaq.html)
+- [Interview Tanya Jawab Python](http://dev.fyicenter.com/Interview-Questions/Python/index.html)
+- [Pertanyaan di StackOverflow dengan tagar Python](http://beta.stackoverflow.com/questions/tagged/python)
 
-## Tutorials
+## Panduan 
 
 - [Awaretek's comprehensive list of Python tutorials](http://www.awaretek.com/tutorials.html)
 
