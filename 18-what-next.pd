@@ -39,33 +39,33 @@ Cara paling baik untuk belajar bahasa pemrograman adalah dengan menulis banyak k
 
 ## Panduan 
 
-- [Awaretek's comprehensive list of Python tutorials](http://www.awaretek.com/tutorials.html)
+- [Daftar lengkap tutorial Python dari Awaretek](http://www.awaretek.com/tutorials.html)
 
-## Videos 
+## Video 
 
 - [PyVideo](http://www.pyvideo.org/category)
 
-## Discussion 
+## Diskusi 
 
-If you are stuck with a Python problem, and don't know whom to ask, then the [python-tutor list](http://mail.python.org/mailman/listinfo/tutor) is the best place to ask your question.
+Jika Anda terhenti karena permasalahan Python, dan tidak ada tempat bertanya, [daftar tutor-python](http://mail.python.org/mailman/listinfo/tutor) adalah tempat yang tepat untuk bertanya.
 
-Make sure you do your homework and have tried solving the problem yourself first.
+Pastikan Anda sudah mengerjakan PR Anda dan mencoba menyelesaikan sendiri terlebih dahulu sebelum bertanya.
 
-## News 
+## Berita 
 
-If you want to learn what is the latest in the world of Python, then follow the [Official Python Planet](http://planet.python.org).
+Jika ingin mengikuti berita-berita terkini dari dunia Python, silakan ikuti [Planet Python Resmi](http://planet.python.org).
 
-## Installing libraries 
+## Menginstal Pustaka
 
-There are a huge number of open source libraries at the [Python Package Index](http://pypi.python.org/pypi) which you can use in your own programs.
+Ada sangat banyak pustaka kode terbuka yang tersedia di [Indeks Paket Python](http://pypi.python.org/pypi) yang dapat Anda gunakan di program Anda.
 
-To install and use these libraries, you can use [pip](http://www.pip-installer.org/en/latest/).
+Untuk menginstal dan menggunakan pustaka ini, Anda dapat gunakan [pip](http://www.pip-installer.org/en/latest/).
 
-## Graphical Software 
+## Perangkat Lunak Grafis 
 
-Suppose you want to create your own graphical programs using Python. This can be done using a GUI (Graphical User Interface) library with their Python bindings. Bindings are what allow you to write programs in Python and use the libraries which are themselves written in C or C++ or other languages.
+Misalnya Anda ingin membuat program grafis sendiri dengan menggunakan Python. Ini dapat dilakukan dengan memanfaatkan pustaka GUI (_Graphical User Interface_/Antarmuka Pengguna Grafis) yang bisa dilekatkan pada program Python Anda. Pelekatan ini memungkinkan Anda menulis program di Python dan menggunakan pustaka yang berdiri sendiri yang ditulis dalam bahasa C atau C++ atau bahasa lainnya.
 
-There are lots of choices for GUI using Python:
+Ada banyak pilihan menggunakan GUI di Python:
 
 Kivy
 
@@ -73,7 +73,7 @@ Kivy
 
 PyGTK
 
-:   This is the Python binding for the GTK+ toolkit which is the foundation upon which GNOME is built. GTK+ has many quirks in usage but once you become comfortable, you can create GUI apps fast. The Glade graphical interface designer is indispensable. The documentation is yet to improve. GTK+ works well on Linux but its port to Windows is incomplete. You can create both free as well as proprietary software using GTK+. To get started, read the [PyGTK tutorial](http://www.pygtk.org/tutorial.html).
+:   Perangkat lunak ini merupakan lekatan Python terhadap GTK+ toolkit, yang merupakan fondasi dari antar muka GNOME. GTK+ memiliki banyak aturan main untuk bisa digunakan, namun sekali Anda merasa nyaman, Anda bisa membuat aplikasi GUI secara cepat. Aplikasi desainer antar muka Glade juga sangat bagus. Dokumentasi juga diperbaiki dari waktu ke waktu. GTK+ berjalan baik di Linux meskipun portingnya ke Windows masih belum selesai. Anda dapat membuat perangkat lunak baik bebas maupun komersial dengan menggunakan GTK+. Untuk memulai, silakan baca [Panduan PyGTK](http://www.pygtk.org/tutorial.html).
 
 PyQt
 
