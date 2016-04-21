@@ -77,7 +77,7 @@ PyGTK
 
 PyQt
 
-:   This is the Python binding for the Qt toolkit which is the foundation upon which the KDE is built. Qt is extremely easy to use and very powerful especially due to the Qt Designer and the amazing Qt documentation. PyQt is free if you want to create open source (GPL'ed) software and you need to buy it if you want to create proprietary closed source software. Starting with Qt 4.5 you can use it to create non-GPL software as well. To get started, read the [PyQt tutorial](http://zetcode.com/tutorials/pyqt4/) or the [PyQt book](http://www.qtrac.eu/pyqtbook.html).
+:   PyQt adalah lekatan Python terhadap kumpulan pustaka bantu Qt, yang merupakan fondasi dibangunnya KDE. Qt sangat mudah digunakan dan sangat bagus terutama dengan adanya Qt Designer dan dokumentasi Qt yang komprehensif. PyQt bebas alias gratis jika digunakan untuk membuat perangkat lunak bebas (GPL) dan Anda harus membelinya jika ingin digunakan untuk membuat perangkat lunak komersial tertutup. Mulai dari Qt 4.5 Anda juga bisa menggunakannya untuk membuat perangkat lunak non-GPL. Untuk mulai, silakan baca [Tutorial PyQt](http://zetcode.com/tutorials/pyqt4/) atau [buku PyQT](http://www.qtrac.eu/pyqtbook.html).
 
 wxPython
 
