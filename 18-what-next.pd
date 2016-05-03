@@ -81,15 +81,15 @@ PyQt
 
 wxPython
 
-:   This is the Python bindings for the wxWidgets toolkit. wxPython has a learning curve associated with it. However, it is very portable and runs on Linux, Windows, Mac and even embedded platforms. There are many IDEs available for wxPython which include GUI designers as well such as [SPE (Stani's Python Editor)](http://spe.pycs.net/) and the [wxGlade](http://wxglade.sourceforge.net/) GUI builder. You can create free as well as proprietary software using wxPython. To get started, read the [wxPython tutorial](http://zetcode.com/wxpython/).
+:   Pustaka ini adalah lekatan Python untuk toolkit wxWidgets. wxPython memiliki kurva pembelajaran tersendiri yang terhubung dengan wxWidgets. Meskipun demikian, pustaka ini sangat portabel dan bisa dijalankan di Linux, Windos, Mac bahkan juga platform embedded. Ada banyak IDE yang tersedia untuk wxPython termasuk desainer GUI seperti [SPE (Editor Python dari Stani)](http://spe.pycs.net) dan pembangun GUI [wxGlade](http://wxglade.sourceforge.net/). Anda dapat menggunakannya untuk membuat aplikasi bebas/gratis ataupun aplikasi tertutup. Untuk memulai, silakan baca [tutorial wxPython](http://zetcode.com/wxpython/).
 
-### Summary of GUI Tools 
+### Ringkasan Alat Bantu GUI 
 
-For more choices, see the [GuiProgramming wiki page at the official python website](http://www.python.org/cgi-bin/moinmoin/GuiProgramming).
+Untuk pilihan lebih banyak, silakan lihat [halaman wiki GuiProgramming di situs web resmi dari python](http://www.python.org/cgi-bin/moinmoin/GuiProgramming).
 
-Unfortunately, there is no one standard GUI tool for Python. I suggest that you choose one of the above tools depending on your situation. The first factor is whether you are willing to pay to use any of the GUI tools. The second factor is whether you want the program to run only on Windows or on Mac and Linux or all of them. The third factor, if Linux is a chosen platform, is whether you are a KDE or GNOME user on Linux.
+Namun sayangnya, tidak ada yang satupun yang disebut sebagai standar GUI di Python. Saya sarankan Anda memilih salah satu dari alat-alat bantu di atas, tergantung dari kondisi Anda. Faktor pertama yang perlu dipertimbangkan adalah apakah Anda mau membayar alat bantu GUI tersebut atau tidak. Faktor kedua adalah apakah program yang Anda buat hanya bisa berjalan di Windows, Mac, Linux atau jalan di semua platform. Faktor ketiga adalah, jika Anda memilih platform Linux, apakah Anda menggunakan KDE atau GNOME sebagai lingkungan grafiknya.
 
-For a more detailed and comprehensive analysis, see Page 26 of the [The Python Papers, Volume 3, Issue 1](http://archive.pythonpapers.org/ThePythonPapersVolume3Issue1.pdf).
+Untuk analisa yang komprehensif dan detail, lihat halaman 26 dari [The Python Papers, Volume 3, Issue 1](http://archive.pythonpapers.org/ThePythonPapersVolume3Issue1.pdf).
 
 ## Various Implementations 
 
