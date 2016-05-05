@@ -91,42 +91,42 @@ Namun sayangnya, tidak ada yang satupun yang disebut sebagai standar GUI di Pyth
 
 Untuk analisa yang komprehensif dan detail, lihat halaman 26 dari [The Python Papers, Volume 3, Issue 1](http://archive.pythonpapers.org/ThePythonPapersVolume3Issue1.pdf).
 
-## Various Implementations 
+## Berbagai Macam Penerapan 
 
-There are usually two parts a programming language - the language and the software. A language is *how* you write something. The software is *what* actually runs our programs.
+Biasanya ada dua bagian dari bahasa pemrograman - bahasanya dan perangkat lunaknya. Bahasa adalah *bagaimana* anda menuliskan sesuatu. Sedangkan perangkat lunaknya adalah *apa* yang sebetulnya menjalankan program kita. 
 
-We have been using the *CPython* software to run our programs. It is referred to as CPython because it is written in the C language and is the *Classical Python interpreter*.
+Kita telah menggunakan *CPython* untuk menjalankan program kita. Hal ini sering disebut sebagai CPython sebab ditulis dalam bahasa C dan bahasa tersebut merupakan *interpreter Python Klasik*.
 
-There are also other software that can run your Python programs:
+Ada juga perangkat lunak lain yang bisa menjalankan program Python:
 
 [Jython](http://www.jython.org)
 
-:   A Python implementation that runs on the Java platform. This means you can use Java libraries and classes from within Python language and vice-versa.
+:   Implementasi Python yang berjalan pada platform Java. Ini berarti Anda bisa menggunakan pustaka dan kelas Java di dalam bahasa Python dan sebaliknya.
 
 [IronPython](http://www.codeplex.com/Wiki/View.aspx?ProjectName=IronPython)
 
-:   A Python implementation that runs on the .NET platform. This means you can use .NET libraries and classes from within Python language and vice-versa.
+:   Implementasi Python yang bisa dijalankan pada platform .NET. Ini berarti bahwa Anda bisa menggunakan pustaka dan kelas .NET di dalam bahasa Python dan sebaliknya.
 
 [PyPy](http://codespeak.net/pypy/dist/pypy/doc/home.html)
 
-:   A Python implementation written in Python! This is a research project to make it fast and easy to improve the interpreter since the interpreter itself is written in a dynamic language (as opposed to static languages such as C, Java or C# in the above three implementations)
+:   Implementasi Python yang ditulis dalam bahasa Python! Ini merupakan proyek riset yang bertujuan untuk meningkatkan kecepatan dan kemudahan interpreter Python, mengingat interpreternya sendiri ditulis dalam bahasa dinamis (sebagai lawan dari bahasa statis seperti C, Java atau C#)
 
 [Stackless Python](http://www.stackless.com)
 
-:   A Python implementation that is specialized for thread-based performance.
+:   Implementasi Python yang mengkhususkan diri untuk peningkatan kinerja Python berbasis thread.
 
-There are also others such as [CLPython](http://common-lisp.net/project/clpython/) - a Python implementation written in Common Lisp and [IronMonkey](http://wiki.mozilla.org/Tamarin:IronMonkey) which is a port of IronPython to work on top of a JavaScript interpreter which could mean that you can use Python (instead of JavaScript) to write your web-browser ("Ajax") programs.
+Ada pula implementasi lain seperti [CLPython](http://common-lisp.net/project/clpython/) - Implementasi Python yang ditulis dalam bahasa Common Lisp dan [IronMonkey](http://wiki.mozilla.org/Tamarin:IronMonkey) merupakan porting IronPython di atas interpreter JavaScript yang berarti Anda dapat menggunakan Python (alih-alih JavaScript) untuk menulis program berbasis web ("Ajax").
 
-Each of these implementations have their specialized areas where they are useful.
+Setiap implementasi ini memiliki kekhususan kegunaan untuk bidang-bidang tertentu. 
 
-## Functional Programming (for advanced readers)
+## Pemrograman Berbasis Fungsi (untuk pengguna tingkat lanjut)
 
-When you start writing larger programs, you should definitely learn more about a functional approach to programming as opposed to the class-based approach to programming that we learned in the [object-oriented programming chapter](#object-oriented-programming):
+Saat Anda menulis program yang lebih besar, Anda harus belajar lebih lanjut tentang pendekatan pemrograman berbasis fungsi sebagai perbandingan pada pendekatan pemrograman berbasis kelas sebagaimana yang sudah kita pelajari di [bab pemrograman berbasis obyek](#object-oriented-programming):
 
-- [Functional Programming Howto by A.M. Kuchling](http://docs.python.org/dev/howto/functional.html)
-- [Functional programming chapter in 'Dive Into Python' book](http://www.diveintopython.net/functional_programming/index.html)
-- [Functional Programming with Python presentation](http://ua.pycon.org/static/talks/kachayev/index.html)
+- [Functional Programming Howto oleh A.M. Kuchling](http://docs.python.org/dev/howto/functional.html)
+- [Bab Functional Programming pada buku 'Dive Into Python'](http://www.diveintopython.net/functional_programming/index.html)
+- [Presentasi Functional Programming with Python](http://ua.pycon.org/static/talks/kachayev/index.html)
 
-## Summary 
+## Ringkasan 
 
-We have now come to the end of this book but, as they say, this is the *the beginning of the end*!. You are now an avid Python user and you are no doubt ready to solve many problems using Python. You can start automating your computer to do all kinds of previously unimaginable things or write your own games and much much more. So, get started!
+Kita telah sampai pada bagian akhir buku ini tapi, sebagaimana mereka katakan, ini adalah *awal dari yang akhir*!. Anda sekarang bisa menyebut diri Anda sebagai pengguna Python dan tanpa ragu lagi Anda sudah siap menyelesaikan masalah dengan menggunakan Python. Anda bisa mulai menggunakan komputer untuk mengerjakan segala hal yang tidak dibayangkan sebelumnya, atau menulis program _game_ Anda sendiri dan banyak lagi lainnya. Jadi, mari kita mulai!
