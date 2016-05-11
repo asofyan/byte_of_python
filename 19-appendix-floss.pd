@@ -1,18 +1,18 @@
 # FLOSS
 
-Free/Libre and Open Source Software, in short, [FLOSS](http://en.wikipedia.org/wiki/FLOSS) is based on the concept of a community, which itself is based on the concept of sharing, and particularly the sharing of knowledge. FLOSS are free for usage, modification and redistribution.
+_Free/Libre and Open Source Software_ atau Perangkat Lunak Bebas, disingkat sebagai, [FLOSS](http://en.wikipedia.org/wiki/FLOSS) adalah sebuah konsep yang berlandaskan komunitas, yang berarti di dalamnya ada konsep berbagi, terutama berbagi pengetahuan. FLOSS bebas untuk digunakan, dimodifikasi dan didistribusikan kembali.
 
-If you have already read this book, then you are already familiar with FLOSS since you have been using **Python** all along and Python is an open source software!
+Jika Anda sudah selesai membaca buku ini, maka Anda seharusnya sudah tidak begitu asing lagi dengan istilah FLOSS, mengingat Anda telah menggunakan **Python** dan Python merupakan Perangkat Lunak Bebas!
 
-Here are some examples of FLOSS to give an idea of the kind of things that community sharing and building can create: 
+Berikut beberapa contoh FLOSS untuk memberikan gambaran kepada Anda tentang bagaimana komunitas yang saling berbagi dalam membangun sesuatu dapat membuat:
 
 [Linux](http://www.kernel.org)
 
-:   This is a FLOSS OS kernel used in the GNU/Linux operating system. Linux, the kernel, was started by Linus Torvalds as a student. Android is based on Linux. Any website you use these days will mostly be running on Linux.
+:   Inti (Kernel) sistem operasi FLOSS yang digunakan pada sistem operasi GNU/Linux. Linux, kernelnya, dimulai pembuatannya oleh Linus Torvalds semasa dia menjadi mahasiswa. Android dikembangkan berbasis Linux. Setiap website yang Anda kunjungi akhir-akhir ini, hampir semuanya dijalankan di atas Linux.
 
 [Ubuntu](http://www.ubuntu.com)
 
-:   This is a community-driven distribution, sponsored by Canonical and it is the most popular Linux distribution today. It allows you to install a plethora of FLOSS available and all this in an easy-to-use and easy-to-install manner. Best of all, you can just reboot your computer and run GNU/Linux off the CD! This allows you to completely try out the new OS before installing it on your computer. However, Ubuntu is not entirely free software; it contains proprietary drivers, firmware, and applications.
+:   Distribusi yang dikembangkan berbasis komunitas, disponsori oleh Canonical, dan saat ini Ubuntu merupakan distribusi Linux yang paling terkenal di antara pengguna umum saat ini. Ubuntu memungkinkan Anda menginstal berbagai macam perangkat lunak bebas (FLOSS) yang tersedia, dengan cara yang mudah digunakan dan mudah diinstal. Yang lebih bagus lagi, Anda dapat menyalakan ulang komputer dan langsung menjalankan GNU/Linux dari CD! Hal ini memungkinkan Anda mencoba sistem operasi baru sebelum menginstalnya di komputer Anda. Bagaimanapun juga, Ubuntu tidak sepenuhnya perangkat lunak bebas; Beberapa diantaranya merupakan perangkat lunak tertutup seperti drivers, firmware dan beberapa aplikasi.
 
 [LibreOffice](http://www.libreoffice.org/)
 
