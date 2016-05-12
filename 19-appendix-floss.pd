@@ -1,6 +1,6 @@
 # FLOSS
 
-_Free/Libre and Open Source Software_ atau Perangkat Lunak Bebas, disingkat sebagai, [FLOSS](http://en.wikipedia.org/wiki/FLOSS) adalah sebuah konsep yang berlandaskan komunitas, yang berarti di dalamnya ada konsep berbagi, terutama berbagi pengetahuan. FLOSS bebas untuk digunakan, dimodifikasi dan didistribusikan kembali.
+_Free/Libre and Open Source Software_ atau Perangkat Lunak Bebas/Kode Program Terbuka, disingkat sebagai, [FLOSS](http://en.wikipedia.org/wiki/FLOSS) adalah sebuah konsep yang berlandaskan komunitas, yang berarti di dalamnya ada konsep berbagi, terutama berbagi pengetahuan. FLOSS bebas untuk digunakan, dimodifikasi dan didistribusikan kembali.
 
 Jika Anda sudah selesai membaca buku ini, maka Anda seharusnya sudah tidak begitu asing lagi dengan istilah FLOSS, mengingat Anda telah menggunakan **Python** dan Python merupakan Perangkat Lunak Bebas!
 
@@ -16,13 +16,13 @@ Berikut beberapa contoh FLOSS untuk memberikan gambaran kepada Anda tentang baga
 
 [LibreOffice](http://www.libreoffice.org/)
 
-:   This is an excellent community-driven and developed office suite with a writer, presentation, spreadsheet and drawing components among other things. It can even open and edit MS Word and MS PowerPoint files with ease. It runs on almost all platforms and is entirely free, libre and open source software.
+:   Program ini merupakan program aplikasi kantor lengkap dan baik, dikembangkan oleh komunitas. Di dalamnya sudah termasuk program pengolah kata, presentasi, lembar kerja dan komponen aplikasi untuk menggambar, serta mampu membuka dan mengolah aplikasi perkantoran MS Word dan MS PowerPoint dengan mudah. LibreOffice dapat dijalankan di hampir semua platform dan seluruhnya bersifat bebas, gratis dan berkode program terbuka. 
 
 [Mozilla Firefox](http://www.mozilla.org/products/firefox)
 
-:   This is *the* best web browser. It is blazingly fast and has gained critical acclaim for its sensible and impressive features. The extensions concept allows any kind of plugins to be used.
+:   Dapat dikatakan bahwa Mozilla Firefox adalah salah satu peramban web terbaik. Sangat cepat digunakan dan telah memperoleh pengakuan penuh untuk fitur-fiturnya yang bermanfaat dan impresif. Peramban ini memiliki konsep ekstensi, yang memungkinkan pengembang di seluruh dunia membuat semacam plugin untuk dipasangkan di ekstensi Firefox.
 
-    Its companion product [Thunderbird](http://www.mozilla.org/products/thunderbird) is an excellent email client that makes reading email a snap.
+    Produk rekanannya, [Thunderbird](http://www.mozilla.org/products/thunderbird) merupakan program pembaca email yang bagus yang memungkinkan pembacaan email secara cepat.
 
 [Mono](http://www.mono-project.com)
 
