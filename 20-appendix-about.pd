@@ -1,10 +1,10 @@
 # Colophon 
 
-Almost all of the software that I have used in the creation of this book are [FLOSS](#floss).
+Hampir semua perangkat lunak yang saya gunakan untuk membuat buku ini merupakan perangkat lunak [FLOSS](#floss).
 
-## Birth of the Book 
+## Kelahiran Buku Ini
 
-In the first draft of this book, I had used Red Hat 9.0 Linux as the foundation of my setup and in the sixth draft, I used Fedora Core 3 Linux as the basis of my setup.
+Draft pertama buku ini, saya gunakan Linux Red Hat 9.0 sebagai dasar untuk setup pertama, dan di draft ke 6, saya mulai menggunkana Linux Fedora Core 3 sebagai basis setelan.
 
 Initially, I was using KWord to write the book (as explained in the [history lesson](#history-lesson) in the preface).
 

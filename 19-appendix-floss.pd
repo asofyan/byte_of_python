@@ -26,30 +26,30 @@ Berikut beberapa contoh FLOSS untuk memberikan gambaran kepada Anda tentang baga
 
 [Mono](http://www.mono-project.com)
 
-:   This is an open source implementation of the Microsoft .NET platform.  It allows .NET applications to be created and run on GNU/Linux, Windows, FreeBSD, Mac OS and many other platforms as well.
+:   Proyek ini merupakan implementasi platform .NET dari Microsoft dalam format kode terbuka. Dengan adanya Mono, aplikasi .NET dapat dibuat dan dijalankan pada sistem operasi GNU/Linux,Windows, FreeBSD, Mac OS dan platform lainnya.
 
-[Apache web server](http://httpd.apache.org)
+[Server web Apache](http://httpd.apache.org)
 
-:   This is the popular open source web server. In fact, it is *the* most popular web server on the planet! It runs nearly more than half of the websites out there. Yes, that's right - Apache handles more websites than all the competition (including Microsoft IIS) combined.
+:   Aplikasi yang paling populer sebagai server web berkode terbuka. Faktanya, Apache adalah server web *paling populer* di planet ini! Program ini dijalankan lebih dari setengah situs web yang ada di luar sana. Ya, benar - Apache melayani permintaan situs web lebih banyak daripada gabungan seluruh kompetitor lain (termasuk Microsoft IIS).
 
-[VLC Player](http://www.videolan.org/vlc/)
+[Pemutar Multimedia VLC](http://www.videolan.org/vlc/)
 
-:   This is a video player that can play anything from DivX to MP3 to Ogg to VCDs and DVDs to ... who says open source ain't fun? ;-)
+:   Aplikasi ini merupakan pemutar video yang dapat menjalankan format apa saja, mulai dari DivX ke MP3, dari VCD hingga DVD dan.. siapa yang bilang kode terbuka nggak seru? ;-)
 
-This list is just intended to give you a brief idea - there are many more excellent FLOSS out there, such as the Perl language, PHP language, Drupal content management system for websites, PostgreSQL database server, TORCS racing game, KDevelop IDE, Xine - the movie player, VIM editor, Quanta+ editor, Banshee audio player, GIMP image editing program, ... This list could go on forever.
+Daftar ini dibuat dengan tujuan untuk memberi Anda gambaran singkat - ada lebih banyak lagi perangkat lunak berkode terbuka di luar sana, seperti bahasa Perl, PHP, sistem pengelolaan konten (CMS) Drupal, server database PostgreSQL, permainan balapan TORCS, IDE Kdevelop, pemutar video Xine, editor teks VIM, editor teks Quanta+, pemutar audio Banshee, pengedit gambar GIMP, ... dan seterusnya. Daftar ini bisa bertambah tak ada habisnya.
 
-To get the latest buzz in the FLOSS world, check out the following websites:
+Untuk memperoleh kabar terbaru dari dunia FLOSS (perangkat lunak berkode terbuka), lihat beberapa situs web di bawah ini:
 
 - [linux.com](http://www.linux.com)
 - [LinuxToday](http://www.linuxtoday.com)
 - [NewsForge](http://www.newsforge.com)
 - [DistroWatch](http://www.distrowatch.com)
 
-Visit the following websites for more information on FLOSS:
+Kunjungi juga beberapa situs web berikut untuk gambaran lebih lanjut tentang FLOSS:
 
 - [GitHub Explore](http://github.com/explore)
 - [OMG! Ubuntu!](http://www.omgubuntu.co.uk)
 - [SourceForge](http://www.sourceforge.net)
 - [FreshMeat](http://www.freshmeat.net)
 
-So, go ahead and explore the vast, free and open world of FLOSS!
+Jadi, silakan ekplorasi dunia yang bebas dan terbuka dari FLOSS!
