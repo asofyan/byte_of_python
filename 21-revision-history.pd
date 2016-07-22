@@ -1,59 +1,59 @@
-# Revision History
+# Sejarah Perbaikan 
 
 - 2.0
-    - 20 Oct 2012
-    - Rewritten in [Pandoc format](http://johnmacfarlane.net/pandoc/README.html), thanks to my wife who did most of the conversion from the Mediawiki format
-    - Simplifying text, removing non-essential sections such as `nonlocal` and metaclasses
+    - 20 Okt 2012
+    - Ditulis ulang dalam [format Pandoc](http://johnmacfarlane.net/pandoc/README.html), terima kasih untuk istri saya yang banyak menerjemahkan melalui format Mediawiki
+    - Penyederhanaan teks, menghapus bagian-bagian yang tidak penting seperti `nonlocal` dan metaclasses
 - 1.90 
-    - 04 Sep 2008 and still in progress 
-    - Revival after a gap of 3.5 years! 
-    - Rewriting for Python 3.0
-    - Rewrite using [MediaWiki](http://www.mediawiki.org) (again) 
+    - 04 Sep 2008 dan masih dalam pengembangan
+    - Bangkit kembali setelah vakum selama 3.5 tahun! 
+    - Penulisan ulang untuk 3.0
+    - Penulisan ulang dengan menggunakan [MediaWiki](http://www.mediawiki.org) (lagi) 
 - 1.20 
     - 13 Jan 2005
-    - Complete rewrite using [Quanta+](https://en.wikipedia.org/wiki/Quanta_Plus) on [Fedora](http://fedoraproject.org/) Core 3 with lot of corrections and updates. Many new examples. Rewrote my DocBook setup from scratch. 
+    - Penulisan ulang secara lengkap dengan [Quanta+](https://en.wikipedia.org/wiki/Quanta_Plus) di [Fedora](http://fedoraproject.org/) Core 3 dengan menambahkan banyak perbaikan dan pembaruan. Tambahan contoh-contoh baru. Menulis ulang setelan DocBook dari nol.
 - 1.15 
     - 28 Mar 2004
-    - Minor revisions 
+    - Revisi minor 
 - 1.12 
     - 16 Mar 2004
-    - Additions and corrections. 
+    - Tambahan dan perbaikan. 
 - 1.10 
     - 09 Mar 2004
-    - More typo corrections, thanks to many enthusiastic and helpful readers. 
+    - Perbaikan salah ketik, terima kasih untuk para pembaca yang antusias dan siap bantu.
 - 1.00 
     - 08 Mar 2004
-    - After tremendous feedback and suggestions from readers, I have made significant revisions to the content along with typo corrections. 
+    - Setelah menerima banyak saran dan masukan dari pembaca, Saya membuat revisi yang signifikan terhadap isinya, lengkap dengan perbaikan salah ketik.
 - 0.99 
     - 22 Feb 2004
-    - Added a new chapter on modules. Added details about variable number of arguments in functions. 
+    - Tambahan bab baru di modul. Penambahan detail tentang jumlah argumen variabel di dalam fungsi.
 - 0.98 
     - 16 Feb 2004
-    - Wrote a Python script and CSS stylesheet to improve XHTML output, including a crude-yet-functional lexical analyzer for automatic VIM-like syntax highlighting of the program listings. 
+    - Menulis skrip Python dan CSS stylesheet untuk memperbaiki keluaran XHTML, termasuk penganalisa leksikal yang mentah-namun-berfungsi, untuk sorotan sintaks otomatis mirip-Vim terhadap listing program.
 - 0.97 
     - 13 Feb 2004
-    - Another completely rewritten draft, in DocBook XML (again). Book has improved a lot - it is more coherent and readable. 
+    - Draft penulisan ulang yang baru, dalam format DocBook XML (lagi). Buku ini telah memiliki banyak perbaikan - lebih koheren dan mudah dibaca.
 - 0.93 
     - 25 Jan 2004
-    - Added IDLE talk and more Windows-specific stuff 
+    - Penambahan pembahasan IDLE dan hal-hal lain khusus Windows.
 - 0.92 
     - 05 Jan 2004
-    - Changes to few examples. 
+    - Perubahan beberapa contoh.
 - 0.91 
-    - 30 Dec 2003
-    - Corrected typos. Improvised many topics. 
+    - 30 Des 2003
+    - Perbaikan salah ketik. Improvisasi terhadap berbagai topik.
 - 0.90 
-    - 18 Dec 2003
-    - Added 2 more chapters. [OpenOffice](https://en.wikipedia.org/wiki/OpenOffice) format with revisions. 
+    - 18 Des 2003
+    - Tambahan 2 bab. Format [OpenOffice](https://en.wikipedia.org/wiki/OpenOffice) dengan revisi. 
 - 0.60 
     - 21 Nov 2003
-    - Fully rewritten and expanded. 
+    - Ditulis ulang secara penuh dan dikembangkan lagi materinya.
 - 0.20 
     - 20 Nov 2003
-    - Corrected some typos and errors. 
+    - Perbaikan beberapa salah ketik dan kesalahan program.
 - 0.15 
     - 20 Nov 2003
-    - Converted to [DocBook XML](https://en.wikipedia.org/wiki/DocBook) with XEmacs. 
+    - Konversi ke format [DocBook XML](https://en.wikipedia.org/wiki/DocBook) dengan XEmacs. 
 - 0.10 
     - 14 Nov 2003
-    - Initial draft using [KWord](https://en.wikipedia.org/wiki/Kword).
+    - Draf pertama dengan [KWord](https://en.wikipedia.org/wiki/Kword).
