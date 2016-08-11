@@ -8,46 +8,43 @@ Jika anda berencana untuk memulai terjemahan baru, mohon baca [Cara Penerjemahan
 
 ## Bahasa Arab
  
-Below is the link for the Arabic version. Thanks to Ashraf Ali Khalaf for translating the book, you can read the whole book online [here](http://www.khaledhosny.org/byte-of-python/index.html) or you can download it 
-from [sourceforge.net](http://downloads.sourceforge.net/omlx/byteofpython_arabic.pdf?use_mirror=osdn)
-for more info [click here](http://itwadi.com/byteofpython_arabi).
+Di bawah ini tautan untuk versi bahasa Arab. Terima kasih untuk Ashraf Ali Khalaf yang telah menerjemahkan buku ini. Anda bisa membaca seluruh isi buku secara daring [di sini](http://www.khaledhosny.org/byte-of-python/index.html) atau Anda bisa mengunduhnya dari [sourceforge.net](http://downloads.sourceforge.net/omlx/byteofpython_arabic.pdf?use_mirror=osdn). Untuk info lebih lanjut [klik di sini](http://itwadi.com/byteofpython_arabi).
 
-## Brazilian Portuguese
+## Bahasa Portugis Brazil 
 
-There are two translations:
+Ada dua terjemahan:
 
-[Samuel Dias Neto](http://www.samueldiasneto.com/aprendendopython/index.html) (samuel.arataca-at-gmail-dot-com) made the first Brazilian Portuguese translation of this book when Python was in 2.3.5 version.
+[Samuel Dias Neto](http://www.samueldiasneto.com/aprendendopython/index.html) (samuel.arataca-at-gmail-dot-com) telah membuat terjemahan bahasa Portugis Brazil saat Python yang digunakan masih versi 2.3.5.
 
-Samuel's translation is available at [aprendendopython](http://www.samueldiasneto.com/aprendendopython/index.html).
+Terjemahan milik Samuel dapat diakses di [aprendendopython](http://www.samueldiasneto.com/aprendendopython/index.html).
 
-[Rodrigo Amaral](http://rodrigoamaral.net) (rodrigoamaral-at-gmail-dot-com) has volunteered to translate the book to Brazilian Portuguese. 
+[Rodrigo Amaral](http://rodrigoamaral.net) (rodrigoamaral-at-gmail-dot-com) juga secara sukarela menerjemahkan buku ini ke dalam bahasa Portugis Brazil. 
 
-Rodrigo's translation is available at [http://www.swaroopch.org/notes/Python_pt-br:Indice](http://www.swaroopch.org/notes/Python_pt-br:Indice).
+Terjemahan milik Rodrigo saat ini tersedia di [http://www.swaroopch.org/notes/Python_pt-br:Indice](http://www.swaroopch.org/notes/Python_pt-br:Indice).
 
 ## Catalan
 
-Moises Gomez (moisesgomezgiron-at-gmail-dot-com) has volunteered to translate the book to Catalan.
-The translation is in progress, and was present in the [erstwhile wiki](http://www.swaroopch.com/notes/).
+Moises Gomez (moisesgomezgiron-at-gmail-dot-com) secara sukarela menerjemahkan buku ini ke dalam bahasa Catalan. Terjemahannya masih dalam pengembangan, dan saat ini masih tersedia di [erstwhile wiki](http://www.swaroopch.com/notes/).
 
-> Moisès Gómez - I am a developer and also a teacher of programming (normally for people without any previous experience).
+> Moisès Gómez - Saya seorang pengembang aplikasi juga guru dalam bahasa pemrogaman (biasanya untuk orang-orang yang tidak punya pengalaman membuat program sebelumnya).
 >
-> Some time ago I needed to learn how to program in Python, and Swaroop's work was really helpful. Clear, concise, and complete enough. Just what I needed.
+> Beberapa waktu lalu, saya ingin belajar membuat program dengan Python, dan hasil karya Swaroop sangat membantu. Jernih, jelas dan lengkap. Tepat seperti yang saya butuhkan.
 >
-> After this experience, I thought some other people in my country could take benefit from it too. But English language can be a barrier.
+> Setelah menyelesaikannya, Saya pikir masyarakat di negara saya juga dapat memperoleh keuntungan darinya. Tapi bahasa Inggris menjadi halangan. 
 >
-> So, why not try to translate it? And I did for a previous version of BoP.
+> Jadi, kenapa tidak menerjemahkannya? Dan saya telah mengerjakannya di versi BoP sebelumnya.
 >
-> I my country there are two official languages. I selected the Catalan language assuming that others will translate it to the more widespread Spanish.
+> Di negara saya, ada dua bahasa resmi. Saya pilih bahasa Catalan dengan asumsi bahwa orang lain juga akan menerjemahkannya ke dalam bahasa Spanyol yang lebih luas.
 
-## Chinese
+## Cina
 
-Here's a Chinese version at [http://www.swaroopch.org/notes/Python_cn:Table_of_Contents](http://www.swaroopch.org/notes/Python_cn:Table_of_Contents).
+Berikut versi bahasa Cina di [http://www.swaroopch.org/notes/Python_cn:Table_of_Contents](http://www.swaroopch.org/notes/Python_cn:Table_of_Contents).
 
-Juan Shen (orion-underscore-val-at-163-dot-com) has volunteered to translate the book to Chinese.
-It is available at [http://www.pycn.org/python%E5%9C%A8%E7%BA%BF%E6%89%8B%E5%86%8C](http://www.pycn.org/python%E5%9C%A8%E7%BA%BF%E6%89%8B%E5%86%8C).
+Juan Shen (orion-underscore-val-at-163-dot-com) sudah secara sukarela menerjemahkan buku ini ke dalam bahasa Cina. 
+Saat ini tersedia di [http://www.pycn.org/python%E5%9C%A8%E7%BA%BF%E6%89%8B%E5%86%8C](http://www.pycn.org/python%E5%9C%A8%E7%BA%BF%E6%89%8B%E5%86%8C).
 
-> I am a postgraduate at Wireless Telecommunication Graduate School, Beijing University of Technology, China PR. My current research interest is on the synchronization, channel estimation and multi-user detection of multicarrier CDMA system. Python is my major programming language for daily simulation and research job, with the help of Python Numeric, actually. I learned Python just half a year before, but as you can see, it's really easy-understanding, easy-to-use and productive. Just as what is ensured in Swaroop's book, 'It's my favorite programming language now'.
-> 'A Byte of Python' is my tutorial to learn Python. It's clear and effective to lead you into a world of Python in the shortest time.  It's not too long, but efficiently covers almost all important things in Python. I think 'A Byte of Python' should be strongly recommendable for newbies as their first Python tutorial. Just dedicate my translation to the potential millions of Python users in China.
+> Saya lulusan sarjana Wireless Telecommunication Graduate School, Beijing University of Technology, China PR. Minat riset saya saat ini adalah sinkronisasi, perkiraan kanal dan deteksi pengguna-jamak untuk sistem multicarrier CDMA. Python merupakan bahasa pemrograman yang paling banyak saya gunakan untuk simulasi harian dan karya riset, secara lebih khusus dengan bantuan Python Numeric. Saya sudah belajar Python setengah tahun sebelumnya, namun sebagaimana Anda ketahui, bahasa ini sangat mudah dimengerti, mudah digunakan dan mendukung produktivitas. Persis seperti yang ditulis dalam buku Swaroop 'Python sekarang telah menjadi bahasa pemrograman favorit saya'. 
+> 'A Byte of Python' adalah tutorial saya saat belajar Python. Penjelasannya sangat jelas dan efektif untuk membimbing Anda ke dalam dunia Python dalam waktu singkat. Tidak terlalu panjang, namun secara efisien mencakup semua hal penting di Python. Saya pikir 'A Byte of Pythob' harus direkomendasikan dengan sangat untuk para pemula sebagai tutorial Python pertama mereka. Saya mendedikasikan terjemahan saya kepada jutaan pengguna Python potensial di Cina.
 
 ## Chinese Traditional
 
