@@ -48,41 +48,41 @@ Saat ini tersedia di [http://www.pycn.org/python%E5%9C%A8%E7%BA%BF%E6%89%8B%E5%8
 
 ## Chinese Traditional
 
-Fred Lin (gasolin-at-gmail-dot-com) has volunteered to translate the book to Chinese Traditional.
+Fred Lin (gasolin-at-gmail-dot-com) secara sukarela telah menerjemahkan buku ini ke dalam bahasa Tradisional Cina.
 
-It is available at [http://code.google.com/p/zhpy/wiki/ByteOfZhpy](http://code.google.com/p/zhpy/wiki/ByteOfZhpy).
+Salinan tersedia di [http://code.google.com/p/zhpy/wiki/ByteOfZhpy](http://code.google.com/p/zhpy/wiki/ByteOfZhpy).
 
-An exciting feature of this translation is that it also contains the *executable chinese python sources* side by side with the original python sources.  
+Fitur yang menarik dari terjemahan ini adalah tersedianya *kode program berbahasa Cina yang bisa dieksekusi* berdampingan dengan kode program python aslinya.
 
-> **Fred Lin** - I'm working as a network firmware engineer at Delta Network, and I'm also a contributor of TurboGears web framework.
+> **Fred Lin** - Saya saat ini bekerja sebagai engineer firmware jaringan di Delta Network, dan saya juga kontributor untuk framework web TurboGears.
 >
-> As a python evangelist (:-p), I need some material to promote python language. I found 'A Byte of Python' hit the sweet point for both newbies and experienced programmers. 'A Byte of Python' elaborates the python essentials with affordable size.
+> Sebagai _evangelist_ python (:-p), saya perlu materi untuk mempromosikan bahasa Python. Dan 'Byte of Python' adalah buku yang paling tepat untuk para pemula maupun progreammer yang berpengalaman. 'A Byte of Python' mengelaborasi hal-hal yang esensial dari Python dengan kadar yang terjangkau untuk semua.
 >
-> The translation are originally based on simplified chinese version, and soon a lot of rewrite were made to fit the current wiki version and the quality of reading.
+> Terjemahan dibuat berdasarkan versi bahasa Cina yang disederhanakan, ditambah banyak penulisan ulang agar pas pada versi Wiki dan kualitas bacaan.
 >
-> The recent chinese traditional version also featured with executable chinese python sources, which are achieved by my new 'zhpy' (python in chinese) project (launch from Aug 07).
+> Versi Cina tradisional juga diberikan lengkap dengan kode program Python berbahasa Cina yang bisa dieksekusi, yang bisa dilakukan lewat proyek terbaru saya yakni `zhpy` (python dalam bahasa Cina) (telah diperkenalkan pada publik sejak Agustus 07).
 >
-> zhpy(pronounce (Z.H.?, or zippy) build a layer upon python to translate or interact with python in chinese(Traditional or Simplified). This project is mainly aimed for education.
+> zhpy(dibaca (Z.H.?, atau zippy) dibangun di atas lapisan Python, digunakan agar bisa berinteraksi dengan Python berbahasa Cina (tradisional atau disederhanakan). Proyek ini tujuan utamanya murni untuk pendidikan.
 
-## French
+## Prancis 
 
-Gregory (coulix-at-ozforces-dot-com-dot-au) has volunteered to translate the book to French.
+Gregory (coulix-at-ozforces-dot-com-dot-au) secara sukarela telah menerjemahkan buku ini ke dalam bahasa Perancis.
 
-Gérard Labadie (Palmipede) has completed to translate the book to French, it starts with [http://www.swaroopch.org/notes/Python_fr:Table_des_Mati%C3%A8res](http://www.swaroopch.org/notes/Python_fr:Table_des_Mati%C3%A8res).
+Gérard Labadie (Palmipede) juga telah melengkapi terjemahan buku ini dalam bahasa Perancis, dimulai dengan [http://www.swaroopch.org/notes/Python_fr:Table_des_Mati%C3%A8res](http://www.swaroopch.org/notes/Python_fr:Table_des_Mati%C3%A8res).
 
-## German
+## Jerman 
 
-Lutz Horn (lutz-dot-horn-at-gmx-dot-de), Bernd Hengelein (bernd-dot-hengelein-at-gmail-dot-com) and Christoph Zwerschke (cito-at-online-dot-de) have volunteered to translate the book to German.
+Lutz Horn (lutz-dot-horn-at-gmx-dot-de), Bernd Hengelein (bernd-dot-hengelein-at-gmail-dot-com) dan Christoph Zwerschke (cito-at-online-dot-de) secara sukarela telah menerjemahkan buku ini ke dalam bahasa Jerman.
 
-Their translation is located at [http://abop-german.berlios.de](http://abop-german.berlios.de).
+Terjemahan mereka bisa dilihat di [http://abop-german.berlios.de](http://abop-german.berlios.de).
 
-*Lutz Horn* says:
+*Lutz Horn* mengatakan:
 
-> I'm 32 years old and have a degree of  Mathematics from University of Heidelberg, Germany. Currently I'm working as a software engineer on a publicly funded project to build a web portal for all things related to computer science in Germany.The main language I use as a professional is Java, but I try to do as much as possible with Python behind the scenes. Especially text analysis and conversion is very easy with Python. I'm not very familiar with GUI toolkits, since most of my programming is about web applications, where the user interface is build using Java frameworks like Struts. Currently I try to make more use of the functional programming features of Python and of generators.  After taking a short look into Ruby, I was very impressed with the use of blocks in this language. Generally I like the dynamic nature of languages like Python and Ruby since it allows me to do things not possible in more static languages like Java.I've searched for some kind of introduction to programming, suitable to teach a complete non-programmer. I've found the book 'How to Think Like a Computer Scientist: Learning with Python', and 'Dive into Python'. The first is good for beginners but to long to translate. The second is not suitable for beginners. I think 'A Byte of Python' falls nicely between these, since it is not too long, written to the point, and at the same time verbose enough to teach a newbie. Besides this, I like the simple DocBook structure, which makes translating the text a generation the output in various formats a charm.
+> Saya 32 tahun dan sarjana Matematika dari Universitas Heidelberg, Jemran. Saat ini saya bekerja sebagai pengembang perangkat lunak dalam proyek yang didanai publik berupa portal web yang berkaitan dengan ilmu komputer dalam bahasa Jemran. Bahasa utama yang saya gunakan secara profesional Java, namun saya mencoba sebanyak mungkin menggunakan Python di belakang layar. Terutama untuk analisa teks dan konversi data yang sangat mudah dilakukan di Python. Saya tidak terlalu familiar dengan toolkit GUI, mengingat pemrograman yang saya lakukan lebih banyak digunakan untuk aplikasi webm dan antar muka untuk pengguna menggunakan framework Java seperti Struts. Saat ini saya berusaha menggunakan Python lebih banyak di fitur pemrograman berbasis fungsi dan generator. Setelah melihat secara sekilas terhadap Ruby, saya sangat terkesan dengan penggunan indentasi blok di bahasa Ini. Secara umum saya suka budaya dinamis dalam bahasa Ruby dan Python, yang memungkinkan saya melakukan apa yang tidak bisa saya lakukan lewat bahasa statis seperti Java. Saya telah mencari banyak referensi untuk pengenalan bahasa pemrograman yang cocok untuk pengguna yang sama sekali awam. Saya sebelumnya telah menemukan buku 'How to Think Like a Computer Scientist: Learning with Python' dan 'Dive into Python'. Buku pertama bagus untuk pemula tapi terlalu panjang untuk diterjemahkan. Buku kedua tidak cocok untuk pemula. Saya pikir buku 'A Byte of Python' berada di antara keduanya, mengingat buku ini tidak panjang, ditulis langsung menuju poin yang diinginkan, namun cukup lengkap untuk diajarkan kepada pemula. Di samping itu, saya luka struktur DocBook yang sederhana, membuat hasil penerjemahan dapat dikeluarkan dalam berbagai format secara mudah.
 
-*Bernd Hengelein* says:
+*Bernd Hengelein* mengatakan:
 
-> Lutz and me are going to do the german translation together. We just started with the intro and preface but we will keep you informed about the progress we make. Ok, now some personal things about me. I am 34 years old and playing with computers since the 1980's, when the "Commodore C64" ruled the nurseries. After studying computer science I started working as a software engineer. Currently I am working in the field of medical imaging for a major german company. Although C++ is the main language I (have to) use for my daily work, I am constantly looking for new things to learn.Last year I fell in love with Python, which is a wonderful language, both for its possibilities and its beauty. I read somewhere in the net about a guy who said that he likes python, because the code looks so beautiful. In my opinion he's absolutly right. At the time I decided to learn python, I noticed that there is very little good documentation in german available. When I came across your book the spontaneous idea of a german translation crossed my mind. Luckily, Lutz had the same idea and we can now divide the work.I am looking forward to a good cooperation!
+> Lutz dan saya akan mengerjakan terjemahan berbahasa Jerman bersama-sama. Kami baru saja selesai dengan intro dan pembukaan, tapi kami akan tetap menginformasikan kepada Anda perkembangan yang kami capai. Ok, sedikit catatan pribadi tentang saya. Saya and me are going to do the german translation together. We just started with the intro and preface but we will keep you informed about the progress we make. Ok, now some personal things about me. I am 34 years old and playing with computers since the 1980's, when the "Commodore C64" ruled the nurseries. After studying computer science I started working as a software engineer. Currently I am working in the field of medical imaging for a major german company. Although C++ is the main language I (have to) use for my daily work, I am constantly looking for new things to learn.Last year I fell in love with Python, which is a wonderful language, both for its possibilities and its beauty. I read somewhere in the net about a guy who said that he likes python, because the code looks so beautiful. In my opinion he's absolutly right. At the time I decided to learn python, I noticed that there is very little good documentation in german available. When I came across your book the spontaneous idea of a german translation crossed my mind. Luckily, Lutz had the same idea and we can now divide the work.I am looking forward to a good cooperation!
 
 ## Greek
 
