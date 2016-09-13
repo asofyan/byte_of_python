@@ -4,27 +4,27 @@
 
 # A Byte of Python
 
-'A Byte of Python' adalah buku gratis tentang pemrograman dalam bahasa Python. Buku ini ditujukan sebagai tutorial atau panduan untuk pemula. Jika yang Anda ketahui tentang komputer adalah bagaimana menyimpan file teks, maka buku ini untuk Anda.
+'A Byte of Python' adalah buku gratis tentang pemrograman dalam bahasa Python. Buku ini dibuat dalam format tutorial atau panduan bagi pemula. Jika yang Anda ketahui tentang komputer adalah bagaimana menyimpan berkas-berkas teks, maka buku ini cocok untuk Anda.
 
-Buku ini ditulis minimal untuk Python 3, meskipun Python 2 merupakan versi yang lebih umum ditemukan saat ini (baca lebih lanjut tentang hal ini [Python 2 lawan Python 3](#python-2-versus-3)) 
+Buku ini ditulis minimal untuk Python 3, meskipun Python 2 lebih lazim digunakan untuk saat ini (baca lebih lanjut tentang hal ini [Python 2 lawan Python 3](#python-2-versus-3)) 
 
 ## Siapa Pembaca A Byte of Python?
 
 Berikut kutipan beberapa orang tentang buku ini: 
 
-> Hal terbaik yang saya temukan adalah "A Byte of Python", merupakan buku sederhana yang brilian untuk pemula. Buku ini ditulis dengan baik, konsep dijelaskan seksama dengan contoh yang bisa dibuktikan langsung.
+> Hal terbaik yang saya temukan adalah "A Byte of Python", merupakan buku sederhana yang sangat cocok bagi pemula. Buku ini ditulis dengan baik, konsep dijelaskan seksama dengan contoh yang bisa dibuktikan langsung.
 >
 > -- [_Syed Talal_ (19 years old)](http://littlepancakes.wordpress.com/2010/01/30/python)
 
 >  
 
-> Ini adalah tutorial untuk pemula terbaik yang pernah saya lihat! Terima kasih atas upaya Anda. 
+> Ini adalah tutorial terbaik bagi pemula yang pernah saya baca! Terima kasih atas upaya Anda. 
 >
 > -- _Walt Michalik_ (wmich50-at-theramp-dot-net)
 
 >  
 
-> Anda membuat tutorial Python terbaik yang pernah saya temukan di Internet. Kerja yang baik. Terima kasih!
+> Anda membuat tutorial Python terbaik yang pernah saya temukan di Internet. Hasil karya yang baik. Terima kasih!
 >
 > -- _Joshua Robin_ (joshrob-at-poczta-dot-onet-dot-pl)
 
@@ -36,25 +36,25 @@ Berikut kutipan beberapa orang tentang buku ini:
 
 >  
 
-> Hai, Saya dari Republik Dominika. Nama saya Pavel, dan baru-baru ini saya baca buku Anda 'A Byte of Python' dan menurut saya sempurna!! :). Saya belajar banyak dari contoh-contoh yang ada. Buku Anda penolong terbaik untuk pemula seperti saya...
+> Hai, Saya dari Republik Dominika. Nama saya Pavel, dan baru-baru ini saya baca buku Anda 'A Byte of Python' dan saya pikir buku Anda sempurna!! :). Saya belajar banyak dari contoh-contoh yang ada. Buku Anda penolong terbaik untuk pemula seperti saya...
 >
 > -- _Pavel Simo_ (pavel-dot-simo-at-gmail-dot-com)
 
 >  
 
-> Saya baru saja menyelesaikan baca Byte of Python, dan saya pikir saya harus berterima kasih pada Anda. Saya sangat sedih saat membaca halaman terakhir, dan sekarang saya harus kembali membaca buku manual atau pembelajaran Python yang bertele-tele serta membosankan dari Oreilly atau lainnya. Omong-omong, saya sangat menghargai buku Anda.
+> Saya baru saja menyelesaikan bacaan Byte of Python, dan saya pikir saya harus berterima kasih kepada Anda. Saya sangat sedih saat membaca halaman terakhir, dan sekarang saya harus kembali membaca buku manual atau pembelajaran Python yang bertele-tele serta membosankan dari Oreilly atau lainnya. Omong-omong, saya sangat menghargai buku Anda.
 >
 > --  _Samuel Young_ (sy-one-three-seven-at-gmail-dot-com)
 
 >  
 
-> Dear Swaroop, Saya mengambil kelas dari instruktur yang tidak tertarik untuk mengajar. Kami menggunakan Learning Python, edisi kedua, oleh O'Reilly. Buku itu bukan buku teks untuk pemula yang tidak punya pengetahuan tentang pemrograman, dan instruktur tersebut harusnya bekerja di bidang lain. Terima kasih untuk buku Anda, tanpa itu saya kehilangan arah tentang Python maupun pemrograman. Terima kasih banyak, Anda berhasil 'membagi pesan' ke level yang dipahami oleh pemula dan tidak semua orang mampu.
+> Dear Swaroop, Saya mengikuti pelajaran kelas dari pengajar yang tidak tertarik untuk mengajar. Kami menggunakan Learning Python, edisi kedua, oleh O'Reilly. Buku itu bukan buku teks untuk pemula yang tidak punya pengetahuan tentang pemrograman, dan pengajar tersebut harusnya bekerja di bidang lain. Terima kasih untuk buku Anda, tanpa itu saya kehilangan arah tentang Python maupun pemrograman. Terima kasih banyak, Anda berhasil 'membagi pesan' ke level yang dipahami oleh pemula dan tidak semua orang mampu.
 >
 > -- _Joseph Duarte_ (jduarte1-at-cfl-dot-rr-dot-com)
 
 >  
 
-> Saya cinta buku Anda! Buku tutorial Python terbaik yang pernah ada, dan referensinya sangat bermanfaat. Brilian, masterpiece sejati! Teruskan kerja baik ini!
+> Saya cinta buku Anda! Buku tutorial Python terbaik yang pernah ada, dan referensinya sangat bermanfaat. Brilian, masterpiece sejati! Teruskan hasil karya yang ini!
 >
 > -- _Chris-André Sommerseth_
 
