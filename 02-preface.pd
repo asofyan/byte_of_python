@@ -1,6 +1,6 @@
 # Pendahuluan
 
-Python barangkali merupakan satu dari bahasa pemrograman yang sederhana namun tangguh. Bahasa ini baik untuk pemula maupun ahli, dan yang lebih penting, sangat enak untuk digunakan untuk pemrograman.  Buku ini bertujuan untuk membantu Anda belajar bahasa yang menakjubkan ini dan menunjukkan bagaimana menyelesaikan hal-hal secara cepat tanpa kesulitasn - efek dari 'Anti Racun Sempurna untuk masalah pemrograman Anda'. 
+Python barangkali merupakan satu dari bahasa pemrograman yang sederhana namun tangguh. Bahasa ini baik untuk pemula maupun ahli, dan yang lebih penting, sangat enak untuk digunakan untuk pemrograman.  Buku ini bertujuan untuk membantu Anda belajar bahasa yang menakjubkan ini dan menunjukkan bagaimana menyelesaikan hal-hal secara cepat tanpa kesulitan - efek dari 'Obat yang Sempurna untuk masalah pemrograman Anda'. 
 
 ## Untuk Siapa Buku ini Ditujukan 
 
@@ -8,15 +8,15 @@ Buku ini dapat digunakan sebagai panduan atau tutorial untuk bahasa pemrograman 
 
 Tujuannya adalah, jika Anda tahu bagaimana menyimpan file teks di komputer, maka Anda dapat belajar Python dari buku ini. Jika Anda punya pengalaman pemrograman sebelumnya, Anda juga dapat belajar Python dari buku ini.
 
-Jika Anda punya pengalaman pemrograman sebelumnya, Anda akan tertarik melihat perbedaan antara Python dengan bahasa pemrograman favorit Anda - Saya menggaris bawahi cukup banyak perbedaan. Sedikit peringatan, Python akan segera akan menjadi bahasa pemrograman favorit Anda!
+Jika Anda punya pengalaman pemrograman sebelumnya, Anda akan tertarik melihat perbedaan antara Python dengan bahasa pemrograman favorit Anda - Saya menggarisbawahi cukup banyak perbedaan. Sedikit peringatan, Python akan segera akan menjadi bahasa pemrograman favorit Anda!
 
 ## Pelajaran Sejarah 
 
-Saya mulai Python pertama kali saat saya perlu installer untuk perangkat lunak yang saya tulis bernama 'Diamond', sehingga instalasi dapat berjalan mudah. Saya harus memilih antara Python dan Perl untuk sebagai pengikat pustaka QT. Saya melakukan riset kecil di web, dan menemukan [sebuah artikel oleh Eric S. Raymond](http://pythonology.org/success&story=esr), hacker terkenal dan dihormati, di mana dia bicara bagaimana Python menjadi bahasa pemrograman favoritnya. Saya juga menemukan bahwa ikatan PyQT lebih dewasa dibandingan dengan Perl-QT. Jadi, saya memutuskan Python adalah bahasa untuk saya.
+Saya mulai Python pertama kali saat saya perlu installer untuk perangkat lunak yang saya tulis bernama 'Diamond', sehingga instalasi dapat berjalan mudah. Saya harus memilih antara Python dan Perl untuk sebagai tautan pustaka QT. Saya melakukan riset kecil di web, dan menemukan [sebuah artikel oleh Eric S. Raymond](http://pythonology.org/success&story=esr), hacker terkenal dan dihormati, di mana dia bicara bagaimana Python menjadi bahasa pemrograman favoritnya. Saya juga menemukan bahwa tautan PyQT lebih matang dibandingan dengan Perl-QT. Jadi, saya memutuskan Python adalah bahasa untuk saya.
 
 Kemudian, saya mencarai buku yang bagus tentang Python. Saya tidak dapat menemukannya! Saya temukan beberapa buku O'Reilly, namun kadang terlalu mahal atau seperti petunjuk referensi daripada panduan. Akhirnya saya menggunakan dokumentasi resmi yang ada bersama Python. Bagaimanapun juga, dokumentasi itu terlalu singkat dan kecil. Meskipun memberikan gambaran tentang Python, namun tidak lengkap. Saya bisa mengikutinya karena saya punya latar belakang pemrograman sebelumnya, tapi tentu saja dokumentasi itu tidak cocok untuk pemula.
 
-Kira-kira setelah enam bulan sejak saya bersentuhan dengan Python, saya menginstal Linux Red Hat 9.0 dan bermain-main dengan KWord. Saya sangat senang menggunakannya, dan secara tiba-tiba saya punya ide untuk menulis beberapa hal tentang Python. Saya mulai menulis beberapa halaman, tapi kemudian berkembang menjadi 30 halaman secara cepat. Lalu, saya mulai serius untuk menjadikannya bentuk buku yang bermanfaat. Saya akan mempertimbangkan buku ini sebagai kontribusi dan penghargaan saya terhadap komunitas open source. 
+Kira-kira setelah enam bulan sejak saya bersentuhan dengan Python, saya menginstal Linux Red Hat 9.0 dan bermain-main dengan KWord. Saya sangat senang menggunakannya, dan secara tiba-tiba saya punya ide untuk menulis beberapa hal tentang Python. Saya mulai menulis beberapa halaman, tapi kemudian berkembang menjadi 30 halaman secara cepat. Lalu, saya mulai serius untuk menjadikannya dalam bentuk buku yang bermanfaat. Saya akan mempertimbangkan buku ini sebagai kontribusi dan penghargaan saya terhadap komunitas open source. 
 
 Buku ini dimulai dari catatan pribadi tentang Python, dan saya masih menganggap seperti itu, meskipun saya mengupayakan banyak hal agar lebih enak untuk yang lainnya :)
 
@@ -24,7 +24,7 @@ Dalam semangat utama pada open source, saya menerima banyak saran konstruktif, k
 
 ## Status Buku 
 
-Buku ini telah diformat ulang di Oktober 2012 menggunakan Pandoc agar memungkikan untuk dibuat beberapa versi ebook yang disarankan pembaca, bersama perbaikan dan pembaruan. 
+Buku ini telah diformat ulang di Oktober 2012 menggunakan Pandoc agar memungkinkan untuk dibuat beberapa versi ebook yang disarankan pembaca, bersama perbaikan dan pembaruan. 
 
 Perubahan di edisi Desember 2008 (dari revisi besar di Maret 2005), adalah pembaruan untuk rilis Python 3.0.
 
@@ -42,6 +42,6 @@ Situs web resmi dari buku ini adalah <http://www.swaroopch.com/notes/Python>  di
 
 <!-- -->
 
-> Keberhasilan hidup tidak banyak berkait tentang bakat dan kesempatan, melainkan konsentrasi dan ketekunan.
+> Keberhasilan hidup tidak banyak kaitannya terhadap bakat dan kesempatan, melainkan konsentrasi dan ketekunan.
 >
 > -- C. W. Wendte
