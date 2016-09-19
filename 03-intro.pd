@@ -1,10 +1,10 @@
 # Pengenalan 
 
-Python  adalah satu dari bahasa yang jarang, yang mampu mengklaim *sederhana* dan *kuat* secara bersamaan. Anda akan temukan kejutan yang menyenangkan melihat bagaimana mudahnya konsentrasi kepada solusi permasalahan daripada ke sintaks dan struktur dari bahasa pemrograman yang Anda gunakan.
+Python adalah salah satu dari jarangnya bahasa pemrograman yang mampu mengklaim *sederhana* dan *tangguh* secara bersamaan. Anda akan terkejut namun senang melihat bagaimana mudahnya konsentrasi langsung kepada jawaban permasalahan daripada dipusingkan dengan sintaks dan struktur dari bahasa pemrograman yang Anda gunakan.
 
-Pengenalan Python secara resmi adalah:
+Secara resmi Python dikenalkan dengan definisi sebagai berikut:
 
-> Python adalah bahasa pemrograman yang mudah dipelajari dan kuat (powerful). Bahasa ini memiliki data struktur tingkat-tinggi yang efisien dan sederhana, namun punya pendekatan yang efektif untuk pemrograman berbasis obyek. Sintaks Python yang elegan dan dynamic typing, bersama dengan interpreter, membuatnya jadi bahasai pemrograman yang ideal untuk membuat skrip (scripting) dan pengembangan aplikasi cepat (rapid application development) di banyak area di platform utama. 
+> Python adalah bahasa pemrograman yang mudah dipelajari dan tangguh (powerful). Bahasa ini memiliki struktur data tingkat-tinggi yang efisien dan sederhana, namun punya pendekatan yang efektif untuk pemrograman berbasis obyek. Sintaks Python yang elegan dan bersifat dynamic typing (sintaks akan dicek secara langsung tanpa harus menunggu dikompilasi dalam bahasa mesin), dilengkapi dengan interpreter, membuatnya menjadi bahasa pemrograman yang ideal untuk membuat skrip (scripting) dan pengembangan aplikasi secara cepat (rapid application development) di banyak area di platform utama. 
 
 Saya akan mendiskusikan sebagian besar fitur-fitur ini di bagian berikutnya.
 
@@ -16,11 +16,11 @@ Cerita di balik nama
 
 ### Sederhana
 
-Python adalah bahasa yang minimalis dan sederhana. Membaca program Python sederhana seperti membaca bahasa Inggris, meskipun Inggris yang baku! Watak Python berupa pseudo-code ini adalah kekuatan terbesarnya. Hal tersebut memungkinkan Anda berkonsentrasi kepada solusi dari masalah daripada pusing tentang bahasanya sendiri.
+Python adalah bahasa yang minimalis dan sederhana. Membaca program Python sederhana seperti membaca bahasa Inggris, meskipun Inggris yang baku! Watak Python berupa pseudo-code ini adalah kekuatan terbesarnya. Hal tersebut memungkinkan Anda berkonsentrasi kepada solusi terhadap masalah daripada pusing tentang bahasanya sendiri.
 
 ### Mudah Dipelajari 
 
-Seperti yang Anda akan lihat, Python sangat mudah untuk dimulai. Python memiliki sintaks yang luar biasa mudah, seperti yang disebutkan sebelumnya.
+Seperti yang akan Anda lihat, Python sangat mudah untuk dimulai. Python juga memiliki sintaks yang luar biasa mudah, seperti telah disebutkan sebelumnya.
 
 ### Bebas dan Open Source 
 
@@ -28,11 +28,11 @@ Python adalah salah satu contoh dari *FLOSS* (Free/Libre and Open Source Softwar
 
 ### Bahasa Tingkat-Tinggi 
 
-Saat Anda menulis program di Python, Anda tidak perlu repot untuk detail tingkat-rendah-nya seperti manajemen memori yang digunakan program dan lainnya. 
+Saat Anda menulis program di Python, Anda tidak perlu repot untuk mempelajai detail tingkat-rendah-nya seperti manajemen memori yang digunakan program dan hal-hal tingkat rendah (mendekati bahasa mesin) lainnya. 
 
 ### Portabel
 
-Dengan sifatnya yang terbuka (open source), Python telah diporting (diubah agar bisa berjalan di) banyak platform. Seluruh program Python Anda dapat dijalankan dalam platform berikut tanpa perlu diganti, dan jika Anda cukup berhati-hati, dapat terhindar dari fitur yang tergantung-sistem.
+Dengan sifatnya yang terbuka (open source), Python telah diporting (disesuaikan agar bisa berjalan di) banyak platform. Seluruh program Python Anda dapat dijalankan dalam platform berikut tanpa perlu diganti, dan jika Anda cukup berhati-hati, dapat terhindar dari fitur yang tergantung dari sistem operasi yang digunakan.
 
 Anda dapat menggunakan Python di Linux, Windows, FreeBSD, Macintosh, Solaris, OS/2, Amita, AROS, AS/400, BeOS, OS/390, z/OS, Palm OS, QNX, VMS, Psion, Acorn RISC OS, VxWorks, PlayStation, Sharp Zaurus, windows CE dan bahkan Pocket PC!
 
@@ -42,13 +42,13 @@ Anda dapat pula menggunakan platform seperti [Kivy](http://kivy.org/) untuk memb
 
 Tentang hal ini perlu sedikit penjelasan.
 
-Program yang ditulis dalam bahasa yang dikompilasi seperti C atau C++, dikonversi dari kode program seperti C atau C++ kepada bahasa yang dapat berbicara oleh komputar Anda (kode biner seperti 0s dan 1s) menggunakan kompiler dengan bermacam flags dan pilihan. Saat Anda menjalankan program, perangkat lunak penghubung (linker/loeader) menyalin program Anda dari hard disk ke memori dan mulai menjalankannya.
+Program yang ditulis dalam bahasa seperti C atau C++ (sering disebut bahasa yang dikompilasi - compiled language), dikonversi dari kode program C atau C++ ke dalam bahasa yang dapat berbicara oleh komputar Anda (kode biner seperti 0s dan 1s) menggunakan kompiler dengan bermacam penanda dan pilihan. Saat Anda menjalankan program, perangkat lunak penghubung (linker/loeader) menyalin program Anda dari cakram keras ke dalam memori dan mulai menjalankannya.
 
-Python, di sisi lain, tidak perlu dikompilasi menjadi biner. Anda cukuup *jalankan* program langsung dari kode program. Secara internal, Python mengonversi kode program ke dalam bentuk intermediate yang dinamakan bytecodes dan menerjemahkannya ke dalam bahasa komputer Anda, lalu menjalanaknnya. Semua ini, sebetulnya, membuat penggunaan Python lebih mudah mengingat Anda tidak perlu khawatir tentang kompilasi program, dan memastikan pustaka terkait dijalankan, dan lainnya. Ini juga membuat program Python Anda lebih portabel, mengingat Anda cuma perlu menyalin program Python ke dalam komputer lain dan langsung jalan!
+Python, di sisi lain, tidak perlu dikompilasi menjadi biner. Anda cukuup *jalankan* program langsung dari kode program. Secara internal, Python mengonversi kode program ke dalam bentuk antara yang dinamakan _bytecodes_ dan menerjemahkannya ke dalam bahasa komputer Anda, lalu menjalankannya. Semua ini, sebetulnya, membuat penggunaan Python menjadi lebih mudah. Anda tidak perlu khawatir tentang kompilasi program, dan memastikan pustaka terkait dijalankan, dan hal-hal teknis lainnya. Ini juga membuat program Python Anda lebih portabel. Anda cuma perlu menyalin program Python ke dalam komputer lain dan langsung jalan!
 
 ### Berorientasi Obyek 
 
-Python mendukung pemrograman berorientasi prosedur (procedure-oriented) sebaik pemrograman berorientasi obyek (object-oriented). Dalam bahasa *procedure-oriented*, program dibangun dari rangkaian prosedur atau fungsi, agar dapat digunakan kembali. Dalam bahasa *object-oriented*, program dbuat berdasaran obyek yang dikombinasikan data dan fungsi. Pythonsangat kuat namun sederhana dalam menjalankan OOP (Object Oriented Programming) terutama jika dibandingkan dengan bahasa besar seperti C++ atau Java.
+Python mendukung pemrograman berorientasi prosedur (procedure-oriented) sebaik pemrograman berorientasi obyek (object-oriented). Dalam bahasa *procedure-oriented*, program dibangun dari rangkaian prosedur atau fungsi, agar dapat digunakan kembali. Dalam bahasa *object-oriented*, program dbuat berdasaran obyek yang dikombinasikan data dan metode. Python sangat kuat namun sederhana dalam menjalankan OOP (Object Oriented Programming) terutama jika dibandingkan dengan bahasa besar seperti C++ atau Java.
 
 ### Dapat diperluas (Extensible) 
 
@@ -60,13 +60,13 @@ Anda dapat menyematkan Python ke dalam program C/C++ untuk memberi kemampuan 'sc
 
 ### Pustaka yang Ekstensif 
 
-Pustaka Standar Python (Python Standard Library) sangat banyak. Pustaka tersebut dapat membantu Anda mengerjakan banyak hal mencakup ekspresi regular (regular expressions/REGEX), pembuatan dokumen otomatis, unit testing, threading, basis data, browser web, CGI, FTP, email, XML, XML-RPC, HTML, berkas WAV, kriptografi, GUI (graphical user interface - antar muka pengguna berbentuk grafik) dan hal lain yang bergantung-sistem. Ingat, semua ini tersedia di mana saja saat Python diinstal. Ini filosofi Python yang bernama *Batteries Included* (termasuk batere di dalamnya).
+Pustaka Standar Python (Python Standard Library) sangat banyak. Pustaka tersebut dapat membantu Anda mengerjakan banyak hal mencakup ekspresi regular (regular expressions/REGEX), pembuatan dokumen otomatis, unit testing, threading, basis data, browser web, CGI, FTP, email, XML, XML-RPC, HTML, berkas WAV, kriptografi, GUI (graphical user interface - antar muka pengguna berbentuk grafik) dan hal lain yang bergantung-sistem. Ingat, semua ini tersedia di mana saja saat Python diinstal. Ini filosofi Python yang bernama *Batteries Included* (sudah termasuk batere di dalamnya).
 
 Disamping pustaka standar, ada banyak pustaka berkualitas tinggi lainnya yang dapat Anda temukan di [Python Package Index](http://pypi.python.org/pypi).
 
 Ringkasan
 
-:   Python adalah bahasa yang kuat dan menarik. Bahasa ini punya kombinasi yang tepat antara kinerja dan fitur yang menjadikannya mudah dan menyenangkan untuk menulis program di Python. 
+:   Python adalah bahasa yang kuat dan menarik. Bahasa ini punya kombinasi yang tepat antara kinerja dan fitur, yang menjadikan penulisan program di Python sangat mudah dan menyenangkan. 
 
 ## Python 2 versus 3
 
@@ -82,8 +82,8 @@ Untuk detail perbedaan Antara Python 2 dan Python 3 lihat [halaman Python/3 di w
 
 Mungkin Anda tertarik hacker besar seperti ESR mengatakan sesuatu tentang Python:
 
-(@) *Eric S. Raymond* adalah pengarang buku "The Cathedral and the Bazaar" dan juga orang yang pertama kali mengenalkan istilah *Open Source*. Dia mengatakan bahwa [Python telah menjadi bahasa pemrogaman favoritnya](http://www.linuxjournal.com/article.php?sid=3882). Artikel ini merupakan inspirasi utama dari keinginan saya untuk bekerja bersama Python.
+(@) *Eric S. Raymond* adalah pengarang buku "The Cathedral and the Bazaar" dan juga orang yang pertama kali mengenalkan istilah *Open Source*. Dia mengatakan bahwa [Python telah menjadi bahasa pemrogaman favoritnya](http://www.linuxjournal.com/article.php?sid=3882). Artikel ini merupakan inspirasi utama dari keinginan saya untuk bekerja menggunakan Python.
 
 (@) *Bruce Eckel* adalah pengarang terkenal dari buku *Thinking in Java* dan *Thinking in C++*. Dia mengatakan tidak ada bahasa pemrograman yang bisa membuatnya lebih produktif selain Python. Dia bilang bahwa Python barangkali satu-satunya bahasa yang menitikberatkan pada membuat hal-hal yang lebih mudah bagi programmer. Baca [wawancara lengkapnya](http://www.artima.com/intv/aboutme.html) untuk informasi lebih detail.
 
-(@) *Peter Norvig* adalah pengarang terkenal dari bahasa Lisp dan Direktur Kualitas Pencarian di Google (terimakasih untuk guido van Rossum telah menunjukkannya). Dia mengatakan bahwa Python merupakan bagian integral dari Google. Anda dapat memverifikasi pernyataan ini dengan melihat halaman [Google Jobs](http://www.google.com/jobs/index.html) yang mendaftar pengatahuan Python sebagai syarat utama dari programmer perangkat lunak. 
+(@) *Peter Norvig* adalah pengarang terkenal dari bahasa Lisp dan Direktur Kualitas Pencarian di Google (terimakasih untuk Guido van Rossum telah menunjukkannya). Dia mengatakan bahwa Python merupakan bagian integral dari Google. Anda dapat memverifikasi pernyataan ini dengan melihat halaman [Google Jobs](http://www.google.com/jobs/index.html) yang mendaftar pengetahuan Python sebagai syarat utama dari programmer perangkat lunak. 
