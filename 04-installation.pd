@@ -6,7 +6,7 @@ Kunjungi <http://www.python.org/download/> dan unduh versi terakhir. Instalasi a
 
 Perhatian
 
-:   Ketika diberi pilihan untuk uncheck komponen "optional", jangan melakukan uncheck.
+:  Ketika diberi pilihan untuk menghilangkan centang komponen "optional", jangan melakukan hilangkan centangnya.
 
 ### Prompt DOS 
 
@@ -14,7 +14,7 @@ Jika Anda ingin menggunakan Python dari baris perintah Windows seperti prompt DO
 
 Untuk Windows 2000, XP, 2003 , klik `Control Panel` --- `System` --- `Advanced` --- `Environment Variables`. Klik pada variabel bernama `PATH` di bagian 'System Variables', lalu pilih `Edit` dan tambahkan `;C:\Python33` (mohon pastikan folder ini sudah ada, dan akan berbeda untuk versi Python yang lebih baru) di akhir isian yang sudah ada di sana. Tentu saja, gunakan nama direktori yang sesuai.
 
-Untuk versi Windows lebih lama, buka berkas `C:\AUTOEXEC.BAT` dan tambahkan baris '`PATH=%PATH%;C:\Python33`' (tanpa tanda petik) kemudian restart kembali sistemnya. Untuk Windows NT, gunakan berkas `AUTOEXEC.NT`.
+Untuk versi Windows lebih lama, buka berkas `C:\AUTOEXEC.BAT` dan tambahkan baris '`PATH=%PATH%;C:\Python33`' (tanpa tanda petik) kemudian nyalakan ulang sistemnya. Untuk Windows NT, gunakan berkas `AUTOEXEC.NT`.
 
 Untuk Windows Vista:
 
@@ -23,13 +23,13 @@ Untuk Windows Vista:
 #. Di bagian kiri daftar tasks, muncul “Advanced system settings.” Silakan diklik.
 #. Tab Advance dari kotak dialog System Properties akan muncul. Klik tombol Environment Variable di bagian kanan bawah. 
 #. Di kotak bawah berjudul "System Variables" gulung layar ke Path dan klik tombol Edit.
-#. Ganti path sesuai yang dibutuhkan.
-#. Nyalakan kembali sistem Anda. Vista tidak akan mengambil perubahan variable lingkungan path sistem hingga saya menyalakan kembali.
+#. Ganti path sesuai yang dibutuhkan (lihat referensi sebelumnya).
+#. Nyalakan kembali sistem Anda. Vista tidak akan mengambil perubahan variable lingkungan path sistem hingga dinyalakan kembali.
 
 Untuk Windows 7:
 
-#. Klik kanan Komputer yang ada di desktop, dan pilih Properties, atau klik Start dan pilih Control Panel --- System and Security --- System. Koik di seting sistem bagian Advanced di sebelah kiri dan tekan tab Advanced. Di bagian bawah tekan Environment Variables, dan di bawah System variables, cari variabel PATH, pilih dan tekan Edit.
-#. Pergi ke akhir baris dibawah nilai Variable dan tambahkan `;C:\Python33`.
+#. Klik kanan Komputer yang ada di desktop, dan pilih Properties, atau klik Start dan pilih Control Panel --- System and Security --- System. Koik di seting sistem bagian Advanced di sebelah kiri dan tekan tab Advanced. Di bagian bawah tekan "Environment Variables", dan di bawah "System variables", cari variabel PATH, pilih dan tekan Edit.
+#. Pergi ke akhir baris di bawah nilai Variable dan tambahkan `;C:\Python33`.
 #. Jika nilai sebelumnya adalah `%SystemRoot%\system32;` maka sekarang akan menjadi `%SystemRoot%\system32;C:\Python33`
 #. Tekan ok dan selesai. Tidak perlu dinyalakan ulang. 
 
@@ -61,9 +61,9 @@ Lalu, jalankan `python3 -V` dan pastikan tidak ada pesan kesalahan.
 
 ## Instalasi di Linux 
 
-Untuk pengguna Linux, buka terminal dengan membuka aplikasi `Termina;` dengan menekan `Alt + F1` dan memasukkan `gnome-terminal`. Jika hal itu tidak jalan, silakan rujuk ke dokumentasi atau forum untuk distribusi Linux yang Anda miliki.
+Untuk pengguna Linux, buka terminal dengan membuka aplikasi `Terminal` dengan menekan `Alt + F1` dan memasukkan `gnome-terminal`. Jika hal itu tidak jalan, silakan rujuk ke dokumentasi atau forum untuk distribusi Linux yang Anda miliki.
 
-Selanjutnya, kita menginstal paket `python3`. Sebagai contoh, di Ubuntu, Anda bisa menjalankan [`dsudo apt-get install python3`](http://packages.ubuntu.com/search?keywords=python3&searchon=names&suite=all&section=all). Silakan cek dokumentasi atau forum sesuai dengan distribusi Linux yang Anda gunakan untuk menjalankan perintah manajer paket yang sesuai.
+Selanjutnya, kita menginstal paket `python3`. Sebagai contoh, di Ubuntu, Anda bisa menjalankan [`sudo apt-get install python3`](http://packages.ubuntu.com/search?keywords=python3&searchon=names&suite=all&section=all). Silakan cek dokumentasi atau forum sesuai dengan distribusi Linux yang Anda gunakan untuk menjalankan perintah manajer paket yang sesuai.
 
 Setelah Anda menyelesaikan instalasi, jalankan perintah `python3 -V` dan Anda seharusnya melihat versi Python di layar:
 
@@ -84,4 +84,4 @@ Baku versi baru di distribusi Anda?
 
 Sejak sekarang, saya sudah mengasumsikan Anda punya Python 3 terinstal di sistem Anda.
 
-Berikutnya, kita akan menuliskan program Python 3 pertama kita. 
+Berikutnya, kita akan menulis program Python 3 pertama kita. 
