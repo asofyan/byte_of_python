@@ -1,8 +1,8 @@
 # Langkah Pertama 
 
-Kita sekarang akan melihat bagaimana menjalankan program tradisional 'Hello World' di Python. Langkah ini akan mengajari Anda bagaimana menulis, menyimpan dan menjalankan program Python.
+Kita sekarang akan melihat bagaimana membuat program yang sering digunakan saat memulai pemrograman, yakni 'Hello World' di Python. Langkah ini akan mengajari Anda bagaimana menulis, menyimpan dan menjalankan program Python.
 
-Ada dua cara menggunakan Python untuk menjalankan program Anda - menggunakan prompt interpreter interaktif atau menggunakan berkas sumber (source file). Kita akan lihat bagaimana cara menggunakan kedua metode ini.
+Ada dua cara menjalankan program Anda dengan menggunakan Python - menggunakan prompt interpreter interaktif atau menggunakan berkas sumber (source file). Kita akan lihat bagaimana cara menggunakan kedua metode ini.
 
 ## Menggunakan Prompt Interpreter 
 
@@ -34,13 +34,13 @@ Bagaimana Berhenti dari Prompt Interpreter
 
 Kita tidak dapat menuliskan program di baris interpreter setiap kali ingin menjalankan sesuatu, jadi kita harus menuliskannya di dalam berkas dan kita dapat menjalankan program kita selama beberapa kali.
 
-Untuk membuat berkas kode program Python, kita perlu perangkat lunak berupa editor sehingga kita dapat menulis dan menyimpannya. Editor programmer Python yang baik akan membuat hidup Anda lebih mudah dalam menulis berkas kode program. Oleh karena itu, pemilihan editor sifatnya sangat penting. Anda harus memilih editor sebagaimana memilih mobil untuk dikendarai. Editor yang bagus akan membantu Anda menulis program Python secara lebih mudah, dan membuat perjalanan Anda lebih nyaman dalam meraih tujuan Anda secara lebih cepat dan aman.
+Untuk membuat berkas kode program Python, kita perlu perangkat lunak berupa editor sehingga kita dapat menulis dan menyimpannya. Editor bahasa pemrograman Python yang baik akan membuat hidup Anda lebih mudah dalam menulis berkas kode program. Oleh karena itu, pemilihan editor sifatnya sangat penting. Anda harus memilih editor sebagaimana memilih mobil untuk dikendarai. Editor yang bagus akan membantu Anda menulis program Python secara lebih mudah, dan membuat perjalanan Anda lebih nyaman dalam meraih tujuan Anda secara lebih cepat dan aman.
 
 Salah satu dari syarat dasar adalah *syntax highlighting* atau pewarnaan sintaks di mana bagian program Python Anda akan diwarnai secara berbeda sehingga Anda dapat benar-benar *melihat* program Anda dan memvisualisasikan bagaimana jika program tersebut berjalan.
 
 Jika Anda tidak tahu darimana memulai, Saya rekomendasikan untuk menggunakan perangkat lunak editor [Komodo Edit](http://www.activestate.com/komodo-edit/downloads) yang tersedia untuk Windows, Mac OS X dan Linux.
 
-Jika Anda menggunakan Windows, **jangan menggunakan Notepad** - perangkat lunak tersebut buruk untuk dipilih karena tidak ada pewarnaan sintaks dan lebih penting lagi, tidak mendukung indentasi teks, yang merupakan syarat sangat penting dalam kasus ini, yang nanti akan kita lihat. Editor yang bagus seperti Komodo Edit akan melakukan ini secara otomatis.
+Jika Anda menggunakan Windows, **jangan menggunakan Notepad** - perangkat lunak tersebut tidak disarankan untuk dipilih karena tidak ada pewarnaan sintaks dan lebih penting lagi, tidak mendukung indentasi teks, yang merupakan syarat sangat penting dalam kasus ini, yang nanti akan kita lihat. Editor yang bagus seperti Komodo Edit akan melakukan ini secara otomatis.
 
 
 Jika Anda merupakan programmer yang berpengalaman, Anda pasti sudah menggunakan [Vim](http://www.vim.org/) atau [Emacs](http://www.gnu.org/software/emacs/). Tanpa perlu banyak pembahasan, kedua perangkat lunak ini merupakan editor yang paling berkualitas dan Anda akan memperoleh banyak keuntungan jika menggunakannya untuk menulis program Python. Jika Anda mau menyediakan atau punya waktu untuk belajar Vim atau Emacs, saya menganjurkan untuk mempelajarinya karena akan sangat bermanfaat dalam jangka panjang. Bagaimanapun juga, sebagaimana saya sebutkan sebelumnya, pemula dapat mulai dengan menggukana Komodo Edit dan fokus belajar Python daripada belajar editor untuk saat ini.
@@ -75,7 +75,7 @@ Dimana Anda harus simpan berkasnya? Di setiap folder yang Anda sendiri tahu pers
 - `/tmp/py` di Linux
 - `/tmp/py` di Mac OS X
 
-Untuk membuat folder, gunakan perinta `mkdir` di terminal, contohnya `mkdir /tmp/py`.
+Untuk membuat folder, gunakan perintah `mkdir` di terminal, contohnya `mkdir /tmp/py`.
 
 Penting
 
@@ -100,11 +100,11 @@ Hello World
 
 Jika Anda memperoleh keluaran sebagaimana yang ditampilkan di atas, selamat! - Anda telah berhasil menjalankan program Python pertama Anda. Anda telah berhasil melewati bagian yang paling sulit dari belajar pemrograman, yakni, memulai program pertama.
 
-Jika Anda memperoleh pesan kesalahan, mohon ketikkan lagi program di atas *sama persis* seperti ditampilkan di atas dan jalankan program kembali. Mohon dicatat bawah Python sangat peka terhadap huruf besar kecil, seperti `print` tidak sama dengan `Print` - catat bahwa `p` di kata pertama adalah huruf kecil dan `p` di kata berikutnya adalah huruf besar. Juga, pastikan tidak ada spasi atau tab sebeulm huruf pertama di tiap bari - kita akan [lihat nanti kenapa ini penting](#indentation).
+Jika Anda memperoleh pesan kesalahan, mohon ketikkan lagi program di atas *sama persis* seperti ditampilkan di atas dan jalankan program kembali. Mohon dicatat bawah Python sangat peka terhadap huruf besar kecil, seperti `print` tidak sama dengan `Print` - catat bahwa `p` di kata pertama adalah huruf kecil dan `p` di kata berikutnya adalah huruf besar. Juga, pastikan tidak ada spasi atau tab sebelum huruf pertama di tiap bari - kita akan [lihat nanti kenapa ini penting](#indentation).
 
 **Bagaimana Cara Kerjanya**
 
-Program Python disusun atas *statemen*. Di Program pertama kita, kita hanya punya satu statemen. Dalam statemen ini, kita sebut sebagai *fungsi* `print` yang hanya mencetak teks `Hello World`. Kita akan belajar tentang fungsi secara lebih mendalam di [bab berikutnya](#functions_ - Apa yang perlu Anda pahami sekarang adalah setiap yang Anda ketikkan setelah tanda petik akan dikeluarkan kembali di layar. Dalam kasus ini kita mengetikkan teks '`Hello World`'
+Program Python disusun atas *statemen*. Di Program pertama kita, kita hanya punya satu statemen. Dalam statemen ini, kita sebut sebagai *fungsi* `print` yang hanya mencetak teks `Hello World`. Kita akan belajar tentang fungsi secara lebih mendalam di [bab berikutnya](#functions) - Apa yang perlu Anda pahami sekarang adalah setiap yang Anda ketikkan setelah tanda petik akan dikeluarkan kembali di layar. Dalam kasus ini kita mengetikkan teks '`Hello World`'
 
 ### Program Python yang bisa Dieksekusi 
 
@@ -112,7 +112,7 @@ Ini hanya berlaku untuk pengguna Linux dan Unix, tapi pengguna Windows juga perl
 
 Setiap kali, Anda ingin menjalankan program Python, Anda harus secara eksplisit mengetikkan `python3 foo.py`, tapi kenapa kita tidak menjalankannya seperti program lain di komputer? Kita dapat melakukannya dengan menggunakan sesuatu yang disebut baris *hashbang*.
 
-Tambahkan baris berikut di *bari pertama* program Anda:
+Tambahkan baris berikut di *baris pertama* program Anda:
 
 ~~~python
 #!/usr/bin/env python3
@@ -164,7 +164,7 @@ Metode ini sangat bermanfaat jika Anda ingin menuliskan perintah yang dapat Anda
 
 ## Memperoleh Bantuan 
 
-Jika Anda butuh informasi cepat tentang fungsi atau statemen di Python, Anda dapat menggunakan fungsi `help` yang sudah built-in. Hal ini sangat bermanfaat terutama saat menggunakan prompt interpeter. Sebagai contoh, jalankan perintah `help(print)` - akan menampilkan bantuan dari fungsi print yang digunakan untuk mencetak semua masukan ke dalam layar.
+Jika Anda butuh informasi cepat tentang fungsi atau statemen di Python, Anda dapat menggunakan fungsi `help` yang secara baku sudah ada. Hal ini sangat bermanfaat terutama saat menggunakan prompt interpeter. Sebagai contoh, jalankan perintah `help(print)` - akan menampilkan bantuan dari fungsi print yang digunakan untuk mencetak semua masukan ke dalam layar.
 
 Catatan
 
