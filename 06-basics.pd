@@ -1,6 +1,6 @@
 # Dasar 
 
-Hanya menampilkan 'Hello World' tentu saja tidak cukup bukan? Anda ingin melakukan sesuatu lebih dari itu - Anda ingin mengambil beberapa masukan, memanipulasinya dan mengeluarkannya dalam bentuk tertentu. Kita dapat melakukan ini di Python dengan menggunakan konstanta dan variabel, dan kita akan belajar konsep ini secara baik di bab ini. 
+Hanya menampilkan 'Hello World' tentu saja tidak cukup bukan? Anda ingin melakukan sesuatu lebih dari itu - misalnya mengambil beberapa masukan, mengubah, memproses dan mengeluarkannya dalam bentuk tertentu. Kita dapat melakukan ini di Python dengan menggunakan konstanta dan variabel, dan kita betul-betul akan belajar konsep ini dalam bab berikut. 
 
 ## Komentar 
 
@@ -24,7 +24,7 @@ Gunakan komentar yang bermanfaat di dalam program sebanyak mungkin yang Anda bis
 - menjelaskan asumsi
 - menjelaskan keputusan penting
 - menjelaskan detail yang penting 
-- menjelaskan masalah yang Anda coba pecahkan
+- menjelaskan masalah yang coba Anda pecahkan
 - menjelaskan masalah yang Anda coba atasi di dalam program, dll.
 
 [*Kode menunjukkan bagaimana, sedangkan komentar menunjukkan kepada Anda mengapa.*](http://www.codinghorror.com/blog/2006/12/code-tells-you-how-comments-tell-you-why.html)
@@ -37,9 +37,9 @@ Contoh konstanta literal adalah nomor seperti `5`, `1.23`, atau string seperti `
 
 ## Nomor 
 
-Nomor biasanya digunakan untuk dua jenis - integer dan float.
+Nomor biasanya digunakan dalam dua bentuk - integer dan float.
 
-Contoh sebuah integer adalah `2` di mana semuanya adalah angka.
+Contoh integer misalnya `2` di mana semuanya adalah angka.
 
 Contoh dari angka floating point (atau sering disebut *float*) adalah `3.23` dan `52.3E-4`. Notasi `E` mengindikasikan basis 10. Dalam hal ini, `52.3E4` merarti `52.3 * 10^-4^`.
 
@@ -49,7 +49,7 @@ Catatan untuk Programmer Berpengalaman
 
 ## String 
 
-String adalah urutan *karakter*. String pada dasarnya adalah kumpulan kata-kata.
+String adalah urutan *karakter*. String pada dasarnya adalah kumpulan huruf.
 
 Anda akan menggunakan string di hampir setiap program Python yang Anda tulis, jadi perhatikan baik-baik bagian berikut ini.
 
@@ -63,7 +63,7 @@ String dalam kutip ganda akan bekerja mirip seperti tanda kutip tunggal. Sebagai
 
 ### Kutip Tiga
 
-Anda dapat menetukan string lebih dari satu baris dengan menggunakan kutip tiga - (`"""` atau `'''`). Anda dapat menggunakan tanda kutip dan kutip ganda secara bebas di dalam kutip tiga. Sebagai contoh:
+Anda dapat menentukan string lebih dari satu baris dengan menggunakan kutip tiga - (`"""` atau `'''`). Anda dapat menggunakan tanda kutip dan kutip ganda secara bebas di dalam kutip tiga. Sebagai contoh:
 
 ~~~python
 '''Ini adalah string lebih dari satu baris. Ini adalah baris pertama.
@@ -75,7 +75,7 @@ Dia bilang "Bond, James Bond."
 
 ### String bersifat Abadi (Immutable) 
 
-Ini berarti sekali Anda membuat string, Anda tidak dapat mengubahnya. Meskipun ini terlihat jelek, tapi sebetulnya tidak. Kita akan melihat kenapa hal ini bukanlah batasan di beberapa program yang akan kita lihat kemudian.
+Ini berarti sekali Anda membuat string, Anda tidak dapat mengubahnya. Meskipun ini terlihat jelek, tapi sebetulnya tidak. Kita akan memeriksa kenapa hal ini bukanlah batasan di beberapa program yang akan kita lihat kemudian.
 
 Catatan untuk Programmer C/C++ 
 
@@ -111,9 +111,9 @@ Bagaimana Cara Kerjanya:
 
 String menggunakan ketentuan khusus, dan dapat diulang, metode *format* dapat dipanggil untuk menggantikan argumen yang ada di dalam format.
 
-Coba perhatikan penggunaan pertama, di mana kita menggunakan `{0}` dan ini terkait dengan variabel `nama` yang merupakan argumen pertama dari metode `format`. Dan selanjutnya juga mirip, ketentuan berikutnya adalah `{1}` yang tersambung ke `usia` yang merupakan arguman kedua dari metode format. Mohon dicatat bahwa Python mulai penghitungan dari 0 yang berarti posisi pertama dalam indeks ini adalah 0, dan kedua adalah indeks 1 dan seterusnya.
+Coba perhatikan penggunaan pertama, di mana kita menggunakan `{0}` dan ini terkait dengan variabel `nama` yang merupakan argumen pertama dari metode `format`. Dan selanjutnya juga mirip, ketentuan berikutnya adalah `{1}` yang tersambung ke `usia` yang merupakan arguman kedua dari metode format. Mohon dicatat bahwa Python mulai penghitungan dari 0 yang berarti posisi pertama dalam indeks ini adalah 0, kedua adalah indeks 1 dan seterusnya.
 
-Mohon perhatikan bahwa kita dapat memperoleh hasil yang sama dengan penggabungan string (string concatenation): `nama + ' berusia ' + str(usia) + ' tahun'` tapi ini lebih jelek dan lebih banyak kemungkinan salah. Kedua, konversi ke string dapat dilakukan secara otomatis lewat metode `format` daripada konversi eksplisit ke dalam string yang dibutuhkan dalam kasus ini. Ketiga, kita dapat menggunakan metode `format`, kita dapat mengubah pesan tanpa harus berurusan bagaimana variable tersebut digunakan dan sebaliknya.
+Mohon dicatat bahwa kita dapat memperoleh hasil yang sama dengan penggabungan string (string concatenation): `nama + ' berusia ' + str(usia) + ' tahun'` tapi ini lebih jelek dan lebih banyak kemungkinan salah. Kedua, konversi ke string dapat dilakukan secara otomatis lewat metode `format` daripada konversi eksplisit ke dalam string yang dibutuhkan dalam kasus ini. Ketiga, kita dapat menggunakan metode `format`, kita dapat mengubah pesan tanpa harus berurusan bagaimana variable tersebut digunakan dan sebaliknya.
 
 Juga catat bahwa nomor tersebut sifatnya pilihan, jadi Anda dapat menuliskannya dengan:
 
@@ -127,7 +127,7 @@ print('Kenapa {} bermain-main dengan python?'.format(name))
 
 yang akan menghasilkan output yang sama persis dengan program sebelumnya.
 
-Apa yang Python lakukan dalam metode `format` merupakan pengganti nilai tiap-tiap argumen yang diletakkan dalam ketentuan khusus. Ada ketentuan yang lebih detail seperti:
+Apa yang Python lakukan dalam metode `format` merupakan pengganti nilai tiap-tiap argumen yang diletakkan dalam bentuk dan aturan yang khusus. Aturan yang lebih detail misalnya:
 
 ~~~python
  desimal (.) presisi 3 untuk float '0.333'
@@ -154,15 +154,15 @@ Variabiel adalah contoh penunjuk identitas. *Penunjuk Identitas* disematkan untu
 
 ## Tipe Data 
 
-Variabel dapat menyimpan nilai dari jenis data yang berbeda-beda yang dinamakan **tipe data**. Tipe dasarnya adalah nomor dan string, yang kita sudah diskusikan sebelumnya. Di bab berikutnya, kita akan lihat bagaimana menciptakan data tipe kita sendiri dengan menggunakan [classes](#object-oriented-programming).
+Variabel dapat menyimpan nilai dari jenis data yang berbeda-beda yang dinamakan **tipe data**. Tipe dasarnya adalah nomor dan string, yang kita sudah diskusikan sebelumnya. Di bab berikutnya, kita akan lihat bagaimana menciptakan tipe data kita sendiri dengan menggunakan [classes](#object-oriented-programming).
 
 ## Obyek
 
-Ingat, Python mereferensikan segala sesuatu yang digunakan di dalam program sebagai *obyek*. Ini hanya dimaksudkan dalam perasaan umum saja. Alih-alih menyebut '*sesuatu*' kita sebut '*obyek*'.
+Ingat, Python mereferensikan segala sesuatu yang digunakan di dalam program sebagai *obyek*. Ini hanya dimaksudkan untuk perasaan umum saja. Alih-alih menyebut '*sesuatu*' kita sebut '*obyek*'.
 
-Catatn untuk pengguna Pemrograman Berorientasi Obyek (Object Oriented Programming) 
+Catatan untuk pengguna Pemrograman Berorientasi Obyek (Object Oriented Programming) 
 
-:   Python sangat kuat di dalam object-oriented dalam kaitan segala sesuatu adalah obyek termasuk nomor, string dan fungsi.
+:   Python sangat kuat di dalam orientasi obyek. Segala sesuatu adalah obyek termasuk nomor, string dan fungsi.
 
 Kita akan melihat bagaimana menggunakan variabel sejalan dengan konstanta literal. Simpan contoh berikut dan jalankan programnya.
 
@@ -171,14 +171,14 @@ Kita akan melihat bagaimana menggunakan variabel sejalan dengan konstanta litera
 Cara yang baku untuk menyimpan dan menjalankan program Python adalah seperti ini:
 
 #. Buka editor pilihan Anda, seperti Komodo Edit.
-#. Ketik kode porgram seperti yang diberikan dalam contoh.
+#. Ketik kode program seperti yang diberikan dalam contoh.
 #. Simpan sebagai berkas dengan nama seperti yang disebutkan.
 #. Jalankan interpreter dengan perintah `python3 program.py` untuk menjalankan program
 
 ## Contoh: Menggunakan Variabel dan Konstanta Literal.
 
 ~~~python
- Filename : var.py
+Filename : var.py
 i = 5
 print(i)
 i = i + 1
@@ -201,13 +201,13 @@ Ini baris kedua.
 
 Bagaimana cara kerjanya:
 
-Berikut bagaimana program tersebut bekerja. Pertama, kita tentukan nilai konstanta literalnya `5` ke dalam variabel `i` lewat penentuan operator (`=`). Baris ini disebut statemen/pernyataan sebab menyatakan sesuatu yang harus dikerjakan  dan dalam kasus ini, kita menghubungkan variabel bernama `i` dengan nilai `5`. Kemudian kita menampilkan nilai `i` dengan fungsi `print` yang secara mengejutkan hanya menampilkan nilai variabel ke dalam layar.
+Berikut bagaimana program tersebut bekerja. Pertama, kita tentukan nilai konstanta literalnya `5` ke dalam variabel `i` lewat penentuan operator (`=`). Baris ini disebut statemen/pernyataan sebab menyatakan sesuatu yang harus dikerjakan. Didalam kasus ini, kita menghubungkan variabel bernama `i` dengan nilai `5`. Kemudian kita menampilkan nilai `i` dengan fungsi `print` yang secara mengejutkan hanya menampilkan nilai variabel ke dalam layar.
 
 Kemudian kita menambahkan `1` ke dalam nilai yang disimpan di dalam `i` dan menyimpannya lagi. Kemudian kita menampilkannya lagi, dan seperti yang sudah kita duga, kita mendapatkan nilai `6`.
 
-Berikutnya juga mirip, kita menentikan string literal ke dalam variabel `s` lalu menampilkannya.
+Berikutnya juga mirip, kita menentukan string literal ke dalam variabel `s` lalu menampilkannya.
 
-Catatan untuk programmer bahasa satatik
+Catatan untuk programmer bahasa statik
 
 :   Variabel digunakan hanya untuk memberikan nilai terhadapnya. Tidak perlu menggunakan deklarasi atau definisi tipe data.
 
@@ -239,7 +239,7 @@ dan sama juga jika ditulis dengan
 i = 5; print(i);
 ~~~
 
-or even
+bahkan sama juga dengan
 
 ~~~python
 i = 5; print(i)
@@ -274,7 +274,7 @@ sama dengan
 print(i)
 ~~~
 
-Kadang, muncul asumsi implisit yang tidak membutuhkan garis miring terbalik. Dalam kasus ini dimana baris logisnya dimulai dengan kurung kurawal, dimulai dengan kurung kotak atau dimulai dengan curly braces (~), tapi tidak diletakkan di akhir baris. Ini dinamakan **penggabungan baris implisit***. Anda dapat melihat penerapan hal ini saat kita menulis program dengan menggunakan [lists](#list) di bab berikutnya.
+Kadang, muncul asumsi implisit yang tidak membutuhkan garis miring terbalik. Dalam kasus ini di mana baris logisnya dimulai dengan kurung kurawal, dimulai dengan kurung kotak atau dimulai dengan curly braces (~), tapi tidak diletakkan di akhir baris. Ini dinamakan **penggabungan baris implisit***. Anda dapat melihat penerapan hal ini saat kita menulis program dengan menggunakan [lists](#list) di bab berikutnya.
 
 ### Indentasi 
 
@@ -305,7 +305,7 @@ Bagaimana Melakukan Indentasi
 
 :   Selalu gunakan spasi untuk indentasi, dengan pemberhentian tapnya 4 spasi. Editor yang baik seperti Komodo Edit akan secara otomatis melakukan hal ini untuk Anda. Pastikan Anda menggunakan jumlah spasi yang konsisten untuk identasi, atau program Anda akan menampilkan pesan kesalahan.
 
-Catataun untuk programmer bahasa statik
+Catatan untuk programmer bahasa statik
 
 :   Python akan selalu menggunakan indentasi untuk blok dan tidak pernah menggunakan kurung kurawal. Jalankan `from __future__ import braces` untuk mempelajari lebih jauh.
 
