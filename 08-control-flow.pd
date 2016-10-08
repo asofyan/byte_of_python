@@ -1,8 +1,8 @@
 # Alur Kontrol 
 
-Di dalam program yang kita lihat hingga saat ini, selalu saja ada beberapa urutan statemen yang dijalankan secara saklak oleh Python, berurutan dari atas ke bawah. Bagaimana jika Anda ingin mengubah bagaimana alur kerjanya? Sebagai contoh Anda ingin program untuk mengambil keputusan dan bertindak secara berbeda tergantung keputusan yang diambil. Sebagai contoh, misalnya mencetak 'Selamat Pagi' atau 'Selamat Sore' tergantung waktu yang ada saat itu?
+Di dalam program yang kita lihat hingga saat ini, selalu saja ada beberapa urutan statemen yang dijalankan secara saklak oleh Python, berurutan dari atas ke bawah. Bagaimana jika Anda ingin mengubah alur kerjanya? Sebagai contoh Anda ingin program untuk mengambil keputusan dan bertindak secara berbeda tergantung keputusan yang diambil. Sebagai contoh, misalnya mencetak 'Selamat Pagi' atau 'Selamat Sore' tergantung waktu yang ada saat itu?
 
-Sebagaimana yang Anda sudah bisa tebak, ini dapat dilakukan lewat statemen alur kontrol. Ada tiga macam statemen alur kontrol di Python - `if`, `for` dan `while`.
+Sebagaimana yang Anda bisa tebak, ini dapat dilakukan lewat statemen alur kontrol. Ada tiga macam statemen alur kontrol di Python - `if`, `for` dan `while`.
 
 ## Statemen if
 
@@ -22,7 +22,7 @@ elif tebakan < angka:
     # Anda dapat melakukan apapun di blok ini ...
 else:
     print('Tidak, angkanya lebih kecil lagi')
-    # you must have guessed > number to reach here
+    # Pesan ini keluar jika Anda menebak angka yang lebih besar
 
 print('Selesai')
 # Statemen terakhir ini selalu dieksekusi, setelah statemen if tersebut dijalankan.

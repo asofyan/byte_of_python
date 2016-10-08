@@ -1,14 +1,14 @@
 # Operator dan Ekspresi
 
-Hampir semua statemen (baris logis) yang Anda tulis akan mengandung *ekspresi*. Contoh sederhana dari ekspresi adalah `2+3`. Sebuah ekspresi dapat diturunkan menjadi operator dan operand. 
+Hampir semua statemen (baris logika) yang Anda tulis akan mengandung *ekspresi*. Contoh sederhana dari ekspresi adalah `2+3`. Sebuah ekspresi dapat diturunkan menjadi operator dan operand. 
 
-*Operator* adalah fungsi yang menjalankan sesuatu dan direpresentasikan oleh simbol, seperti `+` atau kata kunci khusus. Operator butuh data untuk dioperasikan dan data ini disebut *operand*. Dalam kasus ini `2` dan `3` adalah operand.
+*Operator* adalah fungsi yang menjalankan sesuatu dan direpresentasikan oleh simbol, seperti `+` atau simbol-simbol lain secara khusus. Operator butuh data untuk bisa dioperasikan dan data ini disebut *operand*. Dalam kasus ini `2` dan `3` adalah operand.
 
 ## Operator
 
 Kita akan melihat operator secara singkat dan bagaimana penggunaannya:
 
-Catat bahwa Anda dapat mengevaluasi ekspresi yang diberikan di contoh ini dengan menggunakan interpreter secara interaktif. Sebagai contoh, untuk menguji ekspresi `2+3`, gunakan prompt interpreter interaktif Python:
+Catat bahwa Anda dapat mengecek dan memperbaiki ekspresi yang diberikan di contoh ini dengan menggunakan interpreter secara interaktif. Sebagai contoh, untuk menguji ekspresi `2+3`, gunakan prompt interpreter interaktif Python:
 
 ~~~python
 >>> 2 + 3
@@ -26,7 +26,7 @@ Catat bahwa Anda dapat mengevaluasi ekspresi yang diberikan di contoh ini dengan
 
 `-` (minus)
 
-:   Mengurangi satu angka terhadap angka lainnyal jika operand pertama tidak ada, diasumsikan nol.
+:   Mengurangi satu angka terhadap angka lainnya. Jika operand pertama tidak ada, diasumsikan nol.
 
     `-5.2` memberikan angka negatif dan `50 - 24` memberi hasil `26`.
 
@@ -152,7 +152,7 @@ Catat bahwa Anda dapat mengevaluasi ekspresi yang diberikan di contoh ini dengan
 
 :   `x dan y` menghasilkan `False` Jika x `False`, selain itu akan menghasilkan pengembalian evaluasi nilai y 
 
-    `x = False; y = True; x and y` menghasilkan `False` mengingat x False. Dalam kasus ini, Python tidak akan mengevaluasi y mengingat nilai dari ekspresi `and` adalah `False` yang menunjukkan bahwa seluruh ekspresi akan bernilai `False` dengan mengabaikan nilai apapun yang ada setelahnya. Ini disebut evaluasi sirkuit-pendek. I
+    `x = False; y = True; x and y` menghasilkan `False` mengingat x False. Dalam kasus ini, Python tidak akan mengevaluasi y mengingat nilai dari ekspresi `and` adalah `False` yang menunjukkan bahwa seluruh ekspresi akan bernilai `False` dengan mengabaikan nilai apapun yang ada setelahnya. Ini disebut evaluasi sirkuit-pendek. 
 
 `or` (boolean OR)
 
@@ -185,7 +185,7 @@ Perhatikan bahwa `operasi ekxpresi var = var` menjadi `var operasi = ekspresi`.
 
 Jika Anda memiliki ekspresi seperti `2 + 3 * 4`, yang dilakukan penambahan dulu atau perkalian dulu? Dulu guru matematika di sekolah kita mengatakan bahwa perkalian harus dilakukan lebih dulu. Ini berarti operasi perkalian memiliki tingkat yang lebih tinggi daripada operasi penambahan.
 
-Tabel berikut memberikan urutan untuk Python, dari urutan paling rendah (ikatan terenda) ke urutan tertinggi (ikatan tertinggi). Ini berarti bahwa dalam setiap ekspresi yang diberikan, Python akan mengevaluasi operator dan ekspresi di tabel yang lebih rendah sebelum menjalankan operasi di tabel yang lebih tinggi.
+Tabel berikut memberikan urutan untuk Python, dari urutan paling rendah (ikatan terendah) ke urutan tertinggi (ikatan tertinggi). Ini berarti bahwa dalam setiap ekspresi yang diberikan, Python akan mengevaluasi operator dan ekspresi di tabel yang lebih rendah sebelum menjalankan operasi di tabel yang lebih tinggi.
 
 Tabel berikut diambil dari [manual referensi Python](http://docs.python.org/py3k/reference/expressions.html#summary), diberikan hanya untuk kelengkapan saja. Lebih disarankan sebetulnya untuk menggunakan tanda kurung untuk mengelompokkan operasi dan operand secara benar, dan secara eksplit menentukan urutan. Ini membuat program dapat lebih dibaca. Lihat [Mengubah Urutan Evaluasi](#changing-the-order-of-evaluation) di bawah untuk lebih lengkapnya.
 
@@ -255,7 +255,7 @@ Tabel berikut diambil dari [manual referensi Python](http://docs.python.org/py3k
 
 `x.attribute`
 
-:   Referensi terhadap artribut
+:   Referensi terhadap atribut
 
 `x[index]`
 
@@ -281,19 +281,19 @@ Tabel berikut diambil dari [manual referensi Python](http://docs.python.org/py3k
 
 :   Penampilan dalam format kamus (dictionary)
 
-The operators which we have not already come across will be explained in later chapters.
+Simbol operasi yang belum dibahas akan dijelaskan nanti pada bab berikutnya.
 
-Operators with the *same precedence* are listed in the same row in the above table. For example, `+` and `-` have the same precedence.
+Simbol operasi yang memiliki *bobot yang sama* akan ditampilkan pada baris yang sama di tabel di atas. Sebagai contoh, `+` dan `-` memiliki bobot yang sama.
 
-## Mengubah Urutan Ekspresi Evaluasi 
+## Mengubah Urutan Pelaksanaan Ekspresi 
 
-Untuk membuat ekspresi lebih mudah dibaca kita dapat menggunakan tanda dalam kurung. Sebagai contoh `2 + ( 3 * 4 ) jauh leibh mudah untuk dipahami daripada `2 + 3 * 4` yang membutuhkan pengetahuan urutan operator. Sebagaimana hal lainnya, tanda dalam kurung harus digunakan secara tepat (jangan berlebihan) dan jangan rendundan seperti di `(2 + (3 * 4)).
+Untuk membuat ekspresi lebih mudah dibaca kita dapat menggunakan tanda dalam kurung. Sebagai contoh `2 + ( 3 * 4 ) jauh lebih mudah untuk dipahami daripada `2 + 3 * 4` yang membutuhkan pengetahuan urutan operator. Sebagaimana hal lainnya, tanda dalam kurung harus digunakan secara tepat (jangan berlebihan) dan jangan berulang seperti di `(2 + (3 * 4)).
 
-Ada keuntungan lain menggunakan tanda kurung - membantu penggantian urutan evaluasi. Sebagai contoh jika Anda ingin penambahan diproses dulu sebelum perkalian dalam satu ekspresi, Anda dapat menuliskannya dengan `(2 +3) * 4`.
+Ada keuntungan lain menggunakan tanda kurung - membantu penggantian urutan pelaksanaan. Sebagai contoh jika Anda ingin penambahan diproses dulu sebelum perkalian dalam satu ekspresi, Anda dapat menuliskannya dengan `(2 +3) * 4`.
 
 ## Asosiatifitas 
 
-Operator biasanya diasosiasikan dari kiri kekanan. Ini berarti operator dengan urutan yang sama, akan dievaluasi secara urut dari kiri ke kanan. Sebagai contoh, `2 + 3 + 4` akan di evaluasi dengan `(2 + 3) + 4`. Beberapa operator seperti operator sama dengan (penugasan/assignment) memiliki asosiatifitas dari kanan ke kiri. Misalnya `a = b = c` diperlakukan `a = (b = c)`.
+Operator biasanya diasosiasikan dari kiri kekanan. Ini berarti operator dengan urutan yang sama, akan dijalankan secara urut dari kiri ke kanan. Sebagai contoh, `2 + 3 + 4` akan dijalankan dengan urutan `(2 + 3) + 4`. Beberapa operator seperti operator sama-dengan (penugasan/_assignment_) memiliki asosiatifitas dari kanan ke kiri. Misalnya `a = b = c` diperlakukan `a = (b = c)`.
 
 ## Ekspresi 
 
@@ -320,7 +320,7 @@ Bagaimana Cara Kerjanya:
 
 Panjang dan lebar dari sebuah persegi empat disimpan dalam variabel dengan nama sama. Kita gunakan ini untuk menghitung area dan perimeter persegi empat di mana variabelnya disimpan dengan nama yang sama. Kita simpan hasil dari ekspresi `panjang * lebar` ke dalam variabel bernama `area`, lalu mencetaknya di layar dengan perintah `print`. Dalam kasus kedua, kita secara langsung menggunakan nilai dari eksresi `2 * (panjang + lebar)` dalam fungsi print. 
 
-Juga perhatikan bagaimana Python 'mencetak-cantik' keluarannya. Meskipun kita tidak menentikan spasi antara `'Area seluas'` dengan variabel `area`, Python menampakkanyya dalam keluaran yang manis dan bersih sehingga program dapat jauh leibh mudah dibaca dengan cara ini (mengingat kita tidak perlu khawatir tentang spasi dan string untuk menggunakan keluaran). Ini adalah salah satu contoh bagaimana Python membuat hidup programmer menjadi lebih mudah.
+Juga perhatikan bagaimana Python 'mencetak-cantik' keluarannya. Meskipun kita tidak menentikan spasi antara `'Area seluas'` dengan variabel `area`, Python menampilkannya dalam keluaran yang manis dan bersih sehingga program dapat jauh lebih mudah dibaca dengan cara ini (mengingat kita tidak perlu khawatir tentang spasi dan string untuk menggunakan keluaran). Ini adalah salah satu contoh bagaimana Python membuat hidup programmer menjadi lebih mudah.
 
 ## Ringkasan 
 
