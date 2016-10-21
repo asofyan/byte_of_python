@@ -1,33 +1,33 @@
 # Fungsi
 
-Fungsi merupakan bagian yang dapat digunakan kembali di dalam program. Fungsi tersebut memungkinkan Anda memberi nama terhadap blok statemen, yang memungkinkan Anda menjalankan blok tersebut di program Anda kapan saja berkali-kali dengan memanggil namanya.  Ini dinamakan *pemanggilan* terhadap fungsi. Kita sudah pernah menggunakan beberapa fungsi yang sudah built-in seperti `len` dan `range`.
+Fungsi merupakan bagian di dalam program yang dapat digunakan kembali. Fungsi tersebut memungkinkan Anda memberi nama terhadap blok statemen, yang memungkinkan Anda menjalankan blok tersebut di program Anda kapan saja berkali-kali dengan memanggil namanya.  Ini dinamakan *pemanggilan* terhadap fungsi. Kita sudah pernah menggunakan beberapa fungsi yang sudah tertanam secara baku seperti `len` dan `range`.
 
-Konsep tentang fungsi ini mungkin merupakan *struktur pembangun* yang paling penting perangkat lunak (dalam bahasa pemrograman apapun), dan kita akan mengeksplorasi bermacam aspek dari fungsi dalam bab ini.
+Konsep tentang fungsi ini mungkin merupakan *struktur pembangun* perangkat lunak yang paling penting (dalam bahasa pemrograman apapun), dan dalam bab ini kita akan mengeksplorasi bermacam aspek dari fungsi.
 
-Fungsi ditentukan dengan menggunakan kata kunci `def`. Setelah kata kunci, diikuti dengan nama *penanda* dari fungsi tersebut, diikut pasangan dalam kurung yang di dalamnya ada nama variabel. Setelah tanda kurung, akan ditutup dengan titik dua di akhir baris. Kemudian di baris baru akan diikuti blok statemen yang merupakan bagian dari fungsi tersebut. Contoh yang menunjukkan betapa sederhananya sebuah fungsi:
+Fungsi ditentukan dengan menggunakan kata kunci `def`. Setelah kata kunci, dilanjutkan dengan nama *penanda* dari fungsi tersebut, diikuti pasangan dalam kurung yang di dalamnya ada nama variabel. Setelah tanda kurung, akan ditutup dengan titik dua di akhir baris. Kemudian di baris baru akan diikuti blok statemen yang merupakan bagian dari fungsi tersebut. Contoh yang menunjukkan betapa sederhananya sebuah fungsi:
 
-Contoh (simpan dengan nama `function1.py`):
+Contoh (simpan dengan nama `fungsi1.py`):
 
 ~~~python
 def apaKabar():
-    print('Apa kabar dunia!') # blok ini milik fungsi sayHello()
+    print('Apa kabar dunia!') # blok ini milik fungsi apaKabar()
 # Akhir fungsi
 
 apaKabar() # memanggil fungsi
-apaKabar() # memanggil kembali fungsi
+apaKabar() # memanggil fungsi sekali lagi
 ~~~
 
 Keluaran:
 
 ~~~
-$ python3 function1.py
+$ python3 fungsi1.py
 Apa kabar dunia!
 Apa kabar dunia!
 ~~~
 
 Bagaimana Cara Kerjanya:
 
-Kita mendefinisikan fungsi yang bernama `apaKabar` dengan menggunakan sintaks sebagaimana yang telah dijelaskan di atas. Fungsi ini tidak mengambil satu parameterpun, sehingga tidak perlu ada variabel yang dideklarasikan di dalam kurung. Parameter ke dalam fungsi hanyalah merupakan masukan yang digunakan di dalam fungsi, sehingga kita dapat memasukkan nilai yang berbeda untuk memperoleh hasil yang diinginkan.
+Kita mendefinisikan fungsi bernama `apaKabar` dengan menggunakan sintaks sebagaimana yang telah dijelaskan di atas. Fungsi ini tidak mengambil satu parameterpun, sehingga tidak perlu ada variabel yang dideklarasikan di dalam kurung. Parameter merupakan masukan yang hanya digunakan di dalam fungsi, sehingga kita dapat memasukkan nilai yang berbeda untuk memperoleh hasil yang diinginkan.
 
 Perhatikan bahwa kita dapat memanggil fungsi dua kali, yang artinya kita tidak perlu menuliskan kode yang sama lagi untuk menginginkan keluaran sama. 
 
@@ -40,15 +40,15 @@ Parameter ditentukan di dalam tanda kurung saat fungsi didefinisikan, dipisahkan
 Contoh (simpan dengan nama `func_param.py`):
 
 ~~~python
-def printMax(a, b):
+def printMaks(a, b):
     if a > b:
-        print(a, 'adalah nilai maksimum')
+        print(a, 'adalah angka tertinggi')
     elif a == b:
         print(a, 'adalah sama dengan', b)
     else:
-        print(b, 'adalah nilai maksimum')
+        print(b, 'adalah angka tertinggi')
 
-printMax(3, 4) # langsung diberikan nilai terhadap parameter a dan b saat fungsi dipanggil
+printMaks(3, 4) # langsung diberikan nilai terhadap parameter a dan b saat fungsi dipanggil
 
 x = 5
 y = 7
@@ -60,15 +60,15 @@ Keluaran:
 
 ~~~
 $ python3 func_param.py
-4 adalah nilai maksimum
-7 adalah nilai maksimum
+4 adalah angka tertinggi 
+7 adalah angka tertinggi
 ~~~
 
 Bagaimana Cara Kerjanya:
 
-Di sini, kita mendefinisikan fungsi dengan nama `printMax` yang menggunakan dua parameter yang disebut `a` dan `b`. Kita mencari angka yang lebih besar dengan menggunakan statemen `if..else` sederhana, lalu mencetak angka yang lebih besar. 
+Di sini, kita mendefinisikan fungsi dengan nama `printMaks` yang menggunakan dua parameter yang disebut `a` dan `b`. Kita mencari angka yang lebih besar dengan menggunakan statemen `if..else` sederhana, lalu mencetak angka yang lebih besar. 
 
-Saat pertama kali kita panggil fungsi `printMax`, kita secara langsung memasukkan angka sebagai argumen. Dalam kasus kedua, kita memanggil fungsi dengan argumen berupa variabel. `printMax(x,y)` membuat nilai yang argumen `x` dimasukkan dalam parameter `a` dan nilai dari argumen `y` dimasukkan dalam parameter `b`. Fungsi `printMax` berfungsi sama saja di kedua kasus tersebut.
+Saat pertama kali kita panggil fungsi `printMaks`, kita secara langsung memasukkan angka sebagai argumen. Dalam kasus kedua, kita memanggil fungsi dengan argumen berupa variabel. `printMaks(x,y)` membuat nilai argumen `x` dimasukkan dalam parameter `a` dan nilai argumen `y` dimasukkan dalam parameter `b`. Fungsi `printMaks` berfungsi sama saja di kedua kasus tersebut.
 
 ## Variabel Lokal
 
@@ -107,9 +107,9 @@ Dengan pemanggilan fungsi `print` di baris terakhir, kita menampilkan nilai `x` 
 
 ## Menggunakan Statemen Global
 
-Jika Anda ingin memberi nilai terhadap satu variabel yang didefinisikan di level tertinggi dalam satu program (atau dengan kata lain tidak berada di dalam skup apapun, baik fungsi maupun `class`), Anda harus memberitahu Python bahwa nama tersebut bukan local, tapi *global~. Kita melakukannya dengan statemen `global`. Tidak mungkin membrikan nilai di dalam variabel di luar fungsi tanpa statemen `global`.
+Jika Anda ingin memberi nilai terhadap satu variabel yang didefinisikan di level tertinggi dalam satu program (atau dengan kata lain tidak berada di dalam skup apapun, baik fungsi maupun `class`), Anda harus memberitahu Python bahwa nama tersebut bukan local, tapi *global*. Kita melakukannya dengan statemen `global`. Tidak mungkin memberikan nilai di dalam variabel di luar fungsi tanpa statemen `global`.
 
-Anda dapat menggunakan nilai dari variabel yang didefinisikan di luar fungsi (asumsikan bahwa tidak ada nama variabel yang sama di dalam fungsi). Bagaimanapun juga, ini sangat tidak disarankan dan Anda harus menghindarinya mengingat hal tersebut akan membingungkan pembaca program tentang di mana definisi variabelnya. Menggunakan statemen `global` membuatna jelas bahwa variable yang bersangkutan didefinisikan di luar blok. 
+Anda dapat menggunakan nilai dari variabel yang didefinisikan di luar fungsi (asumsikan bahwa tidak ada nama variabel yang sama di dalam fungsi). Bagaimanapun juga, ini sangat tidak disarankan dan Anda harus menghindarinya mengingat hal tersebut akan membingungkan pembaca program tentang di mana definisi variabelnya. Menggunakan statemen `global` membuatnya jelas bahwa variabel yang bersangkutan didefinisikan di luar blok. 
 
 Contoh (simpan dengan nama `func_global.py`):
 
@@ -146,7 +146,7 @@ Anda dapat menentukan lebih dari satu variabel global, dengan menggunakan statem
 
 Untuk beberapa fungsi, Anda mungkin ingin membuat beberapa parameter *tidak wajib* diisi, dan menggunakan nilai baku pada saat pengguna tidak ingin memberikan nilai terhadapnya. Ini dapat dilakukan dengan bantuan nilai argumen baku. Anda dapat menentukan nilai arguman baku untuk parameter yang diberikan, dengan menambahkan nilai baku lewat operator sama dengan (`=`).
 
-Catat bahwa nilai arguman baku haruslah berupa konstanta. Lebih tepatnya, nilai argumen baku harus bersifat immutable - ini akan dijelaskan di bab berikutnya. Untuk sekarang Anda hanya perlu mengingatnya.
+Catat bahwa nilai argumen baku haruslah berupa konstanta. Lebih tepatnya, nilai argumen baku harus bersifat immutable - ini akan dijelaskan di bab berikutnya. Untuk sekarang Anda hanya perlu mengingatnya.
 
 Contoh (simpan dengan nama `func_default.py`):
 
@@ -170,19 +170,19 @@ Bagaimana Cara Kerjanya:
 
 Fungsi yang bernama `katakan` digunakan untuk menampilkan string sebanyak yang ditentukan. Jika pengalinya tidak ditentukan, maka secara baku, string akan ditampilkan sebanyak sekali. Kita dapat melakukan ini dengan menentukan nilai argumen baku ke `1` untuk parameter `kali`.
 
-Jika dalam penggunaan `katakan` pertama, kita hanya mengisi string dan mennampilkannya sekali, maka dalam penggunaan `katakan` kedua, kita mengisikan string dan sebuah arguman `5` yang menyatakan bahwa kita ingin *mengatakan* string tersebut sebanyak 5 kali.
+Jika dalam penggunaan `katakan` pertama, kita hanya mengisi string dan menampilkannya sekali, maka dalam penggunaan `katakan` kedua, kita mengisikan string dan sebuah arguman `5` yang menyatakan bahwa kita ingin *mengatakan* string tersebut sebanyak 5 kali.
 
 Penting
 
 :   Hanya parameter yang berada di akhir daftar parameter yang dapat diberikan nilai argumen baku, dengan kata lain Anda tidak boleh menentukan nilai argumen baku di depan parameter yang tidak memiliki nilai argumen baku.
 
-    Ini karana nilai disematkan ke dalam parameter berdasarkan posisi. Sebagai contoh, `def fun(a, b=5)` dianggap valid, sedangkan `def func(a=5, b)` *tidak valid*.
+    Ini karena nilai disematkan ke dalam parameter berdasarkan posisi. Sebagai contoh, `def fun(a, b=5)` dianggap valid, sedangkan `def func(a=5, b)` *tidak valid*.
 
-## Argumen Keyword 
+## Argumen Kata Kunci 
 
-Jika Anda memiliki fungsi dengan banyak parameter dan Anda hanya ingin menentukan beberapa saja, Anda dapat memberikan nilai terhadap parameter, dengan memberikan nama terhadapnya - ini disebut sebagai *argumen keyword* - kita gunakan kata (keyword) daripada posisi(yang selalu kita gunakan selama ini) untuk menentukan argumen terhadap fungsi.
+Jika Anda memiliki fungsi dengan banyak parameter dan Anda hanya ingin menentukan beberapa saja, Anda dapat memberikan nilai terhadap parameter, dengan memberikan nama terhadapnya - ini disebut sebagai *argumen kata kunci* - kita gunakan kata kunci daripada posisi (yang selalu kita gunakan selama ini) untuk menentukan argumen terhadap fungsi.
 
-Ada dua *keuntungan* - satu, menggunakan fungsi akan leibh mudah sebab kita tidak perlu khawatir terhadap urutan argumen. Kedua, kita dapat memberikan nilai hanya terhadap parameter yang kita inginkan, sebab parameter lain telah memiliki nilai baku.
+Ada dua *keuntungan* - satu, menggunakan fungsi akan lebih mudah sebab kita tidak perlu khawatir terhadap urutan argumen. Kedua, kita dapat memberikan nilai hanya terhadap parameter yang kita inginkan, sebab parameter lain telah memiliki nilai baku.
 
 Contoh (simpan dengan nama `func_key.py`):
 
@@ -200,8 +200,8 @@ Keluaran:
 ~~~
 $ python3 func_key.py
 a adalah 3 dan b adalah 7 dan c adalah 10
-a adalah 325 dan b adalah 5 dan c adalah 24
-a  adalah 100 dan b adalah 5 dan c adalah 50
+a adalah 25 dan b adalah 5 dan c adalah 24
+a adalah 100 dan b adalah 5 dan c adalah 50
 ~~~
 
 Bagaimana Cara Kerjanya:
@@ -210,7 +210,7 @@ Fungsi tersebut bernama `func` dan hanya punya satu parameter tanpa nilai argume
 
 Pada penggunaan pertama, `func(3, 7)`, parameter `a` memperoleh nilai `3`, parameter `b` memeperoleh nilai `7` dan `c` memperoleh nilai baku `10`.
 
-Pada penggunaan kedua, `func(25, c=24)`, parameter `a` memperoleh nilai 25 mengingat posisinya di dalam argumen. Kemudian parameter `c` memperoleh nilai `24` berkaitan dengan penamaan argumen keyword. Variabel `b` akan memperoleh nilai baku `5`.
+Pada penggunaan kedua, `func(25, c=24)`, parameter `a` memperoleh nilai 25 mengingat posisinya di dalam argumen. Kemudian parameter `c` memperoleh nilai `24` berkaitan dengan penamaan argumen kata kunci. Variabel `b` akan memperoleh nilai baku `5`.
 
 Dalam penggunaan ketiga `func(c=50, a=100)`, kita menggunakan argumen untuk seluruh nilai yang ditentukan. Perhatikan bahwa kita menentukan nilai untuk parameter `c` sebelum `a` didefinisikan.
 
@@ -245,9 +245,9 @@ Mirip dengan itu, ketika kita mendeklarasikan parameter dua-bintang seperti `**p
 
 Kita akan eksplorasi tentang tuples dan dictionaries di [bab berikutnya](#data-structures).
 
-## Parameter Keyword-Only
+## Parameter Hanya-Kata-kunci 
 
-Jika kita ingin menentukan parameter keyword tertentu yang tersedia dalam bentuk keyword-only (hanya-keyword) dan *bukan* argumen yang bersifat posisional, hal tersebut dapat dideklarasikan setelah parameter berbintang (simpan dengan nama `keyword_only.py`):
+Jika kita ingin menentukan parameter kata kunci tertentu, tersedia dalam bentuk hanya kata kunci (keyword-only) dan *bukan* argumen yang bersifat posisional, hal tersebut dapat dideklarasikan setelah parameter berbintang (simpan dengan nama `keyword_only.py`):
 
 ~~~python
 def total(awal=5, *angkas, angka_tambahan):
@@ -259,7 +259,7 @@ def total(awal=5, *angkas, angka_tambahan):
 
 total(10, 1, 2, 3, angka_tambahan=50)
 total(10, 1, 2, 3)
-# Akan menampilkan pesan error, karena kita tidak memberikan argumen baku untuk nilai `angka_tambahan`
+# Akan menampilkan pesan kesalahan, karena kita tidak memberikan argumen baku untuk nilai `angka_tambahan`
 ~~~
 
 Keluaran:
@@ -275,11 +275,11 @@ TypeError: total() needs keyword-only argument extra_number
 
 Bagaimana Cara Kerjanya:
 
-Mendeklarasikan parameter setelah parameter bintang akan menghasilkan agrumen keyword-only (hanya berupa keyword). Jika argumen ini tidak diberi nilai, maka pemanggilan fungsi akan menghasilkan pesan error sebagaimana terlihat di atas. 
+Mendeklarasikan parameter setelah parameter bintang akan menghasilkan argumen hanya-kata-kunci (hanya berupa kata kunci). Jika argumen ini tidak diberi nilai, maka pemanggilan fungsi akan menghasilkan pesan error sebagaimana terlihat di atas. 
 
 Catat bahwa penggunaan `+=` merupakan jalan pintas. Jadi untuk mengatakan `x = x + y`, Anda dapat menuliskan `x += y`.
 
-Jika Anda ingin memiliki argumen hanya-keyword, tapi tidak ingin menentukan nilai baku, cukup menggunakan bintang tanpa nama. contoh `def total(nilai_awal=5, *, nomor_tambahan)`. 
+Jika Anda ingin memiliki argumen hanya-kata-kunci, tapi tidak ingin menentukan nilai baku, cukup menggunakan bintang tanpa nama. contoh `def total(nilai_awal=5, *, nomor_tambahan)`. 
 
 ## Statemen return
 
@@ -308,9 +308,9 @@ $ python3 func_return.py
 
 Bagaimana Cara Kerjanya:
 
-Fungsi `maximum` mengembalikan nilai maksimal dari seluruh parameter yang diberikan, dalam hal ini seluruh angka yang dimasukkan ke dalam fungsi tersebut. Fungsi ini menggunakan statemen `if..else` yang sederha untuk mencari nilai lebih besar dari seluruh nilai, lalu *mengembalikan* hasilnya. 
+Fungsi `maximum` mengembalikan angka tertinggi dari seluruh parameter yang diberikan, dalam hal ini seluruh angka yang dimasukkan ke dalam fungsi tersebut. Fungsi ini menggunakan statemen `if..else` yang sederhana untuk mencari nilai lebih besar dari seluruh nilai, lalu *mengembalikan* hasilnya. 
 
-Catat bahwa statemen `return` tanpa nilai sama dengan `return None`. `None` adalah jenis yang sangat khusus di Python yang mewakili kosong. Sebagai contoh, `None` digunakan untuk mengindikasikan bahwa sebuah variabel tidak memiliki nilai jika nilai yang dimilikinya `None`. 
+Catat bahwa statemen `return` tanpa nilai sama dengan `return None`. `None` adalah jenis yang sangat khusus di Python yang mewakili kosong. Sebagai contoh, `None` digunakan untuk mengindikasikan bahwa sebuah variabel tidak memiliki nilai, jika nilai yang dimilikinya `None`. 
 
 Setiap fungsi secara implisit memiliki `return None` meskipun Anda tidak menuliskannya. Kecuali Anda mendefinisikan sendiri nilai dari statemen `return`. Anda dapat melihat ini dengan menjalankan `print(sebuahFungsi())` dimana `sebuahFungsi` tersebut tidak memiliki statemen `return`, seperti: 
 
@@ -323,24 +323,24 @@ Statemen `pass` digunakan di Python untuk mengindikasikan blok statemen yang kos
 
 Catatan
 
-:   Ada fungsi built-in yang bernama `max` yang sudah mengimplementasikan fungsi 'find maximum', jadi gunakan fungsi built-in sebisa mungkin.
+:   Ada fungsi tertanam yang bernama `max` yang sudah mengimplementasikan fungsi 'find maximum', jadi gunakan fungsi tertanam sebisa mungkin.
 
 ## DocStrings 
 
-Python memiliki fungsi yang keren bernama *documentation strings*, biasanya dirujuk dengan nama yang lebih pendek *docstrings*. DocStrings sangat penting dan Anda harus menggunakannya karene fungsi tersebut dapat mendokumentasikan program secara lebih baik dan lebih mudah untuk dipahami. Kerennya, kita bisa mengambil docstring dari sebuah fungsi, meskipun program tersebut masih berjalan!
+Python memiliki fungsi yang keren bernama *documentation strings*, biasanya dirujuk dengan nama yang lebih pendek, yakni *docstrings*. DocStrings sangat penting dan Anda harus menggunakannya karena fungsi tersebut dapat mendokumentasikan program secara lebih baik dan lebih mudah untuk dipahami. Kerennya, kita bisa mengambil docstring dari sebuah fungsi, meskipun program tersebut masih berjalan!
 
 Contoh (simpan dengan nama `func_doc.py`):
 
 ~~~python
 def printMax(x, y):
-    '''Mencetak nilai maksimal dari dua angka.
+    '''Mencetak nilai tertinggi dari dua angka.
 
     Kedua angka yang diberikan harus berupa integer.'''
     x = int(x) # konversi ke integer, jika memungkinkan
     y = int(y)
 
     if x > y:
-        print(x, ' adalah nilai paling tinggi)
+        print(x, ' adalah nilai paling tinggi')
     else:
         print(y, ' adalah nilai paling tinggi')
 
@@ -362,16 +362,16 @@ Bagaimana cara kerjanya:
 
 String dari baris logis pertama dari sebuah fungsi adalah *docstring* dari fungsi tersebut. Catat bahwa DocStrings juga berlaku untuk [Modules](#modules) dan [classes](#object-oriented-programming) yang akan kita pelajari di bab berikutnya. 
 
-Konvensi yang harus diikuti untuk sebuah docstring, adalah bahwa dia string dengan beris lebih dari satu di mana kata pertama dimulai dengan huruf besar dan diakhiri dengan tanda titik. Kemudian baris kedua dikosongkan, diikuti dengan penjelasan detail di baris ketiga. Anda *sangat disarankan* untuk mengikuti aturan ini untuk semua docstring bagi semua fungsi rumit Anda. 
+Konvensi yang harus diikuti untuk sebuah docstring, adalah bahwa dia string dengan baris lebih dari satu di mana kata pertama dimulai dengan huruf besar dan diakhiri dengan tanda titik. Kemudian baris kedua dikosongkan, diikuti dengan penjelasan detail di baris ketiga. Anda *sangat disarankan* untuk mengikuti aturan ini untuk semua docstring bagi semua fungsi rumit Anda. 
 
 Kita dapat mengakses docstring dari fungsi `printMax` dengan menggunakan atribut `__doc__` (perhatikan *dua garis bawah*) yang merupakan milik dari fungsi tersebut. Ingat bahwa Python memperlakukan *semuanya* sebagai object, termasuk fungsi ini. Kita akan belajar tentang object di bab berikutnya di [classes](#object-oriented-programming).
 
-Jika Anda telah menggunakan `help()` di Oython, Anda sudah pernah melihat penggunaan docstring! Apa yang dilakukan oleh `help()` hanyalah mengambil atribut `__doc__` dan menampilkannya dalam format yang bagus untuk Anda. Silakan Anda coba fungsi di atas - cukup masukkan `help(printMax)` di program Anda. Selalu ingat untuk menekan tombol `d` untuk keluar dari `help`.
+Jika Anda telah menggunakan `help()` di python, Anda sudah pernah melihat penggunaan docstring! Apa yang dilakukan oleh `help()` hanyalah mengambil atribut `__doc__` dan menampilkannya dalam format yang bagus untuk Anda. Silakan Anda coba fungsi di atas - cukup masukkan `help(printMax)` di program Anda. Selalu ingat untuk menekan tombol `d` untuk keluar dari `help`.
 
 Beberapa program bantu otomatis dapat mengambil dokumentasi dari program dengan cara ini. Sehingga, saya *sangat menyarankan* Anda untuk menggunakan docstrings untuk fungsi-fungsi rumit yang Anda tulis. Perintah `pydoc` yang tersedia di distribusi Python Anda, cara kerjanya mirip `help()` menggunakan docstrings. 
 
 ## Ringkasan
 
-Kita sudah lihat banyak aspek dari sebuah fungsi, namun tolong dicatat bahwa belum semua aspek sudah dibahas. Bagaimanapun juga, jita telah membicarakan banyak aspek yang nantinya akan Anda gunakan sebagai fungsi Python dalam tugas sehari-hari.
+Kita sudah lihat banyak aspek dari sebuah fungsi, namun tolong dicatat bahwa belum semua aspek sudah dibahas. Bagaimanapun juga, kita telah membicarakan banyak aspek yang nantinya akan Anda gunakan sebagai fungsi Python dalam tugas sehari-hari.
 
 Berikutnya, kita akan melihat bagaimana cara membuat modul Python.
