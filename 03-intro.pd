@@ -4,7 +4,7 @@ Python adalah salah satu dari jarangnya bahasa pemrograman yang mampu mengklaim 
 
 Secara resmi Python dikenalkan dengan definisi sebagai berikut:
 
-> Python adalah bahasa pemrograman yang mudah dipelajari dan tangguh (powerful). Bahasa ini memiliki struktur data tingkat-tinggi yang efisien dan sederhana, namun punya pendekatan yang efektif untuk pemrograman berbasis obyek. Sintaks Python yang elegan dan bersifat dynamic typing (sintaks akan dicek secara langsung tanpa harus menunggu dikompilasi dalam bahasa mesin), dilengkapi dengan interpreter, membuatnya menjadi bahasa pemrograman yang ideal untuk membuat skrip (scripting) dan pengembangan aplikasi secara cepat (rapid application development) di banyak area di platform utama. 
+> Python adalah bahasa pemrograman yang mudah dipelajari dan tangguh (powerful). Bahasa ini memiliki struktur data tingkat-tinggi yang efisien dan sederhana, namun punya pendekatan yang efektif untuk pemrograman berbasis objek. Sintaks Python yang elegan dan bersifat dynamic typing (sintaks akan dicek secara langsung tanpa harus menunggu dikompilasi dalam bahasa mesin), dilengkapi dengan interpreter, membuatnya menjadi bahasa pemrograman yang ideal untuk membuat skrip (scripting) dan pengembangan aplikasi secara cepat (rapid application development) di banyak area di platform utama. 
 
 Saya akan mendiskusikan sebagian besar fitur-fitur ini di bagian berikutnya.
 
@@ -46,9 +46,9 @@ Program yang ditulis dalam bahasa seperti C atau C++ (sering disebut bahasa yang
 
 Python, di sisi lain, tidak perlu dikompilasi menjadi biner. Anda cukuup *jalankan* program langsung dari kode program. Secara internal, Python mengonversi kode program ke dalam bentuk antara yang dinamakan _bytecodes_ dan menerjemahkannya ke dalam bahasa komputer Anda, lalu menjalankannya. Semua ini, sebetulnya, membuat penggunaan Python menjadi lebih mudah. Anda tidak perlu khawatir tentang kompilasi program, dan memastikan pustaka terkait dijalankan, dan hal-hal teknis lainnya. Ini juga membuat program Python Anda lebih portabel. Anda cuma perlu menyalin program Python ke dalam komputer lain dan langsung jalan!
 
-### Berorientasi Obyek 
+### Berorientasi Objek 
 
-Python mendukung pemrograman berorientasi prosedur (procedure-oriented) sebaik pemrograman berorientasi obyek (object-oriented). Dalam bahasa *procedure-oriented*, program dibangun dari rangkaian prosedur atau fungsi, agar dapat digunakan kembali. Dalam bahasa *object-oriented*, program dbuat berdasaran obyek yang dikombinasikan data dan metode. Python sangat kuat namun sederhana dalam menjalankan OOP (Object Oriented Programming) terutama jika dibandingkan dengan bahasa besar seperti C++ atau Java.
+Python mendukung pemrograman berorientasi prosedur (procedure-oriented) sebaik pemrograman berorientasi objek (object-oriented). Dalam bahasa *procedure-oriented*, program dibangun dari rangkaian prosedur atau fungsi, agar dapat digunakan kembali. Dalam bahasa *object-oriented*, program dbuat berdasaran objek yang dikombinasikan data dan metode. Python sangat kuat namun sederhana dalam menjalankan OOP (Object Oriented Programming) terutama jika dibandingkan dengan bahasa besar seperti C++ atau Java.
 
 ### Dapat diperluas (Extensible) 
 

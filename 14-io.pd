@@ -58,7 +58,7 @@ Pekerjaan Rumah
 
 ## Berkas 
 
-Anda dapat membaca atau menulis berkas dengan membuat obyek dari kelas `file` dan menggunakan metode di dalamnya seperti `read`, `readline` atau `write` untuk membaca, membaca tiap baris, atau menulis ke dalam berkas tersebut. Kemampuan untuk membaca atau menulis sebuah berkas, tergantung mode yang Anda gunakan saat membuka sebuah berkas. Setelah menyelesaikan semua yang Anda inginkan pada berkas tersebut, Anda dapat memanggil metode `close` untuk memberitahu Python bahwa kita sudah selesai menggunakan berkas tersebut. 
+Anda dapat membaca atau menulis berkas dengan membuat objek dari kelas `file` dan menggunakan metode di dalamnya seperti `read`, `readline` atau `write` untuk membaca, membaca tiap baris, atau menulis ke dalam berkas tersebut. Kemampuan untuk membaca atau menulis sebuah berkas, tergantung mode yang Anda gunakan saat membuka sebuah berkas. Setelah menyelesaikan semua yang Anda inginkan pada berkas tersebut, Anda dapat memanggil metode `close` untuk memberitahu Python bahwa kita sudah selesai menggunakan berkas tersebut. 
 
 Contoh (simpan sebagai `guna_berkas.py`):
 
@@ -107,28 +107,28 @@ Sekarang, periksa kembali isi dari `puisi.txt` untuk konfirmasi bahwa program su
 
 ## Pickle
 
-Python memberikan modul standar bernama `picke` di mana Anda dapat menyimpan obyek **apa saja** ke dalam sebuah berkas, lalu memanfaatkannya kemudian. Ini dinamakan menyimpan obyek secara *persisten*.
+Python memberikan modul standar bernama `picke` di mana Anda dapat menyimpan objek **apa saja** ke dalam sebuah berkas, lalu memanfaatkannya kemudian. Ini dinamakan menyimpan objek secara *persisten*.
 
 Contoh (simpan sebagai `pickling.py`):
 
 ~~~python
 import pickle
  
-# nama berkas tempat obyek akan disimpan
+# nama berkas tempat objek akan disimpan
 berkasdaftarbelanja = 'daftarbelanja.data'
 # barang-barang yang akan dibeli 
 daftarbelanja = ['apel', 'mangga', 'wortel']
  
 # Menulis ke dalam berkas 
 f = open(berkasdaftarbelanja, 'wb')
-pickle.dump(daftarbelanja, f) # buang obyek ke dalam berkas 
+pickle.dump(daftarbelanja, f) # buang objek ke dalam berkas 
 f.close()
  
 del daftarbelanja # hapus variabel daftarbelanja
  
 # Baca kembali dari penyimpanan 
 f = open(berkasdaftarbelanja, 'rb')
-daftarsimpan = pickle.load(f) # muat obyek dari berkas
+daftarsimpan = pickle.load(f) # muat objek dari berkas
 print(daftarsimpan)
 ~~~
 
@@ -141,9 +141,9 @@ $ python3 pickling.py
 
 Bagaimana Cara Kerjanya:
 
-Untuk menyimpan obyek ke dalam berkas, pertama kita harus `buka` berkas dalam mode `w` (tulis) dan `b` (format biner), kemudiapn panggil fungsi `dump` dari modul `pickle`. Proses ini dinamakan *pickling*.
+Untuk menyimpan objek ke dalam berkas, pertama kita harus `buka` berkas dalam mode `w` (tulis) dan `b` (format biner), kemudiapn panggil fungsi `dump` dari modul `pickle`. Proses ini dinamakan *pickling*.
 
-Kemudian, kita ambil obyek dengan menggunakan fungsi `load` dari modul `pickle` yang mengembalikan obyek. Proses ini dinamakan *unpickling*.
+Kemudian, kita ambil objek dengan menggunakan fungsi `load` dari modul `pickle` yang mengembalikan objek. Proses ini dinamakan *unpickling*.
 
 ## Ringkasan 
 

@@ -156,13 +156,13 @@ Variabiel adalah contoh penunjuk identitas. *Penunjuk Identitas* disematkan untu
 
 Variabel dapat menyimpan nilai dari jenis data yang berbeda-beda yang dinamakan **tipe data**. Tipe dasarnya adalah nomor dan string, yang kita sudah diskusikan sebelumnya. Di bab berikutnya, kita akan lihat bagaimana menciptakan tipe data kita sendiri dengan menggunakan [classes](#object-oriented-programming).
 
-## Obyek
+## Objek
 
-Ingat, Python mereferensikan segala sesuatu yang digunakan di dalam program sebagai *obyek*. Ini hanya dimaksudkan untuk perasaan umum saja. Alih-alih menyebut '*sesuatu*' kita sebut '*obyek*'.
+Ingat, Python mereferensikan segala sesuatu yang digunakan di dalam program sebagai *objek*. Ini hanya dimaksudkan untuk perasaan umum saja. Alih-alih menyebut '*sesuatu*' kita sebut '*objek*'.
 
-Catatan untuk pengguna Pemrograman Berorientasi Obyek (Object Oriented Programming) 
+Catatan untuk pengguna Pemrograman Berorientasi Objek (Object Oriented Programming) 
 
-:   Python sangat kuat di dalam orientasi obyek. Segala sesuatu adalah obyek termasuk nomor, string dan fungsi.
+:   Python sangat kuat di dalam orientasi objek. Segala sesuatu adalah objek termasuk nomor, string dan fungsi.
 
 Kita akan melihat bagaimana menggunakan variabel sejalan dengan konstanta literal. Simpan contoh berikut dan jalankan programnya.
 
@@ -311,4 +311,4 @@ Catatan untuk programmer bahasa statik
 
 ## Rangkuman 
 
-Sekarang kita telah melewati banyak pernik-pernik detill, dan kita dapat melanjutkan untuk hal-hal yang lebih menarik seperti statemen pengatur arus (control flow statements). Pastikan Anda sudah nyaman dengan apa yang Anda baca di bab ini.
+Sekarang kita telah melewati banyak pernik-pernik detail, dan kita dapat melanjutkan untuk hal-hal yang lebih menarik seperti statemen pengatur arus (control flow statements). Pastikan Anda sudah nyaman dengan apa yang Anda baca di bab ini.

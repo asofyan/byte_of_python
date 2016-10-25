@@ -1,24 +1,24 @@
-# Pemrograman Berbasis Obyek 
+# Pemrograman Berbasis Objek 
 
-Seluruh program yang kita tulis sejauh ini, dibuat atas dasar fungsi, yakni satu kelompok blok dari stetemen yang bertugas untuk memproses data. Pendekatan ini dinamakan *procedure-oriented* atau *pemrograman berbasis prosedur*. Ada cara lain dalam mengatur perangkat lunak Anda yakni dengan menggabungkan data dan fungsi dan menyatukannya ke dalam sesuatu yang disebut sebagai obyek. Paradigma ini dinamakan pemrograman *berbasis obyek*. Dalam banyak hal, Anda bisa menggunakan pemrograman presedural, namun saat menulis program dalam skala program, atau punya masalah yang lebih cocok dengan pendekatan ini, Anda dapat menggunakan teknik pemrograman berbasis obyek. 
+Seluruh program yang kita tulis sejauh ini, dibuat atas dasar fungsi, yakni satu kelompok blok dari stetemen yang bertugas untuk memproses data. Pendekatan ini dinamakan *procedure-oriented* atau *pemrograman berbasis prosedur*. Ada cara lain dalam mengatur perangkat lunak Anda yakni dengan menggabungkan data dan fungsi dan menyatukannya ke dalam sesuatu yang disebut sebagai objek. Paradigma ini dinamakan pemrograman *berbasis objek*. Dalam banyak hal, Anda bisa menggunakan pemrograman presedural, namun saat menulis program dalam skala program, atau punya masalah yang lebih cocok dengan pendekatan ini, Anda dapat menggunakan teknik pemrograman berbasis objek. 
 
-Kelas dan obyek adalah dua aspek utama dalam pemerograman berbasis obyek. Sebuah **kelas (class)** membuat *tipe (type)* baru dimana **obyek (object)** merupakan *perwujudan (instance)* dari sebuah kelas. Bisa dianalogikan Anda punya variabel dengan tipe `int`, dapat diterjemahkan bahwa variabel yang menyimpan integer tersebut merupakan variabel perwujudan dari kelas `int`.
+Kelas dan objek adalah dua aspek utama dalam pemerograman berbasis objek. Sebuah **kelas (class)** membuat *tipe (type)* baru dimana **objek (object)** merupakan *perwujudan (instance)* dari sebuah kelas. Bisa dianalogikan Anda punya variabel dengan tipe `int`, dapat diterjemahkan bahwa variabel yang menyimpan integer tersebut merupakan variabel perwujudan dari kelas `int`.
 
 Catatan untuk Programmer Bahasa Statik
 
-:   Perlu dicatat bahwa integer juga diperlakukan sebagai obyek (dari kelas `int`). Hal ini berbeda di C++ dan Java (sebelum versi 1.5) di mana integer merupakan tipe bawaan awal (primitive native types). Lihat `help(int)` untuk informasi detil dari kelas ini.
+:   Perlu dicatat bahwa integer juga diperlakukan sebagai objek (dari kelas `int`). Hal ini berbeda di C++ dan Java (sebelum versi 1.5) di mana integer merupakan tipe bawaan awal (primitive native types). Lihat `help(int)` untuk informasi detail dari kelas ini.
 
 Programmer C# dan Java 1.5 akan mengenali hal ini mirip dengan konsep *boxing dan unboxing*.
 
-Obyek dapat menyimpan data dengan menggunakan variabel umum yang *dimiliki* oleh obyek tersebut. Variabel yang ikut dalam sebuah obyek atau kelas sering disebut sebagai **fields**. Obyek juga dapat digunakan dengan memanfaatkan fungsi yang *dimiliki* oleh sebuah kelas. Fungsi ini disebut sebagai **metode/methods** dari sebuah kelas. Terminologi ini penting sebab hal ini membantu kita untuk membedakan antara fungsi dan variabel yang independen dengan fungsi dan variabel yang merupakan milik dari kelas atau obyek. Secara bersama-sama, fields dan methods dapat disebut sebagai **atribut** dari sebuah kelas.
+Objek dapat menyimpan data dengan menggunakan variabel umum yang *dimiliki* oleh objek tersebut. Variabel yang ikut dalam sebuah objek atau kelas sering disebut sebagai **fields**. Objek juga dapat digunakan dengan memanfaatkan fungsi yang *dimiliki* oleh sebuah kelas. Fungsi ini disebut sebagai **metode/methods** dari sebuah kelas. Terminologi ini penting sebab hal ini membantu kita untuk membedakan antara fungsi dan variabel yang independen dengan fungsi dan variabel yang merupakan milik dari kelas atau objek. Secara bersama-sama, fields dan methods dapat disebut sebagai **atribut** dari sebuah kelas.
 
-Fields ada dua jenis - mereka ikut dalam sebuah wujud/obyek dari sebuah kelas, atau mereka merupakan bagian dari kelas itu sendiri. Ini sering disebut sebagi **variabel terwujud/instance variables** dan **variabel kelas/class variables**.
+Fields ada dua jenis - mereka ikut dalam sebuah wujud/objek dari sebuah kelas, atau mereka merupakan bagian dari kelas itu sendiri. Ini sering disebut sebagi **variabel terwujud/instance variables** dan **variabel kelas/class variables**.
 
 Sebuah kelas dibuat dengan kata kunci `class`. Fields dan methods dari sebuah kelas, akan dimasukkan dalam blo yang menjorok (_indented block_).
 
 ## Diri/Self 
 
-Metode kelas punya perbedaan khusus terhadap fungsi yang biasa Anda kenal - mereka harus punya nama depan tambahan yang harus ditambahkan di seluruh awal daftar parameter, namun Anda **tidak perlu** memberi nilai terhadap parameter ini saat Anda memanggil metode-nya, Python akan secara otomatis memberikannya. Variabel yang khusus ini akan merujuk pada obyek itu *sendiri*, dan secara umum telah disepakati, dengan nama `diri` atau `self`.
+Metode kelas punya perbedaan khusus terhadap fungsi yang biasa Anda kenal - mereka harus punya nama depan tambahan yang harus ditambahkan di seluruh awal daftar parameter, namun Anda **tidak perlu** memberi nilai terhadap parameter ini saat Anda memanggil metode-nya, Python akan secara otomatis memberikannya. Variabel yang khusus ini akan merujuk pada objek itu *sendiri*, dan secara umum telah disepakati, dengan nama `diri` atau `self`.
 
 Meskipun, Anda dapat memberikan nama apa saja terhadap parameter ini, namun *sangat disarankan* Anda menggunakan nama `self` - dan nama selain itu pastinya akan memancing pertanyaan. Ada keuntungan menggunakan nama yang baku - setiap pembaca program Anda akan segera mengenalinua, dan bahkan IDE (Integrated Development Environments - Alat Bantu Pengembangan yang Terintegrasi) dapat membantu jika Anda menggunakan `self`.
 
@@ -26,7 +26,7 @@ Catatan untuk C++/Java/C# Programmers
 
 :    `self` di Python sebanding dengan pointer `this` di C++ dan `this` di Java dan C#
 
-Anda mungkin heran, kenapa Python memberikan nilai langsung untuk `self` dan kenapa Anda tidak perlu memberikan nilai terhadapnya. Berikut sebuah contoh yang dapat mempermudah Anda memahaminya. Misalnya Anda punya kelas dengan nama `KelasKu` dan perwujudan (instance) dari kelas ini dinamakan `obyekku`. Ketika Anda memanggil metode dari obyek ini dengan nama `obyekku.metode(argumen1, argumen2)`, secara otomatis akan dikonversikan oleh Python menjadi `KelasKu.metode(obyekku, argumen1, argumen2(` - inilah yang khusus terhadap `self`. 
+Anda mungkin heran, kenapa Python memberikan nilai langsung untuk `self` dan kenapa Anda tidak perlu memberikan nilai terhadapnya. Berikut sebuah contoh yang dapat mempermudah Anda memahaminya. Misalnya Anda punya kelas dengan nama `KelasKu` dan perwujudan (instance) dari kelas ini dinamakan `objekku`. Ketika Anda memanggil metode dari objek ini dengan nama `objekku.metode(argumen1, argumen2)`, secara otomatis akan dikonversikan oleh Python menjadi `KelasKu.metode(objekku, argumen1, argumen2(` - inilah yang khusus terhadap `self`. 
 
 Ini juga berarti jika Anda punya metode yang tidak memiliki argumen, Anda tetap harus memberikan satu arguman - `self`. 
 
@@ -53,13 +53,13 @@ Bagaimana Cara Kerjanya:
 
 Kita membuat kelas baru dengan statemen `class` yang diikuti nama kelasnya. Kemudian di bawahnya ditambahkan statemen dalam blok yang menjorok ke dalam, sebagai isi baris perintah dari kelas tersebut. Kita menambahkan blok kosong dengan statemen `pass`. 
 
-Kemudian, kita membuat obyek/wujud dari kelas ini dengan nama kelas yang diikuti oleh kurung kurawal. (Kita akan belajar [lebih banyak tentang perwujudan/_instantiation_](#metode-init)  di bagian berikutnya). Sebagai verifikasi, kita konfirmasi jenis variabel tersebut sebagai sebuah obyek dengan menampilkannya di layar. Informasi tersebut menunjukkan bahwa kita mempunya sebuah wujud kelas `Person` di dalam modul `__main__`.
+Kemudian, kita membuat objek/wujud dari kelas ini dengan nama kelas yang diikuti oleh kurung kurawal. (Kita akan belajar [lebih banyak tentang perwujudan/_instantiation_](#metode-init)  di bagian berikutnya). Sebagai verifikasi, kita konfirmasi jenis variabel tersebut sebagai sebuah objek dengan menampilkannya di layar. Informasi tersebut menunjukkan bahwa kita mempunya sebuah wujud kelas `Person` di dalam modul `__main__`.
 
-Perhatikan bahwa alamat di mana obyek Anda berada di dalam memori komputer juga dicetak. Alamat ini akan memiliki nilai yang berbeda antara apa yang muncul di layar komputer Anda dengan yang tampilan di atas, mengingat Python akan menyimpan obyek di mana saja dia temukan ruangan kosong. 
+Perhatikan bahwa alamat di mana objek Anda berada di dalam memori komputer juga dicetak. Alamat ini akan memiliki nilai yang berbeda antara apa yang muncul di layar komputer Anda dengan yang tampilan di atas, mengingat Python akan menyimpan objek di mana saja dia temukan ruangan kosong. 
 
-## Metode Obyek 
+## Metode Objek 
 
-Kita telah diskusikan bahwa kelas/obyek dapat memiliki metode yang tugasnya mirip dengan fungsi (pada pemrograman prosedural), kecuali ada tambahan variabel bernama `self`. Kita akan lihat dalam contoh berikut (simpan dengan nama `metode.py`).
+Kita telah diskusikan bahwa kelas/objek dapat memiliki metode yang tugasnya mirip dengan fungsi (pada pemrograman prosedural), kecuali ada tambahan variabel bernama `self`. Kita akan lihat dalam contoh berikut (simpan dengan nama `metode.py`).
 
 ~~~python
 class Person:
@@ -87,7 +87,7 @@ Di sini kita lihat bagaimana `self` bekerja. Perhatikan bahwa metode `sapaHalo` 
 
 Ada banyak nama metode yang memiliki kegunaan khusus dalam kelas di Python. Kita akan lihat pentingnya metode `__init__` sebagai berikut.
 
-Metode `__init__` otomatis berjalan jika sebuah obyek diwujudkan dari kelas. Metode ini berguna untuk *inisialisasi* hal-hal yang perlu Anda persiapkan saat obyek Anda mewujud. Perhatikan bahwa di depan init ada dua garis bawah di belakang dan di depan.
+Metode `__init__` otomatis berjalan jika sebuah objek diwujudkan dari kelas. Metode ini berguna untuk *inisialisasi* hal-hal yang perlu Anda persiapkan saat objek Anda mewujud. Perhatikan bahwa di depan init ada dua garis bawah di belakang dan di depan.
 
 Contoh (simpan sebagai `class_init.py`):
 
@@ -113,21 +113,21 @@ Halo, nama saya Swaroop
 
 Bagaimana Cara Kerjanya:
 
-Di sini kita definisikan metode `__init__` dengan mengambil `nama` sebagai parameter ( dan sebagaimana biasa, bersamaan dengan `self`). Di sini kita baru saja membuat field baru dengan nama `nama`. Perhatikan bahwa keduanya merupakan variabel yang berbeda meskipun keduanya sama-sama dipanggil dengan variabel `nama`. Hal ini bukan menjadi masalah mengingat notasi titik `self.nama` berarti merujuk pada sesuatu yang dipanggil "nama" dan merupakan bagian dari obyek yang dipanggil dengan "self" dan variable `nama` lainnya merupakan variabel lokal. Mengingat kita secara eksplisit mereferensikan nama yang mana, sehingga hal ini tidak membingungkan lagi.
+Di sini kita definisikan metode `__init__` dengan mengambil `nama` sebagai parameter ( dan sebagaimana biasa, bersamaan dengan `self`). Di sini kita baru saja membuat field baru dengan nama `nama`. Perhatikan bahwa keduanya merupakan variabel yang berbeda meskipun keduanya sama-sama dipanggil dengan variabel `nama`. Hal ini bukan menjadi masalah mengingat notasi titik `self.nama` berarti merujuk pada sesuatu yang dipanggil "nama" dan merupakan bagian dari objek yang dipanggil dengan "self" dan variable `nama` lainnya merupakan variabel lokal. Mengingat kita secara eksplisit mereferensikan nama yang mana, sehingga hal ini tidak membingungkan lagi.
 
-YAng paling penting adalah, perhatikan bahwa kita tidak secara eksplisit memanggil metode `__init__ namun kita melemparkan arguman dalam kuruung, yang diikuti nama kelas, jika ingin membuat kelas ini mewujud dalam obyek. Metode ini sangat spesifik di Python.
+YAng paling penting adalah, perhatikan bahwa kita tidak secara eksplisit memanggil metode `__init__ namun kita melemparkan arguman dalam kuruung, yang diikuti nama kelas, jika ingin membuat kelas ini mewujud dalam objek. Metode ini sangat spesifik di Python.
 
 Sekarang, kita dapat menggunakan `self.nama` untuk diberikan dalam metode/fungsi, yang dalam contoh di atas bernama `sapaHalo`.
 
-## Kelas dan Variabel Obyek
+## Kelas dan Variabel Objek
 
-Kita telah diskusikan sebelumnya beberapa fungsi bagian dari kelas dan obyek (yakni metode), sekarang kita belajar bagian yang lain, yakni data. Data di dalam obyek, atau disebut field, sebenarnya merupakan variabel biasa nameun *terikat* **lingkup nama** atau **name spaces** dari sebuah kelas atau obyek. Ini rtinya bahwa nama hanya valid di dalam konteks obyek atau kelas yang bersangkutan saja. Karena itulah mereka sering disebut sebagai *lingkup nama* atau *name spaces*.
+Kita telah diskusikan sebelumnya beberapa fungsi bagian dari kelas dan objek (yakni metode), sekarang kita belajar bagian yang lain, yakni data. Data di dalam objek, atau disebut field, sebenarnya merupakan variabel biasa nameun *terikat* **lingkup nama** atau **name spaces** dari sebuah kelas atau objek. Ini rtinya bahwa nama hanya valid di dalam konteks objek atau kelas yang bersangkutan saja. Karena itulah mereka sering disebut sebagai *lingkup nama* atau *name spaces*.
 
-Ada dua jenis *fields* - variabel kelas atau variabel obyek yang dikelompokkan atas dasar apakah kelas atau obyek tersebut *memiliki* variabel tersebut. 
+Ada dua jenis *fields* - variabel kelas atau variabel objek yang dikelompokkan atas dasar apakah kelas atau objek tersebut *memiliki* variabel tersebut. 
 
-*Variabel kelas* merupakan entitas yang dimanfaatkan bersama-sama - dia dapat diakses oleh seluruh perwujudan (_instance_) kelas yang bersangkutan. Jadi jika Anda mendefinisikan satu variabel - dia merujuk pada satu variabel yang bersangkutan, dan jika ada perubahan dilakukan oleh salah satu obyek, maka perubahan tersebut akan dilihat oleh seluruh wujud obyek (instances).
+*Variabel kelas* merupakan entitas yang dimanfaatkan bersama-sama - dia dapat diakses oleh seluruh perwujudan (_instance_) kelas yang bersangkutan. Jadi jika Anda mendefinisikan satu variabel - dia merujuk pada satu variabel yang bersangkutan, dan jika ada perubahan dilakukan oleh salah satu objek, maka perubahan tersebut akan dilihat oleh seluruh wujud objek (instances).
 
-*Variabel Obyek* dimiliki oleh secara tersendiri oleh obyek dari kelas yang bersangkutan. Dalam hal ini, setiap obyek hanya memiliki satu salinan field yang bersangkutan. Dengan kata lain field tersebut tidak akan dibagikan dan tidak berhubungan dengan field lain di obyek berbeda meskipun namanya sama. Untuk mempermudah pemahaman, berikut contohnya (simpan sebagai `varobyek.py`):
+*Variabel Objek* dimiliki oleh secara tersendiri oleh objek dari kelas yang bersangkutan. Dalam hal ini, setiap objek hanya memiliki satu salinan field yang bersangkutan. Dengan kata lain field tersebut tidak akan dibagikan dan tidak berhubungan dengan field lain di objek berbeda meskipun namanya sama. Untuk mempermudah pemahaman, berikut contohnya (simpan sebagai `varobjek.py`):
 	
 ~~~python
 class Robot:
@@ -187,7 +187,7 @@ Robot.adaBerapa()
 Keluaran:
 
 ~~~
-$ python3 varobyek.py
+$ python3 varobjek.py
 (Inisialisasi R2-D2)
 Salam, tuan saya memberi nama saya R2-D2.
 Kita memiliki 1 robot.
@@ -207,11 +207,11 @@ Kita memiliki 0 robot.
 
 Bagaimana Cara Kerjanya:
 
-Skrip di atas merupakan contoh yang panjang, namun membantu mendemonstrasikan bagaimana sebuah variabel obyek dan kelas bekerja. Di sini, `populasi` merupakan milik kelas `Robot` sehingga ini bisa kita sebut sebagai variabel kelas. Lalu variabel `nama` merupakan milik obyek (sehingga dalam penggunaannya memakai awalan `self`), dan ini disebut sebagai variabel obyek. 
+Skrip di atas merupakan contoh yang panjang, namun membantu mendemonstrasikan bagaimana sebuah variabel objek dan kelas bekerja. Di sini, `populasi` merupakan milik kelas `Robot` sehingga ini bisa kita sebut sebagai variabel kelas. Lalu variabel `nama` merupakan milik objek (sehingga dalam penggunaannya memakai awalan `self`), dan ini disebut sebagai variabel objek. 
 
-Sehingga, kita bisa menyebut variabel kelas `populasi` dengan sebutan `Robot.populasi`, dan bukan `self.populasi`. Kita merujuk pada variabel obyek `nama` dengan penulisan `self.nama` sebagai metode di dalam obyek. Mohon selalu diingat perbedaan sederhana antara variabel kelas dan variabel obyek. Dan catat pula bahwa nama variabel obyek yang memiliki nama yang sama dengan variabel kelas, akan menyembunyikan variabel kelas!
+Sehingga, kita bisa menyebut variabel kelas `populasi` dengan sebutan `Robot.populasi`, dan bukan `self.populasi`. Kita merujuk pada variabel objek `nama` dengan penulisan `self.nama` sebagai metode di dalam objek. Mohon selalu diingat perbedaan sederhana antara variabel kelas dan variabel objek. Dan catat pula bahwa nama variabel objek yang memiliki nama yang sama dengan variabel kelas, akan menyembunyikan variabel kelas!
 
-`adaBerapa` sebetulnya merupakan metode yang mengikuti kelas dan bukan obyek. Ini berarti bahwa kita bisa mendefinisikannya sebagai `classmethod` atau sebagai `staticmethod` tergantung apakah kita ingin mengetahui di kelas apa kita saat ini. Mengingat kita tidak perlu mengetahui informasi tersebut, kita akan menggunakan `staticmethod`. 
+`adaBerapa` sebetulnya merupakan metode yang mengikuti kelas dan bukan objek. Ini berarti bahwa kita bisa mendefinisikannya sebagai `classmethod` atau sebagai `staticmethod` tergantung apakah kita ingin mengetahui di kelas apa kita saat ini. Mengingat kita tidak perlu mengetahui informasi tersebut, kita akan menggunakan `staticmethod`. 
 
 Kita dapat memperoleh hal yang sama dengan menggunakan [dekorator](http://www.ibm.com/developerworks/linux/library/l-cpdecor.html):
 
@@ -224,19 +224,19 @@ def adaBerapa():
 
 Dekorator dapat dibayangkan sebagai jalan pintas untuk memanggil statemen secara eksplisit, sebagaimana yang kita lihat dalam contoh.
 
-Perhatikan bahwa metode `__init__` yang digunakan untuk inisialisasi wujud `Robot` dengan nama. Dalam metode ini, kita meningkatkan jumlah `populasi` dengan tambahan 1 setelah robot ditambahkan. Juga perhatikan bahwa nilai `self.nama` khusus di tiap obyek yang mengindikasikan cara kerja variabel obyek. 
+Perhatikan bahwa metode `__init__` yang digunakan untuk inisialisasi wujud `Robot` dengan nama. Dalam metode ini, kita meningkatkan jumlah `populasi` dengan tambahan 1 setelah robot ditambahkan. Juga perhatikan bahwa nilai `self.nama` khusus di tiap objek yang mengindikasikan cara kerja variabel objek. 
 
-Ingat, bahwa Anda harus merujuk pada variabel dan metode di dalam obyek yang sama dengan **hanya** menggunakan awalan `self`. Ini dinamakan sebagai *referensi atribut/attribute reference*.
+Ingat, bahwa Anda harus merujuk pada variabel dan metode di dalam objek yang sama dengan **hanya** menggunakan awalan `self`. Ini dinamakan sebagai *referensi atribut/attribute reference*.
 
 Dalam program ini, kita juga melihat penggunaan **docstrings** untuk kelas maupun metode. Kita dapat mengakses kelas docstring ini pada saat program dijalankan dengan menggunakan `Robot.__doc__` dan docstring untuk metodenya dengan memanggil `Robot.sapaHalo.__doc__`.
 
-Seperti metode `__init__`, ada metode khusus lainnya yang disebut dengan metode `__del__` dan dipanggil saat obyek akan dimusnahkan atau tidak akan digunakan lagi oleh komputer, sehingga kita bisa menggunakan kembali bagian dari memori komputer tersebut. Dalam metode ini kita cukup kurangi 1 nilai dari `Robot.populasi`.
+Seperti metode `__init__`, ada metode khusus lainnya yang disebut dengan metode `__del__` dan dipanggil saat objek akan dimusnahkan atau tidak akan digunakan lagi oleh komputer, sehingga kita bisa menggunakan kembali bagian dari memori komputer tersebut. Dalam metode ini kita cukup kurangi 1 nilai dari `Robot.populasi`.
 
-Metode `__del__` dijalankan ketika obyek tidak lagi digunakan dan tidak ada garansi lagi *kapan* metode tersebut akan dijalankan. Jika Anda ingin melihatnya secara eksplisit, gunakan statemen `del` secara langsung, di mana sudah kita lakukan dalam contoh sebelumnya.
+Metode `__del__` dijalankan ketika objek tidak lagi digunakan dan tidak ada garansi lagi *kapan* metode tersebut akan dijalankan. Jika Anda ingin melihatnya secara eksplisit, gunakan statemen `del` secara langsung, di mana sudah kita lakukan dalam contoh sebelumnya.
 
 Semua anggota kelas bersifat publik. Ada satu pengecualian: Jika Anda menggunakan data dengan *nama berawalan dua garis bawah* seperti `__varprivat`, Python menggunakan penyamaran-nama secara efektif yang membuat variabel tersebut menjadi privat. 
 
-Sehingga, sudah ada ketentuan tidak tertulis yang diikuti bahwa setiap variabel yang hanya boleh digunakan dalam kelas atau obyek harus diawali dengan garis bawah, selain itu dianggap sebagai publik dan dapat dimanfaatkan oleh kelas/obyek yang lain. Ingat bahwa ini hanya konvensi dan tidak dipaksakan oleh Python (kecuali untuk awalan dua garis bawah).
+Sehingga, sudah ada ketentuan tidak tertulis yang diikuti bahwa setiap variabel yang hanya boleh digunakan dalam kelas atau objek harus diawali dengan garis bawah, selain itu dianggap sebagai publik dan dapat dimanfaatkan oleh kelas/objek yang lain. Ingat bahwa ini hanya konvensi dan tidak dipaksakan oleh Python (kecuali untuk awalan dua garis bawah).
 
 Catatan untuk Programmer C++/Java/C# 
 
@@ -244,15 +244,15 @@ Catatan untuk Programmer C++/Java/C#
 
 ## Penurunan (_Inheritance_) 
 
-Salah satu keuntungan terbesar dari pemrograman berbasis obyek adalah **penggunaan kembali** kode yang telah dibuat, dan salah satu cara melakukan ini adalah melalui mekanisme penurunan (_inheritance_). Penurunan dapat dibayangkan sebagai implementasi hubungan antara *tipe dan sub tipe* antar kelas.
+Salah satu keuntungan terbesar dari pemrograman berbasis objek adalah **penggunaan kembali** kode yang telah dibuat, dan salah satu cara melakukan ini adalah melalui mekanisme penurunan (_inheritance_). Penurunan dapat dibayangkan sebagai implementasi hubungan antara *tipe dan sub tipe* antar kelas.
 
-Misalnya Anda ingin membuat program untuk mengatur data guru dan mahasiswa di kampus. Mereka punya karakteristik data yang sama seperti nama, usia dan alamat. Merka juga memiliki karakteristik khusus seperti gaji dan kursus untuk guru, nilai dan uang kuliah untuk mahasiswa.
+Misalnya Anda ingin membuat program untuk mengatur data guru dan mahasiswa di kampus. Mereka punya karakteristik data yang sama seperti nama, usia dan alamat. Mereka juga memiliki karakteristik khusus seperti gaji dan kursus untuk guru, nilai dan uang kuliah untuk mahasiswa.
 
 Anda dapat membuat dua kelas berbeda untuk setiap tipe dan memprosesnya sendiri-sendiri, namun jika ada tambahan tipe yang bersifat umum dan berlaku untuk kedua belah pihak, Anda harus menambahkan dua kali. Ini dapat membuat program menjadi berat dan sulit diatur. 
 
 Cara yang lebih baik adalah membuat kelas yang lebih umum, misalnya bernama `AnggotaSekolah` dan membuat kelas dengan nama Dosen dan Murid *yang diturunkan* dari kelas `AnggotaSekolah`. Dengan kata lain kita membuat sub tipe dari tipe (kelas) `AnggotaSekolah`, lalu membuat karakteristik yang khusus untuk setiap sub tipe yang kita buat ini.
 
-Ada banyak keuntungan dari pendekatan ini. Jika kita menambahkan/mengganti fungsi di `AnggotaSekolah`, otomatis akan berlaku di seluruh sub tipe-nya. Misalnya Anda bisa menambah field Nomor Tanda Pengenal untuk guru dan mahasiswa, dengan menambahkannya langsung ke class AnggotaSekolah. Meskipun demikian, mengganti sub tipe tidak akan mempengaruhi sub tipe lainnya. Keuntungan lain adalah jika Anda bisa merujuk obyek `Dosen` atau `Mahasiswa` sebagai obyek turunan dari `AnggotaSekolah` adalah Anda bisa memanfaatkan data kedua sub tipe turunannya. Misalnya menghitung jumlah total guru dan mahasiswa. Ini disebut sebagai **polimorfism/pholymorphism** di mana setiap sub tipe dapat diganti di kondisi apapun jika tipe induk menginginkannya atau dengan kata lain obyek diperlakukan sebagaimana perwujudan dari kelas induk.
+Ada banyak keuntungan dari pendekatan ini. Jika kita menambahkan/mengganti fungsi di `AnggotaSekolah`, otomatis akan berlaku di seluruh sub tipe-nya. Misalnya Anda bisa menambah field Nomor Tanda Pengenal untuk guru dan mahasiswa, dengan menambahkannya langsung ke class AnggotaSekolah. Meskipun demikian, mengganti sub tipe tidak akan mempengaruhi sub tipe lainnya. Keuntungan lain adalah jika Anda bisa merujuk objek `Dosen` atau `Mahasiswa` sebagai objek turunan dari `AnggotaSekolah` adalah Anda bisa memanfaatkan data kedua sub tipe turunannya. Misalnya menghitung jumlah total guru dan mahasiswa. Ini disebut sebagai **polimorfism/pholymorphism** di mana setiap sub tipe dapat diganti di kondisi apapun jika tipe induk menginginkannya atau dengan kata lain objek diperlakukan sebagaimana perwujudan dari kelas induk.
 
 Juga perhatikan bahwa *penggunaan kembali* kode dari kelas induknya, kita tidak perlu mengulang kembali ke dalam kelas yang berbeda sebagaimana yang kita lakukan jika kita menggunakan kelas yang independen.
 
@@ -319,7 +319,7 @@ Nama:"Swaroop" Usia:"25" Gaji: "75"
 
 Bagaimana Cara Kerjanya:
 
-Untuk menggunakan turunan, kita tentukan dulu nama kelas dasar (_base class__) di dalam sebuah tuple diikuti dengan nama kelas pada definisi kelasnya. Kemudian, kita lihat metode `__init__` dari kelas dasar yang secara eksplisit dipanggil dengan menggunakan variabel `self` sehingga kita dapat inisialisasi kelas dasar sebagai bagian dari obyek. Sangat penting untuk diingat - Python tidak secara otomatis memanggil seluruh konstruktor kelas dasar, namun Anda harus memanggilnya sendiri.
+Untuk menggunakan turunan, kita tentukan dulu nama kelas dasar (_base class__) di dalam sebuah tuple diikuti dengan nama kelas pada definisi kelasnya. Kemudian, kita lihat metode `__init__` dari kelas dasar yang secara eksplisit dipanggil dengan menggunakan variabel `self` sehingga kita dapat inisialisasi kelas dasar sebagai bagian dari objek. Sangat penting untuk diingat - Python tidak secara otomatis memanggil seluruh konstruktor kelas dasar, namun Anda harus memanggilnya sendiri.
 
 Kita juga lihat bahwa kita dapat memanggil semua metode dalam kelas dasar dengan memberikan awalan dari nama kelas terhadap seluruh metode yang dipanggil di dalam variabel `self` bersamaan dengan argumen lain.
 
@@ -333,6 +333,6 @@ Parameter `end` yang digunakan dalam metode `katakan()` untuk mengganti baris ba
 
 ## Ringkasan 
 
-Kita telah mengeksplorasi berbagai macam aspek dari kelas dan obyek dan banyak terminologi yang berkaitan dengannya. Kita juga akan lihat keuntungan dan kerugian pemrograman berbasis obyek. Python sangat berorientasi terhadap obyek dan memahami konsep ini secara hati-hati akan membantu Anda dalam jangka panjang.
+Kita telah mengeksplorasi berbagai macam aspek dari kelas dan objek dan banyak terminologi yang berkaitan dengannya. Kita juga akan lihat keuntungan dan kerugian pemrograman berbasis objek. Python sangat berorientasi terhadap objek dan memahami konsep ini secara hati-hati akan membantu Anda dalam jangka panjang.
 
 Berikutnya, kita akan belajar bagaimana menangani input/output dan bagaimana mengakses berkas di Python.

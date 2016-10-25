@@ -78,11 +78,11 @@ Jika pesan kesalahan atau eksepsi tidak ditangani, maka handler Python yang baku
 
 Anda juga dapat menggunakan klausa `else` pada setiap blok `try..except`. Klausa ini akan dieksekusi jika tidak ada eksepsi yang terjadi. 
 
-Dalam contoh berikutnya, kita juga akan melihat bagaimana cara memperoleh eksepsi dari sebuah obyek sehingga kita bisa mengambil informasi lebih banyak.
+Dalam contoh berikutnya, kita juga akan melihat bagaimana cara memperoleh eksepsi dari sebuah objek sehingga kita bisa mengambil informasi lebih banyak.
 
 ## Memunculkan Eksepsi
 
-Anda dapat *memunculkan* eksepsi dengan menggunakan statemen `raise` dengan memberikan nama dari kesalahan/ekspsi dan obyek eksepsi yang akan *dilemparkan*
+Anda dapat *memunculkan* eksepsi dengan menggunakan statemen `raise` dengan memberikan nama dari kesalahan/ekspsi dan objek eksepsi yang akan *dilemparkan*
 
 Kesalahan atau eksepsi yang dapat Anda munculkan harus berupa kelas yang secara langsung atau tidak diturunkan dari kelas `Exception`. 
 
@@ -126,11 +126,11 @@ Bagaimana Cara Kerjanya:
 
 Di sini, kita membuat jenis eksepsi kita sendiri. Eksepsi ini disebut `EksepsiMasukanSingkat`. Dia punya dua field - `panjang` untuk menampung panjangnya masukan (_input_), dan `minimal` yang merupakan minimal panjang yang diinginkan oleh program.
 
-Dalam klausul `except`, kita menyebutkan kelas pesan kesalahannya, yang akan disimpan `sebagai` nama variabel yang menjadi rujukan setiap obyek pesan kesalahan/eksepsi terkait. Hal ini dapat dianalogikan sebagai parameter dan arguman dalam pemanggilan fungsi. Dalam klausul `except` di sini, kita gunakan field `panjang` dan `minimal` untuk mencetak pesan yang sesuai terhadap pengguna.
+Dalam klausul `except`, kita menyebutkan kelas pesan kesalahannya, yang akan disimpan `sebagai` nama variabel yang menjadi rujukan setiap objek pesan kesalahan/eksepsi terkait. Hal ini dapat dianalogikan sebagai parameter dan arguman dalam pemanggilan fungsi. Dalam klausul `except` di sini, kita gunakan field `panjang` dan `minimal` untuk mencetak pesan yang sesuai terhadap pengguna.
 
 ## Try .. Finally 
 
-Misalnya Anda membaca berkas dalam program. Bagaimana Anda tahu bahwa obyek berkas yang bersangkutan sudah ditutup secara semestinya atau ada eksepsi yang dimunculkan? Ini dapat kita atasi dengan penggunaan blok `finally`. Catat bahwa Anda dapat menggunakan klausul `except` bersamaan dengan blok `finally` untuk blok yang sama dengan `try`. Anda harus sisipkan diantara salah satunya jika Anda ingin memanfaatkan keduanya. 
+Misalnya Anda membaca berkas dalam program. Bagaimana Anda tahu bahwa objek berkas yang bersangkutan sudah ditutup secara semestinya atau ada eksepsi yang dimunculkan? Ini dapat kita atasi dengan penggunaan blok `finally`. Catat bahwa Anda dapat menggunakan klausul `except` bersamaan dengan blok `finally` untuk blok yang sama dengan `try`. Anda harus sisipkan diantara salah satunya jika Anda ingin memanfaatkan keduanya. 
 
 Simpan sebagai `finally.py`:
 
@@ -167,7 +167,7 @@ Bagaimana Cara Kerjanya:
 
 Kita telah lakukan cara pembacaan berkas seperti biasanya, namun secara khusus kita kenalkan waktu jeda selama 2 detik setelah mencetak tiap baris dengan fungsi `time.sleep` sehingga program akan berjalan secara lebih lambat (Python biasanya berjalan sangat cepat). Ketika program masih berjalan, tekan `ctrl-c` untuk menginterupsi/membatalkan program.
 
-Perhatikan bahwa eksepsi `KeyboardInterrupt` dimunculkan dan program berhenti berjalan. Bagaimanapun juga, sebelum program berhenti, klausul _finally_ dieksekusi dan obyek berkas akan tertutup setelahnya.
+Perhatikan bahwa eksepsi `KeyboardInterrupt` dimunculkan dan program berhenti berjalan. Bagaimanapun juga, sebelum program berhenti, klausul _finally_ dieksekusi dan objek berkas akan tertutup setelahnya.
 
 ## Statemen with 
 
@@ -186,7 +186,7 @@ Bagaimana Cara Kerjanya:
 
 Keluaran harusnya sama dengan contoh sebelumnya. Bedanya di sini kita menggunakan fungsi `open` dengan statemen `with` - kita tinggalkan perintah menutup berkas yang nantinya secara otomatis akan dilakukan oleh `with open`.
 
-Yan terjadi di belakang layar sebetulnya ada protokol yang digunakan oleh statemen `with`. Dia mengambil obyek yang dikembalikan oleh statemen `open`, dalam kasus ini kita sebut saja sebagai `sangberkas`. 
+Yan terjadi di belakang layar sebetulnya ada protokol yang digunakan oleh statemen `with`. Dia mengambil objek yang dikembalikan oleh statemen `open`, dalam kasus ini kita sebut saja sebagai `sangberkas`. 
 
 Dia *selalu* memanggil fungsi `sangberkas.__enter__` sebelum memulai blok perintah di bawahnya dan *selalu* memanggil `sangberkas.__exit__` setelah menyelesaikan blok perintah.
 

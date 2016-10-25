@@ -10,15 +10,15 @@ Ada empat struktur data built-in di Python - list, tuple, dictionary dan set. Ki
 
 Penulisan list harus diapit dalam tanda kurung kotak (square bracket), sehingga Python dapat memahami bahwa Anda sedang membuat list. Sekali Anda buat list, Anda dapat menambah, menghapus atau mencari item di dalam list. Karena kita bisa menambah dan menguranginya, kita dapat katakan bahwa list termasuk tipe data *mutable* - yang berarti nilainya bisa diganti. 
 
-### Pengenalan Singkat Object (Obyek) dan Classes (Kelas) 
+### Pengenalan Singkat Object (Objek) dan Classes (Kelas) 
 
-Meskipun saya menunda pembahasan tentang object dan class hingga sekarang, saat ini penjelasan sedikit dibutuhkan sehingga Anda dapat memahami list secara lebih baik. Kita akan mengeksplorasi topik ini secara lebih detail di [bab berikutnya](#pemrograman-berbasis-obyek). 
+Meskipun saya menunda pembahasan tentang object dan class hingga sekarang, saat ini penjelasan sedikit dibutuhkan sehingga Anda dapat memahami list secara lebih baik. Kita akan mengeksplorasi topik ini secara lebih detail di [bab berikutnya](#pemrograman-berbasis-objek). 
 
 List adalah contoh yang bisa dipahami tentang penggunaan object dan class. Ketika kita menggunakan variabel bernama `i` dan memberi nilai terhadap variabel tersebut, misalnya integer `5`, Anda dapat berpikir membuat **object** (berupa instance) `i` dari **class** (berupa tipe) `int`. Sebagai bantuan, Anda dapat membaca `help(int)` untuk memahaminya lebih baik. 
 
-Sebuah class juga memiliki **methods/metode** berupa fungsi yang didefinisikan khusus hanya untuk class tersebut. Anda dapat menggunakan fungsi bagian ini, jika dan hanya jika Anda mendeklarasikan obyek dari class tersebut. Sebagai contoh, Python memberikan metode `append` untuk class `list` yang memungkinkan Anda menambah item di akhir list. Misalnya `listku.append('sesuatu') yang akan menambahkan string tersebut (sesuatu) di akhir `listku`. Perhatikan penggunaan notasi bertitik untuk mengakses method dari sebuah object.
+Sebuah class juga memiliki **methods/metode** berupa fungsi yang didefinisikan khusus hanya untuk class tersebut. Anda dapat menggunakan fungsi bagian ini, jika dan hanya jika Anda mendeklarasikan objek dari class tersebut. Sebagai contoh, Python memberikan metode `append` untuk class `list` yang memungkinkan Anda menambah item di akhir list. Misalnya `listku.append('sesuatu') yang akan menambahkan string tersebut (sesuatu) di akhir `listku`. Perhatikan penggunaan notasi bertitik untuk mengakses method dari sebuah object.
 
-Sebuah class juga punya **fields** yang merupakan variabel tapi hanya digunakan untuk class tersebut. Anda dapat menggunakan variabel atau nama ini, hanya ketika Anda mendeklarasikan obyek dari kelas tersebut. Fields juga diakses lewat notasi bertiti, sebagai contoh, `listku.field`.
+Sebuah class juga punya **fields** yang merupakan variabel tapi hanya digunakan untuk class tersebut. Anda dapat menggunakan variabel atau nama ini, hanya ketika Anda mendeklarasikan objek dari kelas tersebut. Fields juga diakses lewat notasi bertiti, sebagai contoh, `listku.field`.
 
 Contoh (simpan dengan nama `menggunakan_list.py`):
 
@@ -64,7 +64,7 @@ Daftar belanja saya sekarang ['beras', 'mangga', 'pisang', 'wortel']
 
 Bagaimana Cara Kerjanya:
 
-Variabel `daftarbelanja` adalah daftar belanja seseorang yang akan pergi ke pasar. Di dalam `daftarbelanja`, kita hanya menyimpan nama string yang akan dibeli, tapi Anda dapat menambahkan *segala macam jenis obyek* ke dalam daftar, termasuk angka, bahkan bisa juga list lainnya. 
+Variabel `daftarbelanja` adalah daftar belanja seseorang yang akan pergi ke pasar. Di dalam `daftarbelanja`, kita hanya menyimpan nama string yang akan dibeli, tapi Anda dapat menambahkan *segala macam jenis objek* ke dalam daftar, termasuk angka, bahkan bisa juga list lainnya. 
 
 Kita juga dapat menggunakan putaran `for..in` untuk mengulangi seluruh item di dalam list. Sekarang, harusnya Anda juga sudah mulai memahami bahwa list juga merupakan urutan (sequence). Kekhususan dari sequence akan didiskusikan di [bagian berikutnya](#sequence). 
 
@@ -127,7 +127,7 @@ Tanda Dalam Kurung (parentheses)
 
 Tuple dengan item 0 atau 1
 
-:   Sebuah tuple kosong dibuat dari tanda kurung kosong, seperti misalnya `kosong = ()`. Bagaimanapun juga, tuple dengan satu item tidak sesederhana itu. Anda harus menyebutkannya dengan koma diikuti dengan item pertama (dan satu-satunya) sehingga Python dapat membedakan antara tuple dengan tanda kurung berpasangan yang mengelilingi ekspresi obyek. Anda harus menyebutkan `singleton = (2,)` jika Anda ingin membuat sebuah tuple yang berisi angka `2`.
+:   Sebuah tuple kosong dibuat dari tanda kurung kosong, seperti misalnya `kosong = ()`. Bagaimanapun juga, tuple dengan satu item tidak sesederhana itu. Anda harus menyebutkannya dengan koma diikuti dengan item pertama (dan satu-satunya) sehingga Python dapat membedakan antara tuple dengan tanda kurung berpasangan yang mengelilingi ekspresi objek. Anda harus menyebutkan `singleton = (2,)` jika Anda ingin membuat sebuah tuple yang berisi angka `2`.
 
 Catatan untuk programmer Perl
 
@@ -137,13 +137,13 @@ Catatan untuk programmer Perl
 
 Pustaka seperti buku-alamat di mana Anda dapat menemukan alamat atau detail kontak seseorang hanya dengan mengetahui namanya. Dengan kata lain kita asosiasikan **kunci** atau **keys** (nama) dengan **nilai** atau **value** (informasi detail). Perlu dicatat bahwa kunci dalam sebuah pustaka haruslah unik dan Anda tidak dapat menemukan informasi yang benar jika dua orang punya nama yang sama. 
 
-Mohon dicatat bahwa Anda hanya dapat menggunakan _immutable objects_ (obyek yang tidak bisa dimutasi/diubah jenisnya seperti string) untuk kunci sebuah pustaka namun Anda dapat menggunakan obyek yang bisa berubah bentuk (_mutable object_) maupun obyek yang tidak bisa berubah bentuk (_immutable objects_). Dengan kata lain Anda seharusnya menggunakan obyek yang sederhana untuk kunci. 
+Mohon dicatat bahwa Anda hanya dapat menggunakan _immutable objects_ (objek yang tidak bisa dimutasi/diubah jenisnya seperti string) untuk kunci sebuah pustaka namun Anda dapat menggunakan objek yang bisa berubah bentuk (_mutable object_) maupun objek yang tidak bisa berubah bentuk (_immutable objects_). Dengan kata lain Anda seharusnya menggunakan objek yang sederhana untuk kunci. 
 
 Pasangan kunci dan nilainya yang digunakan dalam pustaka mengunakan notasi `d = {kunci1: nilai1, kunci2:nilai2}`. Perhatikan bahwa pasangan kunci-nilai dipisahkan dengan titik dua dan pasangan tersebut dipisahkan dengan koma hingga ditutup dengan kurung kurawal penutup.
 
 Perlu diingat bahwa pasangan kunci-nilai di dalam pustaka tidak bisa diurutkan. Jika Anda ingin mengurutkannya secara khusus, Anda harus malkukan pengurutan (_sort_) sebelum menggunakannya. 
 
-Pusaka yang Anda gunakan merupakan _instance_/obyek dari kelas `dict`. 
+Pusaka yang Anda gunakan merupakan _instance_/objek dari kelas `dict`. 
 
 Contoh (simpan dengan nama `menggunakan_pustaka.py`):
 
@@ -297,7 +297,7 @@ Cobalah beberapa kombinasi dengan penggunaan sesuai spesifikasi urutan dengan me
 
 ## _Set_ 
 
-_Set_ adalah koleksi obyek sederhana yang  *tidak berurut*. Ini digunakan ketika keberadaan obyek dalam sebuah koleksi lebih penting daripada urutannya atau berapa kali muncul.
+_Set_ adalah koleksi objek sederhana yang  *tidak berurut*. Ini digunakan ketika keberadaan objek dalam sebuah koleksi lebih penting daripada urutannya atau berapa kali muncul.
 
 Dengan menggunakan _set_ Anda dapat mengetes keanggotaan, apakah dia merupakan subset dari set yang lain, menemukan interseksi dari dua set dan lainnya. 
 
@@ -322,7 +322,7 @@ Contoh berikut ini bisa menjelaskan-sendiri sebaba melibatkan set dasar teori ma
 
 ## Referensi 
 
-Ketika Anda membuat obyek dan menyematkannya pada variable, variable tersebut hanya *mereferensikan* pada obyek dan tidak merepresentasikan obyek itu sendiri! Dengan kata lain, itu hanyalah nama variabel yang menunjukkan bagian dari memori komputer tempat di mana obyek tersebut diletakkan. Ini disebut sebagai **binding** atau **mengikat** nama kepada obyek tersebut. 
+Ketika Anda membuat objek dan menyematkannya pada variable, variable tersebut hanya *mereferensikan* pada objek dan tidak merepresentasikan objek itu sendiri! Dengan kata lain, itu hanyalah nama variabel yang menunjukkan bagian dari memori komputer tempat di mana objek tersebut diletakkan. Ini disebut sebagai **binding** atau **mengikat** nama kepada objek tersebut. 
 
 Secara umum, Anda tidak perlu khawatir tentang hal ini, namun ada beberapa efek ringan atas referensi yang perlu Anda perhatikan:
 
@@ -331,14 +331,14 @@ Contoh (simpan sebagai `referensi.py`):
 ~~~python
 print('Tugas Sederhana')
 daftarbelanja = ['apel', 'mangga', 'wortel', 'pisang']
-daftarku = daftarbelanja # daftarku cuma sekedar nama yang merujuk pada obyek yang sama!
+daftarku = daftarbelanja # daftarku hanya sekadar nama yang merujuk pada objek yang sama!
 
 del daftarbelanja[0] # Saya membeli item pertama, sehingga saya perlu menghapusnya dari daftar
 
 print('daftar belanja ', daftarbelanja)
 print('daftarku', daftarku)
 # perhatikan bahwa daftarbelanja dan daftarku, keduanya mencetak hal yang sama 
-# tanpa 'apel' mengonfirmasi bahwa keduanya merujuk pada obyek yang sama
+# tanpa 'apel' mengonfirmasi bahwa keduanya merujuk pada objek yang sama
 
 print('Salin dengan membuat irisan penuh')
 daftarku = daftarbelanja[:] # membuat salinan lewat irisan penuh
@@ -365,7 +365,7 @@ Bagaimana Cara Kerjanya:
 
 Hampir semua penjelasan sudah ditulis di komentar. 
 
-Mohon diingat jika Anda ingin membuat salinan sebuah daftar (_list_) atau sejenis urutan (_sequence_) atau obyek yang sedikit rumit (bukan *obyek* sederhana seperti integer), Anda harus membuat operasi irisan untuk membuat salinan. Jika Anda cuma menyebut nama dengan nama variabel lain, keduanya akan ''merujuk'' pada obyek yang sama dan ini bisa menimbulkan masalah jika Anda tidak hati-hati. 
+Mohon diingat jika Anda ingin membuat salinan sebuah daftar (_list_) atau sejenis urutan (_sequence_) atau objek yang sedikit rumit (bukan *objek* sederhana seperti integer), Anda harus membuat operasi irisan untuk membuat salinan. Jika Anda hanya menyebut nama dengan nama variabel lain, keduanya akan ''merujuk'' pada objek yang sama dan ini bisa menimbulkan masalah jika Anda tidak hati-hati. 
 
 Catatan untuk programmer Perl
 
@@ -373,14 +373,14 @@ Catatan untuk programmer Perl
 
 ## Lebih banyak tentang String
 
-Kita telah mendiskusikan string secara lebih detail sebelumnya. Apa lagi yang bisa kita eksplorasi dari situ? Jika Anda tahu string adalah sebuah obyek dan memiliki semua metode untuk melakukan berbagai operasi, seperti mengecek bagian atau bahkan menghapus spasi!
+Kita telah mendiskusikan string secara lebih detail sebelumnya. Apa lagi yang bisa kita eksplorasi dari situ? Jika Anda tahu string adalah sebuah objek dan memiliki semua metode untuk melakukan berbagai operasi, seperti mengecek bagian atau bahkan menghapus spasi!
 
-String yang Anda gunakan di dalam program merupakan obyek dari kelas `str`. Beberapa metode yang bermanfaat didemonstrasikan dalam contoh berikut. Untuk daftar lengkap dari metode ini, lihat `help(str)`. 
+String yang Anda gunakan di dalam program merupakan objek dari kelas `str`. Beberapa metode yang bermanfaat didemonstrasikan dalam contoh berikut. Untuk daftar lengkap dari metode ini, lihat `help(str)`. 
 
 Contoh (simpan dengan nama `metode_str.py`):
 
 ~~~python
-nama = 'Swaroop' # Ini adalah obyek string
+nama = 'Swaroop' # Ini adalah objek string
 
 if name.startswith('Swa'):
     print('Ya, string dimulai dengan "Swa"')
@@ -409,7 +409,7 @@ Brazil_*_Russia_*_India_*_China
 
 Bagaimana Cara Kerjanya:
 
-Di sini kita lihat banyak metode string kita gunakan. Metode `startswith` digunakan untuk mengecek apakah obyek tersebut dimulai dengan string sebagaimana dimaksud. Operator `in` digunakan untuk mengecek apakah suatu string (misal kata atau kumpulan huruf/angka) merupakan bagian dari string. 
+Di sini kita lihat banyak metode string kita gunakan. Metode `startswith` digunakan untuk mengecek apakah objek tersebut dimulai dengan string sebagaimana dimaksud. Operator `in` digunakan untuk mengecek apakah suatu string (misal kata atau kumpulan huruf/angka) merupakan bagian dari string. 
 
 Metode `find` digunakan untuk mencari posisi substring di dalam string; `find` memberikan kembalian -1 jika tidak berhasil. Kelas `str` juga punya metode keren seperti `join` untuk menggabungkan item dari sebuah urutan dengan menggunakan string tertentu sebagai delimiter dari tiap item sehingga menghasilkan string baru yang lebih besar.
 

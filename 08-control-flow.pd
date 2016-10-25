@@ -73,7 +73,7 @@ if True:
 
 Setelah Python menyelesaikan eksekusi dan melengkapi statemen `if` termasuk klausul `elif` dan `else` terkait, maka statemen berikutnya adalah `print('Selesai')`. Setelah ini, Python akan melihat bahwa program sudah selesai dan berhenti.
 
-Meskipun program ini sangat sederhana, Saya telah menunjukkan banyak hal yang harus Anda perhatikan. Semua ini sangat langsung (dan sangat mudah jika Anda memiliki latar belakang C/C++). Anda hanya perlu menyadari ini di depan, dan setelah praktek beberapa kali Anda akan merasa nyaman dengan itu, sehingga terasa 'natural' untuk Anda.
+Meskipun program ini sangat sederhana, Saya telah menunjukkan banyak hal yang harus Anda perhatikan. Semua ini sangat langsung (dan sangat mudah jika Anda memiliki latar belakang C/C++). Anda hanya perlu menyadari ini di depan, dan setelah praktik beberapa kali Anda akan merasa nyaman dengan itu, sehingga terasa 'natural' untuk Anda.
 
 Catatan untuk programer C/C++
 
@@ -135,7 +135,7 @@ Catatan untuk Programmer C/C++
 
 ## Putaran For 
 
-Ada lagi statemen putaran yang *mengulang* urutan obyek seperti menjalankan tiap item dalam urutan (sequence). Statemen ini disebut `for..in`. Kita akan lihat tentang [urutan](#sequence) di bab berikutnya secara detail. Apa yang pelru Anda ketahui sekarang bahwa urutan/sequence hanyalah kumpulan item berurut.
+Ada lagi statemen putaran yang *mengulang* urutan objek seperti menjalankan tiap item dalam urutan (sequence). Statemen ini disebut `for..in`. Kita akan lihat tentang [urutan](#sequence) di bab berikutnya secara detail. Apa yang pelru Anda ketahui sekarang bahwa urutan/sequence hanyalah kumpulan item berurut.
 
 Contoh (simpan dengan nama `for.py`):
 
@@ -165,11 +165,11 @@ Apa yang akan kita lakukan di sini adalah memberikan dua angka dan `range` akan 
 
 Sebagai catatan, range() menghasilkan urutan angka, tapi hanya satu angka dalam satu waktu, ketika menjalankan permintaan for loop dalam item berikutnya. Jika Anda ingin melihat urutan angka secara penuh dengan cepat, gunakan list(range()). Lists dijelaskan di [[bab tentang struktur data](#data-structures)].
 
-`for` loop akan melakukan iterasi dalam range ini - `for i in range(1,5)` adalah sama dengan `for i in [1, 2, 3, 4]` yang akan menugaskan setiap angka (atau obyek) di dalam urutan ke dalam variabel i, sekali dalam satu waktu, dan mengeksekusi statemn blok dari tiap nilai `i`. Dalam kasus ini kita akan mencetak statemen blok.
+`for` loop akan melakukan iterasi dalam range ini - `for i in range(1,5)` adalah sama dengan `for i in [1, 2, 3, 4]` yang akan menugaskan setiap angka (atau objek) di dalam urutan ke dalam variabel i, sekali dalam satu waktu, dan mengeksekusi statemn blok dari tiap nilai `i`. Dalam kasus ini kita akan mencetak statemen blok.
 
 Ingat bahwa bagian `else` sifatnya tidak wajib. Jika dimasukkan, bagian tersebut hanya akan dijalankan setelah putaran `for` selesai, kecuali ketemu statemen [break](#break).
 
-Ingat bahwa putaran `for..in` bisa berjalan di urutan appaun. Di sini, kita memiliki daftar angka yang dihasilkan oleh fungsi `range` secara built-in, namun secara umum kita dapat menggunakan segala macam urutan dari berbagai jenis obyek! Kita akan mengeksplorasi ide ini secara detail di bab berikutnya.
+Ingat bahwa putaran `for..in` bisa berjalan di urutan appaun. Di sini, kita memiliki daftar angka yang dihasilkan oleh fungsi `range` secara built-in, namun secara umum kita dapat menggunakan segala macam urutan dari berbagai jenis objek! Kita akan mengeksplorasi ide ini secara detail di bab berikutnya.
 
 Catatan untuk Programmer /C++/Java/C#
 
