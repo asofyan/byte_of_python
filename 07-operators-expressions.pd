@@ -20,7 +20,7 @@ Catat bahwa Anda dapat mengecek dan memperbaiki ekspresi yang diberikan di conto
 
 `+` (tambah)
 
-:   Menambahkan dua obyek
+:   Menambahkan dua objek
 
     `3 + 5` menghasilkan `8`. `'a' + 'b'` menghasilkan `'ab'`.
 
@@ -128,7 +128,7 @@ Catat bahwa Anda dapat mengecek dan memperbaiki ekspresi yang diberikan di conto
 
 `==` (sama dengan)
 
-:   Membandingkan apakah kedua obyek sama atau tidak
+:   Membandingkan apakah kedua objek sama atau tidak
 
     `x = 2; y = 2; x == y` menghasilkan `True`.
 
@@ -138,7 +138,7 @@ Catat bahwa Anda dapat mengecek dan memperbaiki ekspresi yang diberikan di conto
 
 `!=` (tidak sama dengan)
 
-:   Membandingkan apakah kedua obyek berbeda atau tidak
+:   Membandingkan apakah kedua objek berbeda atau tidak
 
     `x = 2; y = 3; x != y` menghasilkan `True`.
 

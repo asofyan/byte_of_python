@@ -6,9 +6,9 @@ Setelah sebelumnya kita telah mengeksplorasi berbagai bagian bahasa Python, seka
 
 Permasalahan yang ingin dipecahkan adalah *"Saya ingin membuat sebuah program yang membackup semua berkas-berkas saya yang penting."*.
 
-Meskipun ini masalah sederhana, namun tidak ada informasi yang cukup bagi kita untuk mulai dengan pemecahannya. Hal ini membutuhkan sedikit **analisa lanjutan**. Sebagai contoh, bagaimana kita menentukan berkas *mana* yang penting sehingga perlu dibackup? *Bagaimana* berkas-berkas tersebut disimpan? *Di mana* tempat penyimpanannya?
+Meskipun ini masalah sederhana, namun tidak ada informasi yang cukup bagi kita untuk mulai dengan pemecahannya. Hal ini membutuhkan sedikit **analisis lanjutan**. Sebagai contoh, bagaimana kita menentukan berkas *mana* yang penting sehingga perlu dibackup? *Bagaimana* berkas-berkas tersebut disimpan? *Di mana* tempat penyimpanannya?
 
-Setelah menganalisa masalah tersebut secara lebih mendalam, kita mulai **mendesain** program kita. Kita bisa mulai dengan membuat daftar bagaimana program kita akan berjalan nantinya. Dalam kasus ini, Saya telah membuat daftar berikut tentang bagaimana *Saya* ingin program tersebut bekerja. Jika Anda melakukan sendiri desainnya, mungkin Anda akan membuat analisa berbeda mengingat setiap orang punya pendekatan berbeda tentang bagaimana cara mereka melakukan pekerjaannya. Dan ini sama sekali bukan masalah. Tidak apa-apa. 
+Setelah menganalisis masalah tersebut secara lebih mendalam, kita mulai **mendesain** program kita. Kita bisa mulai dengan membuat daftar bagaimana program kita akan berjalan nantinya. Dalam kasus ini, Saya telah membuat daftar berikut tentang bagaimana *Saya* ingin program tersebut bekerja. Jika Anda melakukan sendiri desainnya, mungkin Anda akan membuat analisis berbeda mengingat setiap orang punya pendekatan berbeda tentang bagaimana cara mereka melakukan pekerjaannya. Dan ini sama sekali bukan masalah. Tidak apa-apa. 
 
 - Berkas dan direktori akan disimpan dalam berkas pendukung (_backup_) secara khusus dalam list.
 - Berkas pendukung harus disimpan dalam direktori pendukung utama.
@@ -18,7 +18,7 @@ Setelah menganalisa masalah tersebut secara lebih mendalam, kita mulai **mendesa
 
 ## Solusi 
 
-Mengingat desain program kita relatif sudah komplit dan stabil, sekarang kita dapat menuliskan kode sebagai **implementasi** dari solusi kita. 
+Mengingat desain program kita relatif sudah komplet dan stabil, sekarang kita dapat menuliskan kode sebagai **implementasi** dari solusi kita. 
 
 Simpan sebagai `backup_ver1.py`:
 
@@ -291,17 +291,17 @@ Dapatkah Anda coba membuat versi ke lima yang menggunakan modul [zipfile](http:/
 
 Kita telah melakukan beberapa **fase** dalam proses pengembangan perangkat lunak. Fase ini dapat diringkas sebagai berikut:
 
-#. Apa (Analisa)
+#. Apa (Analisis)
 #. Bagaimana (Desain)
 #. Mengerjakan (Implementasi)
 #. Uji coba (Uji coba dan debugging)
 #. Menggunakan (Operasi atau Pemasangan)
 #. Perawatan (Perbaikan terus menerus)
 
-Salah satu prosedur menulis perangkat lunak yang direkomendasikan sudah kita ikuti satu demi satu dalam membuat skrip backup sebelumnya: Dimulai dengan analisa dan desain. Lalu Mulai dengan implementasi untuk program yang sederhana. Kemudian kita lakukan ujicoba dan debug. Kita gunakan programnya agar berjalan sesuai dengan yang diharapkan. Sekarang, kita menambahkan fitur-fitur yang diinginkan, kemudian melakukan kembali proses dari siklus Kerjakan-Ujicoba-Gunakan sebanyak yang dibutuhkan. Ingat bahwa **Perangkat lunak tidak tumbuh, namun dibangun**.
+Salah satu prosedur menulis perangkat lunak yang direkomendasikan sudah kita ikuti satu demi satu dalam membuat skrip backup sebelumnya: Dimulai dengan analisis dan desain. Lalu Mulai dengan implementasi untuk program yang sederhana. Kemudian kita lakukan ujicoba dan debug. Kita gunakan programnya agar berjalan sesuai dengan yang diharapkan. Sekarang, kita menambahkan fitur-fitur yang diinginkan, kemudian melakukan kembali proses dari siklus Kerjakan-Ujicoba-Gunakan sebanyak yang dibutuhkan. Ingat bahwa **Perangkat lunak tidak tumbuh, namun dibangun**.
 
 ## Ringkasan 
 
 Kita telah melihat bagaimana membuat program/skrip Python kita sendiri, dan berbagai tahapan yang dibutuhkan dalam menulis sebuah perangkat lunak. Anda mungkin dapat memanfaatkannya untuk menulis program Anda sendiri sebagaimana yang sudah Anda kerjakan di bab ini hingga Anda nyaman dengan Python sebagaimana Anda nyaman dengan pemecahan-masalah.
 
-Selanjutnya, kita akan diskusikan pemrograman berbasis-obyek. 
+Selanjutnya, kita akan diskusikan pemrograman berbasis-objek. 

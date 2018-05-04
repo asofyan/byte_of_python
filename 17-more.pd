@@ -48,11 +48,11 @@ Dalam tabel berikut akan Anda temukan beberapa metode khusus. Jika Anda ingin me
 
 `__init__(self, ...)`
 
-:   Metode ini dipanggil sesaat sebelum obyek yang tercantum dibawahnya dibuat, dan metodenya siap digunakan.
+:   Metode ini dipanggil sesaat sebelum objek yang tercantum dibawahnya dibuat, dan metodenya siap digunakan.
 
 `__del__(self)`
 
-:   Dipanggil sebelum obyek dimusnahkan
+:   Dipanggil sebelum objek dimusnahkan
 
 `__str__(self)`
 
@@ -68,7 +68,7 @@ Dalam tabel berikut akan Anda temukan beberapa metode khusus. Jika Anda ingin me
 
 `__len__(self)`
 
-:   Dipanggil ketika fungsi baku `len()` digunakan untuk obyek yang bersifat urutan (sequence).
+:   Dipanggil ketika fungsi baku `len()` digunakan untuk objek yang bersifat urutan (sequence).
 
 ## Blok Statemen Tunggal
 
@@ -84,7 +84,7 @@ Perhatikan bahwa statemen tunggal digunakan di satu tempat dan bukan di blok ter
 
 ## Forms Lambda 
 
-Statemen `lambda` digunakan untuk membuat obyek fungsi yang baru. Pada dasarnya, `lambda` mengambil parameter yang diikuti oleh ekspresi tunggal dan nilai dari eksresi ini akan dikembalikan oleh fungsi yang baru.
+Statemen `lambda` digunakan untuk membuat objek fungsi yang baru. Pada dasarnya, `lambda` mengambil parameter yang diikuti oleh ekspresi tunggal dan nilai dari eksresi ini akan dikembalikan oleh fungsi yang baru.
 
 Contoh (simpan sebagai `lambda.py`):
 
@@ -200,6 +200,6 @@ Catatan untuk pengguna Ekspresi Reguler
 
 ## Ringkasan 
 
-Di bab ini kita telah membahas beberapa fitur tambahan dari Python meskipun belum mencakup seluruh fitur yang dimiliki Python. Bagaimanapun juga, dalam tahap ini, kita telah membahas hampir semua hal yang mungkin akan Anda gunakan dalam praktek. Dan ini sudah cukup bagi Anda untuk mulai menulis program apapun yang ingin Anda tulis.
+Di bab ini kita telah membahas beberapa fitur tambahan dari Python meskipun belum mencakup seluruh fitur yang dimiliki Python. Bagaimanapun juga, dalam tahap ini, kita telah membahas hampir semua hal yang mungkin akan Anda gunakan dalam praktik. Dan ini sudah cukup bagi Anda untuk mulai menulis program apapun yang ingin Anda tulis.
 
 Berikutnya, kita akan diskusi bagaimana menjelajahi Python lebih lanjut. 

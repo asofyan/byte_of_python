@@ -64,7 +64,7 @@ Mengimpor modul relatif sangat mahal sumber daya, sehingga Python punya trik unt
 
 Catatan
 
-:   Berkas `.pyc` biasanya dibuat di dalam direktori yang sama dari berkas `.py`. Jika Python tidak punya ijin untuk menulis berkas ke dalam direktori tersebut, maka berkas `.pyc` tidak akan dibuat.
+:   Berkas `.pyc` biasanya dibuat di dalam direktori yang sama dari berkas `.py`. Jika Python tidak punya izin untuk menulis berkas ke dalam direktori tersebut, maka berkas `.pyc` tidak akan dibuat.
 
 ## Statemen from ... import 
 
@@ -157,7 +157,7 @@ print('Versi', __version__)
 
 Keluaran `demo2_modulku.py` sama dengan keluaran `demo_modulku.py`. 
 
-Perhatikan bahwa jika ada `__version__` yang dideklarasikan sebelumnya oleh demo_modulku.py atau demo2_modulku.py maka akan terjadi bentrok. Ini juga karena praktek yang umum pada setiap modul untuk mendeklarasikan versi dengan menggunakan namanya. Sehingga, selalu direkomendasikan untuk statemen `import` meskipun hal itu membuat program Anda sedikit lebih lama.
+Perhatikan bahwa jika ada `__version__` yang dideklarasikan sebelumnya oleh demo_modulku.py atau demo2_modulku.py maka akan terjadi bentrok. Ini juga karena praktik yang umum pada setiap modul untuk mendeklarasikan versi dengan menggunakan namanya. Sehingga, selalu direkomendasikan untuk statemen `import` meskipun hal itu membuat program Anda sedikit lebih lama.
 
 Anda dapat juga menggunakan:
 
@@ -173,7 +173,7 @@ Zen of Python
 
 ## Fungsi dir
 
-Anda dapat menggunakan fungsi built-in (sudah ada secara otomatis) `dir` untuk melihat daftar seluruh nama yang didefinisikan oleh obyek (dalam hal ini didefinisikan oleh sebuah modul). Dalam hal modul, fungsi `dir()` akan memuat daftar seluruh fungsi, kelas dan variabel yang didefinisikan oleh modul tersebut.
+Anda dapat menggunakan fungsi built-in (sudah ada secara otomatis) `dir` untuk melihat daftar seluruh nama yang didefinisikan oleh objek (dalam hal ini didefinisikan oleh sebuah modul). Dalam hal modul, fungsi `dir()` akan memuat daftar seluruh fungsi, kelas dan variabel yang didefinisikan oleh modul tersebut.
 
 Jika Anda memberikan nama modul untuk fungsi `dir()`, akan memberikan daftar nama yang didefinisikan dalam modul yang dimasukkan tersebut. Jika tidak memasukkan argumen, maka akan mengembalikan nama yang didefinisikan oleh modul yang dipakai saat ini. 
 
@@ -224,7 +224,7 @@ Dalam rangka observasi `dir`, kita mendefinisikan variabel baru dengan nama `a` 
 
 A note on `del` - this statement is used to *delete* a variable/name and after the statement has run, in this case `del a`, you can no longer access the variable `a` - it is as if it never existed before at all.
 
-Catat bahwa fungsi `dir()` dapat dijalankan dalam *setiap* obyek. Sebagai contoh, jalankan `dir('print')` untuk mempelajari fungsi print, atau `dir(str)` untuk atribut-atribut yang ada dalam kelas str. 
+Catat bahwa fungsi `dir()` dapat dijalankan dalam *setiap* objek. Sebagai contoh, jalankan `dir('print')` untuk mempelajari fungsi print, atau `dir(str)` untuk atribut-atribut yang ada dalam kelas str. 
 
 ## Paket 
 

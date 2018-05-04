@@ -1,16 +1,16 @@
 # Apa Berikutnya 
 
-Jika Anda telah membaca buku ini secara seksama hingga sekarang dan praktek membuat banyak program, maka Anda sekarang seharusnya lebih nyaman dan familiar dengan Python. Anda mungkin sudah mmebuat beberapa program Python untuk percobaan dan melatih kemampuan Python Anda. Jika belum, mulailah sekarang. Pertanyaan berikutnya adalah 'Apa Berikutnya?'
+Jika Anda telah membaca buku ini secara saksama hingga sekarang dan praktik membuat banyak program, maka Anda sekarang seharusnya lebih nyaman dan familier dengan Python. Anda mungkin sudah mmebuat beberapa program Python untuk percobaan dan melatih kemampuan Python Anda. Jika belum, mulailah sekarang. Pertanyaan berikutnya adalah 'Apa Berikutnya?'
 
 Saya sarankan Anda coba geluti masalah ini:
 
-> Buat program *buku-alamat* berbasis perintah di mana Anda dapat menelusuri, menambah, modifikasi,menghapus atau mencari kontak yang Anda miliki seperti teman, keluarga dan rekanan serta informasi detil mereka seperti alamat email atau nomor telepon. Detailnya harus disimpan agar bisa ditampilkan di kemudian hari.
+> Buat program *buku-alamat* berbasis perintah di mana Anda dapat menelusuri, menambah, modifikasi,menghapus atau mencari kontak yang Anda miliki seperti teman, keluarga dan rekanan serta informasi detail mereka seperti alamat email atau nomor telepon. Detailnya harus disimpan agar bisa ditampilkan di kemudian hari.
 
 Ini cukup mudah jika Anda memikirkannya dengan mempertimbangkan berbagai hal yang telah kita pelajari sebelumnya hingga sekarang. Jika Anda masih membutuhkan petunjuk bagaimana melakukannya, berikut beberapa petunjuk.
 
 Petunjuk (Jangan baca ini sebelum Anda mencobanya)
 
-:   Buat sebuah _class_ untuk merepresentasikan informasi dari seseorang. Gunakan pustaka untuk menyimpan obyek person ini, dengan menggunakan namanya sebagai kunci. Gunakan modul picke untuk menyimpan obyek secara persisten ke dalam ruang penyimpanan komputer Anda. Gunakan metode baku dari pustaka untuk menambah, menghapus dan mengubah informasi dari orang tersebut.
+:   Buat sebuah _class_ untuk merepresentasikan informasi dari seseorang. Gunakan pustaka untuk menyimpan objek person ini, dengan menggunakan namanya sebagai kunci. Gunakan modul picke untuk menyimpan objek secara persisten ke dalam ruang penyimpanan komputer Anda. Gunakan metode baku dari pustaka untuk menambah, menghapus dan mengubah informasi dari orang tersebut.
 
 Sekai Anda bisa melakukan ini, Anda dapat menyebut diri Anda sebagai seorang programmer Python. Lalu kirim [surel ke saya](http://www.swaroopch.com/contact/) dan berterimakasihlah terhadap buku yang bagus ini ;-). Langkah ini tidak wajib, namun dianjurkan. Juga pertimbangkan untuk membeli [versi cetak](http://www.swaroopch.com/buybook/) untuk mendukung pengembangan buku ini.
 
@@ -89,7 +89,7 @@ Untuk pilihan lebih banyak, silakan lihat [halaman wiki GuiProgramming di situs 
 
 Namun sayangnya, tidak ada yang satupun yang disebut sebagai standar GUI di Python. Saya sarankan Anda memilih salah satu dari alat-alat bantu di atas, tergantung dari kondisi Anda. Faktor pertama yang perlu dipertimbangkan adalah apakah Anda mau membayar alat bantu GUI tersebut atau tidak. Faktor kedua adalah apakah program yang Anda buat hanya bisa berjalan di Windows, Mac, Linux atau jalan di semua platform. Faktor ketiga adalah, jika Anda memilih platform Linux, apakah Anda menggunakan KDE atau GNOME sebagai lingkungan grafiknya.
 
-Untuk analisa yang komprehensif dan detail, lihat halaman 26 dari [The Python Papers, Volume 3, Issue 1](http://archive.pythonpapers.org/ThePythonPapersVolume3Issue1.pdf).
+Untuk analisis yang komprehensif dan detail, lihat halaman 26 dari [The Python Papers, Volume 3, Issue 1](http://archive.pythonpapers.org/ThePythonPapersVolume3Issue1.pdf).
 
 ## Berbagai Macam Penerapan 
 
@@ -121,7 +121,7 @@ Setiap implementasi ini memiliki kekhususan kegunaan untuk bidang-bidang tertent
 
 ## Pemrograman Berbasis Fungsi (untuk pengguna tingkat lanjut)
 
-Saat Anda menulis program yang lebih besar, Anda harus belajar lebih lanjut tentang pendekatan pemrograman berbasis fungsi sebagai perbandingan pada pendekatan pemrograman berbasis kelas sebagaimana yang sudah kita pelajari di [bab pemrograman berbasis obyek](#object-oriented-programming):
+Saat Anda menulis program yang lebih besar, Anda harus belajar lebih lanjut tentang pendekatan pemrograman berbasis fungsi sebagai perbandingan pada pendekatan pemrograman berbasis kelas sebagaimana yang sudah kita pelajari di [bab pemrograman berbasis objek](#object-oriented-programming):
 
 - [Functional Programming Howto oleh A.M. Kuchling](http://docs.python.org/dev/howto/functional.html)
 - [Bab Functional Programming pada buku 'Dive Into Python'](http://www.diveintopython.net/functional_programming/index.html)
